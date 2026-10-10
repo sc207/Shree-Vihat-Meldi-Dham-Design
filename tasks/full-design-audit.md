@@ -3,6 +3,27 @@
 Status: **not started.** Run it in a new session, in phases. The owner's brief is reproduced verbatim below the line.
 Read these project notes first — where the brief is generic, they say how it applies here. Project rules in [CLAUDE.md](../CLAUDE.md) win.
 
+## Agreed scope and order (owner, 10 Oct 2026)
+
+Order: (1) Seva desktop empty right column first — fix, then the owner inspects before approving; (2) this audit; (3) approved fixes in small versions.
+
+First audit task, as the owner worded it:
+
+> Run the complete design audit in `tasks/full-design-audit.md`, covering all 24 boards.
+> Perform Phases A–C only. Do not modify, fix, or redesign anything yet.
+> 1. Inspect every board and its relevant responsive layouts.
+> 2. Identify confirmed visual bugs, UX problems, animation and transition issues, image and artwork placement problems, typography and Gujarati rendering issues, accessibility concerns, and design inconsistencies.
+> 3. Investigate the likely root cause of each issue.
+> 4. Prioritise findings by severity and user impact.
+> 5. Provide screenshots of the actual issues wherever possible, with the board name and viewport size.
+> 6. Give me a consolidated audit report and proposed fix plan before changing anything.
+>
+> Preserve the Gujarati-only requirement, all approved content and artwork, the existing visual identity, and v106 as the fallback.
+> Do not claim that a page, device, browser, animation, or performance metric has been tested unless it was actually verified. Clearly label anything that remains unverified.
+> Wait for my approval before beginning Phase D or making any changes.
+
+Do not fix all 24 boards in one pass: diagnose first, then targeted changes in small approved batches.
+
 ## How this brief applies to this project
 
 1. **Gujarati only.** The brief mentions "Gujarati and English content"; this site has Gujarati content only. Do not add English.
