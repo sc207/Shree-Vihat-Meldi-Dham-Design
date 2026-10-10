@@ -104,7 +104,9 @@ Decided:
 Task queue, one small task at a time (owner's order):
 1. **Seva page, desktop: fix the empty right column** — the first task for the new session. Contained design task; does not need trust content.
 2. **Canvas to-do note:** the PDF line correction above.
-3. Trust content as it arrives (placeholders stay until then). **Never invent** temple history, construction dates, festival details or any
+3. **Complete design audit** — owner's brief in [tasks/full-design-audit.md](tasks/full-design-audit.md); phases A–C end in a report to the owner, fixes follow
+   in small approved versions. Not started.
+4. Trust content as it arrives (placeholders stay until then). **Never invent** temple history, construction dates, festival details or any
    other trust-approved information.
 
 Standing note for later: when the PDF exists, link the file in the button, delete the "Festival PDF button hidden" rule
