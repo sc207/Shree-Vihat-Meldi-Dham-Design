@@ -1,0 +1,252 @@
+<title>Vihat Meldi Dham Audit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@400;500;600&family=Noto+Serif+Gujarati:wght@600;700&display=swap">
+<style>
+/* Layout: one reading column; findings as plain sections with a severity pill; evidence pictures full column width. Palette taken from the website's own maroon / gold / ivory. */
+:root {
+  --bg: #fbf7ef; --surface: #fffdf8; --ink: #2a1418; --muted: #6b5753; --line: #e5d9c6;
+  --maroon: #741a32; --gold: #8a6420;
+  --p1: #a3261e; --p1-bg: #fbe4e0; --p2: #9a5208; --p2-bg: #fbecd9; --p3: #3f6233; --p3-bg: #e5efdc; --ok: #2c6650; --ok-bg: #dcefe6;
+  --display: "Noto Serif Gujarati", "Iowan Old Style", Georgia, serif;
+  --body: "Hind Vadodara", "Segoe UI", system-ui, sans-serif;
+  --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #1b0f12; --surface: #251518; --ink: #f2e9de; --muted: #bba99c; --line: #3e2a2e;
+  --maroon: #eaa6b6; --gold: #e2c27a;
+  --p1: #ffb4a8; --p1-bg: #4a1a17; --p2: #f5c48a; --p2-bg: #45290c; --p3: #b9d7a6; --p3-bg: #233320; --ok: #9fd8bf; --ok-bg: #173329; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #1b0f12; --surface: #251518; --ink: #f2e9de; --muted: #bba99c; --line: #3e2a2e;
+  --maroon: #eaa6b6; --gold: #e2c27a;
+  --p1: #ffb4a8; --p1-bg: #4a1a17; --p2: #f5c48a; --p2-bg: #45290c; --p3: #b9d7a6; --p3-bg: #233320; --ok: #9fd8bf; --ok-bg: #173329; color-scheme: dark }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--body); padding-inline: 16px; padding-block: 0 64px; }
+.wrap { max-width: 920px; margin: 0 auto; }
+h1, h2, h3 { font-family: var(--display); color: var(--maroon); text-wrap: balance; line-height: 1.25; margin: 0; }
+h1 { font-size: clamp(28px, 4.4vw, 40px); }
+h2 { font-size: 24px; margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); }
+h3 { font-size: 19px; }
+p { margin: 0; max-width: 68ch; }
+code { font-family: var(--mono); font-size: .86em; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; overflow-wrap: anywhere; }
+a { color: var(--maroon); }
+.top { padding-block: 40px 8px; display: grid; gap: 14px; }
+.eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+.meta { color: var(--muted); font-size: 15px; }
+.tally { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.tally span { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 6px 12px; font-size: 15px; font-variant-numeric: tabular-nums; }
+.tally b { font-size: 18px; margin-right: 4px; }
+.lead { display: grid; gap: 12px; margin-top: 18px; }
+.sev { display: inline-block; font-size: 13px; font-weight: 600; padding: 1px 9px; border-radius: 999px; white-space: nowrap; letter-spacing: .02em; }
+.s1 { color: var(--p1); background: var(--p1-bg); } .s2 { color: var(--p2); background: var(--p2-bg); } .s3 { color: var(--p3); background: var(--p3-bg); } .sok { color: var(--ok); background: var(--ok-bg); }
+.finding { margin-top: 28px; display: grid; gap: 10px; }
+.finding header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; }
+.finding .id { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+dl { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); gap: 6px 16px; margin: 0; }
+dt { color: var(--muted); font-size: 14px; padding-top: 2px; }
+dd { margin: 0; min-width: 0; }
+figure { margin: 6px 0 0; }
+figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+figure.narrow img { max-width: 420px; }
+figure.mid img { max-width: 640px; }
+figcaption { font-size: 14px; color: var(--muted); margin-top: 6px; }
+.tbl { overflow-x: auto; margin-top: 14px; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 560px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+th { font-size: 13px; color: var(--muted); font-weight: 600; letter-spacing: .03em; }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+ul.plain { margin: 10px 0 0; padding-left: 1.2em; display: grid; gap: 6px; max-width: 72ch; }
+.ask { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: grid; gap: 10px; margin-top: 16px; }
+.ask ol { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; }
+@media (max-width: 560px) { dl { grid-template-columns: minmax(0, 1fr); } dt { padding-top: 6px; } }
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Design audit · Phases A–C · no changes made</div>
+  <h1>શ્રી વિહત મેલડી ધામ — website design v106</h1>
+  <p class="meta">10 Oct 2026 · Baseline: live design v106 (<code>1791624520-9b52</code>), 24 boards · Tested locally in Chromium with the design's own runtime · The live website was not changed.</p>
+  <div class="tally" aria-label="Findings by priority">
+    <span><b>0</b>P0 critical</span><span><b>1</b>P1 high</span><span><b>4</b>P2 medium</span><span><b>9</b>P3 polish</span><span><b>1</b>decision for you</span>
+  </div>
+  <div class="lead">
+    <p>No page is broken and no Gujarati text is clipped anywhere except one button on very small phones. The one serious problem is navigation: on tablets and small laptops (761–1179 px wide) the header shows a menu button that does nothing, so the page links disappear. Four medium issues follow: the Seva help column (fix already prepared as v107), the Seva form's error messages appearing out of view, the phone menu screen's nearly invisible close icon, and the home hero button on 320 px phones.</p>
+    <p>The header/hero problem described in the brief (menubar adjustments cropping text) did not reproduce: text was never cropped in any first screen tested. On shorter phones the temple picture sits partly below the first screen; that is a layout choice for you to decide, not a defect.</p>
+  </div>
+</header>
+
+<h2>P1 — high</h2>
+
+<section class="finding" id="a1">
+  <header><span class="sev s1">P1</span><h3>No header navigation between 761 and 1179 px</h3><span class="id">A1 · confirmed</span></header>
+  <dl>
+    <dt>Boards</dt><dd>12 desktop and tablet files: Main, HomeTablet (834), HomePhoneL (844), HomeTabletL (below 1180), NewTemple, PranPratishtha, Seva, Gallery, History, Contact, Darshan, NotFound. Phone boards are not affected.</dd>
+    <dt>What happens</dt><dd>Below 1180 px the 8 page links are hidden and a ☰ button appears. Clicking it does nothing: no menu opens and no page changes (clicked in Chromium). Visitors on iPads, many laptops at 1024–1152 px, and phones in landscape lose header navigation. The footer links and in-page buttons still work, so pages remain reachable.</dd>
+    <dt>Root cause</dt><dd>The design system hides <code>.vm-nav</code> and shows <code>.vm-menu-btn</code> below 1180 px (<code>bundle.css</code> lines 151–156). On phone boards that button is a link to <code>MenuMobile.dc.html</code>; on desktop and tablet boards it is a <code>&lt;button aria-expanded="false"&gt;</code> with no action and no menu panel behind it.</dd>
+    <dt>Proposed fix</dt><dd>Give the existing button a real menu: a panel that drops below the header with the same 8 links (desktop page targets), opened and closed by the button, closed by Esc, with <code>aria-expanded</code> kept in step. Styles reused from the phone menu. Linking the button to the phone menu screen instead would be smaller, but it would send tablet visitors to the phone pages, so it is not recommended.</dd>
+  </dl>
+  <figure><img src="img/01_menu_button.jpg" alt="Header at 1024, 834 and 900 px with the menu button outlined, and at 1180 px with the page links visible" loading="lazy" width="1180" height="664"><figcaption>Main 1024×768, HomeTablet 834 px, Darshan 900 px: the outlined button has no action. Main 1180 px for comparison.</figcaption></figure>
+</section>
+
+<h2>P2 — medium</h2>
+
+<section class="finding" id="b1">
+  <header><span class="sev s2">P2</span><h3>Seva desktop: help column ends halfway beside the long form</h3><span class="id">B1 · fix prepared (v107)</span></header>
+  <dl>
+    <dt>Boards</dt><dd>Seva at 1000 px and wider.</dd>
+    <dt>What happens</dt><dd>The right column (help card) ends while the form continues for about two screens, leaving an empty right half for 6–7 scroll positions at 1024–1440 px.</dd>
+    <dt>Root cause</dt><dd>The column is only as tall as its cards, and the section's <code>overflow: hidden</code> stops a sticky card from following the form.</dd>
+    <dt>Status</dt><dd>The fix is built and checked (sticky help card, 3 CSS rules, <code>site.css</code> only). It stays unpublished until you approve v107.</dd>
+  </dl>
+  <figure><img src="img/09_seva_column_1440.jpg" alt="Seva at 1440 px scrolled to section 3: before, the right column is empty; in the preview the help card stays beside the form" loading="lazy" width="1455" height="488"><figcaption>Seva 1440×900, scrolled to section 3. Left: v106. Right: v107 preview.</figcaption></figure>
+</section>
+
+<section class="finding" id="b2">
+  <header><span class="sev s2">P2</span><h3>Seva form: error messages appear out of view after a failed submit</h3><span class="id">B2 · confirmed</span></header>
+  <dl>
+    <dt>Boards</dt><dd>Seva, SevaMobile (all widths).</dd>
+    <dt>What happens</dt><dd>Pressing “નોંધણી પૂર્ણ કરો” with empty fields shows a summary (“કેટલીક વિગતો બાકી છે”) and messages under the name, mobile and town fields. All of these are at the top of the form, more than 3,000 px above the button on a phone. The page does not move and focus stays on the button, so the visitor sees only the consent message next to the button. After ticking consent and pressing again, nothing visible explains why the form is still blocked.</dd>
+    <dt>Root cause</dt><dd>The form's script marks fields (<code>.is-invalid</code>) and fills the alert region, but does not scroll or move focus to it. Fields also lack <code>aria-invalid</code> and a link to their message (<code>aria-describedby</code>).</dd>
+    <dt>Proposed fix</dt><dd>On a failed submit, scroll to the summary and move focus to it (or to the first field with a problem); add <code>aria-invalid</code> and <code>aria-describedby</code>. No wording changes. The success message already works.</dd>
+  </dl>
+  <figure class="narrow"><img src="img/08_seva_empty_submit_390.jpg" alt="SevaMobile at 390 by 844 after an empty submit: only the consent error is visible near the button" loading="lazy" width="390" height="876"><figcaption>SevaMobile 390×844, immediately after pressing the button with an empty form.</figcaption></figure>
+</section>
+
+<section class="finding" id="b3">
+  <header><span class="sev s2">P2</span><h3>Phone menu screen: close icon almost invisible; close always goes home</h3><span class="id">B3 · confirmed</span></header>
+  <dl>
+    <dt>Boards</dt><dd>MenuMobile (opened from every phone page).</dd>
+    <dt>What happens</dt><dd>The ✕ is maroon on maroon, 1.41:1 contrast; icons need at least 3:1. Only its thin ring (3.3:1) is visible. Closing the menu always opens the Home page, even when the visitor came from Darshan or Seva, and “મુખ્ય પૃષ્ઠ” is always marked as the current page.</dd>
+    <dt>Root cause</dt><dd>The site's general link colour rule <code>.vm-root a</code> outranks the design system's <code>.vm-mnav__close { color: ivory }</code>, because on this board the close control is a link. The menu is one shared static board, so its close link and current-page marker are fixed to Home.</dd>
+    <dt>Proposed fix</dt><dd>One scoped CSS rule restores the ivory ✕ (14:1). For closing, return to the page the visitor came from, with Home as the fallback; drop the fixed current-page marker or set it from that page. Your choice; see the questions below.</dd>
+  </dl>
+  <figure class="mid"><img src="img/03_menu_close.jpg" alt="Phone menu screen with the faint close icon and the always-current home link outlined" loading="lazy" width="780" height="634"><figcaption>MenuMobile 390×844 (2× zoom).</figcaption></figure>
+</section>
+
+<section class="finding" id="b4">
+  <header><span class="sev s2">P2</span><h3>Home hero button cut on 320–340 px phones</h3><span class="id">B4 · confirmed</span></header>
+  <dl>
+    <dt>Boards</dt><dd>HomeMobile at widths up to about 340 px, in both text sizes.</dd>
+    <dt>What happens</dt><dd>“મહોત્સવ વિશે જાણો →” is wider than its button; the first letter is cut at the left edge. At 360 px it fits with little side room.</dd>
+    <dt>Root cause</dt><dd>The phone home hero gives both buttons equal width (<code>flex: 1 1 0</code>, no wrapping labels; <code>site.css</code> line 619), and the button's <code>overflow: hidden</code> lets it shrink below its label. The inner-page heroes already have the guard <code>min-width: max-content</code> (line 1321); the home hero does not.</dd>
+    <dt>Proposed fix</dt><dd>Add the same guard to the home hero buttons on phones, so on very narrow screens the two buttons stack instead of squeezing. Nothing changes at 360 px and wider.</dd>
+  </dl>
+  <figure class="mid"><img src="img/02_home_button_320.jpg" alt="Home hero buttons at 320 px with the first letter of the left button cut, and at 360 px fitting" loading="lazy" width="720" height="509"><figcaption>HomeMobile 320×568 and 360×640 (2× zoom).</figcaption></figure>
+</section>
+
+<h2>P3 — polish</h2>
+
+<section class="finding" id="c1">
+  <header><span class="sev s3">P3</span><h3>Four gallery photos are small originals</h3><span class="id">C1 · content</span></header>
+  <dl>
+    <dt>Boards</dt><dd>Gallery, GalleryMobile.</dd>
+    <dt>What happens</dt><dd>“જય શ્રી લાખણેચી માઁ” (380×534 px), “જય શ્રી ગોગા મહારાજ” (393×534), “ભુવાજી શ્રી સુરેશબાપા” cut-out (470×501) and one સુરેશબાપા portrait (585×882) are shown at about their own size on desktop. On sharper screens (most phones and laptops) they look soft; the cut-out is enlarged 1.1× even on a standard screen.</dd>
+    <dt>Proposed fix</dt><dd>No design change. Larger originals from the trust, when available.</dd>
+  </dl>
+</section>
+
+<section class="finding" id="c2">
+  <header><span class="sev s3">P3</span><h3>Seva at 1000–1179 px: the festival day tiles wrap onto two rows</h3><span class="id">C2 · confirmed</span></header>
+  <dl>
+    <dt>Boards</dt><dd>Seva, 1000–1179 px (one row below 1000 px and from 1180 px).</dd>
+    <dt>What happens</dt><dd>The 7 day tiles (૨–૮ ફેબ્રુઆરી) split 5 + 2 at 1000 px and 6 + 1 at 1024–1100 px, leaving “૮ સોમવાર” alone.</dd>
+    <dt>Root cause</dt><dd>Fixed-width tiles in a wrapping row; the form column is narrowest at these widths because the help column sits beside it.</dd>
+    <dt>Proposed fix</dt><dd>Let the 7 tiles share one row (7 equal columns) at these widths.</dd>
+  </dl>
+  <figure><img src="img/05_seva_days_1024.jpg" alt="Seva day tiles at 1024 px with the eighth tile wrapped onto a second row" loading="lazy" width="1024" height="334"><figcaption>Seva 1024×768: “૮ સોમવાર” on its own row.</figcaption></figure>
+</section>
+
+<section class="finding" id="c3">
+  <header><span class="sev s3">P3</span><h3>Festival night artists: names break at 320 px with large text</h3><span class="id">C3 · confirmed</span></header>
+  <dl>
+    <dt>Boards</dt><dd>PranPratishthaMobile, 320 px, large text (અ+) only.</dd>
+    <dt>What happens</dt><dd>Names wrap word by word (“ગોપાલ / સાધુ”), and “માયાભાઈ આહીર” runs 4 px past its column.</dd>
+    <dt>Root cause</dt><dd>The two-column card (date | avatars and names) leaves too little width for the names at this size.</dd>
+    <dt>Proposed fix</dt><dd>At 360 px and below with large text, place the date above the names.</dd>
+  </dl>
+  <figure class="narrow"><img src="img/06_night_names_320_big.jpg" alt="Night programme cards at 320 px with large text, artist names wrapping" loading="lazy" width="640" height="1170"><figcaption>PranPratishthaMobile 320×568, large text (2× zoom).</figcaption></figure>
+</section>
+
+<section class="finding" id="c4">
+  <header><span class="sev s3">P3</span><h3>Three jump links land with the heading touching the top edge</h3><span class="id">C4 · confirmed</span></header>
+  <dl>
+    <dt>Boards</dt><dd>Darshan and DarshanMobile (“પંચાંગ”, “યાત્રા માર્ગદર્શન”), NewTemple and NewTempleMobile (“નિર્માણ પ્રગતિ”). The other 42 jump links tested leave space.</dd>
+    <dt>Proposed fix</dt><dd>Add <code>scroll-margin-top</code> to those three targets.</dd>
+  </dl>
+  <figure><img src="img/07_darshan_jump.jpg" alt="Darshan page after the calendar jump link, heading at the very top of the screen" loading="lazy" width="1440" height="294"><figcaption>Darshan 1440×900 after the “પંચાંગ” link.</figcaption></figure>
+</section>
+
+<section class="finding" id="c5">
+  <header><span class="sev s3">P3</span><h3>Smaller items</h3><span class="id">C5–C9</span></header>
+  <div class="tbl"><table>
+    <thead><tr><th>ID</th><th>Item</th><th>Where</th><th>Proposal</th></tr></thead>
+    <tbody>
+      <tr><td>C5</td><td>Heading levels skip: footer “પૃષ્ઠો” h2→h4; Seva help card “નોંધણી પછી શું?” h1→h3. Affects screen-reader outline only.</td><td>19 boards; Seva, SevaMobile</td><td>Change the tag level; looks unchanged.</td></tr>
+      <tr><td>C6</td><td>Seva consent checkbox is 22×22 px (WCAG 2.2 asks 24×24). Its text label is also clickable, so the real tap area is larger.</td><td>Seva, SevaMobile</td><td>Optional: 24 px.</td></tr>
+      <tr><td>C7</td><td>Hero entrance animation takes 900 ms; the brief suggests 350–650 ms. Already off with reduced motion.</td><td>All heroes</td><td>Optional: 600 ms.</td></tr>
+      <tr><td>C8</td><td>Many images have no width/height attributes. Measured load shift stays low (≤ 0.073, lab), because their boxes have fixed sizes.</td><td>Deity art, gallery tiles</td><td>Optional: add attributes.</td></tr>
+      <tr><td>C9</td><td>Text-only page banners leave the right half empty at 1440/1920 px.</td><td>Contact, Darshan, Seva, NotFound</td><td>Approved design; no change unless you want art there.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<h2>For you to decide</h2>
+
+<section class="finding" id="d1">
+  <header><span class="sev sok">Decision</span><h3>Header and hero: where was text cropped?</h3><span class="id">D1 · brief §3</span></header>
+  <p>The brief says an earlier menubar adjustment, made to show the whole temple, cropped some text. This session's records do not contain that change, and I could not reproduce it: across 9 pages × 6 screen sizes (54 first screens) plus about 100 further hero measurements on 4 pages, no heading, date or button text was cropped or hidden under the header. The temple and deity art is fully visible in the first screen on every desktop size tested from 1024×768 up; on tablets in portrait (768–834 px) it sits below the text and 55–100% shows.</p>
+  <p>On phones the temple sits below the buttons, so how much of it shows in the first screen depends on screen height. Home: 36% at 360×640, about 45% at 390×664 (an iPhone with Safari's bars showing; emulated), 90–100% at 360×780 and taller. Festival page: 0–12% on short screens, 100% at 390×844.</p>
+  <figure><img src="img/04_home_first_screen_phones.jpg" alt="Home first screen at four phone sizes showing how much of the temple is visible above the bottom bar" loading="lazy" width="1548" height="878"><figcaption>HomeMobile first screen at 360×640, 390×664, 360×780, 390×844.</figcaption></figure>
+  <figure class="mid"><img src="img/04b_festival_first_screen_phones.jpg" alt="Festival page first screen at 390 by 664 and 390 by 844" loading="lazy" width="796" height="878"><figcaption>PranPratishthaMobile first screen at 390×664 and 390×844.</figcaption></figure>
+  <figure><img src="img/11_home_hero_six_sizes.jpg" alt="Home first screen at six sizes from 320 to 1920 px wide, no text cropped" loading="lazy" width="1600" height="261"><figcaption>Home first screen at 320×640, 390×844, 768×1024, 1024×768, 1440×900, 1920×1080: no text cropped.</figcaption></figure>
+</section>
+
+<div class="ask">
+  <h3>Questions before any fix</h3>
+  <ol>
+    <li><b>Seva v107:</b> publish the prepared help-column fix?</li>
+    <li><b>Hero (D1):</b> which page and screen size showed cropped text? And should the whole temple fit in the first phone screen? That would mean tightening the hero on short phones, never shrinking text.</li>
+    <li><b>Phone menu (B3):</b> should closing the menu return to the previous page (recommended), or keep going to Home?</li>
+    <li><b>Order:</b> approve the plan below as is, or reorder it.</li>
+  </ol>
+</div>
+
+<h2>Proposed fix plan</h2>
+<p>Each step is one version: preview with before/after pictures, your approval, publish, verify. v106 stays the rollback point. No wording, names, dates or artwork change in any step.</p>
+<div class="tbl"><table>
+  <thead><tr><th>Version</th><th>Fix</th><th>Files</th><th>Size</th></tr></thead>
+  <tbody>
+    <tr><td class="num">v107</td><td>B1 Seva help column (prepared)</td><td><code>site.css</code></td><td>3 rules</td></tr>
+    <tr><td class="num">v108</td><td>A1 working header menu, 761–1179 px</td><td>12 desktop/tablet boards + <code>site.css</code></td><td>Medium</td></tr>
+    <tr><td class="num">v109</td><td>B3 phone menu close icon and close behaviour</td><td>MenuMobile + <code>site.css</code></td><td>Small</td></tr>
+    <tr><td class="num">v110</td><td>B4 home hero buttons on 320–340 px phones</td><td><code>site.css</code></td><td>1 rule</td></tr>
+    <tr><td class="num">v111</td><td>B2 Seva form errors brought into view</td><td>Seva, SevaMobile</td><td>Small</td></tr>
+    <tr><td class="num">v112+</td><td>Polish C2–C5 (C6–C8 if you want them), one at a time or grouped as you prefer</td><td><code>site.css</code>, heading tags</td><td>Small each</td></tr>
+    <tr><td class="num">—</td><td>C1 larger gallery photos; D1 after your answer</td><td>Trust / your decision</td><td>—</td></tr>
+  </tbody>
+</table></div>
+
+<h2>Checked and found correct</h2>
+<ul class="plain">
+  <li>No sideways scrolling and no clipped Gujarati text in 159 page renders: phone files at 320, 360, 390, 430, 540 px; desktop files at 768, 900, 1024, 1280, 1440, 1920 px; the tablet boards at their own widths; large text at 320, 390, 1024, 1440 px. A second scan of every box with a border or background (138 runs) found only B4 and C3, apart from closed FAQ answers and the festival day carousel, which are hidden on purpose.</li>
+  <li>Contrast flags on dark sections were false alarms; close-ups show readable light text on dark ground (countdown pill, festival main-day card, New Temple area cards, night strip).</li>
+  <li>Buttons that seemed to do nothing in the click test (“બધું”, “આખો દિવસ”, “૨ મંગળ”) are options that are already selected.</li>
+  <li>A blank gallery tile in a full-page capture was lazy loading; the photo loads when scrolled to.</li>
+  <li>Keyboard: a visible focus ring on every one of the first 30 Tab stops (fewer on short pages) on 20 pages; skip link present on all content pages.</li>
+  <li>Reduced motion: every animation stops on the 11 pages tested.</li>
+  <li>All 48 in-page jump links on 16 pages reach an existing target; none lands under a fixed bar.</li>
+  <li>Seva form: the error summary, field messages and success message all appear (only their placement is B2).</li>
+  <li>Load-time layout shift ≤ 0.073 on every page (lab measurement; 0.1 is the usual limit).</li>
+</ul>
+<figure class="mid"><img src="img/10_contrast_closeups.jpg" alt="Close-ups of dark sections flagged by the automatic contrast check, all readable" loading="lazy" width="794" height="881"><figcaption>Close-ups of the sections the automatic contrast check flagged.</figcaption></figure>
+
+<h2>Not verified</h2>
+<ul class="plain">
+  <li>Only Chromium was available. Firefox, Safari/WebKit and real iPhone or Android devices were not tested.</li>
+  <li>Core Web Vitals (LCP, INP, field CLS) were not measured; there is no hosted site or real-user data.</li>
+  <li>No screen reader was run.</li>
+  <li>Hover states and real touch were not exercised.</li>
+  <li>Phone heights with browser bars (such as 390×664) are emulated assumptions.</li>
+  <li>Fonts were loaded from a local copy; loading from Google Fonts on the live site was not checked.</li>
+  <li>Boards were tested as web pages in a local server with the design's runtime, not on the Claude Design canvas.</li>
+</ul>
+</div>
