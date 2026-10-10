@@ -72,3 +72,5 @@ hide the phone action bar (`.vx-abar{display:none}`) so it does not cover conten
 - Tools validated on the v106 snapshot: `frame_heights.py` (Darshan, HomeMobile, NewTemple, Seva: 0 changes; MenuMobile/OfflineMobile skipped), `check_layout.py` (Darshan 1440/390, NewTempleMobile 1440/390:
   8 runs, 0 problems), `pixel_regress.py` (4 boards identical); all Python tools and the 15 Figma scripts parse.
 - Per-version results: see [CHANGELOG.md](CHANGELOG.md). Most recent full regression: v106 (all 24 boards).
+- Design audit of v106 (Phases A–C, 10 Oct): 159 renders + targeted probes, Chromium only — results and what stays unverified in
+  [tasks/audit-report-v106.md](tasks/audit-report-v106.md); probe scripts in `tasks/audit-v106/scripts/` (run from the repository root, baseline on port 8771).

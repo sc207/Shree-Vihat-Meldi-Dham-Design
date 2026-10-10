@@ -1,13 +1,13 @@
 # PROJECT_STATE.md
 
-_Last updated: 10 Oct 2026, ~15:30 IST (handover). Update this file only when the project state meaningfully changes._
+_Last updated: 10 Oct 2026, evening IST (audit Phases A–C reported). Update this file only when the project state meaningfully changes._
 
 ## Versions
 
 | | Version | Id | Verified |
 |---|---|---|---|
 | **Live (published) design** | **v106** | `1791624520-9b52` | 10 Oct 2026: 28/28 project files identical to `design/project/`; 26/26 images identical to `design/assets/` (artifact checksums) |
-| Local working version | — | — | No unpublished work. Last working copy = v106. |
+| Local working version | v107 preview (unpublished) | — | Seva help column: 3 rules appended to `site.css`, patch saved as [tasks/audit-v106/seva_v107_pending.diff](tasks/audit-v106/seva_v107_pending.diff). **Awaiting the owner's approval.** Apply it to a v106 copy to rebuild the preview. |
 | Rollback | v105 | `1791622143-5d00` | Any earlier version is in the artifact's history (list in [CHANGELOG.md](CHANGELOG.md)). |
 | Spec / review page | v15 | `1791622167-aaa6` | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` — records v97–v105 (v106 not yet added) |
 
@@ -16,9 +16,7 @@ Website artifact: `https://claude.ai/artifact/HWR4J5u9qBPjri6oUg7nVa` (type Desi
 ## Git
 
 - Repository: `https://github.com/sc207/Shree-Vihat-Meldi-Dham-Design`, branch `main`.
-- At handover the remote was **empty**. The handover commit was made locally in the old session's workspace (`git log` shows it once pushed);
-  pushing waits for the owner to link GitHub to Claude and say "push". If that workspace is gone before the push, the same content is in the
-  handover ZIP the owner downloaded — unzip it and push/upload it.
+- The handover is on GitHub (`main` at `1abec84`, 10 Oct). Later commits are pushed only when the owner says so; check `git status -sb` for unpushed work.
 - There was no earlier Git history: the project lived only in the Claude Design artifact and a temporary session workspace.
 
 ## Completed (10 Oct 2026)
@@ -83,7 +81,10 @@ MenuMobile and OfflineMobile are phone-screen boards (fixed 844 px), not content
    artists of 5 Feb ડાયરો and 8 Feb રમેલ and the spelling of their names, artist photos (with permission), arrival/parking instructions,
    authoritative temple history and both Bapas' introductions, dated construction photos and real festival photos, the પત્રિકા PDF, dress code,
    the trust's registered name. (The note still says the PDF button is "તૈયાર છે"; it has been hidden since v102 — reword the note if the owner wants.)
-2. **Seva desktop:** empty right column (design audit item, not started) — **queued as the first task** (see the task queue below).
+2. **Seva desktop:** empty right column — fix prepared as v107 (see Versions), **awaiting approval**.
+   **Design audit v106 (Phases A–C):** done, no changes made — report [tasks/audit-report-v106.md](tasks/audit-report-v106.md)
+   (page: `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU`). 0 P0, 1 P1 (A1 header menu 761–1179 px), 4 P2, 9 P3, 1 owner decision (D1 hero).
+   Phase D waits for the owner's approval; proposed order v107 Seva → v108 A1 → v109 B3 → v110 B4 → v111 B2 → polish.
 3. **Spec page:** add v106 to `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` when convenient (optional; it currently ends at v105).
 4. **Figma Gate A:** when the allowance returns — one read-only check first; if blocked, stop. Then run `figma/scripts/call1.js` … in order
    (see `figma/state.json` → `run_order`), after the owner drops the 26 original images (original filenames) onto the Components page.
@@ -102,10 +103,10 @@ Decided:
   Show the new wording to the owner before publishing it as its own version.
 
 Task queue, one small task at a time (owner's order):
-1. **Seva page, desktop: fix the empty right column** — the first task for the new session. Contained design task; does not need trust content.
+1. **Seva page, desktop: fix the empty right column** — prepared (v107 preview), awaiting approval.
 2. **Canvas to-do note:** the PDF line correction above.
 3. **Complete design audit** — owner's brief in [tasks/full-design-audit.md](tasks/full-design-audit.md); phases A–C end in a report to the owner, fixes follow
-   in small approved versions. Not started.
+   in small approved versions. Phases A–C done (report: [tasks/audit-report-v106.md](tasks/audit-report-v106.md)); waiting for the owner's answers and approval.
 4. Trust content as it arrives (placeholders stay until then). **Never invent** temple history, construction dates, festival details or any
    other trust-approved information.
 
@@ -120,4 +121,5 @@ and update the canvas to-do note again.
   taller than their frame; the Darshan phone board can be ~8 px taller on dates when the calendar list wraps differently. Real pages have no fixed height.
 - Contact and 404 pages compute a local weekday in their logic but never display it (harmless; left unchanged).
 - Seva form: no save destination yet (front-end only).
+- Audit findings A1, B2–B4, C1–C9 and decision D1 are open — see [tasks/audit-report-v106.md](tasks/audit-report-v106.md).
 - Figma: C3 navigation built but not visually verified; C4–C8 specified, not built.

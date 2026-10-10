@@ -1,0 +1,17 @@
+--- design/project/site.css
++++ work/project/site.css
+@@ -1502,3 +1502,14 @@
+   .vx-sk .vx-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+   .vx-sk .vx-facts > div + div { padding-left: var(--space-lg); border-left: 1px solid var(--line); }
+ }
++
++/* ════════ Seva (desktop ≥1000 px): the help column no longer ends halfway beside the long form (v107) ════════
++   The form is ~2,100 px tall, the help column (steps · યજ્ઞ · help) ~1,000 px, so the right side was empty beside section ૩.
++   The column now runs the full height of the form and the "સહાયની જરૂર છે?" card (phone / WhatsApp) stays in view below a
++   compact header while the visitor scrolls. No content or markup change; phones and tablets (single column) unchanged. */
++@media (min-width: 1000px) {
++  /* the section's overflow: hidden would trap the sticky card; clip cuts the decorations the same way without creating a scroll container */
++  .vm-section:has(> .vm-container > .vx-seva) { overflow: clip; }
++  .vx-seva > aside { align-self: stretch; }
++  .vx-seva > aside > .vx-yagna:last-child { position: sticky; top: calc(var(--header-height-compact) + 24px); }
++}

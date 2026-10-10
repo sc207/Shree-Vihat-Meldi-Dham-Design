@@ -44,9 +44,9 @@ and the trust's "નવા મંદિરનો સંકલ્પ" text placed
 - **Waiting for the trust (content):** 61 placeholders — full list at the end of [PAGE_CONTENT.md](PAGE_CONTENT.md); the remaining canvas to-do items
   are in [PROJECT_STATE.md](PROJECT_STATE.md#outstanding-tasks). Asked most recently (New Temple page): સ્થપતિ (architect) name · સંકલ્પ વર્ષ ·
   આયોજન detail · current construction progress · expected completion · optional dated story of the સંકલ્પ for History ch. 6.
-- **Owner's queue (10 Oct):** (1) **Seva desktop page: fix the empty right column** — expected first task; (2) correct the canvas to-do note's
-  PDF line (approved; `canvas.json` only); (3) **complete design audit** — the owner's brief is in [tasks/full-design-audit.md](tasks/full-design-audit.md)
-  (project notes at the top); run it in phases, report before fixing. Decided: **no** extra closing line in the સંકલ્પ section. Details: [PROJECT_STATE.md](PROJECT_STATE.md#owners-decisions-and-task-queue-10-oct-2026-end-of-the-handover-session).
+- **Owner's queue (10 Oct):** (1) **Seva desktop page: empty right column** — fix prepared as v107, patch in `tasks/audit-v106/seva_v107_pending.diff`,
+  **awaiting approval**; (2) correct the canvas to-do note's PDF line (approved; `canvas.json` only); (3) **design audit** — Phases A–C done, report in
+  [tasks/audit-report-v106.md](tasks/audit-report-v106.md) (brief: [tasks/full-design-audit.md](tasks/full-design-audit.md)); Phase D waits for the owner's approval and answers. Decided: **no** extra closing line in the સંકલ્પ section. Details: [PROJECT_STATE.md](PROJECT_STATE.md#owners-decisions-and-task-queue-10-oct-2026-end-of-the-handover-session).
 - **Figma (Gate A):** paused — Starter plan allowance exhausted on 9 Oct. 0 of 6 checklist items confirmed. Scripts are ready in `figma/`
   (they include the v97 Gate A design); Figma must later also receive the website changes **v99–v106** (`figma/state.json` → `figma_sync_todo`).
 - **Date lists — deadline before the March 2027 પૂનમ:** the last પૂનમ in the page logic is **20 Feb 2027**. Lists to extend (dates need the Acharya's confirmation):
@@ -121,6 +121,6 @@ and the trust's "નવા મંદિરનો સંકલ્પ" text placed
    Work from the repository files, not from chat history.
 2. Check the snapshot: `(cd design/project && sha256sum -c --quiet ../SHA256SUMS.txt) && (cd design/assets && sha256sum -c --quiet SHA256SUMS.txt) && echo OK`.
 3. Run the live-version check (§8 step 1) and report the live version id and whether it still equals v106 `1791624520-9b52`.
-4. Report anything missing from the handover, then **wait for the owner's next task** (expected: the Seva empty right column). Do not modify anything before that.
+4. Report anything missing from the handover, then **wait for the owner's next task** (open: approval of Seva v107; answers to the audit report's questions). Do not modify anything before that.
 5. Before any audit work, read [tasks/full-design-audit.md](tasks/full-design-audit.md) in full (agreed scope: Phases A–C only, report and fix plan first;
    the website stays unchanged until the owner approves the findings and fixes).

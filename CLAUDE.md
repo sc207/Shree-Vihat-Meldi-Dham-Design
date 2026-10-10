@@ -70,3 +70,4 @@ python3 tools/gen_page_content.py design/project PAGE_CONTENT.md "design vNNN (<
 - [PAGE_CONTENT.md](PAGE_CONTENT.md) — every text on every page (generated), with all open placeholders
 - [CHANGELOG.md](CHANGELOG.md) — what changed in each version and how it was tested
 - [TESTING.md](TESTING.md) — tools, viewports, checks, known limitations, last results
+- [tasks/audit-report-v106.md](tasks/audit-report-v106.md) — design audit findings (P0–P3), root causes and the proposed fix plan
