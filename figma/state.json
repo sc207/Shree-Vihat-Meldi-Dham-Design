@@ -1,0 +1,254 @@
+{
+ "fileKey": "0AYx0wwuBl0zZZ57xjJbIu",
+ "pages": {
+  "Read-me & Foundations": "5:2",
+  "Components": "5:3",
+  "Pages": "0:1"
+ },
+ "foundations": {
+  "F1 Colour": "6:2",
+  "F2 Type": "6:270",
+  "F3 Numerals": "7:2",
+  "F4 Spacing": "7:109",
+  "Setup check frame": "1:2"
+ },
+ "components": {
+  "C1 board": "9:4",
+  "Icon set frame": "9:9",
+  "Ornament/Lotus chakra": "9:409",
+  "C2 board": "9:411",
+  "Button": "9:490",
+  "Button on dark": "9:541",
+  "Button WhatsApp": "9:556",
+  "Chip": "9:565",
+  "Text field": "9:583",
+  "Selection control": "9:608",
+  "C3 board": "14:37",
+  "Announcement strip": "14:52",
+  "Header": "14:129",
+  "Phone menu": "14:131",
+  "Bottom action bar": "14:192"
+ },
+ "assetsSection": "5:95",
+ "boardX": {
+  "C1": 0,
+  "C2": 1700,
+  "C3": 3400,
+  "C4 (planned)": 5200,
+  "C5 (planned)": 7000,
+  "C6 (planned)": 8700,
+  "C7 (planned)": 10400,
+  "C8 (planned)": 12100
+ },
+ "note": "Earlier attempt hit session limit at 20:20 UTC; resumed 21:10 UTC. ZIP already sent (zipout/).",
+ "icons_added": [
+  "check",
+  "clock",
+  "moon",
+  "car",
+  "info",
+  "play",
+  "map",
+  "arrow-down"
+ ],
+ "blocked": "Figma Starter MCP tool-call limit reached 2026-10-09 ~21:3x UTC after C3 build; C3 not visually verified.",
+ "remaining": [
+  "C4 Section heading + Page banner (Feature/Standard x Desktop/Phone)",
+  "C5 Image slot/coming-soon tile, Arch frame (Deity/Portrait x Large/Phone), Photo tile with caption scrim, image rules",
+  "C6 Event card (Tone x Layout), News card (Photo/Coming soon/Text only), Info row (contact), Link card",
+  "C7 Countdown (Counting/Soon/Done x Desktop/Phone), Day card (Regular/Main/Closing=સમાપન), Day tab, Muhurat marker",
+  "C8 WhatsApp band, Devotional band, Footer (Desktop/Phone compact), page-ending rule",
+  "Read-me board on page 5:2 at x=0,y=0 (status, trust decisions, audit→change table, limitations, approval box)",
+  "Fill image slots after user drops ZIP images into section 5:95",
+  "Visual QA screenshots of all boards"
+ ],
+ "prepared_calls": {
+  "call1": "C4+C5 boards (phone festival banner with the new-temple render slot instead of the deity pair; phone dates in two rows). READ-ONLY check of the C3 phone strip text (returns stripPhoneText). Screenshots C3/C4/C5. Phone date rows and button row WRAP (min widths = natural label widths).",
+  "call2": "C6+C7 boards + screenshots. Runs WITHOUT the strip fix by default. call2_with_strip_fix.js is used only if call 1 showed the long phone-strip text AND the user approved that correction.",
+  "call3": "C8 board: approved page-ending rule, compact phone WA/devotional bands, compact phone footer + screenshot",
+  "call4": "Read-me board on page 5:2 (locked decisions, audit record incl. phone banner + Karamshibapa rows) + screenshot",
+  "call5": "Fill image slots: matches dropped files to INVENTORY by name + pixel size, reports missing/rejected/extra/duplicate, confirms 07 Karamshibapa, skips already-correct slots, changes slot fills only, screenshots changed boards + Arch frame. Mock-tested (6 scenarios, idempotent).",
+  "call6": "Per-board screenshots + structural checks, then builds its own 'QA · Phone widths' board: every phone variant at 320/360/390/430 (component-column widths minus page margins), checks past-edge, button label breaks, year lines; 4 group screenshots. Non-destructive."
+ },
+ "run_order": "1 → inspect screenshots → 2 → 3 → 4 → inspect; 5 only after the user has dropped the 26 images; then 6 (report-only width test). One batch at a time; check component names, variants, responsive layouts and image placements from the screenshots. Corrections to existing components (e.g. fix_strip) or to built boards are proposed for review first, never applied silently. Reserve ~3 calls.",
+ "locked_decisions_2026_10_10": [
+  "Page endings: WA band → devotional band → footer; Seva form and 404 footer only (404 with route home)",
+  "Phone festival banner: deity pair replaced on phone only by one image, 14_temple_new-temple-render, whole, 190 px, below the buttons; dates in two rows; 1,053 → 770 px (preview). Desktop/tablet keep the deity pair.",
+  "Images: user drags the 26 ZIP images in; call5 matches and fills",
+  "Banner wording unchanged. '॥ ભગવાન કરમશી બાપાના પાવન આશીર્વાદથી ॥' reserved for the promo video opening, not the banner. 'એક પાવન અવસર · માતાજીનાં દર્શન અને આશીર્વાદ' not used yet (maybe a separate devotional section later).",
+  "Tighter phone-banner spacing on all inner pages accepted, subject to visual regression checks."
+ ],
+ "spec_page": {
+  "url": "https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW",
+  "version": "1791622167-aaa6 (v15, records website v97–v105)"
+ },
+ "gateA_checklist": {
+  "specs": "C4–C8 specified, not built",
+  "mobile_banner": "approved in preview (770 px), Figma pending",
+  "navigation": "built (C3), not inspected",
+  "images": "waiting for drop",
+  "typography": "checked in previews only",
+  "figma_verification": "not started"
+ },
+ "regression_2026_10_10": "Preview check of 8 phone banners: fixed History TOC overflow (220 px cap now pictures only) and button labels breaking (Darshan, New Temple). Repeat on Figma screenshots and at build.",
+ "safeguards_2026_10_10": [
+  "Preserve existing work: no canvas edits until scripts ready and first screenshots reviewed",
+  "Verify full layout (strip, header, breadcrumb, content, footer, overflow), not just banners",
+  "Test 320/360/390/430 px for Gujarati text, dates, buttons, image frames",
+  "Preview-verified ≠ Figma-verified; Gate A confirmed only from Figma screenshots",
+  "Width-test board reports PASS/FAIL only; it never edits components. Every correction is reviewed before it is applied to the existing design."
+ ],
+ "full_layout_preview_2026_10_10": "12 phone artboards × 4 widths (96 runs): 0 regressions, 0 page overflow; 12 pre-existing issues fixed (year split from month → NBSP; WhatsApp invite + Seva CTA labels breaking at 320; CTA card 64px phone padding; one-word heading last lines → text-wrap: balance).",
+ "handoff_2026_10_10": {
+  "preview": "12 phone pages × 4 widths checked; no horizontal overflow; fixes recorded as proposed changes (gateA/proposed.css/js), not verified Figma results",
+  "figma": "scripts prepared (calls 1–6 + optional approved strip fix); syntax + eslint passed; not run",
+  "gateA": "0 of 6 confirmed",
+  "next": [
+   "user drops 26 images (README)",
+   "wait for allowance reset, no upgrade",
+   "run call 1, inspect",
+   "one batch at a time",
+   "mark checklist items only when acceptance criteria verified in Figma"
+  ]
+ },
+ "allowance_check_2026_10_10": "One read-only use_figma (list pages) at 2026-10-09T22:5x UTC → blocked: 'You've reached the Figma MCP tool call limit on the Starter plan.' Confirms use_figma counts even when read-only. Nothing ran. Reset date unknown (Figma: monthly, aligned with billing cycle); latest likely ~10 Nov 2026.",
+ "reminder": {
+  "scheduled_task": "trig_01ECWJ5SooaTTh9Fnz5V5ZBY",
+  "fires": "2026-11-10T04:30:00Z (10:00 IST)",
+  "note": "tentative fallback, not a confirmed reset date"
+ },
+ "call5_change": "No loadAllPagesAsync (Figma rule); searches Components page only; mock re-run 6 scenarios OK, idempotent.",
+ "design_applied_2026_10_10": {
+  "artifact": "https://claude.ai/artifact/HWR4J5u9qBPjri6oUg7nVa",
+  "version": "1791587967-2aa6 (v97)",
+  "based_on": "1791587156-17be (user save 04:35 IST)",
+  "files": 24,
+  "verified": "12 phone pages x 4 widths: 0 issues; 27 spec shots pixel-identical to preview; frames = content+3px; Karamshibapa restored on Main heritage arch; live checksums match",
+  "note": "Applied ahead of Figma at the user's request; Figma to be brought in line later"
+ },
+ "workflow_2026_10_10": "User direction: v97 (Claude Design website) is the working reference; refine and verify in real browser renders (fix → retest → approve); Figma becomes a later sync, not a prerequisite. Nov 10 reminder kept for Figma sync.",
+ "desktop_check_v97": "78 runs (9 desktop pages × 1440/1280/1024/834 + 3 home boards): 0 new issues, no overflow; pre-existing: Seva shift card title wraps at 1024. Phone bottom bar never covers footer text.",
+ "design_batch2": {
+  "version": "1791590131-fe8b (v99)",
+  "based_on": "1791588058-863e (= v97 content)",
+  "changes": [
+   "WA band: NewTemple(+Mobile) standard; History(+Mobile) festival ivory variant",
+   "Contact(+Mobile): WA moved below FAQ + devotional band",
+   "Darshan(+Mobile): devotional band",
+   "site.css: .vx-shift padding 12px at 761–1099px"
+  ],
+  "verified": "174 runs 0 new issues; frames fit (24/24 no clipping); 27 spec shots identical to v97; live checksums match"
+ },
+ "design_batch3": {
+  "version": "1791592628-54e6 (v100)",
+  "change": "site.css phone rule: .vm-section:not(.vm-section--alt):has(> .vm-container > .vm-wa) padding 48px; PranPratishthaMobile 14000→13888, HistoryMobile 10523→10411 frames",
+  "verified": "104 runs 0 issues; 24 frames fit; 27 shots unchanged (arch pair max diff 1/255 noise); live checksums match"
+ },
+ "current_reference": "v106 (1791624520-9b52)",
+ "home_summary_preview": {
+  "base": "v100 (1791592628-54e6)",
+  "copy": "apply_home/",
+  "status": "published as v101 (1791617104-8b44); live checksums match",
+  "decisions": [
+   "night strip kept",
+   "PDF removed from Home (Festival PDF unchanged; open question)",
+   "new temple sections kept separate"
+  ],
+  "changed": [
+   "Main",
+   "HomeMobile",
+   "HomeTablet",
+   "HomeTabletL",
+   "HomePhoneL",
+   "site.css (.vx-sumacts phone full-width)",
+   "canvas.json HomeMobile h 6906→5083"
+  ],
+  "checks": "30 runs 0 issues; 24 frames fit; expected spec picture changes only",
+  "note": "heights vary by time of day/festival week; frames sized for daily max"
+ },
+ "festival_pdf_hidden": {
+  "version": "1791617270-e652 (v102)",
+  "change": "site.css .vx-patrika display:none; PranPratishthaMobile frame 13888→13824",
+  "verified": "16 runs 0 issues; live checksums match",
+  "open": "note text still mentions પત્રિકા"
+ },
+ "invite_note": {
+  "version": "1791617581-c8ff (v103)",
+  "change": "note text without 'અને પત્રિકા' (Festival desktop + phone); CSS comment: restore with PDF",
+  "verified": "16 runs 0 issues; heights unchanged; live checksums match"
+ },
+ "pending_previews": {},
+ "published_versions": {
+  "v104": {
+   "id": "1791621046-995a",
+   "date": "2026-10-10",
+   "change": "Darshan timetable: 8 identical day rows -> 1 daily timeline + 1 ગાદી week strip; tablet no sideways scroll; phone 4x2 strip; frames Darshan 5030, DarshanMobile 7090",
+   "files": [
+    "project/Darshan.dc.html",
+    "project/DarshanMobile.dc.html",
+    "project/site.css (append-only)",
+    "project/canvas.json (2 board heights)"
+   ],
+   "rollback": "v103 (1791617581-c8ff)",
+   "local_copy": "apply_v104/project"
+  },
+  "v105": {
+   "id": "1791622143-5d00",
+   "date": "2026-10-10",
+   "change": "Darshan \"આજે\": moves to the પૂનમ tile on પૂનમ dates (page panchang list); weekday taken from the Indian date (UTC+5:30) like the calendar and home page",
+   "files": [
+    "project/Darshan.dc.html",
+    "project/DarshanMobile.dc.html"
+   ],
+   "rollback": "v104 (1791621046-995a), v103 (1791617581-c8ff)",
+   "local_copy": "apply_v105/project",
+   "checks": "85-case timezone/midnight/પૂનમ matrix (5 visitor zones) on desktop+phone pages: all pass; 64 layout runs (4 dates x 8 widths x 2 text sizes): no new issues, heights identical; ordinary India days pixel-identical to v104"
+  },
+  "v106": {
+   "id": "1791624520-9b52",
+   "date": "2026-10-10",
+   "change": "Trust text \"નવા મંદિરનો સંકલ્પ\" placed: New Temple section (3 paragraphs, eyebrow \"મંદિરની સંકલ્પના અને હેતુ\", wider text column ≥1100, stacked 768–1099, facts row kept on tablet), Home teaser (2 sentences), History ch6 line (1 sentence); canvas to-do note updated",
+   "text_edits": [
+    "સનંદ→સાણંદ",
+    "ભગવાન કરમશી બાપા→ભગવાન શ્રી કરમશીબાપા",
+    "તેમના→તેઓશ્રીના",
+    "સમૂહિક→સામૂહિક",
+    "subtitle used as eyebrow without \"શ્રી વિહત મેલડી ધામ –\"",
+    "closing \"જય શ્રી વિહત મેલડી માતાજી!\" not added (page already ends with \"॥ જય શ્રી વિહત મેલડી માઁ ॥\")"
+   ],
+   "frames": {
+    "NewTemple": 8647,
+    "NewTempleMobile": 11846,
+    "Main": 8090,
+    "HomeTablet": 10804,
+    "HomeTabletL": 8192,
+    "HomePhoneL": 9092,
+    "HomeMobile": "5249 (canvas h 5249)",
+    "History": 8129,
+    "HistoryMobile": 10511
+   },
+   "rollback": "v105 (1791622143-5d00)",
+   "local_copy": "apply_v106/project",
+   "script": "gateA/apply_sk.py"
+  }
+ },
+ "figma_sync_todo": [
+  "v99: WhatsApp band on New Temple (+phone) and History (+phone, festival ivory variant); Contact WA band below FAQ + devotional band; Darshan devotional band; Seva shift-card padding 761–1099",
+  "v100: compact (48 px) WhatsApp band on phones",
+  "v101: home page reduced to festival summary (event cards without long text, actions row .vx-sumacts, events section ivory)",
+  "v102–v103: festival PDF button hidden; invitation note without \"અને પત્રિકા\"",
+  "v104: Darshan timetable = daily timeline + ગાદી week strip (desktop/tablet/phone)",
+  "v105: logic only (આજે marker) — nothing to draw",
+  "v106: New Temple સંકલ્પ section (3 paragraphs, eyebrow, 7fr/5fr ≥1100, stacked 768–1099), Home teaser lead, History ch6 lead"
+ ],
+ "notes_v105": "Contact/404 compute a local weekday but never display it — left unchanged. The પૂનમ list (EV) covers Oct 2026–Apr 2027 and must be extended each year (existing comment in the page).",
+ "awaiting_trust": [
+  "New temple: સ્થપતિ name",
+  "સંકલ્પ year",
+  "આયોજન details",
+  "current progress details",
+  "expected completion time",
+  "History ch6: dated story of the sankalp (optional)"
+ ],
+ "paths_note": "Local paths in this file (gateA/…, apply_*/…, zipout/, live_*/) belong to the old session workspace (10 Oct 2026) and are not in the repo. Equivalents: tools/examples/, design/, tools/rebuild_image_zip.py."
+}

@@ -1,0 +1,181 @@
+#!/usr/bin/env python3
+"""Regenerate PAGE_CONTENT.md from the design's page files.
+
+usage: python3 tools/gen_page_content.py <project-dir> <out.md> [version-label]
+  <project-dir>  folder holding the *.dc.html pages (e.g. backup-v106/project)
+
+Text is copied exactly as it appears in the files (HTML entities decoded).
+Placeholders in [square brackets] are marked ⚠. {{…}} are live values filled by the page's logic.
+"""
+import html, re, sys
+from html.parser import HTMLParser
+from pathlib import Path
+
+BLOCK = {'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li', 'dt', 'dd', 'figcaption', 'blockquote', 'button', 'label',
+         'td', 'th', 'option', 'summary', 'legend', 'caption', 'small', 'b', 'a', 'span', 'em', 'time', 'strong', 'i'}
+OUTER_BLOCK = {'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li', 'dt', 'dd', 'figcaption', 'blockquote', 'button', 'label',
+               'td', 'th', 'option', 'summary', 'legend', 'caption'}
+SKIP = {'script', 'style', 'svg', 'helmet', 'title', 'head'}
+VOID = {'img', 'br', 'hr', 'input', 'meta', 'link', 'source', 'wbr', 'col', 'area', 'base', 'embed', 'track'}
+
+
+class Walker(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.stack, self.skip, self.items, self.section = [], 0, [], None
+        self.buf = None  # [tag, text] for the outermost text block
+        self.sep = False  # a child element started inside the block: separate its text with ‖
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if tag in SKIP:
+            self.skip += 1
+        if tag in VOID:
+            if tag == 'img' and not self.skip and a.get('alt'):
+                self.items.append(('img', 'alt: ' + a['alt'], self.section))
+            if tag == 'br' and self.buf is not None:
+                self.buf[1] += ' / '
+            return
+        self.stack.append(tag)
+        if self.skip:
+            return
+        if tag in ('section', 'header', 'footer', 'nav') or (tag == 'div' and 'vm-notice' in (a.get('class') or '')):
+            label = a.get('aria-labelledby') or a.get('aria-label') or a.get('id') or (a.get('class') or tag).split()[0]
+            self.items.append(('SECTION', f'{tag} · {label}', None))
+        if tag in OUTER_BLOCK and self.buf is None:
+            self.buf = [tag, '', len(self.stack)]; self.sep = False
+        elif self.buf is not None:
+            self.sep = True
+
+    def handle_endtag(self, tag):
+        if tag in VOID:
+            return
+        # pop to the matching tag (tolerant of sloppy markup)
+        while self.stack:
+            t = self.stack.pop()
+            if t in SKIP:
+                self.skip -= 1
+            if self.buf is not None and len(self.stack) < self.buf[2]:
+                self._flush()
+            if t == tag:
+                break
+
+    def _flush(self):
+        tag, text, _ = self.buf
+        text = re.sub(r'\s+', ' ', text).strip(' /')
+        if text:
+            self.items.append((tag, text, None))
+        self.buf = None
+
+    def handle_data(self, data):
+        if self.skip or not data.strip():
+            return
+        if self.buf is not None:
+            if self.sep and self.buf[1].strip() and not self.buf[1][-1].isspace() and not data[0].isspace() and not self.buf[1].endswith(' / '):
+                self.buf[1] += ' ‖ '
+            self.sep = False
+            self.buf[1] += data
+        else:
+            parent = self.stack[-1] if self.stack else '?'
+            self.items.append((parent, re.sub(r'\s+', ' ', data).strip(), None))
+
+
+def page_items(path):
+    s = path.read_text(encoding='utf-8')
+    title = html.unescape(re.search(r'<title>(.*?)</title>', s, re.S).group(1).strip())
+    body = s[s.index('<x-dc>'):s.index('</x-dc>')]
+    w = Walker(); w.feed(body)
+    return title, w.items, s
+
+
+def dyn_strings(s):
+    """Gujarati string literals inside the page logic (calendar, countdown, festival programme…)."""
+    m = re.search(r'<script type="text/x-dc"[^>]*>(.*?)</script>', s, re.S)
+    if not m:
+        return []
+    out = []
+    for lit in re.findall(r"'((?:[^'\\]|\\.)*)'", m.group(1)):
+        if re.search(r'[઀-૿]', lit) and lit not in out:
+            out.append(lit)
+    return out
+
+
+def fmt(tag, text):
+    flag = ' ⚠ placeholder' if re.search(r'\[[^\]]+\]', text) else ''
+    return f'- `{tag}` {text}{flag}'
+
+
+def main():
+    proj, out = Path(sys.argv[1]), Path(sys.argv[2])
+    label = sys.argv[3] if len(sys.argv) > 3 else ''
+    pages = [('Main', 'HomeMobile', 'HomeMobile2'), ('NewTemple', 'NewTempleMobile'), ('PranPratishtha', 'PranPratishthaMobile'),
+             ('Seva', 'SevaMobile'), ('Gallery', 'GalleryMobile'), ('History', 'HistoryMobile'), ('Contact', 'ContactMobile'),
+             ('Darshan', 'DarshanMobile'), ('NotFound', 'NotFoundMobile'), ('MenuMobile',), ('OfflineMobile',)]
+    lines = [f'# PAGE_CONTENT — every text on every page{(" · " + label) if label else ""}', '',
+             'Generated by `tools/gen_page_content.py` from the design files. **Do not edit by hand** — edit the page, then regenerate.',
+             '', 'How to read it:', '',
+             '- Each page lists its sections in order (`section · <id>`), then every piece of text with the HTML element it sits in.',
+             '- **⚠ placeholder** = text in [square brackets]: waiting for the trust. Everything else is the current approved copy.',
+             '- `{{…}}` = a live value filled in by the page (countdown, today marker, text size button).',
+             '- `img` lines are image alt texts (also content).',
+             '- ‖ separates pieces that sit in separate child elements of one block (e.g. a timeline step: name ‖ date ‖ status); / marks a line break.',
+             '- Desktop page shown in full; the phone page is compared against it and only differences are listed.',
+             '- "Text from the page logic" = Gujarati strings inside the page script (calendar dates, festival programme, status lines).', '']
+    shared_seen = set()
+    toc = []
+    for group in pages:
+        main_p = group[0]
+        title, items, src = page_items(proj / f'{main_p}.dc.html')
+        toc.append(f'- [{main_p} — {title}](#{main_p.lower()})')
+        lines += [f'## {main_p}', '', f'**Title:** {title}  ', f'**Files:** ' + ', '.join(f'`{g}.dc.html`' for g in group), '']
+        for tag, text, _ in items:
+            if tag == 'SECTION':
+                lines += ['', f'**{text}**', '']
+            else:
+                lines.append(fmt(tag, text))
+        main_texts = [t for g, t, _ in items if g != 'SECTION']
+        for other in group[1:]:
+            _, oitems, _ = page_items(proj / f'{other}.dc.html')
+            ot = [t for g, t, _ in oitems if g != 'SECTION']
+            if main_p == 'Main':
+                continue
+            add = [t for t in dict.fromkeys(ot) if t not in main_texts]
+            rem = [t for t in dict.fromkeys(main_texts) if t not in ot]
+            lines += ['', f'**Phone page `{other}` vs desktop:** ' + ('identical text' if not add and not rem else ''), '']
+            lines += [f'- only on phone: {t}' for t in add] + [f'- only on desktop: {t}' for t in rem]
+        if main_p == 'Main':
+            home_ph = []
+            for other in group[1:]:
+                _, oitems, _ = page_items(proj / f'{other}.dc.html')
+                home_ph += [t for g, t, _ in oitems if g != 'SECTION']
+            add = [t for t in dict.fromkeys(home_ph) if t not in main_texts]
+            rem = [t for t in dict.fromkeys(main_texts) if t not in home_ph]
+            lines += ['', '**Phone home (`HomeMobile` + `HomeMobile2`, one page split over two boards) vs desktop:**', '']
+            lines += [f'- only on phone: {t}' for t in add] + [f'- only on desktop: {t}' for t in rem]
+            lines += ['', '_Tablet and landscape home boards (`HomeTablet`, `HomeTabletL`, `HomePhoneL`) carry the same text as `Main`._']
+        dyn = [d for d in dyn_strings(src) if d not in shared_seen]
+        if dyn:
+            lines += ['', '**Text from the page logic** (new strings only; strings already listed for an earlier page are not repeated):', '']
+            lines += [f'- {d}' for d in dyn]
+            shared_seen.update(dyn)
+        lines += ['', '---', '']
+    lines[14:14] = ['## Pages', ''] + toc + ['']
+    # placeholder summary
+    ph = []
+    for group in pages:
+        for p in group:
+            _, its, _ = page_items(proj / f'{p}.dc.html')
+            for tag, t, _ in its:
+                if tag != 'SECTION' and re.search(r'\[[^\]]+\]', t):
+                    ph.append((p, t))
+    uniq = {}
+    for p, t in ph:
+        uniq.setdefault(t, []).append(p)
+    lines += ['## All open placeholders (waiting for the trust)', '', f'{len(uniq)} distinct placeholders:', '']
+    lines += [f'- {t} — _{", ".join(sorted(set(ps)))}_' for t, ps in uniq.items()]
+    out.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    print(out, len(lines), 'lines,', len(uniq), 'placeholders')
+
+
+if __name__ == '__main__':
+    main()

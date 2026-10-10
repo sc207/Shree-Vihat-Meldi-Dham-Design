@@ -1,0 +1,261 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Contact.dc.html": {
+      "h": 4345,
+      "is_interactive": true,
+      "title": "૦૭ · સંપર્ક અને પ્રશ્નો",
+      "w": 1440,
+      "x": 9120,
+      "y": 0
+    },
+    "ContactMobile.dc.html": {
+      "h": 5402,
+      "is_interactive": true,
+      "title": "મોબાઇલ · સંપર્ક અને પ્રશ્નો",
+      "w": 390,
+      "x": -470,
+      "y": 7000
+    },
+    "Darshan.dc.html": {
+      "h": 5030,
+      "is_interactive": true,
+      "title": "૦૮ · દર્શન અને યાત્રા",
+      "w": 1440,
+      "x": 10640,
+      "y": 0
+    },
+    "DarshanMobile.dc.html": {
+      "h": 7090,
+      "is_interactive": true,
+      "title": "મોબાઇલ · દર્શન અને યાત્રા",
+      "w": 390,
+      "x": -3290,
+      "y": 7000
+    },
+    "Gallery.dc.html": {
+      "h": 7907,
+      "is_interactive": true,
+      "title": "૦૫ · ગેલેરી અને સમાચાર",
+      "w": 1440,
+      "x": 6080,
+      "y": 0
+    },
+    "GalleryMobile.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "title": "મોબાઇલ · ગેલેરી અને સમાચાર",
+      "w": 390,
+      "x": -1410,
+      "y": 7000
+    },
+    "History.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "title": "૦૬ · મંદિરનો ઇતિહાસ",
+      "w": 1440,
+      "x": 7600,
+      "y": 0
+    },
+    "HistoryMobile.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "title": "મોબાઇલ · મંદિરનો ઇતિહાસ",
+      "w": 390,
+      "x": -940,
+      "y": 7000
+    },
+    "HomeMobile.dc.html": {
+      "h": 5249,
+      "is_interactive": true,
+      "title": "મોબાઇલ · મુખ્ય પૃષ્ઠ (૧/૨)",
+      "w": 390,
+      "x": -940,
+      "y": 0
+    },
+    "HomeMobile2.dc.html": {
+      "h": 5750,
+      "is_interactive": true,
+      "title": "મોબાઇલ · મુખ્ય પૃષ્ઠ (૨/૨)",
+      "w": 390,
+      "x": -470,
+      "y": 0
+    },
+    "HomePhoneL.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "title": "મોબાઇલ આડું · મુખ્ય પૃષ્ઠ (૮૪૪)",
+      "w": 844,
+      "x": 2174,
+      "y": 9359
+    },
+    "HomeTablet.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "title": "ટૅબ્લેટ ઊભું · મુખ્ય પૃષ્ઠ (૮૩૪)",
+      "w": 834,
+      "x": 0,
+      "y": 9359
+    },
+    "HomeTabletL.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "title": "ટૅબ્લેટ આડું · મુખ્ય પૃષ્ઠ (૧૧૮૦)",
+      "w": 1180,
+      "x": 914,
+      "y": 9359
+    },
+    "Main.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "title": "૦૧ · મુખ્ય પૃષ્ઠ",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "MenuMobile.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "title": "મોબાઇલ · મેનુ",
+      "w": 390,
+      "x": -1410,
+      "y": 0
+    },
+    "NewTemple.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "title": "૦૨ · નવું મંદિર",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "NewTempleMobile.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "title": "મોબાઇલ · નવું મંદિર",
+      "w": 390,
+      "x": -2820,
+      "y": 7000
+    },
+    "NotFound.dc.html": {
+      "h": 1668,
+      "is_interactive": true,
+      "title": "૪૦૪ · પાનું મળ્યું નથી",
+      "w": 1440,
+      "x": 12160,
+      "y": 0
+    },
+    "NotFoundMobile.dc.html": {
+      "h": 2520,
+      "is_interactive": true,
+      "title": "મોબાઇલ · ૪૦૪",
+      "w": 390,
+      "x": 13680,
+      "y": 0
+    },
+    "OfflineMobile.dc.html": {
+      "h": 844,
+      "is_interactive": true,
+      "title": "મોબાઇલ · ઇન્ટરનેટ જોડાણ નથી",
+      "w": 390,
+      "x": 14150,
+      "y": 0
+    },
+    "PranPratishtha.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "title": "૦૩ · પ્રાણ પ્રતિષ્ઠા મહોત્સવ",
+      "w": 1440,
+      "x": 3040,
+      "y": 0
+    },
+    "PranPratishthaMobile.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "title": "મોબાઇલ · પ્રાણ પ્રતિષ્ઠા મહોત્સવ",
+      "w": 390,
+      "x": -2350,
+      "y": 7000
+    },
+    "Seva.dc.html": {
+      "h": 3314,
+      "is_interactive": true,
+      "title": "૦૪ · સેવા નોંધણી",
+      "w": 1440,
+      "x": 4560,
+      "y": 0
+    },
+    "SevaMobile.dc.html": {
+      "h": 6127,
+      "is_interactive": true,
+      "title": "મોબાઇલ · સેવા નોંધણી",
+      "w": 390,
+      "x": -1880,
+      "y": 7000
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-09-30T16:43:01Z",
+    "v": 1
+  },
+  "designSystems": [
+    {
+      "artifact": "https://claude.ai/artifact/7PGYwFXqvGuHKZiU2XFMbn",
+      "copiedAt": "2026-09-30T16:43:01Z",
+      "namespace": "vihatmeldimandir",
+      "title": "શ્રી વિહત મેલડી માતા મંદિર",
+      "version": "1790785681-c294"
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {
+    "title": {
+      "kind": "title1",
+      "maxW": 4200,
+      "text": "શ્રી વિહત મેલડી ધામ — સત્તાવાર વેબસાઇટ",
+      "w": 240,
+      "x": -1930,
+      "y": -420
+    },
+    "todo": {
+      "fill": "orange",
+      "maxH": 1377,
+      "size": 24,
+      "text": "હજુ જોઈતી માહિતી\n\n• ગેપ્પરાની જોડણીની પુષ્ટિ\n• Facebook પેજની લિંક (હાલ બટન છુપાવેલું છે)\n• ભાગવત કથાકારનું નામ; યજ્ઞશાળા અને ભોજનશાળાનું સ્થળ; યજ્ઞ પૂર્ણાહુતિનો સમય\n• મહોત્સવ દરમિયાન મંગળવાર ૨ ફેબ્રુ. અને રવિવાર ૭ ફેબ્રુ.એ ગાદી રહેશે?\n• ધામ પરિવારમાં શ્રી લાખણેચી માઁ અને શ્રી ગોગા મહારાજના સ્થાનની પુષ્ટિ\n• પૂનમની તારીખો અને ૮ ફેબ્રુ.ની તિથિ (મહા સુદ બીજ) — આચાર્યશ્રી દ્વારા પુષ્ટિ\n• સ્તંભ પરનાં ૧૦ નક્ષત્ર કયાં છે\n• ધામની પરંપરા મુજબ ચારેય દેવી-દેવતાનો પરિચય અને પ્રાગટ્યની કથા\n• લોક ડાયરો અને રામ કથાનો સમય\n• ૫ ફેબ્રુ.ના ડાયરો અને ૮ ફેબ્રુ.ની રમેલના કલાકારો; કલાકારોનાં નામની જોડણી\n• દરેક કલાકારનો ફોટો (પરવાનગી સાથે) — હાલ નામના અક્ષરવાળું વર્તુળ મૂક્યું છે\n• આગમન, પાર્કિંગ અને ભક્તો માટે સૂચનાઓ\n• મંદિરનો અધિકૃત ઇતિહાસ, બન્ને પૂજ્ય બાપાનો પરિચય\n• નવા મંદિરના સ્થપતિ, સંકલ્પ વર્ષ, પૂર્ણતાનો સમય\n• નિર્માણ કાર્યના તારીખ સાથેના ફોટા (નવું મંદિર → નિર્માણ પ્રગતિ), મહોત્સવના વાસ્તવિક ફોટા\n• કાર્યક્રમ પત્રિકાની PDF — \"કાર્યક્રમ પત્રિકા (PDF)\" બટન તૈયાર છે, લિંક મૂકવાની બાકી\n• દર્શન માટેનો પહેરવેશ / અન્ય સૂચનાઓ (હોય તો)\n• ટ્રસ્ટનું નોંધાયેલ નામ\n\n[ ] ચોરસ કૌંસમાંનું દરેક લખાણ લૉન્ચ પહેલાં બદલવું.",
+      "w": 440,
+      "x": -1930,
+      "y": 0
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "NewTemple.dc.html",
+    "PranPratishtha.dc.html",
+    "Seva.dc.html",
+    "Gallery.dc.html",
+    "History.dc.html",
+    "Contact.dc.html",
+    "Darshan.dc.html",
+    "MenuMobile.dc.html",
+    "HomeMobile.dc.html",
+    "HomeMobile2.dc.html",
+    "HomeTablet.dc.html",
+    "HomeTabletL.dc.html",
+    "HomePhoneL.dc.html",
+    "NewTempleMobile.dc.html",
+    "PranPratishthaMobile.dc.html",
+    "SevaMobile.dc.html",
+    "GalleryMobile.dc.html",
+    "HistoryMobile.dc.html",
+    "ContactMobile.dc.html",
+    "DarshanMobile.dc.html",
+    "NotFound.dc.html",
+    "NotFoundMobile.dc.html",
+    "OfflineMobile.dc.html"
+  ],
+  "pages": [],
+  "title": "શ્રી વિહત મેલડી ધામ — વેબસાઇટ"
+}
