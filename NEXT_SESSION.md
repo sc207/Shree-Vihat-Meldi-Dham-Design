@@ -116,7 +116,11 @@ and the trust's "નવા મંદિરનો સંકલ્પ" text placed
 
 ## 11. First action in the new session
 
-1. Confirm you have read this file and CLAUDE.md.
+1. Confirm you are in the right repository and it is current: `git remote -v` shows `github.com/sc207/Shree-Vihat-Meldi-Dham-Design`,
+   and `git fetch origin && git status -sb` shows `main...origin/main` with nothing ahead/behind. Confirm you have read this file and CLAUDE.md.
+   Work from the repository files, not from chat history.
 2. Check the snapshot: `(cd design/project && sha256sum -c --quiet ../SHA256SUMS.txt) && (cd design/assets && sha256sum -c --quiet SHA256SUMS.txt) && echo OK`.
 3. Run the live-version check (§8 step 1) and report the live version id and whether it still equals v106 `1791624520-9b52`.
 4. Report anything missing from the handover, then **wait for the owner's next task** (expected: the Seva empty right column). Do not modify anything before that.
+5. Before any audit work, read [tasks/full-design-audit.md](tasks/full-design-audit.md) in full (agreed scope: Phases A–C only, report and fix plan first;
+   the website stays unchanged until the owner approves the findings and fixes).
