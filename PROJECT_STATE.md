@@ -83,7 +83,7 @@ MenuMobile and OfflineMobile are phone-screen boards (fixed 844 px), not content
    artists of 5 Feb ડાયરો and 8 Feb રમેલ and the spelling of their names, artist photos (with permission), arrival/parking instructions,
    authoritative temple history and both Bapas' introductions, dated construction photos and real festival photos, the પત્રિકા PDF, dress code,
    the trust's registered name. (The note still says the PDF button is "તૈયાર છે"; it has been hidden since v102 — reword the note if the owner wants.)
-2. **Seva desktop:** empty right column (design audit item, not started).
+2. **Seva desktop:** empty right column (design audit item, not started) — **queued as the first task** (see the task queue below).
 3. **Spec page:** add v106 to `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` when convenient (optional; it currently ends at v105).
 4. **Figma Gate A:** when the allowance returns — one read-only check first; if blocked, stop. Then run `figma/scripts/call1.js` … in order
    (see `figma/state.json` → `run_order`), after the owner drops the 26 original images (original filenames) onto the Components page.
@@ -91,11 +91,25 @@ MenuMobile and OfflineMobile are phone-screen boards (fixed 844 px), not content
 5. **Before the March 2027 પૂનમ:** extend the date lists — `const EV` (Darshan, Contact, NotFound + phone pages) and `const EVH` + `const POONAM`
    (Main, HomeTablet, HomeTabletL, HomePhoneL, HomeMobile). Last પૂનમ listed: 20 Feb 2027; calendars end 15 Apr 2027. Dates need the Acharya's confirmation.
 
-## Pending decisions (owner)
+## Owner's decisions and task queue (10 Oct 2026, end of the handover session)
 
-- Whether to add "જય શ્રી વિહત મેલડી માતાજી!" at the end of the સંકલ્પ section (left out in v106 because every page already ends with "॥ જય શ્રી વિહત મેલડી માઁ ॥").
-- When the PDF exists: link the file in the button, delete the "Festival PDF button hidden" rule `.vm-root .vx-patrika { display: none !important; }`
-  in site.css (its comment explains the restore), and put "અને પત્રિકા" back in the invitation note.
+Decided:
+- **No extra closing line in the સંકલ્પ section.** Do not add "જય શ્રી વિહત મેલડી માતાજી!" there; the page's site-wide closing line
+  "॥ જય શ્રી વિહત મેલડી માઁ ॥" (devotional band) stays the only one. Nothing to change.
+- **Correct the canvas to-do note about the PDF button** — approved. The line currently reads
+  `• કાર્યક્રમ પત્રિકાની PDF — "કાર્યક્રમ પત્રિકા (PDF)" બટન તૈયાર છે, લિંક મૂકવાની બાકી` although the button has been hidden since v102.
+  Reword it to say the button is hidden until the PDF arrives (change `project/canvas.json` → `notes.todo.text` only; no page changes).
+  Show the new wording to the owner before publishing it as its own version.
+
+Task queue, one small task at a time (owner's order):
+1. **Seva page, desktop: fix the empty right column** — the first task for the new session. Contained design task; does not need trust content.
+2. **Canvas to-do note:** the PDF line correction above.
+3. Trust content as it arrives (placeholders stay until then). **Never invent** temple history, construction dates, festival details or any
+   other trust-approved information.
+
+Standing note for later: when the PDF exists, link the file in the button, delete the "Festival PDF button hidden" rule
+`.vm-root .vx-patrika { display: none !important; }` in site.css (its comment explains the restore), put "અને પત્રિકા" back in the invitation note,
+and update the canvas to-do note again.
 
 ## Known issues / limitations
 

@@ -44,7 +44,8 @@ and the trust's "નવા મંદિરનો સંકલ્પ" text placed
 - **Waiting for the trust (content):** 61 placeholders — full list at the end of [PAGE_CONTENT.md](PAGE_CONTENT.md); the remaining canvas to-do items
   are in [PROJECT_STATE.md](PROJECT_STATE.md#outstanding-tasks). Asked most recently (New Temple page): સ્થપતિ (architect) name · સંકલ્પ વર્ષ ·
   આયોજન detail · current construction progress · expected completion · optional dated story of the સંકલ્પ for History ch. 6.
-- **Design audit item not yet done:** Seva desktop page has an empty right column.
+- **Owner's queue (10 Oct):** (1) **Seva desktop page: fix the empty right column** — expected first task; (2) correct the canvas to-do note's
+  PDF line (approved; `canvas.json` only). Decided: **no** extra closing line in the સંકલ્પ section. Details: [PROJECT_STATE.md](PROJECT_STATE.md#owners-decisions-and-task-queue-10-oct-2026-end-of-the-handover-session).
 - **Figma (Gate A):** paused — Starter plan allowance exhausted on 9 Oct. 0 of 6 checklist items confirmed. Scripts are ready in `figma/`
   (they include the v97 Gate A design); Figma must later also receive the website changes **v99–v106** (`figma/state.json` → `figma_sync_todo`).
 - **Date lists — deadline before the March 2027 પૂનમ:** the last પૂનમ in the page logic is **20 Feb 2027**. Lists to extend (dates need the Acharya's confirmation):
@@ -117,4 +118,4 @@ and the trust's "નવા મંદિરનો સંકલ્પ" text placed
 1. Confirm you have read this file and CLAUDE.md.
 2. Check the snapshot: `(cd design/project && sha256sum -c --quiet ../SHA256SUMS.txt) && (cd design/assets && sha256sum -c --quiet SHA256SUMS.txt) && echo OK`.
 3. Run the live-version check (§8 step 1) and report the live version id and whether it still equals v106 `1791624520-9b52`.
-4. Report anything missing from the handover, then **wait for the owner's next task**. Do not modify anything before that.
+4. Report anything missing from the handover, then **wait for the owner's next task** (expected: the Seva empty right column). Do not modify anything before that.
