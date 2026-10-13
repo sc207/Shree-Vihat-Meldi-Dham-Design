@@ -58,6 +58,7 @@ hide the phone action bar (`.vx-abar{display:none}`) so it does not cover conten
 
 - The home boards' moving text ribbon (`.vx-marquee`) and the darshan photo area can differ by a few pixels between two loads of the **same** version.
   Treat a difference there as noise only after confirming it with the same version on both ports.
+  Since 14 Oct `tools/_common.py` FIX also freezes `::before`/`::after` animations (darshan aura, journey "now" marker), which removed most of this noise.
 - Canvas boards are capped at 8000 px; frames are sized for ordinary days (festival-week states can be taller — canvas only).
 - These are render checks in Chromium only; no Safari/Firefox, no real devices, no screen-reader run.
 - Figma is not checked here (Gate A needs Figma screenshots; see `figma/state.json`).

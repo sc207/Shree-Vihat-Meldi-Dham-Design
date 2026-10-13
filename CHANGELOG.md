@@ -6,6 +6,22 @@ History before v97 (the original build, 30 Sep – 9 Oct 2026) lives in the arti
 
 Standard verification after every publish below: the changed files were read back from the live artifact and compared byte-for-byte with what was sent (all matched).
 
+## v108 · `1791920313-6e1c` — new chakra everywhere (14 Oct 2026)
+
+- **Files:** Main, HomeTablet, HomeTabletL, HomePhoneL, HomeMobile, NewTemple, NewTempleMobile, PranPratishtha, PranPratishthaMobile (`.dc.html`).
+- **Change:** the old chakra drawing (simple oval-petal mandala) was still used in two ornaments: `svg.vm-mandala` in the dark "નવું મંદિર" band of
+  all 5 home boards, and `svg.vm-cta__orn` in the maroon call-to-action card of New Temple and Festival (desktop + phone). Both now draw the new lotus
+  mandala already used by the banners (`vm-hero__mandala`), the closing devotional band (`vm-devotional__mandala`) and the photo slots. Only the drawing
+  inside each `<svg>` changed; size, position, colour and opacity are as before. Script: `tools/examples/apply_v108_new_chakra.py`.
+- **Why:** owner spotted the old chakra on the phone home page and asked for every old pattern to be replaced on all pages.
+- **Tests:** all 24 boards now carry only the new drawing (hash check); desktop and phone carry the same pattern section by section; check_layout 72 runs
+  (9 boards, 320–1440 px, both text sizes) 0 new problems; frames unchanged; wording identical; pixel check: the 15 other boards identical, and on the 9
+  changed boards every changed pixel lies inside the ornaments (with pseudo-element animations frozen). Pictures: `tasks/visual-effects/v108/`.
+
+## v107 · `1791918685-cd89` — re-save, no content change (13 Oct 2026)
+
+- All 28 project files byte-identical to v106 (only the Design type's own files changed). Counted because the artifact numbers it.
+
 ## v106 · `1791624520-9b52` — "નવા મંદિરનો સંકલ્પ" text from the trust
 
 - **Files:** NewTemple, NewTempleMobile, Main, HomeTablet, HomeTabletL, HomePhoneL, HomeMobile, History, HistoryMobile (`.dc.html`), `site.css` (appended), `canvas.json`.

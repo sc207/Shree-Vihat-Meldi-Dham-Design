@@ -26,9 +26,9 @@ The Gujarati-only website design for **શ્રી વિહત મેલડી
 
 | | Version | Version id | Notes |
 |---|---|---|---|
-| **Live design (published)** | **v106** | `1791624520-9b52` | Verified 10 Oct 2026 ~15:20 IST: all 28 project files byte-identical to `design/project/` (`design/SHA256SUMS.txt`); 26 images identical to `design/assets/` (`design/assets/SHA256SUMS.txt`). |
-| Previous known-good | v105 | `1791622143-5d00` | Rollback target for v106. Earlier ids: [CHANGELOG.md](CHANGELOG.md). |
-| Local working copy | none | — | Nothing unpublished. All work up to v106 is published and in `design/`. |
+| **Live design (published)** | **v108** | `1791920313-6e1c` | 14 Oct 2026: new chakra on all boards; `design/project/` refreshed and checksums regenerated (`design/SHA256SUMS.txt`); 26 images unchanged (`design/assets/SHA256SUMS.txt`). |
+| Previous known-good | v107 (= v106 content) | `1791918685-cd89` | Rollback target for v108. v106 `1791624520-9b52`; earlier ids: [CHANGELOG.md](CHANGELOG.md). Version numbers follow the artifact's own count. |
+| Local working copy | Seva preview | — | Unpublished, awaiting approval: `tasks/audit-v106/seva_v107_pending.diff`. Visual-effects work in `tasks/visual-effects/` (see PROJECT_STATE.md). |
 
 At handover the owner's editor reported no unsaved changes, and the live version id was still v106.
 

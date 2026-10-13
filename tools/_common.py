@@ -3,7 +3,8 @@ import glob, os, re
 
 # Freeze animations and let the page take its natural height (boards have a fixed height in the design).
 FIX = ('*{animation:none!important;transition:none!important;caret-color:transparent!important} '
-       '.vx-page::after{display:none!important} .vx-page{height:auto!important;min-height:0!important}')
+       '.vx-page::after{display:none!important} .vx-page{height:auto!important;min-height:0!important} '
+       '*::before,*::after{animation:none!important;transition:none!important}')   # pseudo-element animations (journey marker, darshan aura) were not frozen
 # The five daily times used to size frames (darshan card open/closed changes some heights).
 DAILY_TIMES = ['2026-10-10T04:40:00+05:30', '2026-10-10T06:30:00+05:30', '2026-10-10T12:30:00+05:30',
                '2026-10-10T19:30:00+05:30', '2026-10-10T22:30:00+05:30']
