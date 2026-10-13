@@ -13,6 +13,13 @@ How the website looks and speaks. Values come from the design files (`design/pro
   readable gold is `--gold-ink` on light and `--gold-soft` on dark; logo red `#e31e24` only in the logo; WhatsApp green only inside its glyph.
 - **One easing curve** (`--ease-temple`); motion is disabled under `prefers-reduced-motion`.
 - **Lotus chakra ornament** (`.vm-hero__mandala`): stays in the banner's top-right corner, half visible, opacity 15 %.
+- **One chakra drawing only (since v108).** Every chakra uses the lotus mandala (`viewBox="-200 -200 400 400"`, the drawing in `.vm-hero__mandala`):
+  banner corner, closing devotional band (`.vm-devotional__mandala`), the dark "નવું મંદિર" band on Home (`.vm-mandala`), the CTA card corner (`.vm-cta__orn`)
+  and the photo-slot tile (`.vx-slot`, as a data-URI). The old oval-petal chakra is retired — never copy it back from an old version or from Figma.
+- **Banner light belongs to the picture (since v109).** On banners with a picture the gold light is `.vm-hero__art::before` and the breathing halo
+  `.vm-hero__halo` is centred in the picture box (`translate`, breathing via `scale`), so both follow the picture at every width and orientation.
+  Never position a light or halo with banner- or viewport-relative coordinates, and never animate `transform` on an element whose position uses `transform`.
+  The closing devotional band's light is a band-wide ambient light (centred behind title and deities) and stays as it is.
 
 ### Colour tokens (from `project/ds/vihatmeldimandir/tokens.json`)
 

@@ -13,7 +13,8 @@ _Last updated: 10 Oct 2026, evening IST (audit Phases A–C reported). Update th
 | Visual-effects work | — | — | Owner's brief [tasks/visual-effects-audit.md](tasks/visual-effects-audit.md): glow fixed in v109, old chakra replaced in v108. Remaining sweep items: see Outstanding tasks. |
 | Local working version | Seva preview (unpublished) | — | Seva help column: 3 rules appended to `site.css`, patch saved as [tasks/audit-v106/seva_v107_pending.diff](tasks/audit-v106/seva_v107_pending.diff) (prepared as "v107"; it will take the next free number). **Awaiting the owner's approval.** Its 3 rules go at the end of `site.css` (after the v109 block). |
 | Older rollback | v107 / v106 content | `1791918685-cd89` | Any earlier version is in the artifact's history (list in [CHANGELOG.md](CHANGELOG.md)). Version numbers follow the artifact's own count from v107 on. |
-| Spec / review page | v15 | `1791622167-aaa6` | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` — records v97–v105 (v106 not yet added) |
+| Spec / review page | v16 | `1791922379-dd2c` | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` — records v97–v109 (new section "Banner light & chakra"); source + new pictures in `tasks/spec-page/` |
+| Audit report page | v2 | `1791922345-463b` | `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU` — audit of v106 + status after v108/v109; source `tasks/audit-v106/audit-page.html` |
 
 Website artifact: `https://claude.ai/artifact/HWR4J5u9qBPjri6oUg7nVa` (type Design, `https://claude.ai/artifact/QKN21svewxgyPb6SYRqWnd`).
 
@@ -89,7 +90,7 @@ MenuMobile and OfflineMobile are phone-screen boards (fixed 844 px), not content
    **Design audit v106 (Phases A–C):** done, no changes made — report [tasks/audit-report-v106.md](tasks/audit-report-v106.md)
    (page: `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU`). 0 P0, 1 P1 (A1 header menu 761–1179 px), 4 P2, 9 P3, 1 owner decision (D1 hero).
    Phase D waits for the owner's approval; proposed order v107 Seva → v108 A1 → v109 B3 → v110 B4 → v111 B2 → polish.
-3. **Spec page:** add v106 to `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` when convenient (optional; it currently ends at v105).
+3. **Spec page:** up to date with v109 (14 Oct). Add each new version there after publishing.
 4. **Figma Gate A:** when the allowance returns — one read-only check first; if blocked, stop. Then run `figma/scripts/call1.js` … in order
    (see `figma/state.json` → `run_order`), after the owner drops the 26 original images (original filenames) onto the Components page.
    Then sync Figma with website changes v99–v106 (`figma/state.json` → `figma_sync_todo`; the scripts already contain the v97 Gate A design).

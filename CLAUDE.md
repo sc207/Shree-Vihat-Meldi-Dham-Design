@@ -13,7 +13,8 @@ The official **Gujarati-only** website design for **શ્રી વિહત �
 |---|---|---|
 | **Website design (source of truth)** | Claude Design artifact `https://claude.ai/artifact/HWR4J5u9qBPjri6oUg7nVa` (type "Design"), files under `project/` | The live design. Every published change is a numbered version there, with full history for rollback. |
 | Snapshot of the design | `design/project/` + `design/assets/` in this repo | Verified byte-for-byte copy of the version named in [PROJECT_STATE.md](PROJECT_STATE.md). Backup and diff base — **not** a second source of truth. Refresh it after each published version. |
-| Spec / review page | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` | Before/after pictures and decisions for review; not part of the website. |
+| Spec / review page | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` | Before/after pictures and decisions for review; not part of the website. Source: `tasks/spec-page/`. |
+| Audit report page | `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU` | Design audit of v106 with status updates; source `tasks/audit-v106/audit-page.html`. |
 | Design-system origin | `https://claude.ai/artifact/7PGYwFXqvGuHKZiU2XFMbn` | The system copied into `project/ds/vihatmeldimandir/` (tokens + component CSS). |
 | Figma library (later sync) | Figma file key `0AYx0wwuBl0zZZ57xjJbIu`; scripts in `figma/` | Gate A component work, paused by the Figma Starter plan's call limit. Not a prerequisite for website work. |
 

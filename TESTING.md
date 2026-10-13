@@ -72,6 +72,8 @@ hide the phone action bar (`.vx-abar{display:none}`) so it does not cover conten
   (`design/assets/SHA256SUMS.txt`); `tools/rebuild_image_zip.py` rebuilds the owner's original 26-image ZIP byte-for-byte.
 - Tools validated on the v106 snapshot: `frame_heights.py` (Darshan, HomeMobile, NewTemple, Seva: 0 changes; MenuMobile/OfflineMobile skipped), `check_layout.py` (Darshan 1440/390, NewTempleMobile 1440/390:
   8 runs, 0 problems), `pixel_regress.py` (4 boards identical); all Python tools and the 15 Figma scripts parse.
-- Per-version results: see [CHANGELOG.md](CHANGELOG.md). Most recent full regression: v106 (all 24 boards).
+- Per-version results: see [CHANGELOG.md](CHANGELOG.md). Most recent full regression: v109 (`pixel_regress.py` on all 24 boards, 14 Oct: only the 12 picture banners differ, inside the banner).
+- 14 Oct (v108, v109): chakra hash check on all boards; desktop/phone pattern parity; halo-to-artwork alignment at 17 sizes incl. portrait↔landscape resize
+  (`tasks/visual-effects/scripts/probe_halo.py`); scripts in `tasks/visual-effects/scripts/` (run from the repository root).
 - Design audit of v106 (Phases A–C, 10 Oct): 159 renders + targeted probes, Chromium only — results and what stays unverified in
   [tasks/audit-report-v106.md](tasks/audit-report-v106.md); probe scripts in `tasks/audit-v106/scripts/` (run from the repository root, baseline on port 8771).

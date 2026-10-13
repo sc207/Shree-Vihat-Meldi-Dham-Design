@@ -1,0 +1,572 @@
+<title>Vihat Meldi Dham Component Specs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@500;600&family=Hind+Vadodara:wght@400;500;600&display=swap">
+<style>
+/* Layout: one reading column (max 1120px) — each component is a spec block followed by its before/after picture. */
+:root {
+  --bg: #fbf7ef; --surface: #f2e6d2; --raised: #fffdf8; --ink: #29272a; --muted: #675a51;
+  --heading: #741a32; --accent: #741a32; --on-accent: #fbf7ef; --gold: #86621f; --line: #e4d6be;
+  --ok: #1f5f5b; --ok-bg: #e3efe9; --todo: #86621f; --todo-bg: #f6ead2; --later: #675a51; --later-bg: #ece4d8;
+  --display: "Noto Serif Gujarati", "Noto Serif", Georgia, serif;
+  --body: "Hind Vadodara", "Noto Sans Gujarati", system-ui, sans-serif;
+  --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #1c0a10; --surface: #26101a; --raised: #2e1520; --ink: #f6eedf; --muted: #c9b8a6;
+  --heading: #f3dfb4; --accent: #e2c27a; --on-accent: #2a0b14; --gold: #d9b266; --line: #3e2029;
+  --ok: #7cc7be; --ok-bg: #173430; --todo: #e2c27a; --todo-bg: #3a2614; --later: #c9b8a6; --later-bg: #33202a; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #1c0a10; --surface: #26101a; --raised: #2e1520; --ink: #f6eedf; --muted: #c9b8a6;
+  --heading: #f3dfb4; --accent: #e2c27a; --on-accent: #2a0b14; --gold: #d9b266; --line: #3e2029;
+  --ok: #7cc7be; --ok-bg: #173430; --todo: #e2c27a; --todo-bg: #3a2614; --later: #c9b8a6; --later-bg: #33202a; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16.5px; line-height: 1.65; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 80px; display: grid; gap: 56px; }
+h1, h2, h3 { font-family: var(--display); color: var(--heading); font-weight: 600; margin: 0; text-wrap: balance; line-height: 1.3; }
+h1 { font-size: clamp(30px, 4.4vw, 44px); }
+h2 { font-size: clamp(24px, 3vw, 30px); }
+h3 { font-size: 21px; }
+p { margin: 0; max-width: 72ch; }
+a { color: var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 600; color: var(--gold); letter-spacing: .06em; text-transform: uppercase; }
+.gu { font-family: var(--body); letter-spacing: 0; text-transform: none; }
+
+/* header */
+.top { display: grid; gap: 18px; }
+.top .lead { color: var(--muted); font-size: 18px; }
+.status { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.status div { background: var(--raised); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: grid; gap: 4px; min-width: 0; }
+.status b { font-size: 15px; }
+.status span { color: var(--muted); font-size: 14.5px; line-height: 1.5; }
+.toc { display: flex; flex-wrap: wrap; gap: 8px; }
+.toc a { text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 14.5px; font-weight: 600; color: var(--ink); background: var(--raised); }
+.toc a:hover { border-color: var(--accent); color: var(--accent); }
+.toc a:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* board sections */
+.board { display: grid; gap: 28px; scroll-margin-top: 16px; }
+.board > header { display: grid; gap: 8px; border-top: 2px solid var(--heading); padding-top: 20px; }
+.board > header p { color: var(--muted); }
+.comp { display: grid; gap: 16px; background: var(--raised); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+.comp-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
+.chip.ok { color: var(--ok); background: var(--ok-bg); }
+.chip.todo { color: var(--todo); background: var(--todo-bg); }
+.chip.later { color: var(--later); background: var(--later-bg); }
+dl.spec { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 10px 20px; margin: 0; }
+dl.spec dt { font-weight: 600; color: var(--muted); font-size: 14.5px; padding-top: 1px; }
+dl.spec dd { margin: 0; min-width: 0; }
+dl.spec ul { margin: 0; padding-left: 18px; display: grid; gap: 3px; }
+.fix { color: var(--ink); }
+.fix code, code { font-family: var(--mono); font-size: 13px; background: var(--surface); padding: 1px 5px; border-radius: 4px; }
+figure { margin: 0; display: grid; gap: 8px; }
+figure img { width: 100%; height: auto; display: block; border-radius: 10px; border: 1px solid var(--line); background: #fbf7ef; }
+figure.narrow img { max-width: 820px; }
+figure.phone img { max-width: 520px; }
+.checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.checklist li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; align-items: start; background: var(--raised); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.checklist li span { color: var(--muted); font-size: 14.5px; grid-column: 1; }
+.checklist li .chip { grid-column: 2; grid-row: 1; }
+@media (max-width: 520px) { .checklist li { grid-template-columns: minmax(0, 1fr); } .checklist li .chip { grid-column: 1; grid-row: auto; justify-self: start; } }
+figure.half { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+figure.half figcaption { grid-column: 1 / -1; }
+figcaption { color: var(--muted); font-size: 14px; }
+.measure { display: flex; flex-wrap: wrap; gap: 8px; }
+.measure span { font-size: 13.5px; font-variant-numeric: tabular-nums; background: var(--surface); border-radius: 8px; padding: 3px 10px; }
+
+/* tables */
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--raised); }
+table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 14.5px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+th { font-weight: 600; color: var(--muted); background: var(--surface); position: sticky; top: 0; }
+tr:last-child td { border-bottom: 0; }
+td.n { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--muted); }
+
+.note { background: var(--surface); border-radius: 12px; padding: 16px 18px; display: grid; gap: 8px; }
+.note ul, .note ol { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+
+@media (max-width: 640px) {
+  dl.spec { grid-template-columns: minmax(0, 1fr); gap: 2px 0; }
+  dl.spec dd { margin-bottom: 10px; }
+  .comp { padding: 18px 16px; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+<div class="wrap">
+
+<section class="top" aria-labelledby="t">
+  <p class="eyebrow">Gate A · changes applied to the website design (version 97, 10 Oct 2026) · Figma verification pending · 0 of 6 confirmed</p>
+  <h1 id="t">Component specifications for <span lang="gu">શ્રી વિહત મેલડી ધામ</span></h1>
+  <p class="lead">The remaining Gate A components, specified in full so they can be built in Figma with as few tool calls as possible once the monthly allowance returns. Every “before / after” picture is the real live component, captured in a hidden browser with the proposed styles applied. The canvas was not changed. Updated 10 October 2026 with your locked decisions: page endings, the phone festival banner and the images.</p>
+  <div class="status">
+    <div><b>Built in Figma</b><span>Foundations: colour, type scale, Gujarati numerals, spacing &amp; layout. Components: icons &amp; chakra, buttons/chips/fields, navigation.</span></div>
+    <div><b>Specified on this page</b><span>Page banners &amp; headings, images &amp; frames, cards, festival components and page endings, with before/after pictures.</span></div>
+    <div><b>Waiting on</b><span>Figma tool-call allowance (resets monthly). Your 26 images dropped into the Figma file. Trust content in [brackets].</span></div>
+    <div><b>Website design updated</b><span>At your request on 10 Oct 2026, every change on this page was applied to the Claude Design website (version 97), built on your 04:35 save. Your previous version stays in the history. The edited design was re-checked: all 12 phone pages pass at 4 widths and every picture on this page renders identically.</span></div>
+    <div><b>Gate A checklist</b><span>0 of 6 confirmed. Preview checks pass on all 12 phone pages at 4 widths; nothing counts as verified until its Figma screenshot has been inspected.</span></div>
+  </div>
+  <nav class="toc" aria-label="On this page">
+    <a href="#c4">Banners &amp; headings</a><a href="#c5">Images &amp; frames</a><a href="#c6">Cards</a><a href="#c7">Festival</a><a href="#c8">Page endings</a><a href="#record">Audit change record</a><a href="#full">Full-layout phone check</a><a href="#home">Home summary preview</a><a href="#darshan">Darshan timetable</a><a href="#effects">Banner light &amp; chakra</a><a href="#plan">Figma build plan</a><a href="#open">Decisions &amp; checklist</a>
+  </nav>
+</section>
+
+<!-- ============================ C4 ============================ -->
+<section class="board" id="c4" aria-labelledby="c4t">
+  <header><p class="eyebrow">Components · 4</p><h2 id="c4t">Page banners and section headings</h2><p>One banner system for all inner pages, with the title always in the same place.</p></header>
+
+  <article class="comp">
+    <div class="comp-head"><h3>Page banner</h3><span class="chip todo">Specified · Figma build prepared</span></div>
+    <dl class="spec">
+      <dt>Purpose</dt><dd>The top of every inner page: where you are, the page title, and the next action.</dd>
+      <dt>Variants</dt><dd><b>Size</b> Feature (New Temple, Festival, Gallery, History — with page art) · Standard (Darshan, Seva, Contact, 404 — text only) × <b>Device</b> Desktop · Phone.</dd>
+      <dt>Anatomy</dt><dd>Announcement strip (44 px) → header over the banner (88 / 72 px) → breadcrumb → eyebrow <span lang="gu">॥ જય શ્રી વિહત મેલડી માઁ ॥</span> → title (Display L, 60 / 36 px) → lead (19 px, max 54 characters per line) → buttons → page art (Feature only) → lotus chakra in the top-right corner, half visible at 15 % (approved).</dd>
+      <dt>Sizes</dt><dd>Desktop: Feature at least 680 px, Standard at least 460 px, plus the 44 px strip. Phone: as tall as the content (no fixed height); Feature art at most 220 px. On the phone the festival banner's art is one image, the new-temple render (190 px tall, shown whole), in place of the deity pair (approved).</dd>
+      <dt>Rules</dt><dd><ul>
+        <li>Content is aligned to the top, so the breadcrumb starts 120 px below the banner top on every page. Today the title sits anywhere from 228 to 378 px down, depending on the art.</li>
+        <li>The title stays on one line on desktop where it fits. <span lang="gu">“પ્રાણ પ્રતિષ્ઠા”</span> is never split (non-breaking space).</li>
+        <li>Festival banner on the phone (approved 10 Oct): title, dates, countdown and both actions first; then one image — the new-temple render from the ZIP (<code>14_temple_new-temple-render</code>), shown whole and standing on the bottom edge, on the burgundy ground with the faint lotus chakra. Desktop and tablet keep the full composition with the deity pair.</li>
+        <li>Phone dates sit in two rows, label left and date right. A date never breaks inside itself; on a very narrow phone (320 px) the whole date moves under its label rather than leaving <span lang="gu">“૨૦૨૭”</span> alone.</li>
+        <li>Wording stays as approved on the site: <span lang="gu">॥ જય શ્રી વિહત મેલડી માઁ ॥</span>, <span lang="gu">મૂર્તિ પ્રાણ પ્રતિષ્ઠા મહોત્સવ</span>, <span lang="gu">૨ – ૮ ફેબ્રુઆરી ૨૦૨૭</span>. The layout changes; the copy does not.</li>
+        <li>Phone, every inner page: eyebrow 10 px above the title, 16 px between groups. Buttons share a row only when both labels fit; otherwise each takes a full row. A label never breaks inside a button.</li>
+        <li>Phone page art: the 220 px cap applies to pictures only. The History contents list and the Gallery collage keep their full height.</li>
+        <li>The announcement strip appears on every inner page; on phone it uses the short text <span lang="gu">“પ્રાણ પ્રતિષ્ઠા મહોત્સવ · ૨–૮ ફેબ્રુ.”</span> so <span lang="gu">“૨૦૨૭”</span> never wraps.</li>
+      </ul></dd>
+      <dt>Fixes</dt><dd class="fix">Banner heights 423–792 px → two sizes (audit B3) · festival title broke as <span lang="gu">“મૂર્તિ પ્રાણ / પ્રતિષ્ઠા મહોત્સવ”</span> (B5) · strip missing on 4 of 8 inner pages (B3) · phone strip wrapped the year (B5).</dd>
+    </dl>
+    <figure><img src="img/c4-banner-feature-desktop.webp" alt="Festival page banner on desktop, current and proposed side by side" loading="lazy"><figcaption>Feature banner, desktop (festival page). Title now one line; banner 824 → 752 px including the strip.</figcaption></figure>
+    <figure><img src="img/c4-banner-standard-desktop.webp" alt="Seva page banner on desktop, current and proposed" loading="lazy"><figcaption>Standard banner, desktop (Seva page). The announcement strip is added; the title stays at the same height as on every other page.</figcaption></figure>
+    <figure class="half"><img src="img/c4-banner-feature-phone.webp" alt="Festival page banner on phone, current and proposed" loading="lazy"><img src="img/c4-banner-standard-phone.webp" alt="Seva page banner on phone, current and proposed" loading="lazy"><figcaption>Phone. Festival banner 1,053 → 770 px: one-line title, dates in two rows, buttons in one row, then the new-temple render (190 px) in place of the deity pair. Checked at 320, 360, 390 and 430 px wide: no clipped Gujarati and no year on its own line (at 360 px the title takes two lines). Seva gains the strip and the same tighter title spacing (460 → 477 px).</figcaption></figure>
+    <div class="measure"><span>Festival desktop 824 → 752 px</span><span>Festival phone 1,053 → 770 px</span><span>Seva desktop 457 → 504 px (strip added)</span><span>Title start: 120 px on every page</span></div>
+  </article>
+
+  <article class="comp">
+    <div class="comp-head"><h3>Regression check: all eight phone banners</h3><span class="chip ok">Passed in the preview · 10 Oct</span></div>
+    <p>The tighter phone spacing applies to every inner page, so each phone banner was captured with the proposed styles and checked for clipped or overflowing Gujarati, overlapping buttons and the breadcrumb position. The check found two problems from earlier preview rules, both now fixed:</p>
+    <ul>
+      <li><b>History</b>: the contents list (<span lang="gu">અનુક્રમણિકા</span>) ran past the bottom of the banner because the 220 px art cap applied to it. The cap now applies to pictures only.</li>
+      <li><b>Darshan and New Temple</b>: long button labels broke onto two lines inside the button. Buttons now move to their own row instead.</li>
+    </ul>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Phone banner heights">
+    <table>
+      <thead><tr><th>Page</th><th>Current</th><th>Proposed</th><th>Breadcrumb top</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>Darshan</td><td class="n">637 px</td><td class="n">646 px</td><td class="n">128 → 172 px</td><td>Three buttons: two in a row, the third full width</td></tr>
+        <tr><td>New Temple</td><td class="n">927 px</td><td class="n">807 px</td><td class="n">189 → 172 px</td><td>Buttons stacked; temple whole at 220 px</td></tr>
+        <tr><td>Festival</td><td class="n">1,053 px</td><td class="n">770 px</td><td class="n">189 → 172 px</td><td>Temple render in place of the deity pair; dates in two rows</td></tr>
+        <tr><td>Seva</td><td class="n">460 px</td><td class="n">477 px</td><td class="n">128 → 172 px</td><td>Strip added</td></tr>
+        <tr><td>Gallery</td><td class="n">879 px</td><td class="n">824 px</td><td class="n">189 → 172 px</td><td>Collage at full height</td></tr>
+        <tr><td>History</td><td class="n">1,147 px</td><td class="n">1,103 px</td><td class="n">189 → 172 px</td><td>Contents list fully inside the banner</td></tr>
+        <tr><td>Contact</td><td class="n">426 px</td><td class="n">444 px</td><td class="n">128 → 172 px</td><td>Strip added</td></tr>
+        <tr><td>404</td><td class="n">580 px</td><td class="n">599 px</td><td class="n">—</td><td>Strip added; the way home stays first</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <figure><img src="img/c4-phone-banners-all.webp" alt="All eight phone page banners with the proposed styles" loading="lazy"><figcaption>All eight phone banners, proposed, at 390 px. The breadcrumb now starts at the same place on every page. The floating bottom bar is hidden in these pictures.</figcaption></figure>
+  </article>
+
+  <article class="comp">
+    <div class="comp-head"><h3>Section heading</h3><span class="chip todo">Specified · no visual change</span></div>
+    <dl class="spec">
+      <dt>Variants</dt><dd><b>Align</b> Centre (with gold rule and lotus) · Left (with an optional “see all” button on the right) × <b>Device</b> Desktop · Phone.</dd>
+      <dt>Anatomy</dt><dd>Eyebrow (15 px semibold, gold ink) → heading (Heading XL, 44 / 30 px, maroon) → optional lead (19 px, max 680 px wide).</dd>
+      <dt>Rule</dt><dd>One heading style for every section on every page. No section numbers (removed by trust decision).</dd>
+    </dl>
+    <figure><img src="img/c4-section-heading-single.webp" alt="Left-aligned section heading with a see-all button" loading="lazy"><figcaption>Left variant as it is today (home page programme section).</figcaption></figure>
+  </article>
+</section>
+
+<!-- ============================ C5 ============================ -->
+<section class="board" id="c5" aria-labelledby="c5t">
+  <header><p class="eyebrow">Components · 5</p><h2 id="c5t">Images and frames</h2><p>How the deities, the pujya Bapas and the temple are framed — and what shows while a photo is still awaited.</p></header>
+
+  <article class="comp">
+    <div class="comp-head"><h3>Arch frame</h3><span class="chip todo">Specified · Figma build prepared</span></div>
+    <dl class="spec">
+      <dt>Variants</dt><dd><b>Kind</b> Deity · Portrait × <b>Size</b> Large · Phone.</dd>
+      <dt>Image fit</dt><dd><ul><li>Deity: the whole figure is shown (contain), anchored to the bottom, on the warm glow — never cropped.</li><li>Portrait: fills the arch (cover) with the face in the upper third (focus point 50 % / 18 %); never zoomed beyond the frame.</li></ul></dd>
+      <dt>Frame</dt><dd>Round top, 8 px bottom corners, gold ring. Desktop ring: 1.5 px gold + 9 px ivory + 1 px line. Phone ring: 1.5 + 5 + 1 px, so the visible ring stays inside the 16 px page margin; pairs sit 24 px apart.</dd>
+      <dt>Caption</dt><dd>Below the arch, centred: deity name in maroon; portraits add the small <span lang="gu">“પરમ પૂજ્ય”</span> line above the name.</dd>
+      <dt>Fixes</dt><dd class="fix">Pairs of arches reached 6 px from the phone edge (A4) · Karamshibapa's portrait on the phone history page was zoomed so far the face was cut at the moustache (A2, critical).</dd>
+    </dl>
+    <figure class="half"><img src="img/c5-arch-pair-phone.webp" alt="Pair of deity arches on phone, current and proposed" loading="lazy"><img src="img/c5-portrait-pair-phone.webp" alt="Pair of portrait arches on phone, current and proposed" loading="lazy"><figcaption>Phone pairs: thinner ring, clear margins on both sides.</figcaption></figure>
+    <figure class="narrow"><img src="img/c5-portrait-phone.webp" alt="Karamshibapa portrait in the history page arch on phone, current and proposed" loading="lazy"><figcaption>History page, phone. Current: turban and half a face. Proposed: the whole face, turban and moustache inside the arch.</figcaption></figure>
+  </article>
+
+  <article class="comp">
+    <div class="comp-head"><h3>Photo tile with caption</h3><span class="chip todo">Specified · Figma build prepared</span></div>
+    <dl class="spec">
+      <dt>Variants</dt><dd><b>Ratio</b> Tall (4 : 5) · Wide (16 : 10).</dd>
+      <dt>Anatomy</dt><dd>Photo (cover) → category tag top-left (14 px on ivory pill) → caption bottom-left (16 px ivory) over a dark fade → short gold rule under the caption.</dd>
+      <dt>Fade</dt><dd>From transparent to 62 % at 38 % height to 90 % burgundy-night at the bottom.</dd>
+      <dt>Fix</dt><dd class="fix">Caption contrast on light photos measured 3.1 : 1 → 7.5 : 1 (needs 4.5 : 1).</dd>
+    </dl>
+    <figure class="narrow"><img src="img/c5-photo-caption.webp" alt="Gallery tile of Bhuvaji Shri Sureshbapa with caption, current and proposed" loading="lazy"><figcaption>Gallery tile. The stronger fade keeps the caption readable over the white kurta.</figcaption></figure>
+  </article>
+
+  <article class="comp">
+    <div class="comp-head"><h3>“Photo coming soon” tile</h3><span class="chip todo">Specified · Figma build prepared</span></div>
+    <dl class="spec">
+      <dt>Variants</dt><dd><b>Ratio</b> Wide (16 : 10, news) · Tall (4 : 5, gallery) · Square.</dd>
+      <dt>Anatomy</dt><dd>Cream ground, the lotus chakra faintly in the centre, gold-ink camera icon, the placeholder label in 15 px muted ink (e.g. <span lang="gu">[નિર્માણ કાર્યનો તાજો ફોટો]</span>).</dd>
+      <dt>Rule</dt><dd>No dashed borders anywhere — they read as unfinished wireframes. One tile style for news, gallery, history and the construction diary.</dd>
+      <dt>Fix</dt><dd class="fix">Placeholders looked like wireframes and news cards were built two ways (B12).</dd>
+    </dl>
+    <figure><img src="img/c6-news-desktop.webp" alt="Home page news cards, current and proposed" loading="lazy"><figcaption>Shown inside the news cards (also covered under Cards): cream tile with faint chakra instead of a dashed box.</figcaption></figure>
+  </article>
+
+  <article class="comp">
+    <div class="comp-head"><h3>Temple render crops</h3><span class="chip todo">Specified · Figma build prepared</span></div>
+    <dl class="spec">
+      <dt>Rules</dt><dd><ul><li>The full temple render is always completely visible (hero, new-temple band).</li><li>Detail crops never touch the flag: at least 24 px of air above the <span lang="gu">ધજા</span>.</li></ul></dd>
+      <dt>Fix</dt><dd class="fix">The flag ran into the top of the frame on the New Temple page (A1).</dd>
+    </dl>
+    <figure><img src="img/c5-temple-crop.webp" alt="Shikhar and flag crop, current and proposed" loading="lazy"><figcaption>New Temple page, <span lang="gu">“શિખર અને ધજા”</span> crop.</figcaption></figure>
+  </article>
+</section>
+
+<!-- ============================ C6 ============================ -->
+<section class="board" id="c6" aria-labelledby="c6t">
+  <header><p class="eyebrow">Components · 6</p><h2 id="c6t">Cards</h2><p>Programme, news, contact and link cards — one family, consistent edges and padding.</p></header>
+
+  <article class="comp">
+    <div class="comp-head"><h3>Event card</h3><span class="chip todo">Specified · Figma build prepared</span></div>
+    <dl class="spec">
+      <dt>Variants</dt><dd><b>Tone</b> Light · Feature (maroon, for <span lang="gu">મૂર્તિ પ્રાણ પ્રતિષ્ઠા</span>) × <b>Layout</b> Stacked · Wide.</dd>
+      <dt>Anatomy</dt><dd>Date (Numeral style + month) → lotus ornament top-right → title (Heading M) → description (15 px) → rule → time and place rows with icons.</dd>
+      <dt>Sizes</dt><dd>Radius 12 px; padding 40 / 32 px desktop, 24 px phone.</dd>
+      <dt>Responsive</dt><dd>1440 / 1180: three across. 834 / 844: the main event comes first, full width, in the Wide layout (two columns), then the other two side by side. 390: stacked.</dd>
+      <dt>Fix</dt><dd class="fix">At tablet widths the row broke 2 + 1 and left the most important card alone (B6).</dd>
+    </dl>
+    <figure><img src="img/c6-events-tablet.webp" alt="Programme cards at tablet width, current and proposed" loading="lazy"><figcaption>Tablet portrait (834 px). Section 844 → 744 px tall and no orphaned card.</figcaption></figure>
+  </article>
+
+  <article class="comp">
+    <div class="comp-head"><h3>News card</h3><span class="chip todo">Specified · Figma build prepared</span></div>
+    <dl class="spec">
+      <dt>Variants</dt><dd><b>Media</b> Photo · Coming soon · Text only (announcements, and the compact phone list).</dd>
+      <dt>Anatomy</dt><dd>One white card (radius 12, 1 px line): media on top → tag → date → title (Heading M) → one-line summary → link with arrow. Same inner padding (24 px) on every card.</dd>
+      <dt>Fix</dt><dd class="fix">Card 1 was a white card while cards 2–3 were a dashed box with floating text (B12).</dd>
+    </dl>
+    <figure><img src="img/c6-news-desktop.webp" alt="News cards, current and proposed" loading="lazy"><figcaption>Home page news, desktop.</figcaption></figure>
+  </article>
+
+  <article class="comp">
+    <div class="comp-head"><h3>Contact rows</h3><span class="chip todo">Specified · Figma build prepared</span></div>
+    <dl class="spec">
+      <dt>Anatomy</dt><dd>One card holding four rows: 48 px icon circle → label (gold ink) → value (19 px semibold) → note → optional link. Rows split by a 1 px line.</dd>
+      <dt>Content</dt><dd lang="gu">સરનામું · ફોન · પાર્કિંગ · દર્શન સમય (unchanged wording).</dd>
+      <dt>Fix</dt><dd class="fix">The 2 × 2 grid squeezed the text: <span lang="gu">“૭”</span> alone on a line, a wrapped link, a half-empty parking card (A5).</dd>
+    </dl>
+    <figure><img src="img/c6-contact-desktop.webp" alt="Contact section, current and proposed" loading="lazy"><figcaption>Contact page, desktop.</figcaption></figure>
+  </article>
+
+  <article class="comp">
+    <div class="comp-head"><h3>Link card</h3><span class="chip todo">Specified · no visual change</span></div>
+    <dl class="spec"><dt>Use</dt><dd>404 page and “related pages” lists: title, one-line description, arrow. States: Default, Hover, Focus.</dd></dl>
+    <figure><img src="img/c6-link-cards-single.webp" alt="Link cards on the 404 page" loading="lazy"><figcaption>As it is today on the 404 page.</figcaption></figure>
+  </article>
+</section>
+
+<!-- ============================ C7 ============================ -->
+<section class="board" id="c7" aria-labelledby="c7t">
+  <header><p class="eyebrow">Components · 7</p><h2 id="c7t">Festival components</h2><p>The detailed programme stays on the festival page (approved); these are its building blocks.</p></header>
+
+  <article class="comp">
+    <div class="comp-head"><h3>Countdown</h3><span class="chip todo">Specified · no visual change</span></div>
+    <dl class="spec">
+      <dt>States</dt><dd>Counting (days · hours · minutes, no seconds) · Day before / day of (7–8 Feb) · After the muhurat (<span lang="gu">મૂર્તિ પ્રાણ પ્રતિષ્ઠા સંપન્ન</span> and a thank-you). × <b>Device</b> Desktop · Phone.</dd>
+      <dt>Numerals</dt><dd>Gujarati digits in Noto Serif Gujarati (decorative numeral rule).</dd>
+      <dt>Build note</dt><dd>The page needs to refresh only every 30–60 seconds (it refreshes every second today, though seconds are no longer shown).</dd>
+    </dl>
+    <figure class="narrow"><img src="img/c7-countdown-states.webp" alt="Countdown in its three states" loading="lazy"><figcaption>The three states, captured by setting the browser clock to today, 7 Feb 2027 and 8 Feb 2027 after 12:39.</figcaption></figure>
+  </article>
+
+  <article class="comp">
+    <div class="comp-head"><h3>Festival day card</h3><span class="chip todo">Specified · Figma build prepared</span></div>
+    <dl class="spec">
+      <dt>Variants</dt><dd><b>Type</b> Regular · Main (8 Feb: maroon, muhurat callout <span lang="gu">બપોરે ૧૨:૩૯</span>) · Closing (9 Feb).</dd>
+      <dt>Anatomy</dt><dd>Date and weekday → day label → day title → timed rows → night block (moon, time, programme, artist names with initials circles).</dd>
+      <dt>Sizes</dt><dd>Radius 16 px (was 18, outside the radius scale); padding 22 / 20 px.</dd>
+      <dt>Fix</dt><dd class="fix">The 9 Feb card said <span lang="gu">“દિવસ ૮”</span>, contradicting <span lang="gu">“સાત દિવસ”</span> and the trust's 2–8 Feb decision. It now says <span lang="gu">“સમાપન”</span> (critical #3).</dd>
+    </dl>
+    <figure class="half"><img src="img/c7-day-regular.webp" alt="Regular day card, current and proposed" loading="lazy"><img src="img/c7-day-main.webp" alt="Main day card, current and proposed" loading="lazy"><img src="img/c7-day-closing.webp" alt="Closing day card, current and proposed" loading="lazy"><figcaption>Regular, Main and Closing. Only the closing label and the corner radius change.</figcaption></figure>
+  </article>
+
+  <article class="comp">
+    <div class="comp-head"><h3>Day tabs (phone) and muhurat marker</h3><span class="chip todo">Specified · Figma build prepared</span></div>
+    <dl class="spec">
+      <dt>Day tabs</dt><dd>One segmented strip of 8 equal tabs (each ≥ 44 px wide, weekday at 14 px). Selected: maroon. 8 Feb: gold ring.</dd>
+      <dt>Muhurat marker</dt><dd>Desktop: <span lang="gu">“◆ બપોરે ૧૨:૩૯”</span>. Phone: <span lang="gu">“◆ ૧૨:૩૯”</span> — the time is always visible.</dd>
+      <dt>Fixes</dt><dd class="fix">Tabs were 41 px wide with 11 px labels (C8) · on phone the muhurat row showed only a dark dot — the most important time on the site was missing (critical #5).</dd>
+    </dl>
+    <figure><img src="img/c7-day-tabs-phone.webp" alt="Day tabs on phone, current and proposed" loading="lazy"><figcaption>Day tabs, phone.</figcaption></figure>
+    <figure><img src="img/c7-muhurat-phone.webp" alt="Muhurat row of the week chart on phone, current and proposed" loading="lazy"><figcaption>Week chart, pran pratishtha row, phone.</figcaption></figure>
+  </article>
+</section>
+
+<!-- ============================ C8 ============================ -->
+<section class="board" id="c8" aria-labelledby="c8t">
+  <header><p class="eyebrow">Components · 8</p><h2 id="c8t">Page endings</h2><p>Every page ends the same way — rule approved on 10 October 2026.</p></header>
+
+  <article class="comp">
+    <div class="comp-head"><h3>Page-ending rule</h3><span class="chip ok">Approved · 10 Oct 2026</span></div>
+    <dl class="spec">
+      <dt>Content pages</dt><dd>Home, Darshan, New Temple, Festival, Gallery, History, Contact: <b>WhatsApp band → devotional band → footer</b>.</dd>
+      <dt>Exceptions</dt><dd>Seva registration form: footer only, so nothing distracts from the form. 404: footer only, with a clear way back to the home page (<span lang="gu">“મુખ્ય પૃષ્ઠ પર જાઓ”</span>).</dd>
+      <dt>Phone</dt><dd>Bands stay short and are not repeated: WhatsApp band section 723 → 566 px, devotional band 488 → 407 px.</dd>
+      <dt>Changes</dt><dd>Adds the WhatsApp band to New Temple and History; adds the devotional band to Darshan and Contact (audit B4).</dd>
+    </dl>
+  </article>
+
+  <article class="comp">
+    <div class="comp-head"><h3>WhatsApp band</h3><span class="chip todo">Specified · Figma build prepared</span></div>
+    <dl class="spec">
+      <dt>Purpose</dt><dd>Seva enquiries and the WhatsApp contact action.</dd>
+      <dt>Variants</dt><dd><b>Device</b> Desktop (glyph · copy · checklist · QR · button) · Phone (no QR; full-width button).</dd>
+      <dt>Style</dt><dd>One style everywhere: white card on cream, radius 16 px. Desktop 64 px padding. Phone: section 48 px top and bottom, card 28 / 20 px, 56 px glyph, 24 px heading, checklist in one wrapping row.</dd>
+      <dt>Fix</dt><dd class="fix">The festival page used a maroon card while the others used white (B4).</dd>
+    </dl>
+    <figure><img src="img/c8-wa-festival.webp" alt="WhatsApp band on the festival page, current and proposed" loading="lazy"><figcaption>Festival page, desktop.</figcaption></figure>
+    <figure class="phone"><img src="img/c8-wa-phone.webp" alt="WhatsApp band on phone, current and proposed" loading="lazy"><figcaption>Phone: 723 → 566 px for the whole section, same content.</figcaption></figure>
+  </article>
+
+  <article class="comp">
+    <div class="comp-head"><h3>Devotional band and footer</h3><span class="chip todo">Specified · Figma build prepared</span></div>
+    <dl class="spec">
+      <dt>Devotional band</dt><dd>Burgundy, chakra centred behind, <span lang="gu">॥ ૐ ॥</span>, <span lang="gu">જય શ્રી વિહત મેલડી માઁ</span>, the shloka, five values, the deity pair. Phone: values separated by space only, so no line starts with a dot; 64 px top space; shloka 16 px. A respectful close, not a repeat of the page.</dd>
+      <dt>Footer</dt><dd>Desktop unchanged (brand, pages, festival, contact). Phone: contact first, then brand, then pages and festival links in two columns — 1,281 → 1,009 px. Footer headings become proper level-2 headings styled small (the page outline skipped from h2 to h4).</dd>
+      <dt>Fixes</dt><dd class="fix">Phone values line began with <span lang="gu">“•”</span> (B5) · phone footer about 1,300 px, repeating the menu (B8).</dd>
+    </dl>
+    <figure class="half"><img src="img/c8-devotional-phone.webp" alt="Devotional band on phone, current and proposed" loading="lazy"><img src="img/c8-footer-phone.webp" alt="Footer on phone, current and proposed" loading="lazy"><figcaption>Phone: devotional band 488 → 407 px (values on one line) and the compact footer, 1,281 → 1,009 px.</figcaption></figure>
+  </article>
+</section>
+
+<!-- ============================ Record ============================ -->
+<section class="board" id="record" aria-labelledby="rt">
+  <header><p class="eyebrow">Audit change record</p><h2 id="rt">Every Phase 1 finding and where it is handled</h2><p>Status: <span class="chip ok">In Figma</span> built in the Figma file · <span class="chip todo">Specified</span> on this page, Figma build prepared · <span class="chip later">Later</span> page-level work in Gate B/C or behaviour fixed when the site is built.</p></header>
+  <div class="tablewrap" tabindex="0" role="region" aria-label="Audit change record">
+  <table>
+    <thead><tr><th>Finding</th><th>Change</th><th>Where</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>~110 [bracket] placeholders</td><td>Trust content; one polished “coming soon” style meanwhile</td><td>Images &amp; frames</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>Booklet (PDF) button links to “#”</td><td>Hidden until the trust's PDF exists — no invented file</td><td>Buttons; build stage</td><td><span class="chip later">Later</span></td></tr>
+      <tr><td>9 Feb card says <span lang="gu">“દિવસ ૮”</span></td><td>Label <span lang="gu">“સમાપન”</span></td><td>Festival day card</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>Karamshibapa portrait over-zoomed (phone)</td><td>Cover with the face in the upper third</td><td>Arch frame</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>Karamshibapa photo missing from the desktop home heritage arch after the last canvas save</td><td>Restored only from <code>07_portrait_karamshibapa_closeup-glow</code></td><td>Arch frame (Figma); website at build</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>12:39 hidden on the phone chart</td><td>Marker shows <span lang="gu">“◆ ૧૨:૩૯”</span></td><td>Muhurat marker</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>Seva form does not save registrations</td><td>Trust chooses where entries go; thank-you only after saving</td><td>Before launch</td><td><span class="chip later">Later</span></td></tr>
+      <tr><td>Home repeats the festival programme</td><td>Home becomes a summary; festival page keeps the full programme and singers</td><td>Home (Gate B)</td><td><span class="chip later">Later</span></td></tr>
+      <tr><td>Banner heights 423–792 px; strip on 4 of 8 pages</td><td>Two banner sizes; title in the same place; strip everywhere</td><td>Page banner</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>Page endings differ</td><td>One ending rule (approved); one WhatsApp band style; compact on the phone</td><td>Page endings</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>Festival banner 1,053 px tall on the phone; year wrapping on its own</td><td>New-temple render in place of the deity pair on the phone (approved); dates in two rows — 770 px</td><td>Page banner</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>19–24 font sizes per page; 11–12 px labels</td><td>10 sizes per device; 14 px minimum</td><td>Foundations · Type</td><td><span class="chip ok">In Figma</span></td></tr>
+      <tr><td>Hind Vadodara has no Gujarati digits</td><td>Digits in Noto Sans Gujarati; decorative numerals in Noto Serif Gujarati</td><td>Foundations · Numerals</td><td><span class="chip ok">In Figma</span></td></tr>
+      <tr><td>Gold numerals on maroon 2.8–4.4 : 1</td><td>Gold stays decorative; numerals on dark use soft gold</td><td>Foundations · Colour</td><td><span class="chip ok">In Figma</span></td></tr>
+      <tr><td>No navigation once you scroll</td><td>Compact header after one screen, stays visible</td><td>Navigation</td><td><span class="chip ok">In Figma</span></td></tr>
+      <tr><td>Phone menu numbered “01–08”</td><td>Numbers removed; menu fits one screen</td><td>Navigation</td><td><span class="chip ok">In Figma</span></td></tr>
+      <tr><td>Extra floating WhatsApp button (phone home)</td><td>Removed; bottom bar and band cover it</td><td>Navigation</td><td><span class="chip ok">In Figma</span></td></tr>
+      <tr><td>Arches 6 px from the phone edge</td><td>Thinner phone ring inside the margin</td><td>Arch frame</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>3-card rows break 2 + 1 on tablet</td><td>Main event full width first</td><td>Event card</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>Captions over photos 2.3–3.3 : 1</td><td>Stronger fade (7.5 : 1 measured)</td><td>Photo tile</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>Flag touching the image frame</td><td>24 px of air above the flag</td><td>Temple crops</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>Contact cards cramped</td><td>One card of rows</td><td>Contact rows</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>News cards built two ways; dashed placeholders</td><td>One card structure; cream tile</td><td>News card</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>Phone footer ~1,300 px</td><td>Compact footer 1,009 px</td><td>Footer</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>Day tabs 41 px, 11 px labels</td><td>Segmented strip, ≥ 44 px, 14 px</td><td>Day tabs</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>Hero taller than short laptop screens; tablet hero 1,234 px</td><td>Hero never taller than the screen; tablet recomposed</td><td>Foundations rule; Home (Gate B)</td><td><span class="chip later">Later</span></td></tr>
+      <tr><td>Scrolling strip ignores reduced motion</td><td>Starts paused when the device asks for less motion</td><td>Build stage</td><td><span class="chip later">Later</span></td></tr>
+      <tr><td>Countdown refreshes the page every second</td><td>Refresh every 30–60 seconds</td><td>Build stage</td><td><span class="chip later">Later</span></td></tr>
+      <tr><td>Darshan desktop chart: 8 identical rows</td><td>Use the phone day-list design</td><td>Darshan page (Gate C)</td><td><span class="chip later">Later</span></td></tr>
+      <tr><td>Seva desktop: empty right column</td><td>Side column stays in view while scrolling — fix prepared, waiting for your approval</td><td>Seva page (Gate C)</td><td><span class="chip later">Later</span></td></tr>
+      <tr><td>Stats labels wrap one word</td><td>Wider label column</td><td>Home (Gate B)</td><td><span class="chip later">Later</span></td></tr>
+      <tr><td>Old oval-petal chakra still in two ornaments (Home “નવું મંદિર” band, CTA card corner)</td><td>Lotus chakra everywhere</td><td>Website</td><td><span class="chip ok">Published · v108</span></td></tr>
+      <tr><td>Banner gold light beside the title on tablets and phones; halo drifting while it breathes</td><td>Light and halo drawn in the picture’s own box</td><td>Website</td><td><span class="chip ok">Published · v109</span></td></tr>
+      <tr><td>Heading levels skip (h2 → h4)</td><td>Footer and Seva headings re-levelled</td><td>Footer; build stage</td><td><span class="chip todo">Specified</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============================ Full layout ============================ -->
+<section class="board" id="full" aria-labelledby="ft">
+  <header><p class="eyebrow">Full-layout phone check · preview</p><h2 id="ft">Every phone page at 320, 360, 390 and 430 px</h2><p>Not only banners: each phone page was checked top to bottom — announcement strip, header, breadcrumb, page content, page endings and footer — in its current form and with every proposed change applied. This is a preview check in a hidden browser. It does not replace the Figma screenshots.</p></header>
+  <div class="tablewrap" tabindex="0" role="region" aria-label="Full-layout check summary">
+  <table>
+    <thead><tr><th>What was checked</th><th>Result with the proposed changes</th></tr></thead>
+    <tbody>
+      <tr><td>Pages</td><td>12 phone artboards: Home (both parts), Darshan, New Temple, Festival, Seva, Gallery, History, Contact, 404, Menu, Offline — 4 widths each, current and proposed (96 runs)</td></tr>
+      <tr><td>Sideways scrolling of the page</td><td>None at any width</td></tr>
+      <tr><td>Anything past the screen edge (outside scrolling strips)</td><td>None</td></tr>
+      <tr><td>Clipped or cut-off text</td><td>None</td></tr>
+      <tr><td>Stretched or squashed images</td><td>None</td></tr>
+      <tr><td>Button labels breaking inside the button</td><td>None (3 buttons fixed)</td></tr>
+      <tr><td>Year on its own line, apart from the month</td><td>None (fixed everywhere)</td></tr>
+      <tr><td>Headings ending with one word alone</td><td>None (16 at 320 px before)</td></tr>
+      <tr><td>Problems caused by the proposed changes</td><td><b>0</b> — the two found earlier (History list, Darshan / New Temple buttons) are fixed</td></tr>
+      <tr><td>Problems already on the site, now fixed</td><td>12 — see below</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <article class="comp">
+    <div class="comp-head"><h3>Fixes for problems already on the site</h3><span class="chip todo">Preview-verified · Figma pending</span></div>
+    <dl class="spec">
+      <dt>Buttons</dt><dd>A button label never breaks; when two buttons do not fit side by side, each takes its own row. On the smallest phones (360 px and below) button side padding is 20 px, so <span lang="gu">“WhatsApp પર નિમંત્રણ મોકલો”</span> fits one line at 320 px.</dd>
+      <dt>CTA card</dt><dd>The Seva and New Temple cards kept their 64 px desktop side padding on phones, squeezing the text to 160 px at 320 px (<span lang="gu">“સેવા / નોંધણી / કરો”</span> on three lines). Phone padding is now 32 / 24 px.</dd>
+      <dt>Dates</dt><dd>The year always stays with the word before it (non-breaking space), so <span lang="gu">“૨૦૨૭”</span> never starts a line on its own. The wording is unchanged.</dd>
+      <dt>Headings</dt><dd>Headings balance their lines on phones, so no heading ends with a single word (<span lang="gu">“માઁ”</span>, <span lang="gu">“જોડાઓ”</span>). The number of lines never increases.</dd>
+    </dl>
+    <figure><img src="img/p320-buttons.webp" alt="Seva card and invitation buttons at 320 px, current and proposed" loading="lazy"><figcaption>320 px. Seva card: the button label no longer breaks over three lines. Invitation: the WhatsApp label stays on one line. (The booklet PDF button is still shown here; it is to be hidden until the trust's PDF exists — a build-stage item.)</figcaption></figure>
+    <figure><img src="img/p320-headings.webp" alt="WhatsApp band and devotional band headings at 320 px, current and proposed" loading="lazy"><figcaption>320 px. Headings break into balanced lines instead of leaving <span lang="gu">“જોડાઓ”</span> or <span lang="gu">“માઁ”</span> alone.</figcaption></figure>
+  </article>
+  <div class="note"><p><b>Desktop and tablet (10 Oct 2026, on the published design, version 97).</b> Nine desktop pages at 1440, 1280, 1024 and 834 px, plus the tablet and landscape home boards at their own widths — 78 runs, before and after. No new problems and no sideways scrolling. One small problem that was already there: on the Seva form at 1024 px, the shift card title “બપોર પછીની સેવા” wraps and the three cards end up uneven (proposed fix, not yet applied). The phone bottom bar never covers footer text, at the end of the page or in the canvas board.</p></div>
+  <div class="note"><p><b>Batch 2, published as version 99 (10 Oct 2026).</b> Page endings completed as approved: New Temple and History gained the WhatsApp band; Contact and Darshan gained the devotional band; on Contact the WhatsApp band now sits below the questions, so every content page ends WhatsApp band → devotional band → footer (Seva and 404: footer only). The bands are copied unchanged from the existing pages; History uses the festival page's ivory variant because its last section is cream. Seva shift cards: 12 px side padding between 761 and 1099 px keeps “બપોર પછીની સેવા” on one line at full size. Retest: 174 runs (all phone, desktop and tablet widths) — no new problems, no sideways scrolling; all 24 frames fit; the 27 pictures on this page are pixel-identical to version 97. Version 97 stays in the history.</p></div>
+  <div class="note"><p><b>Batch 3, published as version 100 (10 Oct 2026).</b> The ivory WhatsApp band (Festival and History) now uses the same compact phone spacing as the cream band: 48 px top and bottom instead of 104, section 678 → 566 px; both phone pages are 112 px shorter. One phone-only style rule; no wording or desktop change. Retest: all 12 phone pages at 320–430 px plus Festival and History at 1440 and 834 (104 runs) — no problems, no sideways scrolling; all 24 frames fit; the 27 pictures on this page unchanged.</p></div>
+  <div class="note"><p><b>Limits of this check.</b> Automatic measurements plus a visual look at every changed area and at the page endings at 320 px. It covers the phone artboards only; the new rules are all phone-only, so desktop and tablet are untouched by them. The same four widths are tested again when the site is built, and in Figma when the boards are synced.</p></div>
+</section>
+
+<!-- ============================ Home summary preview ============================ -->
+<section class="board" id="home" aria-labelledby="hst">
+  <header><p class="eyebrow">Home page summary · approved and published as version 101 (10 Oct 2026)</p><h2 id="hst">The home page becomes a festival summary</h2><p>Approved and published as version 101 on 10 Oct 2026, built on version 100 (kept in the history). Only the five home boards and one phone style rule changed; every other page is untouched. The live files were checked against what was sent.</p></header>
+  <article class="comp">
+    <div class="comp-head"><h3>What changed</h3><span class="chip ok">Published · v101</span></div>
+    <dl class="spec">
+      <dt>Removed from Home</dt><dd>The festival section with the large countdown, 7-day strip, invitation paragraph, calendar links and the PDF button. All of it stays on the Festival page; the hero keeps its countdown pill.</dd>
+      <dt>Kept, shortened</dt><dd>“સાત દિવસ, ત્રણ પાવન અવસર”: the three event cards keep their dates, names, time and place; the long descriptions stay on the Festival page. The night programme strip and “વિધિનો પરિચય વાંચો” stay.</dd>
+      <dt>Actions</dt><dd>“સંપૂર્ણ કાર્યક્રમ” (top), then “સેવા નોંધણી કરો” and “WhatsApp પર નિમંત્રણ મોકલો” — the existing buttons, full width on phones.</dd>
+      <dt>Background</dt><dd>The events section moves from cream to ivory on Home so the colours keep alternating (darshan cream → events ivory → new temple dark).</dd>
+      <dt>Wording</dt><dd>No new wording; only existing text is kept or removed.</dd>
+      <dt>Your choices</dt><dd>Night strip kept · PDF button removed from Home · “નવું મંદિર” and “એક નજરે” stay separate.</dd>
+    </dl>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Home page heights">
+    <table>
+      <thead><tr><th>Board</th><th>Festival area</th><th>Whole page</th></tr></thead>
+      <tbody>
+        <tr><td>Desktop · 1440</td><td class="n">2,174 → 989 px</td><td class="n">9,173 → 7,988 px (−1,185)</td></tr>
+        <tr><td>Tablet landscape · 1180</td><td class="n">2,164 → 989 px</td><td class="n">9,185 → 8,010 px (−1,175)</td></tr>
+        <tr><td>Phone landscape · 844</td><td class="n">2,703 → 1,234 px</td><td class="n">10,359 → 8,889 px (−1,470)</td></tr>
+        <tr><td>Tablet · 834</td><td class="n">2,814 → 1,313 px</td><td class="n">12,005 → 10,504 px (−1,501)</td></tr>
+        <tr><td>Phone · 390 (part 1)</td><td class="n">3,667 → 1,844 px</td><td class="n">6,839 → 5,016 px (−1,823)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <figure><img src="img/home-Main.webp" alt="Home page festival area on desktop, version 100 and preview" loading="lazy"><figcaption>Desktop, 1440 px.</figcaption></figure>
+    <figure><img src="img/home-HomeTabletL.webp" alt="Home page festival area on landscape tablet, version 100 and preview" loading="lazy"><figcaption>Tablet landscape, 1180 px.</figcaption></figure>
+    <figure class="half"><img src="img/home-HomePhoneL.webp" alt="Home page festival area on landscape phone, version 100 and preview" loading="lazy"><img src="img/home-HomeTablet.webp" alt="Home page festival area on portrait tablet, version 100 and preview" loading="lazy"><figcaption>Phone landscape 844 px (left) and tablet 834 px (right).</figcaption></figure>
+    <figure class="phone"><img src="img/home-HomeMobile.webp" alt="Home page festival area on phone, version 100 and preview" loading="lazy"><figcaption>Phone, 390 px.</figcaption></figure>
+  </article>
+  <div class="note"><p><b>Checks on the preview.</b> The five home boards at all their widths (desktop 1440/1280/1024/834, tablets, phone landscape, phone 320–430): no problems, no sideways scrolling. All 24 frames fit. Other spec pictures unchanged, except the expected ones: the events heading (now ivory), the tablet event cards (shorter), and the countdown and muhurat pictures, which now live only on the Festival page.</p><p><b>Found on the way.</b> Some page heights change with the time of day (the darshan card's open/closed state) and in festival week (the countdown and day cards). Home frames in the preview are sized for the tallest daily state. In festival week the Festival and Home phone boards in the canvas would show up to about 150 px less at the bottom; the real website has no fixed heights, so this affects the canvas only.</p><p><b>Festival PDF button — version 102.</b> “કાર્યક્રમ પત્રિકા (PDF)” is hidden on the Festival page until the trust’s PDF exists (one style rule; restore by linking the file and deleting the rule). Festival phone page 64 px shorter; desktop unchanged; 16 runs, no problems. </p><p><b>Invitation note — version 103.</b> The note beside the WhatsApp button now reads “મહોત્સવનું નિમંત્રણ સગાં-સ્નેહીઓને મોકલો” (was “… નિમંત્રણ અને પત્રિકા …”). When the PDF is restored, “અને પત્રિકા” goes back with the button; the instruction is in the stylesheet comment.</p></div>
+</section>
+
+<!-- ============================ Darshan timetable ============================ -->
+<section class="board" id="darshan" aria-labelledby="dtt">
+  <header><p class="eyebrow">Darshan timetable · published as version 104, today marker refined in version 105 (10 Oct 2026)</p><h2 id="dtt">One daily timeline and one ગાદી week instead of eight identical rows</h2><p>Built on version 103 (kept in the history for rollback). Only the two Darshan pages, an appended block in the stylesheet and the two Darshan frame heights changed; every other page is untouched. The live files were checked against what was sent.</p></header>
+  <article class="comp">
+    <div class="comp-head"><h3>Why the same row repeated</h3><span class="chip ok">Published · v104</span></div>
+    <p>The chart had one row per day — seven weekdays and પૂનમ. Darshan hours, both aarti times and the ભોજનશાળા are the same every day, so every row drew the same bar, the same two aarti marks and the same strip; only રવિવાર, મંગળવાર and પૂનમ added a ગાદી band. On phones the bars were hidden but “સવારે ૬ – રાત્રે ૧૦” still repeated five times, and on portrait tablets (761–899 px) the chart was cut off on the right and scrolled sideways.</p>
+    <dl class="spec">
+      <dt>Row 1 · “દરરોજ · સોમવારથી રવિવાર”</dt><dd>One timeline: darshan bar “સવારે ૬:૦૦ – રાત્રે ૧૦:૦૦ · વિરામ વિના”, the two aarti marks (7:00 and 19:00) and the ભોજનશાળા strip. It holds only things that happen every day — no ગાદી.</dd>
+      <dt>Row 2 · “માતાજીની ગાદી · રવિવાર · મંગળવાર · પૂનમ”</dt><dd>Eight day tiles. રવિવાર, મંગળવાર and પૂનમ use the ગાદી colour (the same as the legend swatch); today’s weekday is marked “આજે”. Screen readers hear “· માતાજીની ગાદી” on those three tiles.</dd>
+      <dt>Tablet</dt><dd>Each row’s label sits above it, so the chart fits the width with no sideways scrolling.</dd>
+      <dt>Phone</dt><dd>The week strip as 4 × 2 tiles; the timeline stays hidden as before, the timing cards give the hours.</dd>
+      <dt>Unchanged</dt><dd>The legend, the four timing cards, the calendar and everything below.</dd>
+      <dt>Wording</dt><dd>No new wording. Three short labels left the chart; their information is still on the page: “સવારે ૬ – રાત્રે ૧૦” (timeline bar and દર્શન card), “દર મહિને · માતાજીની ગાદી” (“દર પૂનમે માતાજીની અવિરત ગાદી હોય છે” in the calendar section) and “દર્શન અને માતાજીની ગાદી” (row 2 and the cards).</dd>
+    </dl>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Darshan timetable heights">
+    <table>
+      <thead><tr><th>Width</th><th>Timetable panel</th><th>Whole page</th></tr></thead>
+      <tbody>
+        <tr><td>Desktop · 1440</td><td class="n">1,018 → 330 px</td><td class="n">5,715 → 5,027 px (−688)</td></tr>
+        <tr><td>Tablet · 834</td><td class="n">1,002 → 401 px, no sideways scroll</td><td class="n">7,027 → 6,426 px (−601)</td></tr>
+        <tr><td>Phone · 390</td><td class="n">504 → 247 px</td><td class="n">7,344 → 7,087 px (−257)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <figure><img src="img/tt-desktop.webp" alt="Darshan timetable on desktop, version 103 and version 104" loading="lazy"><figcaption>Desktop, 1440 px.</figcaption></figure>
+    <figure><img src="img/tt-tablet.webp" alt="Darshan timetable on portrait tablet, version 103 and version 104" loading="lazy"><figcaption>Tablet, 834 px.</figcaption></figure>
+    <figure><img src="img/tt-phone.webp" alt="Darshan timetable on phones, version 103 and version 104 at 390 and 320 px" loading="lazy"><figcaption>Phone, 390 and 320 px, and 320 px in large-text mode.</figcaption></figure>
+  </article>
+  <div class="note"><p><b>Checks.</b> 13 widths from 320 to 1440 px in normal and large text: no new problems, every tile name inside its tile. “આજે” lands on the right tile on all seven days, including just after midnight. Every other board is pixel-identical to version 103; below the timetable all elements keep their text, size and position. Frames: Darshan 5,718 → 5,030 px, DarshanMobile 7,347 → 7,090 px; the footer ends inside the frame at every daily time.</p><p><b>ગાદી content check.</b> The shared timeline contains only daily items; ગાદી appears only on the રવિવાર, મંગળવાર and પૂનમ tiles, matching the row label, the ગાદી card, the legend and the lead text.</p><p><b>Version 105 · “આજે” on પૂનમ and in Indian time (10 Oct 2026).</b> On a પૂનમ date “આજે” now marks the પૂનમ tile (dates from the page’s own panchang list), so a પૂનમ on an ordinary weekday — first બુધવાર 23 Dec 2026 — no longer reads as “no ગાદી today”. The marker also follows the date in India (UTC+5:30), like the calendar and the home page, so visitors abroad see the temple’s day. Logic only: no wording, colour, layout or height change; ordinary days in India look exactly as in version 104. Checked: 85 cases around midnight in India and overseas and on પૂનમ dates, opened from five visitor timezones (India, Los Angeles, New York, London, Auckland) — all correct and in step with the calendar’s “ચાલુ છે”; 64 layout runs at desktop, tablet and phone widths in both text sizes — no new problems. Rollback: versions 104 and 103.</p></div>
+</section>
+
+<!-- ============================ Banner light & chakra ============================ -->
+<section class="board" id="effects" aria-labelledby="eft">
+  <header><p class="eyebrow">Banner light and chakra · published as versions 108 and 109 (14 Oct 2026)</p><h2 id="eft">One chakra everywhere, and the gold light stays behind Mataji</h2><p>Both at your request. Each is its own version; the previous one stays in the history for rollback. Version 107 in the history is a re-save of 106 with no change. The live files were checked against what was sent.</p></header>
+  <article class="comp">
+    <div class="comp-head"><h3>Version 108 · lotus chakra everywhere</h3><span class="chip ok">Published · v108</span></div>
+    <dl class="spec">
+      <dt>Found</dt><dd>The old chakra (simple oval petals) was still drawn in two ornaments: the dark “નવું મંદિર” band on all five home boards, and the corner of the maroon card on the New Temple and Festival pages, desktop and phone.</dd>
+      <dt>Change</dt><dd>Both now draw the lotus chakra already used by the banners, the closing devotional band and the photo tiles. Size, position, colour and softness are unchanged. Nine page files; no stylesheet change.</dd>
+      <dt>Checks</dt><dd>No old chakra left on any of the 24 boards; desktop and phone carry the same patterns section by section; 72 layout runs (320–1440 px, both text sizes), no problems; frames and wording unchanged; the other 15 boards pixel-identical, and on the nine changed boards only the ornament pixels changed.</dd>
+    </dl>
+    <figure class="phone"><img src="img/v108-chakra-home-phone.webp" alt="Phone home page new temple band, version 107 and version 108" loading="lazy"><figcaption>Phone home page, “નવું મંદિર” band, 390 px. The chakra stays faint on the site.</figcaption></figure>
+    <figure><img src="img/v108-chakra-strong.webp" alt="Old and new chakra drawn five times stronger for comparison" loading="lazy"><figcaption>Check picture only: the ornaments drawn five times stronger and the photos hidden, so the old and new drawings are easy to compare.</figcaption></figure>
+  </article>
+  <article class="comp">
+    <div class="comp-head"><h3>Version 109 · the gold light follows the picture</h3><span class="chip ok">Published · v109</span></div>
+    <dl class="spec">
+      <dt>Cause</dt><dd><ul><li>The banner’s gold light was painted at a fixed spot of the whole banner (72 % across, 42 % down). That spot is behind the picture only on desktop, where the picture sits on the right; on tablets in portrait, phones and phone landscape the picture moves below the text and the light stayed beside the title.</li><li>The breathing animation of the halo replaced the halo’s own centring, so while it breathed the halo sat up to half its width to the right.</li></ul></dd>
+      <dt>Change</dt><dd>On banners with a picture (Home, New Temple, Festival, Gallery) the light and the halo are drawn in the picture’s own box, so they move and scale with it. Same colour and strength; desktop looks as before. Banners without a picture are unchanged. Stylesheet only.</dd>
+      <dt>Checks</dt><dd>Halo centre against the visible artwork at 17 screen sizes and the tablet and landscape boards, with the animation running, with reduced motion and after turning portrait ↔ landscape: within 2 % across and 8 % down everywhere (before: up to 92 % and 71 %). 94 layout runs, no problems; frames unchanged; banners without a picture identical; the light never blocks a button.</dd>
+    </dl>
+    <figure><img src="img/v109-light-festival-768.webp" alt="Festival banner at 768 by 1024, version 108 and version 109" loading="lazy"><figcaption>Festival banner, 768×1024 — the view from your screenshot.</figcaption></figure>
+    <figure><img src="img/v109-light-festival-1024.webp" alt="Festival banner at 1024 by 768, version 108 and version 109" loading="lazy"><figcaption>Festival banner, 1024×768.</figcaption></figure>
+    <figure><img src="img/v109-light-home-1440.webp" alt="Home banner at 1440 px, version 108 and version 109" loading="lazy"><figcaption>Home banner, 1440 px: desktop unchanged in look.</figcaption></figure>
+  </article>
+  <div class="note"><p><b>Version 106 · “નવા મંદિરનો સંકલ્પ” (10 Oct 2026).</b> The trust’s three paragraphs on the New Temple page, a two-sentence teaser on Home and one sentence in History chapter 6. Not shown here with pictures; details in the project change log.</p><p><b>Design audit (10 Oct 2026).</b> The full audit of version 106, with the open items (tablet menu, Seva form errors, phone menu close button, small-phone home button and polish), is on its own page.</p></div>
+</section>
+
+<!-- ============================ Plan ============================ -->
+<section class="board" id="plan" aria-labelledby="pt">
+  <header><p class="eyebrow">Figma build plan</p><h2 id="pt">Finishing Gate A when the allowance returns</h2><p>The free plan allows 20 Figma tool calls a month. Each build script below is written, syntax-checked and returns its own screenshot, so no separate “look” calls are needed. A script running without errors is not a verification: each board is checked from its screenshot before the next call.</p></header>
+  <div class="tablewrap" tabindex="0" role="region" aria-label="Figma call plan">
+  <table>
+    <thead><tr><th>Call</th><th>What it does</th><th>Page in Figma</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td>Builds “C4 · Banners &amp; headings” (phone festival banner with the new-temple render and the dates in two rows) and “C5 · Images &amp; frames”. Only <em>reads</em> the phone announcement strip to check its text. Returns screenshots of C3, C4 and C5.</td><td>Components</td></tr>
+      <tr><td class="n">—</td><td>Pause: inspect the call 1 screenshots and fix the scripts before going on.</td><td>—</td></tr>
+      <tr><td class="n">2</td><td>Builds “C6 · Cards” and “C7 · Festival”. If call 1 shows the long text on the phone strip, the prepared correction to that existing component is shown to you first and runs only after you approve it.</td><td>Components</td></tr>
+      <tr><td class="n">3</td><td>Builds “C8 · Page endings” with the approved rule and the compact phone bands.</td><td>Components</td></tr>
+      <tr><td class="n">4</td><td>Builds the Read-me board: locked decisions, this change record, limits and the approval box.</td><td>Read-me &amp; Foundations</td></tr>
+      <tr><td class="n">5</td><td>After you drop the images: matches each file to <code>INVENTORY.csv</code> by file name <em>and</em> pixel size; reports missing, extra or duplicate files; fills the image slots (cover for portraits and photos, contain for deities, temple, logos and QR); confirms Karamshibapa from <code>07_portrait_karamshibapa_closeup-glow</code>; skips slots that are already right; changes nothing but slot fills; returns screenshots of the boards it changed.</td><td>Components</td></tr>
+      <tr><td class="n">6</td><td>Review screenshots of every board, automatic checks for collapsed text and digits not in Noto Sans Gujarati, then a new board “QA · Phone widths”: every phone component at 320, 360, 390 and 430 px, checked for anything past the edge, button labels breaking and dates. Report only: each cell is marked PASS or FAIL (in red, with the reason) and a pass/fail count is returned. It never changes a component to make a test pass.</td><td>Components</td></tr>
+      <tr><td class="n">7–9</td><td>Reserve for fixes found in the screenshots.</td><td>—</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note"><p><b>The first run is non-destructive.</b> Calls 1–4 only add new boards beside the existing ones; Foundations, C1–C3 and the Setup check page are left as they are. The Claude Design canvas is not touched in Gate A. The image script was also dry-run against a model of the file in six situations (all files present, a wrong-size file, a duplicate, a renamed file, an extra file, a file on another page); it filled only verified slots and a second run changed nothing.</p><p><b>About 6 calls to finish Gate A, plus up to 3 for fixes — 9 of the monthly 20.</b> Gates B–D need more than 20 calls in total, so the free plan sets the pace: roughly one gate per month.</p></div>
+</section>
+
+<!-- ============================ Decisions ============================ -->
+<section class="board" id="open" aria-labelledby="ot">
+  <header><p class="eyebrow">Decisions &amp; checklist</p><h2 id="ot">Locked decisions and the Gate A checklist</h2></header>
+  <div class="note"><p><b>Locked on 10 October 2026</b></p><ol>
+    <li><b>Page endings</b>: content pages end WhatsApp band → devotional band → footer. The Seva registration form and the 404 page end with the footer only; 404 keeps a clear way back to the home page. Bands stay compact on the phone.</li>
+    <li><b>Festival banner on the phone</b>: one image — the new-temple render from the ZIP — below the title, dates and buttons, in place of the deity pair; burgundy and the faint lotus chakra stay. Desktop and tablet keep the deity pair and the full composition. Judged from phone screenshots, not from the height alone.</li>
+    <li><b>Banner wording</b>: the current approved wording and date format stay. <span lang="gu">“॥ ભગવાન કરમશી બાપાના પાવન આશીર્વાદથી ॥”</span> is kept for the opening of the promotional video, not the banner. <span lang="gu">“એક પાવન અવસર · માતાજીનાં દર્શન અને આશીર્વાદ”</span> is not used yet; it may be considered later for a separate devotional section.</li>
+    <li><b>Phone banner spacing</b>: the tighter spacing is accepted on every inner page, subject to visual regression checks (done in the preview above; repeated on the Figma screenshots and again when the site is built).</li>
+    <li><b>Regression fixes are part of Gate A</b>, not optional polish: a change that improves one page but breaks another is not accepted.</li>
+    <li><b>Applied ahead of Figma (10 Oct 2026, your decision)</b>: the reviewed changes are now in the website design (version 97). Figma is brought in line when the allowance returns; any difference found there is reviewed before either side changes.</li>
+    <li><b>Images</b>: the existing ZIP stays. You drag the 26 files onto the “Assets” section on the Components page (this uses no Figma calls); call 5 does the rest.</li>
+  </ol></div>
+  <div class="note"><p><b>Safeguards before the next Figma run</b></p><ol>
+    <li><b>Preserve existing work.</b> No canvas edits until the prepared scripts are ready and the first Figma screenshots have been reviewed. Each script only adds its own boards.</li>
+    <li><b>Verify the full layout, not just banners</b>: announcement strip, header, breadcrumb, page content, footer and sideways overflow together.</li>
+    <li><b>Test the smallest phones</b>: 320, 360, 390 and 430 px, especially Gujarati text, dates, buttons and image frames.</li>
+    <li><b>Report, don't patch.</b> The width-test board reports failures; it never changes components. Any correction to the existing design is shown for review before it is applied.</li>
+  </ol><p>Preview-verified is not Figma-verified. The preview improvements are proposed changes, not Figma results. Gate A stays unconfirmed until the matching Figma screenshots have been inspected, and a checklist item is marked complete only when its acceptance criteria are verified there.</p></div>
+  <ul class="checklist" aria-label="Gate A acceptance checklist">
+    <li><b>Component specifications</b><span class="chip todo">Specified · not built</span><span>C1–C3 built in Figma; C4–C8 specified here, builds prepared (calls 1–3).</span></li>
+    <li><b>Mobile festival banner</b><span class="chip todo">Approved in preview · Figma pending</span><span>Temple render kept, deity pair removed on phones only, 770 px. Dates on one line at 360, 390 and 430 px; at 320 px the date moves whole under its label. Desktop and tablet unchanged. Confirmed only once the call 1 screenshot is checked.</span></li>
+    <li><b>Navigation</b><span class="chip todo">Built · not inspected</span><span>Short phone strip, compact header and bottom bar exist in Figma (C3) but have not been seen in a screenshot yet; call 1 returns one.</span></li>
+    <li><b>Images</b><span class="chip later">Waiting for the images</span><span>All 26 matched and every slot filled, including Karamshibapa — call 5.</span></li>
+    <li><b>Gujarati typography</b><span class="chip todo">Checked in previews</span><span>Preview: all 12 phone pages clean at 320–430 px (no clipped text, no year alone, no one-word heading endings, no broken button labels). To be confirmed in the Figma screenshots and the phone-width board (call 6).</span></li>
+    <li><b>Figma verification</b><span class="chip later">Not started</span><span>Scripts run, screenshots inspected (including the four phone widths), regressions fixed (calls 1–9).</span></li>
+  </ul>
+  <div class="note"><p><b>Still open</b></p><ol>
+    <li><b>Trust items before launch</b>: where Seva registrations are saved; the booklet PDF; the content listed in [brackets].</li>
+  </ol></div>
+</section>
+
+</div>

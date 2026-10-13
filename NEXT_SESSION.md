@@ -30,7 +30,7 @@ The Gujarati-only website design for **શ્રી વિહત મેલડી
 | Previous known-good | v108 | `1791920313-6e1c` | Rollback target for v109. v107 `1791918685-cd89` = v106 content; earlier ids: [CHANGELOG.md](CHANGELOG.md). Version numbers follow the artifact's own count. |
 | Local working copy | Seva preview | — | Unpublished, awaiting approval: `tasks/audit-v106/seva_v107_pending.diff`. Visual-effects work in `tasks/visual-effects/` (see PROJECT_STATE.md). |
 
-At handover the owner's editor reported no unsaved changes, and the live version id was still v106.
+On 13 Oct the live id changed to `1791918685-cd89` without any content change (Design type re-save, counted as v107); v108 and v109 were published on 14 Oct.
 
 ## 4. Completed in the previous session (v97 → v106, all on 10 Oct 2026)
 
@@ -38,6 +38,12 @@ Full detail in [CHANGELOG.md](CHANGELOG.md). In short: phone festival banner and
 festival summary (v101), festival PDF button hidden until the trust's PDF exists (v102–v103), Darshan timetable rebuilt from 8 identical rows
 to one daily timeline + one ગાદી week strip (v104), "આજે" marker follows the Indian date and moves to the પૂનમ tile on પૂનમ days (v105),
 and the trust's "નવા મંદિરનો સંકલ્પ" text placed on the New Temple, Home and History pages (v106).
+
+### Completed 13–14 Oct 2026 (v107–v109)
+
+v107 = re-save of v106 (no change). **v108**: the old oval-petal chakra replaced by the lotus chakra on all boards (owner's request).
+**v109**: the banner's gold light and halo now stay behind the picture at every screen size (owner's screenshot: Festival 768×1024).
+Details and tests: [CHANGELOG.md](CHANGELOG.md); evidence in `tasks/visual-effects/`.
 
 ## 5. Incomplete / needs confirmation
 
@@ -48,7 +54,7 @@ and the trust's "નવા મંદિરનો સંકલ્પ" text placed
   **awaiting approval**; (2) correct the canvas to-do note's PDF line (approved; `canvas.json` only); (3) **design audit** — Phases A–C done, report in
   [tasks/audit-report-v106.md](tasks/audit-report-v106.md) (brief: [tasks/full-design-audit.md](tasks/full-design-audit.md)); Phase D waits for the owner's approval and answers. Decided: **no** extra closing line in the સંકલ્પ section. Details: [PROJECT_STATE.md](PROJECT_STATE.md#owners-decisions-and-task-queue-10-oct-2026-end-of-the-handover-session).
 - **Figma (Gate A):** paused — Starter plan allowance exhausted on 9 Oct. 0 of 6 checklist items confirmed. Scripts are ready in `figma/`
-  (they include the v97 Gate A design); Figma must later also receive the website changes **v99–v106** (`figma/state.json` → `figma_sync_todo`).
+  (they include the v97 Gate A design); Figma must later also receive the website changes **v99–v109** (`figma/state.json` → `figma_sync_todo`).
 - **Date lists — deadline before the March 2027 પૂનમ:** the last પૂનમ in the page logic is **20 Feb 2027**. Lists to extend (dates need the Acharya's confirmation):
   `const EV` in Darshan, Contact, NotFound (+ their phone pages) and `const EVH` + `const POONAM` in Main, HomeTablet, HomeTabletL, HomePhoneL, HomeMobile.
   Without new dates, from March 2027 the home ગાદી line and the Darshan "આજે" marker no longer know પૂનમ, and the calendars run out after 15 Apr 2027.
@@ -120,7 +126,7 @@ and the trust's "નવા મંદિરનો સંકલ્પ" text placed
    and `git fetch origin && git status -sb` shows `main...origin/main` with nothing ahead/behind. Confirm you have read this file and CLAUDE.md.
    Work from the repository files, not from chat history.
 2. Check the snapshot: `(cd design/project && sha256sum -c --quiet ../SHA256SUMS.txt) && (cd design/assets && sha256sum -c --quiet SHA256SUMS.txt) && echo OK`.
-3. Run the live-version check (§8 step 1) and report the live version id and whether it still equals v106 `1791624520-9b52`.
+3. Run the live-version check (§8 step 1) and report the live version id and whether it still equals v109 `1791922103-42cb`.
 4. Report anything missing from the handover, then **wait for the owner's next task** (open: approval of Seva v107; answers to the audit report's questions). Do not modify anything before that.
 5. Before any audit work, read [tasks/full-design-audit.md](tasks/full-design-audit.md) in full (agreed scope: Phases A–C only, report and fix plan first;
    the website stays unchanged until the owner approves the findings and fixes).

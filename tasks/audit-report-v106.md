@@ -3,7 +3,15 @@
 _10 Oct 2026. Baseline: live design v106 `1791624520-9b52`, all 24 boards. Brief: [full-design-audit.md](full-design-audit.md).
 Viewable page with the same content: `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU` (private to the owner)._
 
-**No changes were made to the website.** Phase D (fixes) waits for the owner's approval; each fix will be its own previewed version.
+**No changes were made to the website during the audit.** Phase D (fixes) waits for the owner's approval; each fix will be its own previewed version.
+
+### Status since the audit (14 Oct 2026, live v109 `1791922103-42cb`)
+
+- **Fixed, owner's later requests (not in the findings below):** v108 old chakra replaced by the lotus chakra on all boards; v109 banner gold light and
+  halo stay behind the picture at every screen size (owner's screenshot, Festival 768×1024). See [CHANGELOG.md](../CHANGELOG.md) and `tasks/visual-effects/`.
+- **D1 answered in part:** the owner's screenshot showed the detached glow (fixed in v109), not cropped text.
+- **Still open:** A1, B1 (Seva fix prepared, awaiting approval; it takes the next free version number, not v107), B2, B3, B4, C1–C9.
+  Version numbers now follow the artifact's own count, so the plan's v107–v112 numbers below become the next free numbers.
 
 | Priority | Count | Items |
 |---|---|---|
