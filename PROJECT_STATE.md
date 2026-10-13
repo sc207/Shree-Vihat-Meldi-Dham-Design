@@ -6,12 +6,13 @@ _Last updated: 10 Oct 2026, evening IST (audit Phases A–C reported). Update th
 
 | | Version | Id | Verified |
 |---|---|---|---|
-| **Live (published) design** | **v108** | `1791920313-6e1c` | 14 Oct 2026: new chakra everywhere (9 boards). The 9 published files read back and byte-identical to `design/project/`; all other files unchanged. Owner asked for the fix directly. |
+| **Live (published) design** | **v109** | `1791922103-42cb` | 14 Oct 2026: banner gold light and halo drawn in the picture's own box (`site.css` only); read back byte-identical to `design/project/site.css`. Owner asked for the fix directly. |
+| v108 | v108 | `1791920313-6e1c` | 14 Oct 2026: new chakra everywhere (9 boards). Rollback target for v109. |
 | v107 (artifact's own count) | v106 content | `1791918685-cd89` | 13 Oct 2026: a re-save (Design type update / editor open), **no content change**. Rollback target for v108 (= v106 content). |
 | v106 | v106 | `1791624520-9b52` | 10 Oct 2026: 28/28 project files identical to the snapshot of that day. |
-| Visual-effects work (in progress) | — | — | Owner's brief [tasks/visual-effects-audit.md](tasks/visual-effects-audit.md): hero glow drifts away from Mataji at 768×1024. Draft fix `tasks/visual-effects/scripts/apply_glow_draft.py` (not published). |
-| Local working version | Seva preview (unpublished) | — | Seva help column: 3 rules appended to `site.css`, patch saved as [tasks/audit-v106/seva_v107_pending.diff](tasks/audit-v106/seva_v107_pending.diff) (prepared as "v107"; it will take the next free number). **Awaiting the owner's approval.** Applies cleanly to v108 (`site.css` unchanged since v106). |
-| Rollback | v107 / v106 content | `1791918685-cd89` | Any earlier version is in the artifact's history (list in [CHANGELOG.md](CHANGELOG.md)). Version numbers follow the artifact's own count from v107 on. |
+| Visual-effects work | — | — | Owner's brief [tasks/visual-effects-audit.md](tasks/visual-effects-audit.md): glow fixed in v109, old chakra replaced in v108. Remaining sweep items: see Outstanding tasks. |
+| Local working version | Seva preview (unpublished) | — | Seva help column: 3 rules appended to `site.css`, patch saved as [tasks/audit-v106/seva_v107_pending.diff](tasks/audit-v106/seva_v107_pending.diff) (prepared as "v107"; it will take the next free number). **Awaiting the owner's approval.** Its 3 rules go at the end of `site.css` (after the v109 block). |
+| Older rollback | v107 / v106 content | `1791918685-cd89` | Any earlier version is in the artifact's history (list in [CHANGELOG.md](CHANGELOG.md)). Version numbers follow the artifact's own count from v107 on. |
 | Spec / review page | v15 | `1791622167-aaa6` | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` — records v97–v105 (v106 not yet added) |
 
 Website artifact: `https://claude.ai/artifact/HWR4J5u9qBPjri6oUg7nVa` (type Design, `https://claude.ai/artifact/QKN21svewxgyPb6SYRqWnd`).

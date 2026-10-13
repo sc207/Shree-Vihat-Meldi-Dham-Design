@@ -6,6 +6,21 @@ History before v97 (the original build, 30 Sep – 9 Oct 2026) lives in the arti
 
 Standard verification after every publish below: the changed files were read back from the live artifact and compared byte-for-byte with what was sent (all matched).
 
+## v109 · `1791922103-42cb` — banner light stays behind Mataji / the temple (14 Oct 2026)
+
+- **Files:** `site.css` only (one keyframes line changed, one commented block appended). Script: `tools/examples/apply_v109_banner_light.py`.
+- **Root causes:** (1) the banner's gold light was painted at a fixed spot of the whole banner (`bundle.css` `.vm-hero`: radial-gradient at 72 % 42 %), which is
+  behind the picture only while the picture sits on the right (desktop); in tablet portrait, phones and phone landscape the picture moves below the text and
+  the light stayed beside the title (owner's screenshot, Festival 768×1024). (2) The breathing animation `vx-halo` set `transform: scale()`, which replaced
+  the halo's own `translateX(-42%)`, so while animating the halo sat up to half its width to the right of the picture.
+- **Change:** on banners with a picture (Home ×5 boards, New Temple, Festival, Gallery, desktop + phone) the light is drawn by `.vm-hero__art::before`
+  inside the picture's own box (same colour and strength, about the same size on desktop); the halo is centred in the picture box with `translate`,
+  and the breathing uses the separate `scale` property. Banners without a picture are unchanged.
+- **Tests:** halo centre vs. visible artwork at 17 sizes × 7 boards + 3 tablet/landscape boards, animation running and reduced motion, and after
+  portrait↔landscape resize: offset ≤ 2 % across / ≤ 8 % down (before: up to 92 % / 71 %). Before/after at the owner's 12 sizes (Home, New Temple,
+  Festival, Gallery). check_layout 94 runs, 0 new problems; frames unchanged; pixel check: 12 boards without a picture banner identical, the other 12
+  differ only inside the banner; the light and halo never catch taps. Pictures: `tasks/visual-effects/v109/`.
+
 ## v108 · `1791920313-6e1c` — new chakra everywhere (14 Oct 2026)
 
 - **Files:** Main, HomeTablet, HomeTabletL, HomePhoneL, HomeMobile, NewTemple, NewTempleMobile, PranPratishtha, PranPratishthaMobile (`.dc.html`).

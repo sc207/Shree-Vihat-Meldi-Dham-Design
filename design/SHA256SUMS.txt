@@ -25,4 +25,4 @@ a0b3af920f727003cb9e0d001cb2f476fddcfc9c242b71860067eb1a1347c7f3  ./SevaMobile.d
 add40275c844dc29bdccdb181f960081b2eec302a464692d7c08dfd35fd93ed7  ./canvas.json
 2097c7ee2c856752f42e121beba53d117cd81cf01f0e49d0376ee6b3449ba648  ./ds/vihatmeldimandir/components/bundle.css
 8c749e0d5ddbedb7ce1c4d6b1bc82fd6e44c0a9c7f4cde38df280bce8ae68b8e  ./ds/vihatmeldimandir/tokens.json
-d2cedf5e5a5a85afa5421d161db1a130f47f94047feb7c17970c1d5bd960f3f6  ./site.css
+2723e475a021bf5d85031a0c16a82e11332e16fd2cf036acb743ceffb263a8ee  ./site.css
