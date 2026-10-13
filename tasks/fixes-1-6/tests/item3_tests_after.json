@@ -1,0 +1,1302 @@
+[
+ {
+  "focus": "f-name",
+  "onScreen": true,
+  "top": 423,
+  "bottomLimit": 900,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    "true",
+    "કૃપા કરીને આપનું પૂરું"
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "true",
+    "કૃપા કરીને આપનું ગામ ક"
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "empty",
+  "W": 1440,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": true
+ },
+ {
+  "focus": "f-mob",
+  "onScreen": true,
+  "top": 420,
+  "bottomLimit": 900,
+  "summary": true,
+  "errors": 3,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "true",
+    "કૃપા કરીને આપનું ગામ ક"
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "",
+  "success": null,
+  "scenario": "name-only",
+  "W": 1440,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": true
+ },
+ {
+  "focus": "f-mob",
+  "onScreen": true,
+  "top": 420,
+  "bottomLimit": 900,
+  "summary": true,
+  "errors": 2,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "false",
+    null
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 4321",
+  "success": null,
+  "scenario": "mobile-9-digits",
+  "W": 1440,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": true
+ },
+ {
+  "focus": "f-agree",
+  "onScreen": true,
+  "top": 439,
+  "bottomLimit": 900,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "false",
+    null
+   ],
+   [
+    "f-city",
+    "false",
+    null
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "only-consent-missing",
+  "W": 1440,
+  "big": false,
+  "errs": [],
+  "want": "#f-agree",
+  "ok": true
+ },
+ {
+  "focus": "seva:seva",
+  "onScreen": true,
+  "top": 450,
+  "bottomLimit": 900,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "false",
+    null
+   ],
+   [
+    "f-city",
+    "false",
+    null
+   ],
+   [
+    "f-agree",
+    "false",
+    null
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "no-seva-chosen",
+  "W": 1440,
+  "big": false,
+  "errs": [],
+  "want": "seva",
+  "ok": true
+ },
+ {
+  "focus": "f-name",
+  "onScreen": true,
+  "top": 413,
+  "bottomLimit": 900,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    "true",
+    "કૃપા કરીને આપનું પૂરું"
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "true",
+    "કૃપા કરીને આપનું ગામ ક"
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "keyboard-submit-empty",
+  "W": 1440,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": true
+ },
+ {
+  "focus": "H2",
+  "onScreen": true,
+  "top": 256,
+  "bottomLimit": 900,
+  "summary": false,
+  "errors": 0,
+  "inv": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "nameVal": null,
+  "mobVal": null,
+  "success": {
+   "top": 24,
+   "visible": true
+  },
+  "scenario": "valid",
+  "W": 1440,
+  "big": false,
+  "errs": [],
+  "want": "success",
+  "ok": true
+ },
+ {
+  "focus": "f-name",
+  "onScreen": true,
+  "top": 338,
+  "bottomLimit": 768,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    "true",
+    "કૃપા કરીને આપનું પૂરું"
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "true",
+    "કૃપા કરીને આપનું ગામ ક"
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "empty",
+  "W": 1024,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": true
+ },
+ {
+  "focus": "f-mob",
+  "onScreen": true,
+  "top": 357,
+  "bottomLimit": 768,
+  "summary": true,
+  "errors": 3,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "true",
+    "કૃપા કરીને આપનું ગામ ક"
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "",
+  "success": null,
+  "scenario": "name-only",
+  "W": 1024,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": true
+ },
+ {
+  "focus": "f-mob",
+  "onScreen": true,
+  "top": 338,
+  "bottomLimit": 768,
+  "summary": true,
+  "errors": 2,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "false",
+    null
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 4321",
+  "success": null,
+  "scenario": "mobile-9-digits",
+  "W": 1024,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": true
+ },
+ {
+  "focus": "f-agree",
+  "onScreen": true,
+  "top": 373,
+  "bottomLimit": 768,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "false",
+    null
+   ],
+   [
+    "f-city",
+    "false",
+    null
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "only-consent-missing",
+  "W": 1024,
+  "big": false,
+  "errs": [],
+  "want": "#f-agree",
+  "ok": true
+ },
+ {
+  "focus": "seva:seva",
+  "onScreen": true,
+  "top": 384,
+  "bottomLimit": 768,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "false",
+    null
+   ],
+   [
+    "f-city",
+    "false",
+    null
+   ],
+   [
+    "f-agree",
+    "false",
+    null
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "no-seva-chosen",
+  "W": 1024,
+  "big": false,
+  "errs": [],
+  "want": "seva",
+  "ok": true
+ },
+ {
+  "focus": "f-name",
+  "onScreen": true,
+  "top": 294,
+  "bottomLimit": 768,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    "true",
+    "કૃપા કરીને આપનું પૂરું"
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "true",
+    "કૃપા કરીને આપનું ગામ ક"
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "keyboard-submit-empty",
+  "W": 1024,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": true
+ },
+ {
+  "focus": "H2",
+  "onScreen": true,
+  "top": 256,
+  "bottomLimit": 768,
+  "summary": false,
+  "errors": 0,
+  "inv": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "nameVal": null,
+  "mobVal": null,
+  "success": {
+   "top": 24,
+   "visible": true
+  },
+  "scenario": "valid",
+  "W": 1024,
+  "big": false,
+  "errs": [],
+  "want": "success",
+  "ok": true
+ },
+ {
+  "focus": "f-name",
+  "onScreen": true,
+  "top": 367,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    "true",
+    "કૃપા કરીને આપનું પૂરું"
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "true",
+    "કૃપા કરીને આપનું ગામ ક"
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "empty",
+  "W": 390,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": true
+ },
+ {
+  "focus": "f-mob",
+  "onScreen": true,
+  "top": 368,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 3,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "true",
+    "કૃપા કરીને આપનું ગામ ક"
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "",
+  "success": null,
+  "scenario": "name-only",
+  "W": 390,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": true
+ },
+ {
+  "focus": "f-mob",
+  "onScreen": true,
+  "top": 346,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 2,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "false",
+    null
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 4321",
+  "success": null,
+  "scenario": "mobile-9-digits",
+  "W": 390,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": true
+ },
+ {
+  "focus": "f-agree",
+  "onScreen": true,
+  "top": 411,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "false",
+    null
+   ],
+   [
+    "f-city",
+    "false",
+    null
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "only-consent-missing",
+  "W": 390,
+  "big": false,
+  "errs": [],
+  "want": "#f-agree",
+  "ok": true
+ },
+ {
+  "focus": "seva:seva",
+  "onScreen": true,
+  "top": 422,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "false",
+    null
+   ],
+   [
+    "f-city",
+    "false",
+    null
+   ],
+   [
+    "f-agree",
+    "false",
+    null
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "no-seva-chosen",
+  "W": 390,
+  "big": false,
+  "errs": [],
+  "want": "seva",
+  "ok": true
+ },
+ {
+  "focus": "f-name",
+  "onScreen": true,
+  "top": 367,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    "true",
+    "કૃપા કરીને આપનું પૂરું"
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "true",
+    "કૃપા કરીને આપનું ગામ ક"
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "keyboard-submit-empty",
+  "W": 390,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": true
+ },
+ {
+  "focus": "H2",
+  "onScreen": true,
+  "top": 233,
+  "bottomLimit": 780,
+  "summary": false,
+  "errors": 0,
+  "inv": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "nameVal": null,
+  "mobVal": null,
+  "success": {
+   "top": 1,
+   "visible": true
+  },
+  "scenario": "valid",
+  "W": 390,
+  "big": false,
+  "errs": [],
+  "want": "success",
+  "ok": true
+ },
+ {
+  "focus": "f-name",
+  "onScreen": true,
+  "top": 243,
+  "bottomLimit": 504,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    "true",
+    "કૃપા કરીને આપનું પૂરું"
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "true",
+    "કૃપા કરીને આપનું ગામ ક"
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "empty",
+  "W": 320,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": true
+ },
+ {
+  "focus": "f-mob",
+  "onScreen": true,
+  "top": 227,
+  "bottomLimit": 504,
+  "summary": true,
+  "errors": 3,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "true",
+    "કૃપા કરીને આપનું ગામ ક"
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "",
+  "success": null,
+  "scenario": "name-only",
+  "W": 320,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": true
+ },
+ {
+  "focus": "f-mob",
+  "onScreen": true,
+  "top": 227,
+  "bottomLimit": 504,
+  "summary": true,
+  "errors": 2,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "false",
+    null
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 4321",
+  "success": null,
+  "scenario": "mobile-9-digits",
+  "W": 320,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": true
+ },
+ {
+  "focus": "f-agree",
+  "onScreen": true,
+  "top": 273,
+  "bottomLimit": 504,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "false",
+    null
+   ],
+   [
+    "f-city",
+    "false",
+    null
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "only-consent-missing",
+  "W": 320,
+  "big": false,
+  "errs": [],
+  "want": "#f-agree",
+  "ok": true
+ },
+ {
+  "focus": "seva:seva",
+  "onScreen": true,
+  "top": 282,
+  "bottomLimit": 504,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "false",
+    null
+   ],
+   [
+    "f-city",
+    "false",
+    null
+   ],
+   [
+    "f-agree",
+    "false",
+    null
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "no-seva-chosen",
+  "W": 320,
+  "big": false,
+  "errs": [],
+  "want": "seva",
+  "ok": true
+ },
+ {
+  "focus": "f-name",
+  "onScreen": true,
+  "top": 225,
+  "bottomLimit": 504,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    "true",
+    "કૃપા કરીને આપનું પૂરું"
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "true",
+    "કૃપા કરીને આપનું ગામ ક"
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "keyboard-submit-empty",
+  "W": 320,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": true
+ },
+ {
+  "focus": "H2",
+  "onScreen": true,
+  "top": 244,
+  "bottomLimit": 504,
+  "summary": false,
+  "errors": 0,
+  "inv": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "nameVal": null,
+  "mobVal": null,
+  "success": {
+   "top": 12,
+   "visible": true
+  },
+  "scenario": "valid",
+  "W": 320,
+  "big": false,
+  "errs": [],
+  "want": "success",
+  "ok": true
+ },
+ {
+  "focus": "f-name",
+  "onScreen": true,
+  "top": 364,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    "true",
+    "કૃપા કરીને આપનું પૂરું"
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "true",
+    "કૃપા કરીને આપનું ગામ ક"
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "empty",
+  "W": 390,
+  "big": true,
+  "errs": [],
+  "want": "#f-name",
+  "ok": true
+ },
+ {
+  "focus": "f-mob",
+  "onScreen": true,
+  "top": 365,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 3,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "true",
+    "કૃપા કરીને આપનું ગામ ક"
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "",
+  "success": null,
+  "scenario": "name-only",
+  "W": 390,
+  "big": true,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": true
+ },
+ {
+  "focus": "f-mob",
+  "onScreen": true,
+  "top": 365,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 2,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "false",
+    null
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 4321",
+  "success": null,
+  "scenario": "mobile-9-digits",
+  "W": 390,
+  "big": true,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": true
+ },
+ {
+  "focus": "f-agree",
+  "onScreen": true,
+  "top": 409,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "false",
+    null
+   ],
+   [
+    "f-city",
+    "false",
+    null
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "only-consent-missing",
+  "W": 390,
+  "big": true,
+  "errs": [],
+  "want": "#f-agree",
+  "ok": true
+ },
+ {
+  "focus": "seva:seva",
+  "onScreen": true,
+  "top": 422,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    "false",
+    null
+   ],
+   [
+    "f-mob",
+    "false",
+    null
+   ],
+   [
+    "f-city",
+    "false",
+    null
+   ],
+   [
+    "f-agree",
+    "false",
+    null
+   ]
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "no-seva-chosen",
+  "W": 390,
+  "big": true,
+  "errs": [],
+  "want": "seva",
+  "ok": true
+ },
+ {
+  "focus": "f-name",
+  "onScreen": true,
+  "top": 360,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    "true",
+    "કૃપા કરીને આપનું પૂરું"
+   ],
+   [
+    "f-mob",
+    "true",
+    "કૃપા કરીને ૧૦ અંકનો મો"
+   ],
+   [
+    "f-city",
+    "true",
+    "કૃપા કરીને આપનું ગામ ક"
+   ],
+   [
+    "f-agree",
+    "true",
+    "કૃપા કરીને આગળ વધવા મા"
+   ]
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "keyboard-submit-empty",
+  "W": 390,
+  "big": true,
+  "errs": [],
+  "want": "#f-name",
+  "ok": true
+ },
+ {
+  "focus": "H2",
+  "onScreen": true,
+  "top": 234,
+  "bottomLimit": 780,
+  "summary": false,
+  "errors": 0,
+  "inv": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "nameVal": null,
+  "mobVal": null,
+  "success": {
+   "top": -2,
+   "visible": true
+  },
+  "scenario": "valid",
+  "W": 390,
+  "big": true,
+  "errs": [],
+  "want": "success",
+  "ok": true
+ }
+]

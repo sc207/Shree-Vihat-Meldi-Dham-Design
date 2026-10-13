@@ -1,0 +1,23 @@
+HistoryMobile            430  normal: OK  |  large: OK
+HistoryMobile            390  normal: OK  |  large: OK
+HistoryMobile            360  normal: OK  |  large: OK
+HistoryMobile            320  normal: OK  |  large: OK
+HomeMobile               430  normal: OK  |  large: OK
+HomeMobile               390  normal: OK  |  large: OK
+HomeMobile               360  normal: OK  |  large: OK
+HomeMobile               320  normal: OK  |  large: OK
+HomeMobile2              430  normal: OK  |  large: OK
+HomeMobile2              390  normal: OK  |  large: OK
+HomeMobile2              360  normal: OK  |  large: OK
+HomeMobile2              320  normal: OK  |  large: OK
+HomePhoneL               844  normal: OK  |  large: OK
+HomeTablet               834  normal: OK  |  large: OK
+HomeTabletL             1180  normal: OK  |  large: OK
+Main                    1440  normal: OK  |  large: OK
+Main                    1280  normal: OK  |  large: OK
+Main                    1100  normal: OK  |  large: OK
+Main                    1024  normal: OK  |  large: OK
+Main                     900  normal: OK  |  large: OK
+Main                     834  normal: OK  |  large: OK
+Main                     768  normal: OK  |  large: OK
+44 runs, 0 with new problems

@@ -1,0 +1,569 @@
+[
+ {
+  "board": "Main",
+  "W": 760,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Main",
+  "W": 761,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Main",
+  "W": 800,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Main",
+  "W": 900,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Main",
+  "W": 1024,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Main",
+  "W": 1100,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Main",
+  "W": 1179,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Main",
+  "W": 1180,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NewTemple",
+  "W": 760,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NewTemple",
+  "W": 761,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NewTemple",
+  "W": 800,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NewTemple",
+  "W": 900,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NewTemple",
+  "W": 1024,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NewTemple",
+  "W": 1100,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NewTemple",
+  "W": 1179,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NewTemple",
+  "W": 1180,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "PranPratishtha",
+  "W": 760,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "PranPratishtha",
+  "W": 761,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "PranPratishtha",
+  "W": 800,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "PranPratishtha",
+  "W": 900,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "PranPratishtha",
+  "W": 1024,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "PranPratishtha",
+  "W": 1100,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "PranPratishtha",
+  "W": 1179,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "PranPratishtha",
+  "W": 1180,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Seva",
+  "W": 760,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Seva",
+  "W": 761,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Seva",
+  "W": 800,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Seva",
+  "W": 900,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Seva",
+  "W": 1024,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Seva",
+  "W": 1100,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Seva",
+  "W": 1179,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Seva",
+  "W": 1180,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Gallery",
+  "W": 760,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Gallery",
+  "W": 761,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Gallery",
+  "W": 800,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Gallery",
+  "W": 900,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Gallery",
+  "W": 1024,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Gallery",
+  "W": 1100,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Gallery",
+  "W": 1179,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Gallery",
+  "W": 1180,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "History",
+  "W": 760,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "History",
+  "W": 761,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "History",
+  "W": 800,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "History",
+  "W": 900,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "History",
+  "W": 1024,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "History",
+  "W": 1100,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "History",
+  "W": 1179,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "History",
+  "W": 1180,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Contact",
+  "W": 760,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Contact",
+  "W": 761,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Contact",
+  "W": 800,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Contact",
+  "W": 900,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Contact",
+  "W": 1024,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Contact",
+  "W": 1100,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Contact",
+  "W": 1179,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Contact",
+  "W": 1180,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Darshan",
+  "W": 760,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Darshan",
+  "W": 761,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Darshan",
+  "W": 800,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Darshan",
+  "W": 900,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Darshan",
+  "W": 1024,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Darshan",
+  "W": 1100,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Darshan",
+  "W": 1179,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Darshan",
+  "W": 1180,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NotFound",
+  "W": 760,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NotFound",
+  "W": 761,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NotFound",
+  "W": 800,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NotFound",
+  "W": 900,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NotFound",
+  "W": 1024,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NotFound",
+  "W": 1100,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NotFound",
+  "W": 1179,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "NotFound",
+  "W": 1180,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "HomeTablet",
+  "W": 834,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "HomeTabletL",
+  "W": 1180,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "HomeTabletL",
+  "W": 1112,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "HomePhoneL",
+  "W": 844,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "HomePhoneL",
+  "W": 932,
+  "big": false,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Main",
+  "W": 1024,
+  "big": true,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Seva",
+  "W": 768,
+  "big": true,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "HomePhoneL",
+  "W": 844,
+  "big": true,
+  "problems": [],
+  "errors": []
+ },
+ {
+  "board": "Darshan",
+  "W": 900,
+  "big": true,
+  "problems": [],
+  "errors": []
+ }
+]

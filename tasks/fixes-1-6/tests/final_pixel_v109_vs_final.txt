@@ -1,0 +1,24 @@
+Contact                 1440  identical
+ContactMobile            390  identical
+Darshan                 1440  identical
+DarshanMobile            390  identical
+Gallery                 1440  identical
+GalleryMobile            390  identical
+History                 1440  identical
+HistoryMobile            390  identical
+HomeMobile               390  identical
+HomeMobile2              390  identical
+HomePhoneL               844  identical
+HomeTablet               834  identical
+HomeTabletL             1180  identical
+Main                    1440  identical
+MenuMobile               390  DIFFERENT in box (278, 28, 358, 730)
+NewTemple               1440  identical
+NewTempleMobile          390  identical
+NotFound                1440  identical
+NotFoundMobile           390  identical
+OfflineMobile            390  identical
+PranPratishtha          1440  identical
+PranPratishthaMobile     390  identical
+Seva                    1440  DIFFERENT in box (164, 1375, 1316, 2510)
+SevaMobile               390  DIFFERENT in box (40, 3642, 330, 3690)

@@ -1,0 +1,13 @@
+--- work/fix/s4/site.css	2026-10-13 20:56:57.217193849 +0000
++++ work/fix/s5/site.css	2026-10-13 21:02:34.913109689 +0000
+@@ -1548,3 +1548,10 @@
+    On the phone menu page ✕ is a link, so the general link colour (.vm-root a, maroon) outranked the design system's ivory → maroon on
+    maroon, 1.41:1. Ivory gives 14:1. Closing behaviour: see MenuMobile logic. */
+ .vm-root .vm-mnav__close { color: var(--ivory); }
++/* ════════ Home banner buttons below 375 px: the label is never cut or cramped (item 5) ════════
++   Equal-width buttons (flex: 1 1 0) left "મહોત્સવ વિશે જાણો →" 9–24 px wider than its button at 320–340 px, and the button hides overflow,
++   so the first letter was cut (360–374 px: only 5–8 px from the edge). Below 375 px each button sizes to its label and they share
++   the rest; never narrower than the label. */
++@media (max-width: 374px) {
++  .vm-root .vx-home-hero .vm-btn-row .vm-btn { flex: 1 1 auto; min-width: max-content; }
++}

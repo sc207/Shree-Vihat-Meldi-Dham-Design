@@ -1,0 +1,10 @@
+--- work/fix/s3/site.css	2026-10-13 20:47:43.919708078 +0000
++++ work/fix/s4/site.css	2026-10-13 20:56:57.217193849 +0000
+@@ -1544,3 +1544,7 @@
+    its heading; this keeps a little space above it and gives the heading no focus ring (it is a destination, not a control). */
+ .vm-root .vx-success { scroll-margin-top: 24px; }
+ .vm-root .vx-success h2:focus { outline: none; }
++/* ════════ Phone menu: the ✕ is ivory again (item 4) ════════
++   On the phone menu page ✕ is a link, so the general link colour (.vm-root a, maroon) outranked the design system's ivory → maroon on
++   maroon, 1.41:1. Ivory gives 14:1. Closing behaviour: see MenuMobile logic. */
++.vm-root .vm-mnav__close { color: var(--ivory); }

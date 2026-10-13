@@ -1,0 +1,11 @@
+--- work/fix/s2/site.css	2026-10-13 20:31:32.983570386 +0000
++++ work/fix/s3/site.css	2026-10-13 20:47:43.919708078 +0000
+@@ -1539,3 +1539,8 @@
+ .vm-root .vx-tnav { z-index: 90; overscroll-behavior: contain; }
+ .vm-root .vx-tnav > * { width: 100%; max-width: 720px; margin-inline: auto; }
+ @media (min-width: 1180px) { .vm-root .vx-tnav { display: none; } }
++/* ════════ Seva form: the confirmation comes into view after a successful registration (item 3) ════════
++   The confirmation replaces the long form, so the visitor was left far below it (phone: ~2,300 px). The page now moves to it and focuses
++   its heading; this keeps a little space above it and gives the heading no focus ring (it is a destination, not a control). */
++.vm-root .vx-success { scroll-margin-top: 24px; }
++.vm-root .vx-success h2:focus { outline: none; }

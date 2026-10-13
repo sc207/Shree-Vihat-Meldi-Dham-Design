@@ -1,0 +1,1182 @@
+[
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 689,
+  "bottomLimit": 900,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "empty",
+  "W": 1440,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 689,
+  "bottomLimit": 900,
+  "summary": true,
+  "errors": 3,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "",
+  "success": null,
+  "scenario": "name-only",
+  "W": 1440,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 657,
+  "bottomLimit": 900,
+  "summary": true,
+  "errors": 2,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 4321",
+  "success": null,
+  "scenario": "mobile-9-digits",
+  "W": 1440,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 625,
+  "bottomLimit": 900,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "only-consent-missing",
+  "W": 1440,
+  "big": false,
+  "errs": [],
+  "want": "#f-agree",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 746,
+  "bottomLimit": 900,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "no-seva-chosen",
+  "W": 1440,
+  "big": false,
+  "errs": [],
+  "want": "seva",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 689,
+  "bottomLimit": 900,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "keyboard-submit-empty",
+  "W": 1440,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": false
+ },
+ {
+  "focus": "BODY",
+  "onScreen": false,
+  "top": -1333,
+  "bottomLimit": 900,
+  "summary": false,
+  "errors": 0,
+  "inv": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "nameVal": null,
+  "mobVal": null,
+  "success": {
+   "top": -749,
+   "visible": true
+  },
+  "scenario": "valid",
+  "W": 1440,
+  "big": false,
+  "errs": [],
+  "want": "success",
+  "ok": true
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 663,
+  "bottomLimit": 768,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "empty",
+  "W": 1024,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 665,
+  "bottomLimit": 768,
+  "summary": true,
+  "errors": 3,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "",
+  "success": null,
+  "scenario": "name-only",
+  "W": 1024,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 639,
+  "bottomLimit": 768,
+  "summary": true,
+  "errors": 2,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 4321",
+  "success": null,
+  "scenario": "mobile-9-digits",
+  "W": 1024,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 583,
+  "bottomLimit": 768,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "only-consent-missing",
+  "W": 1024,
+  "big": false,
+  "errs": [],
+  "want": "#f-agree",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 703,
+  "bottomLimit": 768,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "no-seva-chosen",
+  "W": 1024,
+  "big": false,
+  "errs": [],
+  "want": "seva",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 663,
+  "bottomLimit": 768,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "keyboard-submit-empty",
+  "W": 1024,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": false
+ },
+ {
+  "focus": "BODY",
+  "onScreen": false,
+  "top": -1603,
+  "bottomLimit": 768,
+  "summary": false,
+  "errors": 0,
+  "inv": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "nameVal": null,
+  "mobVal": null,
+  "success": {
+   "top": -1019,
+   "visible": false
+  },
+  "scenario": "valid",
+  "W": 1024,
+  "big": false,
+  "errs": [],
+  "want": "success",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 723,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "empty",
+  "W": 390,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 691,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 3,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "",
+  "success": null,
+  "scenario": "name-only",
+  "W": 390,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 659,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 2,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 4321",
+  "success": null,
+  "scenario": "mobile-9-digits",
+  "W": 390,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 627,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "only-consent-missing",
+  "W": 390,
+  "big": false,
+  "errs": [],
+  "want": "#f-agree",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": false,
+  "top": 759,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "no-seva-chosen",
+  "W": 390,
+  "big": false,
+  "errs": [],
+  "want": "seva",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 723,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "keyboard-submit-empty",
+  "W": 390,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": false
+ },
+ {
+  "focus": "BODY",
+  "onScreen": false,
+  "top": -2835,
+  "bottomLimit": 780,
+  "summary": false,
+  "errors": 0,
+  "inv": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "nameVal": null,
+  "mobVal": null,
+  "success": {
+   "top": -2278,
+   "visible": false
+  },
+  "scenario": "valid",
+  "W": 390,
+  "big": false,
+  "errs": [],
+  "want": "success",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": false,
+  "top": 633,
+  "bottomLimit": 504,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "empty",
+  "W": 320,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": false,
+  "top": 601,
+  "bottomLimit": 504,
+  "summary": true,
+  "errors": 3,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "",
+  "success": null,
+  "scenario": "name-only",
+  "W": 320,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": false,
+  "top": 569,
+  "bottomLimit": 504,
+  "summary": true,
+  "errors": 2,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 4321",
+  "success": null,
+  "scenario": "mobile-9-digits",
+  "W": 320,
+  "big": false,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": false,
+  "top": 513,
+  "bottomLimit": 504,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "only-consent-missing",
+  "W": 320,
+  "big": false,
+  "errs": [],
+  "want": "#f-agree",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": false,
+  "top": 644,
+  "bottomLimit": 504,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "no-seva-chosen",
+  "W": 320,
+  "big": false,
+  "errs": [],
+  "want": "seva",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": false,
+  "top": 633,
+  "bottomLimit": 504,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "keyboard-submit-empty",
+  "W": 320,
+  "big": false,
+  "errs": [],
+  "want": "#f-name",
+  "ok": false
+ },
+ {
+  "focus": "BODY",
+  "onScreen": false,
+  "top": -3350,
+  "bottomLimit": 504,
+  "summary": false,
+  "errors": 0,
+  "inv": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "nameVal": null,
+  "mobVal": null,
+  "success": {
+   "top": -2793,
+   "visible": false
+  },
+  "scenario": "valid",
+  "W": 320,
+  "big": false,
+  "errs": [],
+  "want": "success",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": false,
+  "top": 732,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "empty",
+  "W": 390,
+  "big": true,
+  "errs": [],
+  "want": "#f-name",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 700,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 3,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "",
+  "success": null,
+  "scenario": "name-only",
+  "W": 390,
+  "big": true,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 668,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 2,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 4321",
+  "success": null,
+  "scenario": "mobile-9-digits",
+  "W": 390,
+  "big": true,
+  "errs": [],
+  "want": "#f-mob",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 636,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "only-consent-missing",
+  "W": 390,
+  "big": true,
+  "errs": [],
+  "want": "#f-agree",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": false,
+  "top": 773,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 1,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "રમેશભાઈ પટેલ",
+  "mobVal": "98765 43210",
+  "success": null,
+  "scenario": "no-seva-chosen",
+  "W": 390,
+  "big": true,
+  "errs": [],
+  "want": "seva",
+  "ok": false
+ },
+ {
+  "focus": "vm-btn vm-btn--block",
+  "onScreen": true,
+  "top": 396,
+  "bottomLimit": 780,
+  "summary": true,
+  "errors": 4,
+  "inv": [
+   [
+    "f-name",
+    null,
+    null
+   ],
+   [
+    "f-mob",
+    null,
+    null
+   ],
+   [
+    "f-city",
+    null,
+    null
+   ],
+   null
+  ],
+  "nameVal": "",
+  "mobVal": "",
+  "success": null,
+  "scenario": "keyboard-submit-empty",
+  "W": 390,
+  "big": true,
+  "errs": [],
+  "want": "#f-name",
+  "ok": false
+ },
+ {
+  "focus": "BODY",
+  "onScreen": false,
+  "top": -3147,
+  "bottomLimit": 780,
+  "summary": false,
+  "errors": 0,
+  "inv": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "nameVal": null,
+  "mobVal": null,
+  "success": {
+   "top": -2590,
+   "visible": false
+  },
+  "scenario": "valid",
+  "W": 390,
+  "big": true,
+  "errs": [],
+  "want": "success",
+  "ok": false
+ }
+]

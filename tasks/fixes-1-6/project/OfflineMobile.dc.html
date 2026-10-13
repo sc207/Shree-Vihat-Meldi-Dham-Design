@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>ઇન્ટરનેટ જોડાણ નથી | શ્રી વિહત મેલડી ધામ</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/vihatmeldimandir/components/bundle.css">
+<link rel="stylesheet" href="./site.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#fbf7ef;font-family:"Hind Vadodara","Noto Sans Gujarati",sans-serif;color:#29272a}
+a{color:#741a32}a:hover{color:#5c1227}
+</style>
+</helmet>
+<div class="vm-root vx-page {{fsCls}}" style="width: 390px; height: 844px;">
+<div class="vx-off" role="main"><div class="vx-off__brand"><img src="/_blob/e1c9cc4c85b15c1aea37fad5675f6596" alt="" width="40" height="40"><span><b>શ્રી વિહત મેલડી ધામ</b><small>સાણંદ · ગુજરાત</small></span></div><div class="vx-off__hero"><span class="vx-off__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8.5a14 14 0 0 1 19 0M5.5 12a9.5 9.5 0 0 1 13 0M8.6 15.4a5 5 0 0 1 6.8 0M12 19h.01M3 3l18 18"></path></svg></span><h1>ઇન્ટરનેટ જોડાણ નથી</h1><p>જોડાણ પાછું આવતાં પાનું ફરી ખોલો. ત્યાં સુધી નીચેની જરૂરી માહિતી ઉપયોગી થશે.</p><button class="vm-btn vm-btn--block" type="button" onClick="{{retry}}">ફરી પ્રયાસ કરો</button></div><dl class="vx-off__info"><div><dt>ફોન</dt><dd><a href="tel:+919909552020"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg>99095 52020</a></dd></div><div><dt>દર્શન</dt><dd>દરરોજ સવારે ૬ થી રાત્રે ૧૦</dd></div><div><dt>મૂર્તિ પ્રાણ પ્રતિષ્ઠા મહોત્સવ</dt><dd>તા. ૨ થી ૮ ફેબ્રુઆરી, ૨૦૨૭ · પ્રાણ પ્રતિષ્ઠા ૮ ફેબ્રુઆરી, બપોરે ૧૨:૩૯</dd></div><div><dt>સરનામું</dt><dd>ગેપ્પરા, સાણંદ, ગુજરાત ૩૮૨૧૧૦</dd></div></dl><p class="vx-off__jay">॥ જય શ્રી વિહત મેલડી માઁ ॥</p></div></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 390, "height": 844}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = this.state || {}; }
+fsBig() { if (this.state && typeof this.state.fsBig === 'boolean') return this.state.fsBig; try { return window.localStorage.getItem('vx-fs') === '1'; } catch (e) { return false; } }
+fsToggle() { const v = !this.fsBig(); try { window.localStorage.setItem('vx-fs', v ? '1' : '0'); } catch (e) {} this.setState({ fsBig: v }); }
+renderVals() { const base = this._rv() || {}; const big = this.fsBig(); return Object.assign({}, base, { fsCls: big ? 'is-big' : '', fsP: big ? 'true' : 'false', fsLabel: big ? 'અક્ષર સામાન્ય કદમાં કરો' : 'અક્ષર મોટા કરો', fsTxt: big ? 'અ' : 'અ+', fsClick: () => this.fsToggle() }); }
+_rv() {
+return { retry: () => { try { window.location.reload(); } catch (e) {} } };
+}
+}
+</script>
+</body>
+</html>

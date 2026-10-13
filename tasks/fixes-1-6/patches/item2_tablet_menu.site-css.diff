@@ -1,0 +1,13 @@
+--- work/fix/s1/site.css	2026-10-13 20:29:45.442679758 +0000
++++ work/fix/s2/site.css	2026-10-13 20:31:32.983570386 +0000
+@@ -1532,3 +1532,10 @@
+   .vx-seva > aside { align-self: stretch; }
+   .vx-seva > aside > .vx-yagna:last-child { position: sticky; top: calc(var(--header-height-compact) + 24px); }
+ }
++/* ════════ Tablet & small-laptop menu, 761–1179 px (item 2) ════════
++   Below 1180 px the header shows ☰ instead of the page links. On the desktop/tablet boards ☰ had no action, so there was no way to the other
++   pages from the header. ☰ now opens the design system's menu panel (.vm-mnav, as on the phone menu page) with the same 8 links.
++   Above the phone bottom bar; content in one centred column on wide screens; hidden from 1180 px, where the header links show. */
++.vm-root .vx-tnav { z-index: 90; overscroll-behavior: contain; }
++.vm-root .vx-tnav > * { width: 100%; max-width: 720px; margin-inline: auto; }
++@media (min-width: 1180px) { .vm-root .vx-tnav { display: none; } }

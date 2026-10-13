@@ -1,0 +1,4 @@
+Contact                 1440  identical
+Main                    1440  identical
+Seva                    1440  identical
+SevaMobile               390  identical

@@ -1,0 +1,14 @@
+--- work/fix/s5/site.css	2026-10-13 21:02:34.913109689 +0000
++++ work/fix/s6_1/site.css	2026-10-13 21:07:40.549653293 +0000
+@@ -1555,3 +1555,11 @@
+ @media (max-width: 374px) {
+   .vm-root .vx-home-hero .vm-btn-row .vm-btn { flex: 1 1 auto; min-width: max-content; }
+ }
++
++/* ════════ Seva day tiles, 1000–1179 px: the 7 festival days stay on one row (item 6.1) ════════
++   Beside the help column the form is 491–557 px wide; seven 76 px tiles + gaps need 580 px, so "૮ સોમવાર" (or two days) wrapped alone.
++   Here the tiles share the row equally (≥ 65 px each; their text needs ≤ 48 px). Other widths unchanged. */
++@media (min-width: 1000px) and (max-width: 1179px) {
++  .vm-root .vx-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
++  .vm-root .vx-day { min-width: 0; padding: 8px 2px; }
++}

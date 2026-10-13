@@ -1,0 +1,506 @@
+[
+ {
+  "W": 320,
+  "big": false,
+  "btns": [
+   {
+    "room": -5,
+    "w": 139,
+    "h": 52,
+    "top": 475
+   },
+   {
+    "room": 32,
+    "w": 139,
+    "h": 52,
+    "top": 475
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 325,
+  "big": false,
+  "btns": [
+   {
+    "room": -3,
+    "w": 142,
+    "h": 52,
+    "top": 473
+   },
+   {
+    "room": 33,
+    "w": 142,
+    "h": 52,
+    "top": 473
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 330,
+  "big": false,
+  "btns": [
+   {
+    "room": -2,
+    "w": 144,
+    "h": 52,
+    "top": 473
+   },
+   {
+    "room": 34,
+    "w": 144,
+    "h": 52,
+    "top": 473
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 335,
+  "big": false,
+  "btns": [
+   {
+    "room": -1,
+    "w": 147,
+    "h": 52,
+    "top": 472
+   },
+   {
+    "room": 36,
+    "w": 147,
+    "h": 52,
+    "top": 472
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 340,
+  "big": false,
+  "btns": [
+   {
+    "room": 0,
+    "w": 149,
+    "h": 52,
+    "top": 472
+   },
+   {
+    "room": 37,
+    "w": 149,
+    "h": 52,
+    "top": 472
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 345,
+  "big": false,
+  "btns": [
+   {
+    "room": 2,
+    "w": 152,
+    "h": 52,
+    "top": 474
+   },
+   {
+    "room": 38,
+    "w": 152,
+    "h": 52,
+    "top": 474
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 350,
+  "big": false,
+  "btns": [
+   {
+    "room": 3,
+    "w": 154,
+    "h": 52,
+    "top": 473
+   },
+   {
+    "room": 39,
+    "w": 154,
+    "h": 52,
+    "top": 473
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 355,
+  "big": false,
+  "btns": [
+   {
+    "room": 4,
+    "w": 157,
+    "h": 52,
+    "top": 474
+   },
+   {
+    "room": 41,
+    "w": 157,
+    "h": 52,
+    "top": 474
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 359,
+  "big": false,
+  "btns": [
+   {
+    "room": 5,
+    "w": 159,
+    "h": 52,
+    "top": 427
+   },
+   {
+    "room": 42,
+    "w": 159,
+    "h": 52,
+    "top": 427
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 360,
+  "big": false,
+  "btns": [
+   {
+    "room": 5,
+    "w": 159,
+    "h": 52,
+    "top": 423
+   },
+   {
+    "room": 42,
+    "w": 159,
+    "h": 52,
+    "top": 423
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 375,
+  "big": false,
+  "btns": [
+   {
+    "room": 9,
+    "w": 167,
+    "h": 52,
+    "top": 424
+   },
+   {
+    "room": 46,
+    "w": 167,
+    "h": 52,
+    "top": 424
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": true
+ },
+ {
+  "W": 390,
+  "big": false,
+  "btns": [
+   {
+    "room": 13,
+    "w": 174,
+    "h": 52,
+    "top": 423
+   },
+   {
+    "room": 49,
+    "w": 174,
+    "h": 52,
+    "top": 423
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": true
+ },
+ {
+  "W": 320,
+  "big": true,
+  "btns": [
+   {
+    "room": -5,
+    "w": 139,
+    "h": 52,
+    "top": 473
+   },
+   {
+    "room": 32,
+    "w": 139,
+    "h": 52,
+    "top": 473
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 325,
+  "big": true,
+  "btns": [
+   {
+    "room": -3,
+    "w": 142,
+    "h": 52,
+    "top": 475
+   },
+   {
+    "room": 33,
+    "w": 142,
+    "h": 52,
+    "top": 475
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 330,
+  "big": true,
+  "btns": [
+   {
+    "room": -2,
+    "w": 144,
+    "h": 52,
+    "top": 473
+   },
+   {
+    "room": 34,
+    "w": 144,
+    "h": 52,
+    "top": 473
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 335,
+  "big": true,
+  "btns": [
+   {
+    "room": -1,
+    "w": 147,
+    "h": 52,
+    "top": 473
+   },
+   {
+    "room": 36,
+    "w": 147,
+    "h": 52,
+    "top": 473
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 340,
+  "big": true,
+  "btns": [
+   {
+    "room": 0,
+    "w": 149,
+    "h": 52,
+    "top": 472
+   },
+   {
+    "room": 37,
+    "w": 149,
+    "h": 52,
+    "top": 472
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 345,
+  "big": true,
+  "btns": [
+   {
+    "room": 2,
+    "w": 152,
+    "h": 52,
+    "top": 472
+   },
+   {
+    "room": 38,
+    "w": 152,
+    "h": 52,
+    "top": 472
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 350,
+  "big": true,
+  "btns": [
+   {
+    "room": 3,
+    "w": 154,
+    "h": 52,
+    "top": 473
+   },
+   {
+    "room": 39,
+    "w": 154,
+    "h": 52,
+    "top": 473
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 355,
+  "big": true,
+  "btns": [
+   {
+    "room": 4,
+    "w": 157,
+    "h": 52,
+    "top": 472
+   },
+   {
+    "room": 41,
+    "w": 157,
+    "h": 52,
+    "top": 472
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 359,
+  "big": true,
+  "btns": [
+   {
+    "room": 5,
+    "w": 159,
+    "h": 52,
+    "top": 424
+   },
+   {
+    "room": 42,
+    "w": 159,
+    "h": 52,
+    "top": 424
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 360,
+  "big": true,
+  "btns": [
+   {
+    "room": 5,
+    "w": 159,
+    "h": 52,
+    "top": 424
+   },
+   {
+    "room": 42,
+    "w": 159,
+    "h": 52,
+    "top": 424
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": false
+ },
+ {
+  "W": 375,
+  "big": true,
+  "btns": [
+   {
+    "room": 9,
+    "w": 167,
+    "h": 52,
+    "top": 422
+   },
+   {
+    "room": 46,
+    "w": 167,
+    "h": 52,
+    "top": 422
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": true
+ },
+ {
+  "W": 390,
+  "big": true,
+  "btns": [
+   {
+    "room": 13,
+    "w": 174,
+    "h": 52,
+    "top": 422
+   },
+   {
+    "room": 49,
+    "w": 174,
+    "h": 52,
+    "top": 422
+   }
+  ],
+  "overflow": false,
+  "rows": 1,
+  "ok": true
+ }
+]

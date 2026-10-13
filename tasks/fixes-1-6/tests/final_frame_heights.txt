@@ -1,0 +1,25 @@
+Contact                width  1440  frame   4345  natural [4342, 4342, 4342, 4342, 4342]  -> should be 4345
+ContactMobile          width   390  frame   5402  natural [5399, 5399, 5399, 5399, 5399]  -> should be 5402
+Darshan                width  1440  frame   5030  natural [5027, 5027, 5027, 5027, 5027]  -> should be 5030
+DarshanMobile          width   390  frame   7090  natural [7087, 7087, 7087, 7087, 7087]  -> should be 7090
+Gallery                width  1440  frame   7907  natural [7904, 7904, 7904, 7904, 7904]  -> should be 7907
+GalleryMobile          width   390  frame  10455  natural [10452, 10452, 10452, 10452, 10452]  -> should be 10455
+History                width  1440  frame   8129  natural [8126, 8126, 8126, 8126, 8126]  -> should be 8129
+HistoryMobile          width   390  frame  10511  natural [10508, 10508, 10508, 10508, 10508]  -> should be 10511
+HomeMobile             width   390  frame   5249  natural [5246, 5246, 5246, 5246, 5246]  -> should be 5249
+HomeMobile2            width   390  frame   5750  natural [5747, 5747, 5747, 5747, 5747]  -> should be 5750
+HomePhoneL             width   844  frame   9092  natural [9089, 9089, 9089, 9089, 9089]  -> should be 9092
+HomeTablet             width   834  frame  10804  natural [10801, 10801, 10801, 10801, 10801]  -> should be 10804
+HomeTabletL            width  1180  frame   8192  natural [8189, 8143, 8143, 8143, 8189]  -> should be 8192
+Main                   width  1440  frame   8090  natural [8087, 8041, 8041, 8041, 8087]  -> should be 8090
+MenuMobile             width   390  frame    844  phone-screen board — fixed height, skipped
+NewTemple              width  1440  frame   8647  natural [8644, 8644, 8644, 8644, 8644]  -> should be 8647
+NewTempleMobile        width   390  frame  11846  natural [11843, 11843, 11843, 11843, 11843]  -> should be 11846
+NotFound               width  1440  frame   1668  natural [1665, 1665, 1665, 1665, 1665]  -> should be 1668
+NotFoundMobile         width   390  frame   2520  natural [2517, 2517, 2517, 2517, 2517]  -> should be 2520
+OfflineMobile          width   390  frame    844  phone-screen board — fixed height, skipped
+PranPratishtha         width  1440  frame  10190  natural [10187, 10187, 10187, 10187, 10187]  -> should be 10190
+PranPratishthaMobile   width   390  frame  13824  natural [13821, 13821, 13821, 13821, 13821]  -> should be 13824
+Seva                   width  1440  frame   3314  natural [3311, 3311, 3311, 3311, 3311]  -> should be 3314
+SevaMobile             width   390  frame   6127  natural [6124, 6124, 6124, 6124, 6124]  -> should be 6127
+frames to change: 0

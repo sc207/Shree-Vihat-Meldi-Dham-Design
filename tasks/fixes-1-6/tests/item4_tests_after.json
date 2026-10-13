@@ -1,0 +1,102 @@
+[
+ {
+  "W": 320,
+  "H": 568,
+  "problems": [],
+  "contrast": 14.32,
+  "target": [
+   48,
+   48
+  ],
+  "curDirect": [
+   "HomeMobile.dc.html"
+  ],
+  "directClose": "HomeMobile.dc.html",
+  "backScroll": [
+   1400,
+   1400
+  ],
+  "afterLink": "SevaMobile.dc.html",
+  "errors": []
+ },
+ {
+  "W": 360,
+  "H": 800,
+  "problems": [],
+  "contrast": 14.32,
+  "target": [
+   48,
+   48
+  ],
+  "curDirect": [
+   "HomeMobile.dc.html"
+  ],
+  "directClose": "HomeMobile.dc.html",
+  "backScroll": [
+   1400,
+   1400
+  ],
+  "afterLink": "SevaMobile.dc.html",
+  "errors": []
+ },
+ {
+  "W": 390,
+  "H": 844,
+  "problems": [],
+  "contrast": 14.32,
+  "target": [
+   48,
+   48
+  ],
+  "curDirect": [
+   "HomeMobile.dc.html"
+  ],
+  "directClose": "HomeMobile.dc.html",
+  "backScroll": [
+   1400,
+   1400
+  ],
+  "afterLink": "SevaMobile.dc.html",
+  "errors": []
+ },
+ {
+  "W": 430,
+  "H": 932,
+  "problems": [],
+  "contrast": 14.32,
+  "target": [
+   48,
+   48
+  ],
+  "curDirect": [
+   "HomeMobile.dc.html"
+  ],
+  "directClose": "HomeMobile.dc.html",
+  "backScroll": [
+   1400,
+   1400
+  ],
+  "afterLink": "SevaMobile.dc.html",
+  "errors": []
+ },
+ {
+  "W": 844,
+  "H": 390,
+  "problems": [],
+  "contrast": 14.32,
+  "target": [
+   48,
+   48
+  ],
+  "curDirect": [
+   "HomeMobile.dc.html"
+  ],
+  "directClose": "HomeMobile.dc.html",
+  "backScroll": [
+   1400,
+   1400
+  ],
+  "afterLink": "SevaMobile.dc.html",
+  "errors": []
+ }
+]

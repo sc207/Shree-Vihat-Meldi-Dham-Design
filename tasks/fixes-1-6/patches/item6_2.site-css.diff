@@ -1,0 +1,20 @@
+--- work/fix/s6_1/site.css	2026-10-13 21:07:40.549653293 +0000
++++ work/fix/s6_2/site.css	2026-10-13 21:07:40.593629415 +0000
+@@ -1563,3 +1563,17 @@
+   .vm-root .vx-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+   .vm-root .vx-day { min-width: 0; padding: 8px 2px; }
+ }
++
++/* ════════ Festival night cards on small phones: artist names stay whole (item 6.2) ════════
++   The phone card puts the date in a 92 px column beside the names; below 360 px (below 390 px with large text) that left about 70–110 px
++   for a name, so "ગોપાલ / સાધુ" broke word by word. There the date sits above the names, as on desktop. */
++@media (max-width: 359px) {
++  .vm-root .vx-night { grid-template-columns: minmax(0, 1fr); gap: 12px; }
++  .vm-root .vx-night__d { flex-direction: row; align-items: center; gap: 10px; }
++  .vm-root .vx-night__who, .vm-root .vx-night__tba { padding: 12px 0 0; border-left: 0; border-top: 1px solid rgba(226,194,122,.22); }
++}
++@media (max-width: 389px) {
++  .vm-root.is-big .vx-night { grid-template-columns: minmax(0, 1fr); gap: 12px; }
++  .vm-root.is-big .vx-night__d { flex-direction: row; align-items: center; gap: 10px; }
++  .vm-root.is-big .vx-night__who, .vm-root.is-big .vx-night__tba { padding: 12px 0 0; border-left: 0; border-top: 1px solid rgba(226,194,122,.22); }
++}
