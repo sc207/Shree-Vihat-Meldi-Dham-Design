@@ -7,6 +7,8 @@ _Last updated: 10 Oct 2026, evening IST (audit Phases A–C reported). Update th
 | | Version | Id | Verified |
 |---|---|---|---|
 | **Live (published) design** | **v106** | `1791624520-9b52` | 10 Oct 2026: 28/28 project files identical to `design/project/`; 26/26 images identical to `design/assets/` (artifact checksums) |
+| Live version id now | v106 content | `1791918685-cd89` | 13 Oct 2026: a re-save (Design type update / editor open), **no content change** — all 28 project files byte-identical to `design/project/`. Treat as v106. |
+| Visual-effects work (in progress) | — | — | Owner's brief [tasks/visual-effects-audit.md](tasks/visual-effects-audit.md): hero glow drifts away from Mataji at 768×1024. Draft fix `tasks/visual-effects/scripts/apply_glow_draft.py` (not published). |
 | Local working version | v107 preview (unpublished) | — | Seva help column: 3 rules appended to `site.css`, patch saved as [tasks/audit-v106/seva_v107_pending.diff](tasks/audit-v106/seva_v107_pending.diff). **Awaiting the owner's approval.** Apply it to a v106 copy to rebuild the preview. |
 | Rollback | v105 | `1791622143-5d00` | Any earlier version is in the artifact's history (list in [CHANGELOG.md](CHANGELOG.md)). |
 | Spec / review page | v15 | `1791622167-aaa6` | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` — records v97–v105 (v106 not yet added) |
