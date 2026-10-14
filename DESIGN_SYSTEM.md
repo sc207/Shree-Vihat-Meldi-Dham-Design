@@ -88,7 +88,7 @@ Families: **display** = "Noto Serif Gujarati", "Noto Serif", Georgia, serif · *
 
 **Layout:** `--content-max` 1320px · `--text-max` 680px · `--header-height` 88px · `--header-height-compact` 68px
 
-### Image inventory (26 originals; `design/assets/<blob-id>.<ext>`, pages use `/_blob/<blob-id>`)
+### Image inventory (27 originals; `design/assets/<blob-id>.<ext>`, pages use `/_blob/<blob-id>`)
 
 | # | Original file name (keep unchanged) | Blob id | Pixels | Used on |
 |---|---|---|---|---|
@@ -98,7 +98,7 @@ Families: **display** = "Noto Serif Gujarati", "Noto Serif", Georgia, serif · *
 | 04 | `04_deity_meldi-maa_glow` | `67db8acad0ff4fc9a1690e90a08d539b` | 670×921 | Gallery, History |
 | 05 | `05_deity_lakhnechi-maa_glow` | `e31c2f7a518cb9d094489412d6c323c8` | 380×534 | Gallery, History |
 | 06 | `06_deity_goga-maharaj_glow` | `713e6519487a5ab4a26d821bbca861a8` | 393×534 | Gallery, History |
-| 07 | `07_portrait_karamshibapa_closeup-glow` | `692526c97fb81800db3adb90c432cc9a` | 1100×985 | Gallery, History, Main |
+| 07 | `07_portrait_karamshibapa_closeup-glow` | `692526c97fb81800db3adb90c432cc9a` | 1100×985 | — (not used since v110; replaced by 27) |
 | 08 | `08_portrait_karamshibapa_standing-white` | `01d1d891218823b7fc6777885d8634d1` | 1000×1497 | Gallery |
 | 09 | `09_portrait_karamshibapa_seated-poster` | `361278fe9fd6e85e999500f1f74013a3` | 784×1045 | Gallery |
 | 10 | `10_portrait_sureshbapa_blessing-glow` | `4e30bcd6319bfef6bce709ce0ef4afb1` | 1100×1019 | Gallery, History, Main |
@@ -118,8 +118,10 @@ Families: **display** = "Noto Serif Gujarati", "Noto Serif", Georgia, serif · *
 | 24 | `24_unused_diya_cutout` | `70db10d832218539d0ef40367176309a` | 478×521 | — (not used) |
 | 25 | `25_unused_naag_cutout-small` | `624e213ce2a19b887b8069e53658baea` | 183×275 | — (not used) |
 | 26 | `26_unused_poster_karamshibapa-e-j-vihat` | `d142fc2cdd2cad709f1a711292912aac` | 960×1279 | — (not used) |
+| 27 | `27_portrait_karamshibapa_blessing-glow` | `0719d6d6a37c83a09b9880ba4507c70f` | 1086×1448 | Gallery (banner), History, Main — owner's photo, added 14 Oct 2026 (v110) |
 
-`Used on` names the page family (Main = all home boards; each page includes its phone version). Images 20–26 are supplied but unused.
+`Used on` names the page family (Main = all home boards; each page includes its phone version). Images 20–26 are supplied but unused; 07 unused since v110.
+The owner's originals for 27 (and an unused seated full-length photo) are in `tasks/bapa-photo/originals/`.
 Keep the **original file names** unchanged (they are also how the Figma script matches images).
 
 ### Image handling rules

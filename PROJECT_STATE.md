@@ -6,14 +6,15 @@ _Last updated: 10 Oct 2026, evening IST (audit Phases A–C reported). Update th
 
 | | Version | Id | Verified |
 |---|---|---|---|
-| **Live (published) design** | **v109** | `1791922103-42cb` | 14 Oct 2026: banner gold light and halo drawn in the picture's own box (`site.css` only); read back byte-identical to `design/project/site.css`. Owner asked for the fix directly. |
+| **Live (published) design** | **v110** | `1791960914-1d1c` | 14 Oct 2026: owner's new photo of ભગવાન શ્રી કરમશીબાપા (image 27, `/_blob/0719d6d6a37c83a09b9880ba4507c70f`) replaces the close-up 07 on 9 boards (Home pair + strip, History ch. 3, Gallery banner); read back byte-identical. Owner asked for it directly. |
+| v109 | v109 | `1791922103-42cb` | 14 Oct 2026: banner gold light and halo in the picture's own box (`site.css` only). Rollback target for v110. |
 | v108 | v108 | `1791920313-6e1c` | 14 Oct 2026: new chakra everywhere (9 boards). Rollback target for v109. |
 | v107 (artifact's own count) | v106 content | `1791918685-cd89` | 13 Oct 2026: a re-save (Design type update / editor open), **no content change**. Rollback target for v108 (= v106 content). |
 | v106 | v106 | `1791624520-9b52` | 10 Oct 2026: 28/28 project files identical to the snapshot of that day. |
 | Visual-effects work | — | — | Owner's brief [tasks/visual-effects-audit.md](tasks/visual-effects-audit.md): glow fixed in v109, old chakra replaced in v108. Remaining sweep items: see Outstanding tasks. |
-| Local working version | **Items 1–6 on v109 (unpublished)** | — | Saved 14 Oct in [tasks/fixes-1-6/](tasks/fixes-1-6/): final copy `project/`, per-item patches and scripts, report, pictures, test logs. Seva column, tablet menu, Seva form errors + confirmation, phone menu ✕/closing, Home buttons <375 px, polish 6.1–6.5. All checks pass in Chromium (REPORT.md). **Publishing needs the owner's separate approval.** |
+| Local working version | **Items 1–6 on v109 (unpublished)** | — | Saved 14 Oct in [tasks/fixes-1-6/](tasks/fixes-1-6/): final copy `project/`, per-item patches and scripts, report, pictures, test logs. Seva column, tablet menu, Seva form errors + confirmation, phone menu ✕/closing, Home buttons <375 px, polish 6.1–6.5. All checks pass in Chromium (REPORT.md). **Publishing needs the owner's separate approval.** Built on v109: to publish on v110, rebuild from `design/project` with the batch's patches/scripts (verified 14 Oct: result = saved `project/` + the v110 image swap, identical), or run `tools/examples/apply_v110_karamshibapa_photo.py` on the saved copy. |
 | Older rollback | v107 / v106 content | `1791918685-cd89` | Any earlier version is in the artifact's history (list in [CHANGELOG.md](CHANGELOG.md)). Version numbers follow the artifact's own count from v107 on. |
-| Spec / review page | v16 | `1791922379-dd2c` | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` — records v97–v109 (new section "Banner light & chakra"); source + new pictures in `tasks/spec-page/` |
+| Spec / review page | v17 | `1791961011-7067` | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` — records v97–v110 (sections "Banner light & chakra", "Karamshibapa photo"); source + pictures in `tasks/spec-page/` |
 | Audit report page | v2 | `1791922345-463b` | `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU` — audit of v106 + status after v108/v109; source `tasks/audit-v106/audit-page.html` |
 
 Website artifact: `https://claude.ai/artifact/HWR4J5u9qBPjri6oUg7nVa` (type Design, `https://claude.ai/artifact/QKN21svewxgyPb6SYRqWnd`).
@@ -90,7 +91,7 @@ MenuMobile and OfflineMobile are phone-screen boards (fixed 844 px), not content
    **Design audit v106 (Phases A–C):** done, no changes made — report [tasks/audit-report-v106.md](tasks/audit-report-v106.md)
    (page: `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU`). 0 P0, 1 P1 (A1 header menu 761–1179 px), 4 P2, 9 P3, 1 owner decision (D1 hero).
    Phase D waits for the owner's approval; proposed order v107 Seva → v108 A1 → v109 B3 → v110 B4 → v111 B2 → polish.
-3. **Spec page:** up to date with v109 (14 Oct). Add each new version there after publishing.
+3. **Spec page:** up to date with v110 (14 Oct). Add each new version there after publishing.
 4. **Figma Gate A:** when the allowance returns — one read-only check first; if blocked, stop. Then run `figma/scripts/call1.js` … in order
    (see `figma/state.json` → `run_order`), after the owner drops the 26 original images (original filenames) onto the Components page.
    Then sync Figma with website changes v99–v106 (`figma/state.json` → `figma_sync_todo`; the scripts already contain the v97 Gate A design).

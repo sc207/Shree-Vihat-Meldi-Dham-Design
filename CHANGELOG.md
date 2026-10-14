@@ -6,6 +6,23 @@ History before v97 (the original build, 30 Sep – 9 Oct 2026) lives in the arti
 
 Standard verification after every publish below: the changed files were read back from the live artifact and compared byte-for-byte with what was sent (all matched).
 
+## v110 · `1791960914-1d1c` — new photo of ભગવાન શ્રી કરમશીબાપા (14 Oct 2026)
+
+- **Files:** Main, HomeTablet, HomeTabletL, HomePhoneL, HomeMobile2, History, HistoryMobile, Gallery, GalleryMobile (`.dc.html`) — the image address only.
+  New image asset **27** `27_portrait_karamshibapa_blessing-glow` = `/_blob/0719d6d6a37c83a09b9880ba4507c70f` (1086×1448 WebP q92, 138,656 bytes, from the owner's
+  photo `tasks/bapa-photo/originals/karamshibapa_blessing_bust_owner-2026-10-14.png`). Script: `tools/examples/apply_v110_karamshibapa_photo.py`.
+- **Why:** owner's phone screenshot of the "૦૧ · મુખ્ય પૃષ્ઠ" board: the close-up 07 (1100×985, landscape, 50 KB) in the tall 3:4 arch showed only its middle —
+  face filling the frame, turban cut, soft when enlarged. Owner sent two new photos and asked to use the one that fits, in good quality.
+- **Change:** the owner's half-length blessing photo (exactly 3:4, so it shows whole) replaces 07 in all 14 places: Home portrait pair (`.vx-duo`) and photo strip
+  (`.vx-strip`) on the 5 home boards, History chapter 3 portrait (`.vm-profile`, desktop + phone), Gallery banner trio (`.vx-trio`, desktop + phone).
+  Alt text, captions, classes, inline styles and `site.css` unchanged. 07 stays in the asset store (rollback) but is referenced nowhere.
+  The owner's seated full-length photo (`…_seated_owner-2026-10-14.png`) is kept in `tasks/bapa-photo/originals/`, not used (face too small in the small arches).
+  No AI enlargement: the photo's own resolution is sharp at ≥ 2.47× on every frame (≥ 2.73× on phones), and enlargement could alter the face.
+- **Tests:** frame boxes identical before/after (30 frame × size cases, `tasks/bapa-photo/scripts/measure_frames.py`); check_layout 72 runs (9 boards, all widths,
+  both text sizes) 0 new problems; frames unchanged; wording identical; pixel_regress: the 15 other boards identical (MenuMobile = known noise); on the 9 changed boards
+  every changed pixel lies inside a photo frame once the home ribbon's motion noise is masked (`diff_inside_frames.py`). The items 1–6 batch (unpublished) rebuilds
+  cleanly on v110: result = saved batch + this image swap, identical. Pictures: `tasks/bapa-photo/pictures/`.
+
 ## v109 · `1791922103-42cb` — banner light stays behind Mataji / the temple (14 Oct 2026)
 
 - **Files:** `site.css` only (one keyframes line changed, one commented block appended). Script: `tools/examples/apply_v109_banner_light.py`.
