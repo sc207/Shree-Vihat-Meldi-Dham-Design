@@ -5,13 +5,15 @@ Viewable page with the same content: `https://claude.ai/artifact/FJjnL8j4NB95mK2
 
 **No changes were made to the website during the audit.** Phase D (fixes) waits for the owner's approval; each fix will be its own previewed version.
 
-### Status since the audit (14 Oct 2026, live v109 `1791922103-42cb`)
+### Status since the audit (14 Oct 2026, live v116 `1791970043-58bb`)
 
 - **Fixed, owner's later requests (not in the findings below):** v108 old chakra replaced by the lotus chakra on all boards; v109 banner gold light and
   halo stay behind the picture at every screen size (owner's screenshot, Festival 768×1024). See [CHANGELOG.md](../CHANGELOG.md) and `tasks/visual-effects/`.
 - **D1 answered in part:** the owner's screenshot showed the detached glow (fixed in v109), not cropped text.
-- **Still open:** A1, B1 (Seva fix prepared, awaiting approval; it takes the next free version number, not v107), B2, B3, B4, C1–C9.
-  Version numbers now follow the artifact's own count, so the plan's v107–v112 numbers below become the next free numbers.
+- **Fixed and published, one version each (14 Oct):** B1 → v111 · A1 → v112 · B2 → v113 · B3 → v114 · B4 → v115 · C2, C3, C4, C5, C6 → v116.
+  Owner's photo request: v110 (new Karamshibapa photo). Details and tests: [CHANGELOG.md](../CHANGELOG.md), [fixes-1-6/REPORT.md](fixes-1-6/REPORT.md).
+- **Still open:** C1 (larger gallery photos — trust), C7 and C8 (optional, not changed), C9 (approved design), D1 (owner decision).
+  The fix-plan version numbers below were the plan; the real numbers are the ones above.
 
 | Priority | Count | Items |
 |---|---|---|

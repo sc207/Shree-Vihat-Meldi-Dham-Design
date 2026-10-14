@@ -72,6 +72,9 @@ hide the phone action bar (`.vx-abar{display:none}`) so it does not cover conten
   (`design/assets/SHA256SUMS.txt`); `tools/rebuild_image_zip.py` rebuilds the owner's original 26-image ZIP byte-for-byte.
 - Tools validated on the v106 snapshot: `frame_heights.py` (Darshan, HomeMobile, NewTemple, Seva: 0 changes; MenuMobile/OfflineMobile skipped), `check_layout.py` (Darshan 1440/390, NewTempleMobile 1440/390:
   8 runs, 0 problems), `pixel_regress.py` (4 boards identical); all Python tools and the 15 Figma scripts parse.
+- 14 Oct (v111–v116, the six audit fixes): each published stage byte-identical to the stage tested on v109 + the v110 photo swap; on the final copy on v110:
+  `tasks/fixes-1-6/scripts/test_item2.py PORT` 81 runs 0 problems, `test_item3.py PORT` 35/35, `test_item4.py PORT TAG` all pass, `test_item5.py PORT TAG` all OK
+  (run from the repository root); pixel_regress vs v110: only Seva, SevaMobile, MenuMobile differ; frames 0 to change. 28/28 live files = `design/project/`.
 - 14 Oct (v110, new Karamshibapa photo): frame sizes per image (`tasks/bapa-photo/scripts/measure_frames.py PORT BLOBID [OUTDIR]`), changed pixels only inside
   photo frames with the home ribbon's motion noise masked (`diff_inside_frames.py BASE NEW BLOBID`); pixel_regress all 24 boards: only the 9 boards with the photo differ.
 - Per-version results: see [CHANGELOG.md](CHANGELOG.md). Most recent full regression: v109 (`pixel_regress.py` on all 24 boards, 14 Oct: only the 12 picture banners differ, inside the banner).

@@ -1,4 +1,8 @@
-# Items 1–6 — consolidated report (working copy, not committed, not published)
+# Items 1–6 — consolidated report
+
+> **Published 14 Oct 2026, one version per item, rebuilt on v110:** item 1 → v111 `1791969961-3b92` · 2 → v112 `1791969980-ab75` · 3 → v113 `1791969994-902a` ·
+> 4 → v114 `1791970009-dcf8` · 5 → v115 `1791970022-cc11` · 6 → v116 `1791970043-58bb`. Each published stage = the tested stage below + the v110 photo swap
+> (byte-identical); behaviour tests for items 2–5 re-run on the final copy on v110, all pass. The text below is the report as written before publishing.
 
 14 Oct 2026 · Final copy: `project/` here (= live v109 + items 1–6; checksums `project-SHA256SUMS.txt`). Per-item stylesheet patches in `patches/`,
 page-file changes by `scripts/apply_item*.py`; rebuilding from v109 with them reproduces `project/` exactly (checked). Saved to the repo on the owner's

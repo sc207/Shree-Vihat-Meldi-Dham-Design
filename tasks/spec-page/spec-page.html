@@ -108,7 +108,7 @@ td.n { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--mut
     <div><b>Gate A checklist</b><span>0 of 6 confirmed. Preview checks pass on all 12 phone pages at 4 widths; nothing counts as verified until its Figma screenshot has been inspected.</span></div>
   </div>
   <nav class="toc" aria-label="On this page">
-    <a href="#c4">Banners &amp; headings</a><a href="#c5">Images &amp; frames</a><a href="#c6">Cards</a><a href="#c7">Festival</a><a href="#c8">Page endings</a><a href="#record">Audit change record</a><a href="#full">Full-layout phone check</a><a href="#home">Home summary preview</a><a href="#darshan">Darshan timetable</a><a href="#effects">Banner light &amp; chakra</a><a href="#photo">Karamshibapa photo</a><a href="#plan">Figma build plan</a><a href="#open">Decisions &amp; checklist</a>
+    <a href="#c4">Banners &amp; headings</a><a href="#c5">Images &amp; frames</a><a href="#c6">Cards</a><a href="#c7">Festival</a><a href="#c8">Page endings</a><a href="#record">Audit change record</a><a href="#full">Full-layout phone check</a><a href="#home">Home summary preview</a><a href="#darshan">Darshan timetable</a><a href="#effects">Banner light &amp; chakra</a><a href="#photo">Karamshibapa photo</a><a href="#fixes">Audit fixes</a><a href="#plan">Figma build plan</a><a href="#open">Decisions &amp; checklist</a>
   </nav>
 </section>
 
@@ -379,12 +379,17 @@ td.n { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--mut
       <tr><td>Scrolling strip ignores reduced motion</td><td>Starts paused when the device asks for less motion</td><td>Build stage</td><td><span class="chip later">Later</span></td></tr>
       <tr><td>Countdown refreshes the page every second</td><td>Refresh every 30–60 seconds</td><td>Build stage</td><td><span class="chip later">Later</span></td></tr>
       <tr><td>Darshan desktop chart: 8 identical rows</td><td>Use the phone day-list design</td><td>Darshan page (Gate C)</td><td><span class="chip later">Later</span></td></tr>
-      <tr><td>Seva desktop: empty right column</td><td>Side column stays in view while scrolling — fix prepared, waiting for your approval</td><td>Seva page (Gate C)</td><td><span class="chip later">Later</span></td></tr>
+      <tr><td>Seva desktop: empty right column</td><td>Side column runs the full height; the help card stays in view while scrolling</td><td>Website</td><td><span class="chip ok">Published · v111</span></td></tr>
       <tr><td>Stats labels wrap one word</td><td>Wider label column</td><td>Home (Gate B)</td><td><span class="chip later">Later</span></td></tr>
       <tr><td>Old oval-petal chakra still in two ornaments (Home “નવું મંદિર” band, CTA card corner)</td><td>Lotus chakra everywhere</td><td>Website</td><td><span class="chip ok">Published · v108</span></td></tr>
       <tr><td>Banner gold light beside the title on tablets and phones; halo drifting while it breathes</td><td>Light and halo drawn in the picture’s own box</td><td>Website</td><td><span class="chip ok">Published · v109</span></td></tr>
       <tr><td>Karamshibapa close-up cropped to the middle in the tall arch frames, soft when enlarged</td><td>Your new blessing photo (3:4), shown whole</td><td>Website</td><td><span class="chip ok">Published · v110</span></td></tr>
-      <tr><td>Heading levels skip (h2 → h4)</td><td>Footer and Seva headings re-levelled</td><td>Footer; build stage</td><td><span class="chip todo">Specified</span></td></tr>
+      <tr><td>Menu button ☰ does nothing on tablets and small laptops (761–1179 px)</td><td>☰ opens the menu panel with all 8 pages</td><td>Website</td><td><span class="chip ok">Published · v112</span></td></tr>
+      <tr><td>Seva form: error messages out of view after a failed submit; confirmation off screen</td><td>Page moves to the first field to fix; confirmation brought into view</td><td>Website</td><td><span class="chip ok">Published · v113</span></td></tr>
+      <tr><td>Phone menu: close icon almost invisible; close always goes Home</td><td>Ivory ✕; closing returns to the page you came from</td><td>Website</td><td><span class="chip ok">Published · v114</span></td></tr>
+      <tr><td>Home banner button cut on 320–340 px phones</td><td>Buttons size to their labels below 375 px</td><td>Website</td><td><span class="chip ok">Published · v115</span></td></tr>
+      <tr><td>Seva day tiles wrap 5+2 / 6+1; artist names wrap word by word; three jump links land under the top edge; consent checkbox 22 px</td><td>One row of 7; date above names on small phones; proper landing space; 24 px checkbox</td><td>Website</td><td><span class="chip ok">Published · v116</span></td></tr>
+      <tr><td>Heading levels skip (h2 → h4)</td><td>Footer and Seva headings re-levelled, same look</td><td>Website</td><td><span class="chip ok">Published · v116</span></td></tr>
     </tbody>
   </table>
   </div>
@@ -532,6 +537,30 @@ td.n { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--mut
     <figure><img src="img/v110-photo-home-1440.webp" alt="Desktop home page, the two Bapas, version 109 and version 110" loading="lazy"><figcaption>Home, 1440 px.</figcaption></figure>
     <figure><img src="img/v110-photo-history-1440.webp" alt="History chapter 3, version 109 and version 110" loading="lazy"><figcaption>History, chapter 3, 1440 px.</figcaption></figure>
     <figure><img src="img/v110-photo-gallery-1440.webp" alt="Gallery banner, version 109 and version 110" loading="lazy"><figcaption>Gallery banner, 1440 px.</figcaption></figure>
+  </article>
+</section>
+
+<!-- ============================ Audit fixes (v111–v116) ============================ -->
+<section class="board" id="fixes" aria-labelledby="fxt">
+  <header><p class="eyebrow">Audit fixes · published as versions 111 to 116 (14 Oct 2026)</p><h2 id="fxt">Six fixes, one version each</h2><p>On your instruction “one version per fix”. Each was rebuilt on version 110 and is byte-identical to the copy tested before; each earlier version stays in the history for rollback. All 28 live files were checked against what was sent.</p></header>
+  <article class="comp">
+    <div class="comp-head"><h3>What each version changed</h3><span class="chip ok">Published · v111–v116</span></div>
+    <dl class="spec">
+      <dt>v111</dt><dd>Seva desktop: the help column runs the full height of the form and the “સહાયની જરૂર છે?” card stays in view while scrolling.</dd>
+      <dt>v112</dt><dd>Tablets and small laptops (761–1179 px): the ☰ button now opens a menu panel with all 8 pages, the text-size button, WhatsApp and phone. ✕ or Escape closes it.</dd>
+      <dt>v113</dt><dd>Seva form: after a failed submit the page moves to the first field to fix; after a valid one it moves to the confirmation. Typed values are kept; no wording change.</dd>
+      <dt>v114</dt><dd>Phone menu: the ✕ is clearly visible (ivory), and closing returns to the page you came from, at the same scroll position.</dd>
+      <dt>v115</dt><dd>Home banner buttons on very small phones (below 375 px) size to their labels, so “મહોત્સવ વિશે જાણો →” is never cut.</dd>
+      <dt>v116</dt><dd>Polish: Seva festival days in one row on small laptops; artist names no longer wrap word by word on small phones; three jump links land with space above; heading levels in order (same look); consent checkbox 24 px.</dd>
+      <dt>Checks</dt><dd>On the final version: tablet menu 81 runs, form 35 scenarios, phone menu at 5 sizes, home buttons at every width from 320 to 390 px — all pass; every other board pixel-identical; frames and wording unchanged (the tablet menu reuses the existing page names). Tested in Chromium only.</dd>
+    </dl>
+    <figure><img src="img/v112-tablet-menu-1024.webp" alt="Home at 1024 by 768, menu button before and the open menu after" loading="lazy"><figcaption>v112 · tablet / small laptop, 1024×768: ☰ now opens the menu.</figcaption></figure>
+    <figure><img src="img/v111-seva-column-1440.webp" alt="Seva page at 1440 px, empty right column before and help card in view after" loading="lazy"><figcaption>v111 · Seva, 1440 px.</figcaption></figure>
+    <figure class="phone"><img src="img/v113-form-errors-390.webp" alt="Seva form on a phone after an empty submit, before and after" loading="lazy"><figcaption>v113 · Seva form on a phone after an empty submit.</figcaption></figure>
+    <figure><img src="img/v114-phone-menu-close.webp" alt="Phone menu close icon before and after" loading="lazy"><figcaption>v114 · phone menu ✕.</figcaption></figure>
+    <figure><img src="img/v115-home-buttons.webp" alt="Home banner buttons at 320 px before and after" loading="lazy"><figcaption>v115 · home buttons on a 320 px phone.</figcaption></figure>
+    <figure><img src="img/v116-seva-days-1024.webp" alt="Seva festival day tiles at 1024 px before and after" loading="lazy"><figcaption>v116 · Seva festival days, 1024 px.</figcaption></figure>
+    <figure class="phone"><img src="img/v116-night-names-320.webp" alt="Festival night cards at 320 px in large text, before and after" loading="lazy"><figcaption>v116 · festival night cards, 320 px, large text.</figcaption></figure>
   </article>
 </section>
 

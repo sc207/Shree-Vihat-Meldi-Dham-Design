@@ -1,21 +1,22 @@
 # PROJECT_STATE.md
 
-_Last updated: 10 Oct 2026, evening IST (audit Phases A–C reported). Update this file only when the project state meaningfully changes._
+_Last updated: 14 Oct 2026, afternoon IST (v111–v116 published: the six audit fixes)._ _Earlier: 10 Oct 2026, evening IST (audit Phases A–C reported). Update this file only when the project state meaningfully changes._
 
 ## Versions
 
 | | Version | Id | Verified |
 |---|---|---|---|
-| **Live (published) design** | **v110** | `1791960914-1d1c` | 14 Oct 2026: owner's new photo of ભગવાન શ્રી કરમશીબાપા (image 27, `/_blob/0719d6d6a37c83a09b9880ba4507c70f`) replaces the close-up 07 on 9 boards (Home pair + strip, History ch. 3, Gallery banner); read back byte-identical. Owner asked for it directly. |
+| **Live (published) design** | **v116** | `1791970043-58bb` | 14 Oct 2026: the six audit fixes published one version each — v111 `1791969961-3b92` Seva help column · v112 `1791969980-ab75` tablet/small-laptop header menu · v113 `1791969994-902a` Seva form errors into view · v114 `1791970009-dcf8` phone menu ✕ + closing · v115 `1791970022-cc11` Home buttons < 375 px · v116 `1791970043-58bb` polish 6.1–6.5. All 28 live project files read back byte-identical to `design/project/`. Owner: "one version per fix". |
+| v110 | v110 | `1791960914-1d1c` | 14 Oct 2026: owner's new photo of ભગવાન શ્રી કરમશીબાપા (image 27, `/_blob/0719d6d6a37c83a09b9880ba4507c70f`) replaces the close-up 07 on 9 boards (Home pair + strip, History ch. 3, Gallery banner); read back byte-identical. Rollback target for v111. |
 | v109 | v109 | `1791922103-42cb` | 14 Oct 2026: banner gold light and halo in the picture's own box (`site.css` only). Rollback target for v110. |
 | v108 | v108 | `1791920313-6e1c` | 14 Oct 2026: new chakra everywhere (9 boards). Rollback target for v109. |
 | v107 (artifact's own count) | v106 content | `1791918685-cd89` | 13 Oct 2026: a re-save (Design type update / editor open), **no content change**. Rollback target for v108 (= v106 content). |
 | v106 | v106 | `1791624520-9b52` | 10 Oct 2026: 28/28 project files identical to the snapshot of that day. |
 | Visual-effects work | — | — | Owner's brief [tasks/visual-effects-audit.md](tasks/visual-effects-audit.md): glow fixed in v109, old chakra replaced in v108. Remaining sweep items: see Outstanding tasks. |
-| Local working version | **Items 1–6 on v109 (unpublished)** | — | Saved 14 Oct in [tasks/fixes-1-6/](tasks/fixes-1-6/): final copy `project/`, per-item patches and scripts, report, pictures, test logs. Seva column, tablet menu, Seva form errors + confirmation, phone menu ✕/closing, Home buttons <375 px, polish 6.1–6.5. All checks pass in Chromium (REPORT.md). **Publishing needs the owner's separate approval.** Built on v109: to publish on v110, rebuild from `design/project` with the batch's patches/scripts (verified 14 Oct: result = saved `project/` + the v110 image swap, identical), or run `tools/examples/apply_v110_karamshibapa_photo.py` on the saved copy. |
+| Local working version | none | — | Items 1–6 (saved in [tasks/fixes-1-6/](tasks/fixes-1-6/)) are now live as v111–v116. Nothing unpublished. |
 | Older rollback | v107 / v106 content | `1791918685-cd89` | Any earlier version is in the artifact's history (list in [CHANGELOG.md](CHANGELOG.md)). Version numbers follow the artifact's own count from v107 on. |
-| Spec / review page | v17 | `1791961011-7067` | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` — records v97–v110 (sections "Banner light & chakra", "Karamshibapa photo"); source + pictures in `tasks/spec-page/` |
-| Audit report page | v2 | `1791922345-463b` | `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU` — audit of v106 + status after v108/v109; source `tasks/audit-v106/audit-page.html` |
+| Spec / review page | v18 | `1791970186-5a1f` | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` — records v97–v116 (sections "Banner light & chakra", "Karamshibapa photo", "Audit fixes"); source + pictures in `tasks/spec-page/` |
+| Audit report page | v3 | `1791970198-ef0e` | `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU` — audit of v106 + status after v116 (A1, B1–B4, C2–C6 fixed); source `tasks/audit-v106/audit-page.html` |
 
 Website artifact: `https://claude.ai/artifact/HWR4J5u9qBPjri6oUg7nVa` (type Design, `https://claude.ai/artifact/QKN21svewxgyPb6SYRqWnd`).
 
@@ -87,11 +88,12 @@ MenuMobile and OfflineMobile are phone-screen boards (fixed 844 px), not content
    artists of 5 Feb ડાયરો and 8 Feb રમેલ and the spelling of their names, artist photos (with permission), arrival/parking instructions,
    authoritative temple history and both Bapas' introductions, dated construction photos and real festival photos, the પત્રિકા PDF, dress code,
    the trust's registered name. (The note still says the PDF button is "તૈયાર છે"; it has been hidden since v102 — reword the note if the owner wants.)
-2. **Seva desktop:** empty right column — fix prepared as v107 (see Versions), **awaiting approval**.
+2. **Audit fixes published (v111–v116):** A1, B1–B4, C2–C6. **Still open from the audit:** C1 (larger gallery photos — trust), C7 banner entrance 900 ms (optional),
+   C8 image size attributes (optional), C9 (approved design, note only), D1 (whole temple in the first phone screen — owner decision).
    **Design audit v106 (Phases A–C):** done, no changes made — report [tasks/audit-report-v106.md](tasks/audit-report-v106.md)
    (page: `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU`). 0 P0, 1 P1 (A1 header menu 761–1179 px), 4 P2, 9 P3, 1 owner decision (D1 hero).
    Phase D waits for the owner's approval; proposed order v107 Seva → v108 A1 → v109 B3 → v110 B4 → v111 B2 → polish.
-3. **Spec page:** up to date with v110 (14 Oct). Add each new version there after publishing.
+3. **Spec page:** up to date with v116 (14 Oct). Add each new version there after publishing.
 4. **Figma Gate A:** when the allowance returns — one read-only check first; if blocked, stop. Then run `figma/scripts/call1.js` … in order
    (see `figma/state.json` → `run_order`), after the owner drops the 26 original images (original filenames) onto the Components page.
    Then sync Figma with website changes v99–v106 (`figma/state.json` → `figma_sync_todo`; the scripts already contain the v97 Gate A design).
@@ -109,7 +111,7 @@ Decided:
   Show the new wording to the owner before publishing it as its own version.
 
 Task queue, one small task at a time (owner's order):
-1. **Seva page, desktop: fix the empty right column** — prepared (v107 preview), awaiting approval.
+1. **Seva page, desktop: fix the empty right column** — done (v111, 14 Oct).
 2. **Canvas to-do note:** the PDF line correction above.
 3. **Complete design audit** — owner's brief in [tasks/full-design-audit.md](tasks/full-design-audit.md); phases A–C end in a report to the owner, fixes follow
    in small approved versions. Phases A–C done (report: [tasks/audit-report-v106.md](tasks/audit-report-v106.md)); waiting for the owner's answers and approval.
@@ -127,5 +129,7 @@ and update the canvas to-do note again.
   taller than their frame; the Darshan phone board can be ~8 px taller on dates when the calendar list wraps differently. Real pages have no fixed height.
 - Contact and 404 pages compute a local weekday in their logic but never display it (harmless; left unchanged).
 - Seva form: no save destination yet (front-end only).
-- Audit findings A1, B2–B4, C1–C9 and decision D1 are open — see [tasks/audit-report-v106.md](tasks/audit-report-v106.md).
+- Audit findings still open: C1, C7–C9 and decision D1 (A1, B1–B4, C2–C6 fixed in v111–v116) — see [tasks/audit-report-v106.md](tasks/audit-report-v106.md).
+- Phone menu ✕ inside the Claude Design canvas: goes to Home (the canvas may not keep page history); on a real site it returns to the previous page.
+- Not verified anywhere yet: Safari / iPhone, Firefox, real tablets and phones, screen readers (all tests ran in Chromium).
 - Figma: C3 navigation built but not visually verified; C4–C8 specified, not built.

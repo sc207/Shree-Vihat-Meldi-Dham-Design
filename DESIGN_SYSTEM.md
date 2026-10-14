@@ -150,8 +150,11 @@ Every content page, top to bottom:
 
 1. Skip link "મુખ્ય સામગ્રી પર જાઓ".
 2. Festival strip `.vm-notice` (inner pages): "મૂર્તિ પ્રાણ પ્રતિષ્ઠા મહોત્સવ · તા. ૨ થી ૮ ફેબ્રુઆરી, ૨૦૨૭ · વિગતો જુઓ" (shorter text on phones).
-3. Banner `.vm-hero` with the header over it (`.vm-header--over-hero`): brand (mark + "શ્રી વિહત મેલડી ધામ / સાણંદ · ગુજરાત"), navigation, અ+ toggle, phone menu button.
+3. Banner `.vm-hero` with the header over it (`.vm-header--over-hero`): brand (mark + "શ્રી વિહત મેલડી ધામ / સાણંદ · ગુજરાત"), navigation, અ+ toggle, menu button ☰ (shown below 1180 px).
+   ☰ on phone pages opens the menu page `MenuMobile` (✕ / Escape return to the page the visitor came from, scroll kept — v114); on desktop/tablet boards it opens
+   the in-page menu panel `.vm-mnav.vx-tnav` (dialog, Escape closes, focus kept inside — v112).
 4. Content sections `.vm-section` alternating ivory / cream (`--alt`) / dark (`--inverse`); section heading = eyebrow (`.vm-eyebrow`) + `h2.vm-h1` (+ `.vm-lead`).
+   Heading levels never skip (h1 → h2 → h3): footer column titles and the Seva side-card titles are `h2` styled small (v116).
 5. **Page ending (approved rule):** WhatsApp band (`.vm-wa`) → devotional band (`.vm-devotional.vx-close`, "॥ ૐ ॥ / જય શ્રી વિહત મેલડી માઁ" + shloka) → footer (`.vm-footer`).
    Exceptions: the Seva form page and 404 end with the footer only (404 offers the way home).
 6. Phones: fixed bottom action bar `.vx-abar` — દર્શન · મહોત્સવ · રસ્તો · ફોન કરો.
@@ -170,7 +173,9 @@ form fields, header/nav/phone menu, hero, section/heading, cards (event, contact
 WhatsApp band, devotional band, footer, `vm-sr` (screen-reader-only text).
 Site components (`vx-*`, in `site.css`) include: home festival summary (`vx-sumacts`, `vx-night(s)`), countdown (`vx-live`, `vx-cd`), festival plan/day cards
 (`vx-plan`, `vx-day(s)`), Darshan timetable (`vx-tt`, `vx-tt__week`, `vx-ttc`), calendar (`vx-cal`), facts row (`vx-facts`), crops (`vx-crop`), history book
-(`vx-book`), progress (`vx-prog`), New Temple સંકલ્પ layout (`vx-prose`, `vx-sk`), page strip/compact hero (`vx-hero-compact`), action bar (`vx-abar`).
+(`vx-book`), progress (`vx-prog`), New Temple સંકલ્પ layout (`vx-prose`, `vx-sk`), page strip/compact hero (`vx-hero-compact`), action bar (`vx-abar`),
+tablet menu panel (`vx-tnav`, v112). Seva form: a failed submit moves to and focuses the first field to fix; a valid one moves to the confirmation (v113);
+consent checkbox 24 px (v116); help column sticky on desktop (v111).
 Full class list: `grep -o 'class="[^"]*"' design/project/*.dc.html`.
 
 CSS conventions: design-system CSS is never edited; site rules live in `site.css`; every new change is appended at the end as a block headed

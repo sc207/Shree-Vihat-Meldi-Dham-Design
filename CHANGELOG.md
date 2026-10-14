@@ -6,6 +6,60 @@ History before v97 (the original build, 30 Sep – 9 Oct 2026) lives in the arti
 
 Standard verification after every publish below: the changed files were read back from the live artifact and compared byte-for-byte with what was sent (all matched).
 
+_v111–v116 were published one after another on the owner's instruction "one version per fix". Built on v110 from the saved batch `tasks/fixes-1-6/` (patches + scripts); each stage byte-identical to the stage tested on v109 plus the v110 photo swap. Details, pictures and test logs: `tasks/fixes-1-6/REPORT.md`._
+
+## v116 · `1791970043-58bb` — polish 6.1–6.5 (14 Oct 2026)
+
+- **Files:** 21 page files (all except HomeMobile, MenuMobile, OfflineMobile) + `site.css`. Script `tasks/fixes-1-6/scripts/apply_item6.py <proj> 1…5`.
+- **Change:** 6.1 Seva festival day tiles share one row of 7 equal columns at 1000–1179 px (were 5+2 / 6+1; audit C2). 6.2 festival night cards put the date above
+  the artist names below 360 px (below 390 px in large text) — names no longer wrap word by word (C3). 6.3 `scroll-margin-top` 96 / 64 px on `#calendar`, `#travel`,
+  `#progress`, so jump links no longer land with the heading under the top edge (C4). 6.4 footer column titles h4 → h2 (21 files) and Seva side-card titles h3 → h2,
+  with rules that keep the exact previous look — no heading-level skips (C5). 6.5 Seva consent checkbox 22 → 24 px (C6).
+- **Tests:** names wrapped 0/9 at 320–700 px both sizes; day tiles one row at 1000–1179, unchanged elsewhere; jump links land at 96 / 64 px; no heading skip on 24
+  boards, heading change pixel-identical; checkbox 24×24. Whole batch on v110: pixel_regress — only Seva, SevaMobile, MenuMobile differ from v110; frames 0 to change.
+
+## v115 · `1791970022-cc11` — Home buttons on very small phones (14 Oct 2026)
+
+- **Files:** `site.css` (one rule, < 375 px). **Root cause:** equal-width buttons (`flex: 1 1 0`, no wrap, `overflow: hidden`), so "મહોત્સવ વિશે જાણો →" (148 px)
+  was clipped at 320–340 px (audit B4). **Change:** below 375 px each phone home-banner button sizes to its label and shares the rest; never narrower than its label.
+- **Tests:** 320–390 px in 5 px steps, normal + large text: one row, label 14–24 px from the button edge, 52 px tall — all OK (re-run on the final copy on v110).
+
+## v114 · `1791970009-dcf8` — phone menu ✕ visible, closing returns to the page (14 Oct 2026)
+
+- **Files:** MenuMobile + HomeMobile, ContactMobile, DarshanMobile, GalleryMobile, HistoryMobile, NewTempleMobile, NotFoundMobile, PranPratishthaMobile,
+  SevaMobile (`.dc.html`) + `site.css`.
+- **Root cause (audit B3):** ✕ was maroon on maroon (1.41:1) because `.vm-root a` outranked the design system's ivory; ✕ always opened Home and Home was always
+  marked current. **Change:** ivory ✕ (14.3:1); ✕ and Escape go back to the page the visitor came from (Home when the menu was opened directly — the existing link
+  stays as fallback); the current-page mark follows that page; the 9 phone pages remember their scroll position when ☰ is tapped and restore it on return (10 min).
+- **Tests:** 320, 360, 390, 430, 844×390: contrast 14.32:1, 48×48 target, focus ring; direct open → Home marked, ✕ → Home; from Darshan at 1,400 px → Darshan marked,
+  ✕ → back at 1,400 px; Escape → back; other link → that page. All pass on the final copy on v110. Inside the Claude Design canvas ✕ falls back to Home.
+
+## v113 · `1791969994-902a` — Seva form errors brought into view (14 Oct 2026)
+
+- **Files:** Seva, SevaMobile (`.dc.html`) + `site.css`.
+- **Root cause (audit B2):** a failed submit showed the messages but did not move: focus stayed on the button and on phones the messages were ~3,000 px above;
+  fields had no `aria-invalid` / link to their message. After a valid submit the confirmation (which replaces the form) was also off screen.
+  **Change:** on failure the page scrolls to the first invalid control (form order) and focuses it; `aria-invalid` + `aria-describedby` on name, mobile, town,
+  consent; on success it scrolls to the confirmation and focuses its heading. Typed values kept; no wording change.
+- **Tests:** 7 scenarios × 1440, 1024, 390, 320 + 390 large = 35/35 pass on the final copy on v110 (focus on the right control, on screen above the bottom bar,
+  values kept, aria-invalid correct; valid → confirmation on screen). Reduced motion: instant jump. Screen-reader output not tested.
+
+## v112 · `1791969980-ab75` — working header menu on tablets and small laptops (14 Oct 2026)
+
+- **Files:** Main, HomeTablet, HomeTabletL, HomePhoneL, NewTemple, PranPratishtha, Seva, Gallery, History, Contact, Darshan, NotFound (`.dc.html`) + `site.css`.
+- **Root cause (audit A1, P1):** below 1180 px the design system hides the header links and shows ☰; on these 12 boards ☰ was a `<button>` with no action.
+  **Change:** ☰ opens the design system's own menu panel (`.vm-mnav`, id `vx-tnav`, as on the phone menu page) with the board's 8 links (current page marked), brand,
+  text-size button, WhatsApp and phone; `role="dialog"`, `aria-modal`, `aria-expanded`/`aria-controls` on ☰; ✕ button, Escape closes, Tab stays inside, focus to ✕
+  on open and back to ☰ on close; above the phone bottom bar (z-index 90); one centred column ≤ 720 px; hidden from 1180 px.
+- **Tests:** 81 runs (9 pages × 760–1180 px + tablet/landscape boards + large text) — 0 problems on the final copy on v110. With the menu closed all boards look as before.
+
+## v111 · `1791969961-3b92` — Seva desktop help column (14 Oct 2026)
+
+- **Files:** `site.css` (3 rules, ≥ 1000 px). **Root cause (audit B1):** form ~2,100 px, help column ~1,000 px, and the section's `overflow: hidden` stops a sticky card,
+  so the right side was empty beside section ૩. **Change:** the column runs the full height of the form; the "સહાયની જરૂર છે?" card stays in view under the compact
+  header; section `overflow: clip`. Single column below 1000 px unchanged.
+- **Tests:** 24–26 scroll positions at 1440 / 1024: no overlap, stays in its column, stops 96 px above the footer; empty-column positions 6–7 → 0 at 1024–1440.
+
 ## v110 · `1791960914-1d1c` — new photo of ભગવાન શ્રી કરમશીબાપા (14 Oct 2026)
 
 - **Files:** Main, HomeTablet, HomeTabletL, HomePhoneL, HomeMobile2, History, HistoryMobile, Gallery, GalleryMobile (`.dc.html`) — the image address only.

@@ -26,11 +26,11 @@ The Gujarati-only website design for **શ્રી વિહત મેલડી
 
 | | Version | Version id | Notes |
 |---|---|---|---|
-| **Live design (published)** | **v110** | `1791960914-1d1c` | 14 Oct 2026: owner's new photo of ભગવાન શ્રી કરમશીબાપા (image 27) replaces the close-up 07 (v110); banner light (v109); new chakra (v108). `design/project/` refreshed, checksums regenerated; `design/assets/` now 27 images (27 = `0719d6d6a37c83a09b9880ba4507c70f.webp`). |
-| Previous known-good | v109 | `1791922103-42cb` | Rollback target for v110; v108 `1791920313-6e1c` for v109. v107 `1791918685-cd89` = v106 content; earlier ids: [CHANGELOG.md](CHANGELOG.md). Version numbers follow the artifact's own count. |
-| Local working copy | Items 1–6 | — | Unpublished, saved in `tasks/fixes-1-6/` (final copy `project/` = v109 + items 1–6, report, patches, scripts). Publishing waits for the owner's explicit permission. Live is now v110: rebuild the batch on `design/project` before publishing (verified to apply cleanly). |
+| **Live design (published)** | **v116** | `1791970043-58bb` | 14 Oct 2026: the six audit fixes v111–v116 (Seva column, tablet menu, Seva form errors, phone menu ✕, Home buttons, polish); new Karamshibapa photo (v110); banner light (v109); new chakra (v108). `design/project/` refreshed, checksums regenerated; `design/assets/` now 27 images (27 = `0719d6d6a37c83a09b9880ba4507c70f.webp`). |
+| Previous known-good | v115 … v110 | see [CHANGELOG.md](CHANGELOG.md) | Each fix is its own version: roll back one by publishing the previous version's files. v110 `1791960914-1d1c` = before the fixes; v109 `1791922103-42cb` before the photo; v108 `1791920313-6e1c` for v109. v107 `1791918685-cd89` = v106 content; earlier ids: [CHANGELOG.md](CHANGELOG.md). Version numbers follow the artifact's own count. |
+| Local working copy | none | — | Items 1–6 published as v111–v116 (source, report and tests stay in `tasks/fixes-1-6/`). |
 
-On 13 Oct the live id changed to `1791918685-cd89` without any content change (Design type re-save, counted as v107); v108, v109 and v110 were published on 14 Oct.
+On 13 Oct the live id changed to `1791918685-cd89` without any content change (Design type re-save, counted as v107); v108–v116 were published on 14 Oct.
 
 ## 4. Completed in the previous session (v97 → v106, all on 10 Oct 2026)
 
