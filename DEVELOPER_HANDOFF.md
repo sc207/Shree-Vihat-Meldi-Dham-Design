@@ -110,14 +110,15 @@ browsers without scroll timelines simply show everything.
 
 ## 5. Images
 
-27 originals (19 used). Use `handoff/assets.json` for names, sizes, alt texts and where each appears; export them with real names:
+31 files (19 used). Use `handoff/assets.json` for names, sizes, alt texts and where each appears; export them with real names:
 `python3 tools/export_assets.py --export public/images`.
 
 - Deity art and portraits sit in the arch frame (`.vm-arch`); cover-cropping rules (`object-position`) are in the pages — keep them.
 - Images are single-size today. For production, generate responsive sizes (`srcset`, e.g. 480/960/1440 w) and keep `loading="lazy"`
   below the first screen; add `width`/`height` attributes to avoid layout shift.
-- Four photos are small originals and look soft on high-resolution screens (લાખણેચી માઁ 380×534, ગોગા મહારાજ 393×534,
-  સુરેશબાપા cut-out 470×501, સુરેશબાપા candid 585×882) — larger originals must come from the trust; do not upscale portraits.
+- The four ધામ પરિવાર pictures (28–31, v125) are 1200×1500 and already fit the 4:5 arch frame exactly — no cropping needed.
+- Two photos are small originals and look soft on high-resolution screens (સુરેશબાપા cut-out 470×501, સુરેશબાપા candid 585×882) —
+  larger originals must come from the trust; do not upscale portraits.
 - Empty `alt=""` = decorative, or the picture is named by the text beside it. Missing photos use the "photo coming soon" tile — never stock photos.
 
 ## 6. Behaviour to implement (the `DCLogic` class at the end of each page is the reference implementation)

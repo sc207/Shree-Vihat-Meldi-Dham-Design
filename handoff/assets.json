@@ -81,17 +81,9 @@
    "height": 905,
    "bytes": 88512,
    "type": "image/webp",
-   "used_on_boards": [
-    "Gallery",
-    "GalleryMobile",
-    "History",
-    "HistoryMobile"
-   ],
-   "alt_texts": [
-    "",
-    "જય શ્રી વિહત માઁ"
-   ],
-   "note": "Gallery, History"
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used since v125; replaced by 28)"
   },
   {
    "no": 4,
@@ -102,16 +94,9 @@
    "height": 921,
    "bytes": 78184,
    "type": "image/webp",
-   "used_on_boards": [
-    "Gallery",
-    "GalleryMobile",
-    "History",
-    "HistoryMobile"
-   ],
-   "alt_texts": [
-    "જય શ્રી મેલડી માઁ"
-   ],
-   "note": "Gallery, History"
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used since v125; replaced by 29)"
   },
   {
    "no": 5,
@@ -122,16 +107,9 @@
    "height": 534,
    "bytes": 19230,
    "type": "image/webp",
-   "used_on_boards": [
-    "Gallery",
-    "GalleryMobile",
-    "History",
-    "HistoryMobile"
-   ],
-   "alt_texts": [
-    "જય શ્રી લાખણેચી માઁ"
-   ],
-   "note": "Gallery, History"
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used since v125; replaced by 30)"
   },
   {
    "no": 6,
@@ -142,16 +120,9 @@
    "height": 534,
    "bytes": 19524,
    "type": "image/webp",
-   "used_on_boards": [
-    "Gallery",
-    "GalleryMobile",
-    "History",
-    "HistoryMobile"
-   ],
-   "alt_texts": [
-    "જય શ્રી ગોગા મહારાજ"
-   ],
-   "note": "Gallery, History"
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used since v125; replaced by 31)"
   },
   {
    "no": 7,
@@ -603,6 +574,87 @@
     "ભગવાન શ્રી કરમશીબાપા"
    ],
    "note": "Gallery (banner), History, Main — owner's photo, added 14 Oct 2026 (v110)"
+  },
+  {
+   "no": 28,
+   "name": "28_deity_vihat-maa_hd-arch.webp",
+   "blob": "6a5dfa42bf4395ad0c91358b6d58b309",
+   "design_url": "/_blob/6a5dfa42bf4395ad0c91358b6d58b309",
+   "width": 1200,
+   "height": 1500,
+   "bytes": 235212,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile"
+   ],
+   "alt_texts": [
+    "",
+    "જય શ્રી વિહત માઁ"
+   ],
+   "note": "Gallery, History — made from 21 (HD), added 16 Oct 2026 (v125)"
+  },
+  {
+   "no": 29,
+   "name": "29_deity_meldi-maa_hd-arch.webp",
+   "blob": "8c6bc0f2d3dd302001ff1f0156ef263c",
+   "design_url": "/_blob/8c6bc0f2d3dd302001ff1f0156ef263c",
+   "width": 1200,
+   "height": 1500,
+   "bytes": 191126,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile"
+   ],
+   "alt_texts": [
+    "જય શ્રી મેલડી માઁ"
+   ],
+   "note": "Gallery, History — made from 22 (HD), added 16 Oct 2026 (v125)"
+  },
+  {
+   "no": 30,
+   "name": "30_deity_lakhnechi-maa_hd-arch.webp",
+   "blob": "64fea5310ba43b3bb3862a6fbc35b15d",
+   "design_url": "/_blob/64fea5310ba43b3bb3862a6fbc35b15d",
+   "width": 1200,
+   "height": 1500,
+   "bytes": 135880,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile"
+   ],
+   "alt_texts": [
+    "જય શ્રી લાખણેચી માઁ"
+   ],
+   "note": "Gallery, History — made from 05 (enlarged ×4), added 16 Oct 2026 (v125)"
+  },
+  {
+   "no": 31,
+   "name": "31_deity_goga-maharaj_hd-arch.webp",
+   "blob": "707057297d216df873c2b29940cce2e3",
+   "design_url": "/_blob/707057297d216df873c2b29940cce2e3",
+   "width": 1200,
+   "height": 1500,
+   "bytes": 143370,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile"
+   ],
+   "alt_texts": [
+    "જય શ્રી ગોગા મહારાજ"
+   ],
+   "note": "Gallery, History — made from 06 (enlarged ×4), added 16 Oct 2026 (v125)"
   }
  ]
 }

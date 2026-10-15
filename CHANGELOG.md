@@ -6,6 +6,26 @@ History before v97 (the original build, 30 Sep – 9 Oct 2026) lives in the arti
 
 Standard verification after every publish below: the changed files were read back from the live artifact and compared byte-for-byte with what was sent (all matched).
 
+## v125 · `1792094175-7284` — the four ધામ પરિવાર pictures in HD, aligned (16 Oct 2026)
+
+- **Owner's request:** "images not alligned and set properly. make sure those images should be HD and if not make it hd that looks good and does not
+  seems downgrade image quality" (screenshot of the History chapter 2 row: Vihat માઁ, Meldi માઁ, Lakhnechi માઁ, Goga Maharaj).
+- **Files:** `History.dc.html`, `HistoryMobile.dc.html`, `Gallery.dc.html`, `GalleryMobile.dc.html` — image addresses only
+  (script `tools/examples/apply_v125_deity_hd.py <project>`). New images 28–31 (1200×1500 WebP) uploaded to the artifact's image store.
+- **What was wrong:** 03/04 filled the arch and lost the animals' feet to cropping; 05/06 were small (380×534, 393×534 — blurry at 2× screens),
+  sat lower and smaller on a dark ring background. Four different sizes, baselines and backgrounds in one row.
+- **Change:** all four rebuilt the same way at 1200×1500 (= the 4:5 arch frame, so nothing is cropped): one warm-gold background with a soft light
+  behind the head and a soft ground shadow; every figure 80 % of the height on the same baseline and inside the arch top. Vihat/Meldi from the
+  HD cut-outs 21/22 (same paintings); Lakhnechi/Goga enlarged ×4 with Real-ESRGAN (x4plus, chosen after comparing three models) and cut out with IS-Net.
+  Same pictures in the Gallery grid, its lightbox and the Gallery banner trio. Old 03–06 kept in the store for rollback.
+- **Tests:** `check_layout.py` History/Gallery + phone, 44 runs (1440 → 320 px, normal + large text): 0 new problems; `frame_heights.py`: 0 to change;
+  wording diff: none; no page still uses 03–06; before/after pictures in `tasks/deity-hd/pictures/`. Image checksums on the server match `design/assets/`.
+- **Rollback:** publish v123's four files (`1792090563-62eb`; v124 has the same content).
+
+## v124 · `1792093482-e8c1` — re-save, no content change (16 Oct 2026)
+
+- Editor / Design-type re-save; all 28 project files byte-identical to v123. Counted because the artifact numbers it.
+
 _v118–v123 come from the owner's request of 15 Oct 2026 ("check design if you found any responsiveness issue in any device screen or any design,
 ux ui related issues fix it and make website design easy to go for coding part"). Device scan, findings and verification: [tasks/responsive-v116/README.md](tasks/responsive-v116/README.md).
 Script: `tools/examples/apply_v118_v123_responsive.py <project> <part>`. Coding hand-off written in the same task: [DEVELOPER_HANDOFF.md](DEVELOPER_HANDOFF.md)._

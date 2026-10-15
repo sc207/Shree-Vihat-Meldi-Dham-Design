@@ -88,16 +88,16 @@ Families: **display** = "Noto Serif Gujarati", "Noto Serif", Georgia, serif · *
 
 **Layout:** `--content-max` 1320px · `--text-max` 680px · `--header-height` 88px · `--header-height-compact` 68px
 
-### Image inventory (27 originals; `design/assets/<blob-id>.<ext>`, pages use `/_blob/<blob-id>`)
+### Image inventory (31 files; `design/assets/<blob-id>.<ext>`, pages use `/_blob/<blob-id>`)
 
 | # | Original file name (keep unchanged) | Blob id | Pixels | Used on |
 |---|---|---|---|---|
 | 01 | `01_deity_vihat-maa_cutout` | `9e553826353008ace0348667feebc15c` | 1200×1500 | Contact, Darshan, Gallery, History, Main, NewTemple, PranPratishtha |
 | 02 | `02_deity_meldi-maa_cutout` | `11b539b692a86f3ebd187f4cdccda6f2` | 1200×1500 | Contact, Darshan, Gallery, History, Main, NewTemple, PranPratishtha |
-| 03 | `03_deity_vihat-maa_glow` | `5db2fa3066346bbda071d80127890079` | 760×905 | Gallery, History |
-| 04 | `04_deity_meldi-maa_glow` | `67db8acad0ff4fc9a1690e90a08d539b` | 670×921 | Gallery, History |
-| 05 | `05_deity_lakhnechi-maa_glow` | `e31c2f7a518cb9d094489412d6c323c8` | 380×534 | Gallery, History |
-| 06 | `06_deity_goga-maharaj_glow` | `713e6519487a5ab4a26d821bbca861a8` | 393×534 | Gallery, History |
+| 03 | `03_deity_vihat-maa_glow` | `5db2fa3066346bbda071d80127890079` | 760×905 | — (not used since v125; replaced by 28) |
+| 04 | `04_deity_meldi-maa_glow` | `67db8acad0ff4fc9a1690e90a08d539b` | 670×921 | — (not used since v125; replaced by 29) |
+| 05 | `05_deity_lakhnechi-maa_glow` | `e31c2f7a518cb9d094489412d6c323c8` | 380×534 | — (not used since v125; replaced by 30) |
+| 06 | `06_deity_goga-maharaj_glow` | `713e6519487a5ab4a26d821bbca861a8` | 393×534 | — (not used since v125; replaced by 31) |
 | 07 | `07_portrait_karamshibapa_closeup-glow` | `692526c97fb81800db3adb90c432cc9a` | 1100×985 | — (not used since v110; replaced by 27) |
 | 08 | `08_portrait_karamshibapa_standing-white` | `01d1d891218823b7fc6777885d8634d1` | 1000×1497 | Gallery |
 | 09 | `09_portrait_karamshibapa_seated-poster` | `361278fe9fd6e85e999500f1f74013a3` | 784×1045 | Gallery |
@@ -119,8 +119,13 @@ Families: **display** = "Noto Serif Gujarati", "Noto Serif", Georgia, serif · *
 | 25 | `25_unused_naag_cutout-small` | `624e213ce2a19b887b8069e53658baea` | 183×275 | — (not used) |
 | 26 | `26_unused_poster_karamshibapa-e-j-vihat` | `d142fc2cdd2cad709f1a711292912aac` | 960×1279 | — (not used) |
 | 27 | `27_portrait_karamshibapa_blessing-glow` | `0719d6d6a37c83a09b9880ba4507c70f` | 1086×1448 | Gallery (banner), History, Main — owner's photo, added 14 Oct 2026 (v110) |
+| 28 | `28_deity_vihat-maa_hd-arch` | `6a5dfa42bf4395ad0c91358b6d58b309` | 1200×1500 | Gallery, History — made from 21 (HD), added 16 Oct 2026 (v125) |
+| 29 | `29_deity_meldi-maa_hd-arch` | `8c6bc0f2d3dd302001ff1f0156ef263c` | 1200×1500 | Gallery, History — made from 22 (HD), added 16 Oct 2026 (v125) |
+| 30 | `30_deity_lakhnechi-maa_hd-arch` | `64fea5310ba43b3bb3862a6fbc35b15d` | 1200×1500 | Gallery, History — made from 05 (enlarged ×4), added 16 Oct 2026 (v125) |
+| 31 | `31_deity_goga-maharaj_hd-arch` | `707057297d216df873c2b29940cce2e3` | 1200×1500 | Gallery, History — made from 06 (enlarged ×4), added 16 Oct 2026 (v125) |
 
-`Used on` names the page family (Main = all home boards; each page includes its phone version). Images 20–26 are supplied but unused; 07 unused since v110.
+`Used on` names the page family (Main = all home boards; each page includes its phone version). Images 20–26 are supplied but unused (21/22 are the sources of 28/29); 07 unused since v110; 03–06 unused since v125.
+28–31 are the four ધામ પરિવાર pictures composed the same way (4:5 = the arch frame, one warm-gold background, same figure height and baseline); how they were made: [tasks/deity-hd/README.md](tasks/deity-hd/README.md).
 The owner's originals for 27 (and an unused seated full-length photo) are in `tasks/bapa-photo/originals/`.
 Keep the **original file names** unchanged (they are also how the Figma script matches images).
 
