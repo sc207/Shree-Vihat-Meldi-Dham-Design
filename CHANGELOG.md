@@ -9,6 +9,23 @@ Standard verification after every publish below: the changed files were read bac
 _v126 onward come from the owner's follow-up of 16 Oct 2026: "also check other images have this issue" (after v125). Image check of every
 picture on every page, findings and pictures: [tasks/image-audit/README.md](tasks/image-audit/README.md)._
 
+## v127 · `1792096917-c470` — two સુરેશબાપા photos in HD (16 Oct 2026)
+
+- **Files:** `Gallery.dc.html`, `GalleryMobile.dc.html`, `History.dc.html`, `HistoryMobile.dc.html` — image addresses only
+  (script `tools/examples/apply_v127_portraits_hd.py <project>`). New images 32, 33 uploaded to the artifact's image store.
+- **What was wrong:** the image check measured every picture at every screen size: two photos were drawn far larger than their pixels —
+  13 smiling cut-out 470×501 (Gallery tile and viewer: 0.45–0.5 of the pixels a 2× screen needs) and 11 candid 585×882 (Gallery tile 0.77,
+  viewer 0.65; small History portrait).
+- **Change:** 13 → 32 (940×1002, transparent background kept) and 11 → 33 (1170×1764): exactly 2× — Real-ESRGAN x4plus, then halved with
+  Lanczos (halving removes the model's invented fine detail). Faces compared at 1:1 with the originals (eyes, moustache, wrinkles, ring, beads
+  unchanged; shrunk back they match the originals at 36.5 dB); realesr-general-x4v3 was rejected (smoothed the skin). Cut-out edges checked on
+  light and dark grounds (no fringe).
+- **Not changed:** 09 કરમશીબાપા seated poster (784×1045) — both upscalers drew new dark outlines on his face and neck, so it stays as supplied;
+  a larger original is needed from the trust. 10 સુરેશબાપા blessing (1100×1019) and 14 temple render are adequate (≥ 0.82 on 2× screens,
+  except the zoomed tablet crop of 14, left as is: AI sharpening could invent carving details).
+- **Tests:** `check_layout.py` 4 boards, 44 runs: 0 new problems; frames: 0 to change; wording: no change; no page uses 11 or 13 any more;
+  server checksums of 32/33 match `design/assets/`. Pictures: `tasks/image-audit/pictures/`.
+
 ## v126 · `1792095937-de85` — gallery viewer opens on screen and fits phones (16 Oct 2026)
 
 - **Files:** `site.css` (one block at the end; script `tools/examples/apply_v126_gallery_viewer.py <project>`).

@@ -359,6 +359,12 @@
       "date": "2026-10-16",
       "change": "gallery viewer (lightbox) fixed to the screen and centred, fits screen height; phone layout (site.css block)",
       "rollback": "v125 (1792094175-7284)"
+    },
+    "v127": {
+      "id": "1792096917-c470",
+      "date": "2026-10-16",
+      "change": "Sureshbapa photos 13 -> 32 and 11 -> 33 (exactly 2x HD) on Gallery + History",
+      "rollback": "v126 (1792095937-de85)"
     }
   },
   "figma_sync_todo": [
@@ -375,7 +381,8 @@
     "v111-v116: tablet menu panel (open state of ☰ below 1180 px, like the phone menu page, centred ≤720 px); phone menu close icon ivory; Seva consent checkbox 24 px; Seva day tiles one row of 7 at 1000-1179 px; festival night cards: date above names below 360 px; Seva help card sticky (desktop); heading tags only (no visual change); form error/confirmation focus = behaviour only",
     "v118-v123: phone Home has no floating WhatsApp button; History index (<375 px) label under title; WhatsApp band at 1000-1279 px: 64 px badge, 32 px gaps, 28 px heading; festival chart night labels 13 px; sideways-phone Home buttons wrap; touch areas are code-only (no visual)",
     "v125: ધામ પરિવાર images are now 28-31 (Vihat, Meldi, Lakhnechi, Goga; 1200x1500 HD, same composition) instead of 03-06 — replace the image fills in the History and Gallery frames",
-    "v126: gallery viewer — phone variant: 16 px margins, 12 px panel padding, photo full panel width, caption 19 px"
+    "v126: gallery viewer — phone variant: 16 px margins, 12 px panel padding, photo full panel width, caption 19 px",
+    "v127: Sureshbapa smiling cut-out and candid photo image fills -> 32 / 33 (HD)"
   ],
   "notes_v105": "Contact/404 compute a local weekday but never display it — left unchanged. The પૂનમ list (EV) covers Oct 2026–Apr 2027 and must be extended each year (existing comment in the page).",
   "awaiting_trust": [

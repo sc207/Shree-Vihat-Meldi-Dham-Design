@@ -209,16 +209,9 @@
    "height": 882,
    "bytes": 38626,
    "type": "image/webp",
-   "used_on_boards": [
-    "Gallery",
-    "GalleryMobile",
-    "History",
-    "HistoryMobile"
-   ],
-   "alt_texts": [
-    "પરમ પૂજ્ય ભુવાજી શ્રી સુરેશબાપા — પ્રસન્ન મુદ્રામાં"
-   ],
-   "note": "Gallery, History"
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used since v127; replaced by 33)"
   },
   {
    "no": 12,
@@ -247,14 +240,9 @@
    "height": 501,
    "bytes": 28228,
    "type": "image/webp",
-   "used_on_boards": [
-    "Gallery",
-    "GalleryMobile"
-   ],
-   "alt_texts": [
-    "(no <img> tag: listed in the page logic, e.g. the gallery data, with its caption)"
-   ],
-   "note": "Gallery"
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used since v127; replaced by 32)"
   },
   {
    "no": 14,
@@ -655,6 +643,44 @@
     "જય શ્રી ગોગા મહારાજ"
    ],
    "note": "Gallery, History — made from 06 (enlarged ×4), added 16 Oct 2026 (v125)"
+  },
+  {
+   "no": 32,
+   "name": "32_portrait_sureshbapa_smiling-cutout_hd.webp",
+   "blob": "fc35afd1b74520e77020323b6e293a68",
+   "design_url": "/_blob/fc35afd1b74520e77020323b6e293a68",
+   "width": 940,
+   "height": 1002,
+   "bytes": 77238,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile"
+   ],
+   "alt_texts": [
+    "(no <img> tag: listed in the page logic, e.g. the gallery data, with its caption)"
+   ],
+   "note": "Gallery — 13 at exactly 2× (Real-ESRGAN x4plus, halved), added 16 Oct 2026 (v127)"
+  },
+  {
+   "no": 33,
+   "name": "33_portrait_sureshbapa_candid_hd.webp",
+   "blob": "805bf02d7a1d405c2fc9caea541abbee",
+   "design_url": "/_blob/805bf02d7a1d405c2fc9caea541abbee",
+   "width": 1170,
+   "height": 1764,
+   "bytes": 127662,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile"
+   ],
+   "alt_texts": [
+    "પરમ પૂજ્ય ભુવાજી શ્રી સુરેશબાપા — પ્રસન્ન મુદ્રામાં"
+   ],
+   "note": "Gallery, History — 11 at exactly 2× (Real-ESRGAN x4plus, halved), added 16 Oct 2026 (v127)"
   }
  ]
 }
