@@ -72,6 +72,11 @@ hide the phone action bar (`.vx-abar{display:none}`) so it does not cover conten
   (`design/assets/SHA256SUMS.txt`); `tools/rebuild_image_zip.py` rebuilds the owner's original 26-image ZIP byte-for-byte.
 - Tools validated on the v106 snapshot: `frame_heights.py` (Darshan, HomeMobile, NewTemple, Seva: 0 changes; MenuMobile/OfflineMobile skipped), `check_layout.py` (Darshan 1440/390, NewTempleMobile 1440/390:
   8 runs, 0 problems), `pixel_regress.py` (4 boards identical); all Python tools and the 15 Figma scripts parse.
+- 16 Oct (v118–v123, responsive check): device scan `tasks/responsive-v116/scripts/scan_run.py PORT SHARD NSHARDS OUT.json [--only Boards] [--sizes WxH,…]`
+  (34 sizes × normal/large, 930 renders; group with `aggregate.py OUT.txt files…`), touch areas `test_tap_areas.py PORT [W]`, first screens
+  `first_screens.py`, close-ups `viewport_shot.py PORT BOARD W H SCROLL|selector@offset OUT.png`, full-page sheets `shots_full.py`. Results:
+  v116 — no sideways scroll, no JS errors, 6 real problems (fixed v118–v123); final — nothing new, touch areas 156/156 ≥ 44 px, pixel compare
+  only at the three intended places. Run them from the repository root.
 - 14 Oct (v111–v116, the six audit fixes): each published stage byte-identical to the stage tested on v109 + the v110 photo swap; on the final copy on v110:
   `tasks/fixes-1-6/scripts/test_item2.py PORT` 81 runs 0 problems, `test_item3.py PORT` 35/35, `test_item4.py PORT TAG` all pass, `test_item5.py PORT TAG` all OK
   (run from the repository root); pixel_regress vs v110: only Seva, SevaMobile, MenuMobile differ; frames 0 to change. 28/28 live files = `design/project/`.

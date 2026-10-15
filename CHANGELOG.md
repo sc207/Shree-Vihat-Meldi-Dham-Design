@@ -6,6 +6,56 @@ History before v97 (the original build, 30 Sep – 9 Oct 2026) lives in the arti
 
 Standard verification after every publish below: the changed files were read back from the live artifact and compared byte-for-byte with what was sent (all matched).
 
+_v118–v123 come from the owner's request of 15 Oct 2026 ("check design if you found any responsiveness issue in any device screen or any design,
+ux ui related issues fix it and make website design easy to go for coding part"). Device scan, findings and verification: [tasks/responsive-v116/README.md](tasks/responsive-v116/README.md).
+Script: `tools/examples/apply_v118_v123_responsive.py <project> <part>`. Coding hand-off written in the same task: [DEVELOPER_HANDOFF.md](DEVELOPER_HANDOFF.md)._
+
+## v123 · `1792090563-62eb` — touch areas of at least 44 px on phones and touch screens (16 Oct 2026)
+
+- **Files:** `site.css` (one block, `@media (max-width: 760px), (pointer: coarse)`).
+- **Why:** 156 small links and buttons were 25–40 px tall on phones (footer links, festival-strip link, breadcrumb, calendar chips, અ+ button,
+  strip pause button, contact links …); WCAG minimum met (24 px) but below the 44–48 px phones recommend.
+- **Change:** each gets an invisible `::after` touch area (element `position: relative`), nothing moves or changes colour. A first attempt
+  with padding + negative margin shortened phone footers by 70 px (footer links have a fixed height) — caught by the pixel compare, rebuilt.
+- **Tests:** `tasks/responsive-v116/scripts/test_tap_areas.py` 156/156 targets reach 44 px at 390 and 320 px (v116: 0/156; stacked footer links
+  40 px apart share the gap, no dead area); pixel compare: all boards identical to v122.
+
+## v122 · `1792090553-d712` — WhatsApp band on small laptops (16 Oct 2026)
+
+- **Files:** `site.css`, `HomeTabletL.dc.html` (frame 8192 → 8104; canvas h stays 8000).
+- **Why:** at 1000–1279 px the four columns (badge · text · QR · button) left the text 210–330 px wide: heading "WhatsApp ચેનલમાં જોડાઓ"
+  broke word by word at 1024 px and left "જોડાઓ" alone at 1180 px.
+- **Change:** at 1000–1279 px badge 88 → 64 px, gaps 64 → 32 px, side padding 40 px, heading 28 px; `text-wrap: balance` on the band heading everywhere.
+- **Tests:** heading on one line at 1024 / 1180; 1280+ and ≤ 999 unchanged; frames 0 to change after the HomeTabletL update.
+
+## v121 · `1792090543-73a4` — festival chart labels readable on phones (16 Oct 2026)
+
+- **Files:** `site.css`. **Why:** "રામ કથા" and "રમેલ" pills in the overview chart were 11 px. **Change:** 13 px (two lines inside the pill on the
+  narrowest phones). **Tests:** fits at 320–760 px, both text sizes; desktop unchanged.
+
+## v120 · `1792090533-1e4c` — phones turned sideways: Home buttons and darshan card (16 Oct 2026)
+
+- **Files:** `site.css` (landscape `max-height: 500px` block). **Why:** at 568–640 px wide "મહોત્સવ વિશે જાણો →" was cut (equal-width buttons,
+  no wrapping) and "સવારે ૬:૦૦ – રાત્રે ૧૦:૦૦" ran out of the darshan card (568 px). Seen on Main and HomeMobile.
+- **Change:** buttons size to their label and wrap to a second row when needed; card times may wrap (balanced lines), card padding 16/18 px.
+- **Tests:** 568×320, 640×360, 667×375, 740×360, 812×375: no clipping or spill; portrait unchanged.
+
+## v119 · `1792090520-491b` — History chapter index on very small phones (16 Oct 2026)
+
+- **Files:** `site.css`. **Why:** at 320 px "આધ્યાત્મિક પરંપરા" ran into its label "માતાજી અને ધામ પરિવાર" (title column squeezed by the label).
+- **Change:** below 375 px the grey label sits under the title. **Tests:** 320/360 both text sizes; 375+ unchanged.
+
+## v118 · `1792090496-e0cb` — leftover WhatsApp button removed from the phone Home page (16 Oct 2026)
+
+- **Files:** `HomeMobile.dc.html`. **Why:** a green "જોડાઓ" WhatsApp button was pinned at 812 px on the phone Home board, over the top of the
+  "દર્શન" section (and over the darshan card on sideways phones); the earlier review recorded it as removed ("bottom bar and band cover it"),
+  and no other page or the desktop Home has it.
+- **Change:** the button removed (its unused CSS `.vx-fab` stays, harmless). **Tests:** wording diff shows only that label gone.
+
+## v117 · `1792089084-a7b0` — re-save, no content change (15–16 Oct 2026)
+
+- The Design type updated itself (its own files changed); all 28 project files byte-identical to v116. Counted because the artifact numbers it.
+
 _v111–v116 were published one after another on the owner's instruction "one version per fix". Built on v110 from the saved batch `tasks/fixes-1-6/` (patches + scripts); each stage byte-identical to the stage tested on v109 plus the v110 photo swap. Details, pictures and test logs: `tasks/fixes-1-6/REPORT.md`._
 
 ## v116 · `1791970043-58bb` — polish 6.1–6.5 (14 Oct 2026)

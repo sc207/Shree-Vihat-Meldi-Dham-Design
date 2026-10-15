@@ -1595,3 +1595,62 @@ html { scroll-behavior: smooth; }
 /* ════════ Seva consent checkbox 24 px (item 6.5) ════════
    22 × 22 px was below the 24 × 24 px minimum target size (WCAG 2.2); its label was already clickable. Same alignment with the text. */
 .vm-root .vm-check input { width: 24px; height: 24px; margin-top: 1px; }
+
+/* ════════ History chapter index on very small phones (v119) ════════
+   Below 375 px the grey label sat beside the chapter title and ran into it ("આધ્યાત્મિક" × "માતાજી અને ધામ પરિવાર" at 320 px).
+   The label now sits under the title; 375 px and wider unchanged. */
+@media (max-width: 374px) {
+  .vm-root .vx-toc a { grid-template-columns: 40px minmax(0, 1fr); row-gap: 2px; }
+  .vm-root .vx-toc small { grid-column: 2; }
+}
+
+/* ════════ Phone turned sideways: Home banner buttons and darshan card (v120) ════════
+   568–640 px wide: "મહોત્સવ વિશે જાણો →" was cut (equal-width buttons, no wrapping) and "સવારે ૬:૦૦ – રાત્રે ૧૦:૦૦" ran out of the
+   darshan card (no wrapping in a narrow column). Buttons now size to their label and wrap to a second row when needed; card times may wrap (balanced lines). */
+@media (orientation: landscape) and (max-height: 500px) {
+  .vm-root .vx-home-hero .vm-btn-row { flex-wrap: wrap; }
+  .vm-root .vx-home-hero .vm-btn-row .vm-btn { flex: 1 1 auto; min-width: max-content; }
+  .vm-root .vx-dgrid .vx-dt__item { padding: 16px 18px; column-gap: 12px; }
+  .vm-root .vx-dgrid .vx-dt__item b { white-space: normal; flex-wrap: wrap; text-wrap: balance; }
+}
+
+/* ════════ Festival overview chart on phones: readable night labels (v121) ════════
+   "રામ કથા" and "રમેલ" pills were 11 px. Now 13 px; on the narrowest phones the label may take two lines inside the pill. */
+@media (max-width: 760px) {
+  .vm-root .vx-week__nt span { font-size: 13px; line-height: 1.15; }
+}
+
+/* ════════ WhatsApp band on small laptops 1000–1279 px (v122) ════════
+   Four columns (badge · text · QR · button) left the text 210–330 px wide: the heading broke word by word at 1024 px and left
+   "જોડાઓ" alone at 1180 px. At these widths the round badge is smaller and the gaps tighter; heading lines are balanced at all widths. */
+.vm-root .vm-wa__copy h3 { text-wrap: balance; }
+@media (min-width: 1000px) and (max-width: 1279px) {
+  .vm-root .vx-wa { gap: 32px; padding-left: 40px; padding-right: 40px; }
+  .vm-root .vx-wa .vm-wa__glyph { width: 64px; height: 64px; }
+  .vm-root .vx-wa .vm-wa__glyph svg { width: 34px; height: 34px; }
+  .vm-root .vx-wa .vm-wa__copy h3 { font-size: 28px; }
+}
+
+/* ════════ Phones and touch screens: touch areas of at least 44 px, no visual change (v123) ════════
+   Small links and buttons were 25–40 px tall (footer links, festival strip link, breadcrumb, calendar chips, text-size button, ...).
+   Each gets an invisible ::after touch area around it (the element becomes position: relative); nothing moves or changes colour.
+   Insets are measured from the padding box, so framed controls (1 px border) get 1 px more. Stacked footer links are 40 px apart:
+   the space between two links goes to the nearer one (no dead gap). */
+@media (max-width: 760px), (pointer: coarse) {
+  .vm-root .vm-footer li a, .vm-root .vm-notice a, .vm-root .vx-crumb a, .vm-root .vm-brand, .vm-root .vx-dt__foot a, .vm-root .vx-upnext__more,
+  .vm-root .vm-contact__card a, .vm-root .vx-plan__foot a, .vm-root .vx-off__info a, .vm-root .vx-tel, .vm-root .vx-caladd a, .vm-root .vx-fs { position: relative; }
+  .vm-root .vm-footer li a::after, .vm-root .vm-notice a::after, .vm-root .vx-crumb a::after, .vm-root .vm-brand::after, .vm-root .vx-dt__foot a::after,
+  .vm-root .vx-upnext__more::after, .vm-root .vm-contact__card a::after, .vm-root .vx-plan__foot a::after, .vm-root .vx-off__info a::after,
+  .vm-root .vx-tel::after, .vm-root .vx-caladd a::after, .vm-root .vx-fs::after, .vm-root .vx-marquee__btn::after { content: ""; position: absolute; }
+  .vm-root .vm-footer li a::after { inset: -4px 0; }
+  .vm-root .vm-notice a::after, .vm-root .vm-contact__card a::after { inset: -10px 0; }
+  .vm-root .vx-crumb a::after, .vm-root .vx-dt__foot a::after { inset: -8px 0; }
+  .vm-root .vx-upnext__more::after { inset: -9px 0; }
+  .vm-root .vx-plan__foot a::after { inset: -7px 0; }
+  .vm-root .vx-off__info a::after { inset: -6px 0; }
+  .vm-root .vx-caladd a::after { inset: -6px 0; }
+  .vm-root .vm-brand::after { inset: -2px; }
+  .vm-root .vx-fs::after { inset: -3px; }
+  .vm-root .vx-tel::after { inset: -1px 0; }
+  .vm-root .vx-marquee__btn::after { inset: -5px; border-radius: 50%; }
+}

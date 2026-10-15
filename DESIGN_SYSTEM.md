@@ -141,6 +141,8 @@ Keep the **original file names** unchanged (they are also how the Figma script m
 - Must work at **320, 360, 390, 430** px and tablet/desktop widths without sideways scrolling, clipped Gujarati, or broken button labels.
 - Phone rules established in Gate A: buttons `white-space: nowrap`, button rows wrap; headings `text-wrap: balance`; a year never sits alone
   on a line (non-breaking space before ૨૦૨૭ — 75 occurrences in the pages); CTA cards 32 px / 24 px padding on phones.
+- Touch: on phones and touch screens (`(max-width: 760px), (pointer: coarse)`) every small link/button has a touch area of at least 44 px,
+  made with an invisible `::after` (v123) — new small controls must be added to that block.
 - Large-text mode (button **અ+** in the header): adds class `is-big` to the page root (stored in `localStorage` key `vx-fs`) and zooms body text 1.14×.
   New components must be checked in both sizes.
 
@@ -157,7 +159,7 @@ Every content page, top to bottom:
    Heading levels never skip (h1 → h2 → h3): footer column titles and the Seva side-card titles are `h2` styled small (v116).
 5. **Page ending (approved rule):** WhatsApp band (`.vm-wa`) → devotional band (`.vm-devotional.vx-close`, "॥ ૐ ॥ / જય શ્રી વિહત મેલડી માઁ" + shloka) → footer (`.vm-footer`).
    Exceptions: the Seva form page and 404 end with the footer only (404 offers the way home).
-6. Phones: fixed bottom action bar `.vx-abar` — દર્શન · મહોત્સવ · રસ્તો · ફોન કરો.
+6. Phones: fixed bottom action bar `.vx-abar` — દર્શન · મહોત્સવ · રસ્તો · ફોન કરો. No floating WhatsApp button (removed from the phone Home board in v118).
 
 **Navigation (order):** મુખ્ય પૃષ્ઠ · દર્શન અને યાત્રા · નવું મંદિર · પ્રાણ પ્રતિષ્ઠા · સેવા નોંધણી · ગેલેરી અને સમાચાર · મંદિરનો ઇતિહાસ · સંપર્ક.
 Page files: `Main` (home), `NewTemple`, `PranPratishtha` (festival), `Seva`, `Gallery`, `History`, `Contact`, `Darshan`, `NotFound` (404), plus phone-only `MenuMobile`, `OfflineMobile`.

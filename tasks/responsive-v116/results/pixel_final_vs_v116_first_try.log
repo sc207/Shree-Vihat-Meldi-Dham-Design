@@ -1,0 +1,24 @@
+Contact                 1440  identical
+ContactMobile            390  identical
+Darshan                 1440  identical
+DarshanMobile            390  identical
+Gallery                 1440  identical
+GalleryMobile            390  identical
+History                 1440  identical
+HistoryMobile            390  identical
+HomeMobile               390  DIFFERENT in box (215, 746, 390, 926)
+HomeMobile2              390  identical
+HomePhoneL               844  identical
+HomeTablet               834  identical
+HomeTabletL             1180  DIFFERENT height 8143 -> 8055
+Main                    1440  identical
+MenuMobile               390  identical
+NewTemple               1440  identical
+NewTempleMobile          390  identical
+NotFound                1440  identical
+NotFoundMobile           390  identical
+OfflineMobile            390  identical
+PranPratishtha          1440  identical
+PranPratishthaMobile     390  DIFFERENT in box (277, 2925, 360, 2938)
+Seva                    1440  identical
+SevaMobile               390  identical

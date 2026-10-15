@@ -108,7 +108,7 @@ td.n { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--mut
     <div><b>Gate A checklist</b><span>0 of 6 confirmed. Preview checks pass on all 12 phone pages at 4 widths; nothing counts as verified until its Figma screenshot has been inspected.</span></div>
   </div>
   <nav class="toc" aria-label="On this page">
-    <a href="#c4">Banners &amp; headings</a><a href="#c5">Images &amp; frames</a><a href="#c6">Cards</a><a href="#c7">Festival</a><a href="#c8">Page endings</a><a href="#record">Audit change record</a><a href="#full">Full-layout phone check</a><a href="#home">Home summary preview</a><a href="#darshan">Darshan timetable</a><a href="#effects">Banner light &amp; chakra</a><a href="#photo">Karamshibapa photo</a><a href="#fixes">Audit fixes</a><a href="#plan">Figma build plan</a><a href="#open">Decisions &amp; checklist</a>
+    <a href="#c4">Banners &amp; headings</a><a href="#c5">Images &amp; frames</a><a href="#c6">Cards</a><a href="#c7">Festival</a><a href="#c8">Page endings</a><a href="#record">Audit change record</a><a href="#full">Full-layout phone check</a><a href="#home">Home summary preview</a><a href="#darshan">Darshan timetable</a><a href="#effects">Banner light &amp; chakra</a><a href="#photo">Karamshibapa photo</a><a href="#fixes">Audit fixes</a><a href="#resp">Responsive check</a><a href="#plan">Figma build plan</a><a href="#open">Decisions &amp; checklist</a>
   </nav>
 </section>
 
@@ -389,6 +389,12 @@ td.n { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--mut
       <tr><td>Phone menu: close icon almost invisible; close always goes Home</td><td>Ivory ✕; closing returns to the page you came from</td><td>Website</td><td><span class="chip ok">Published · v114</span></td></tr>
       <tr><td>Home banner button cut on 320–340 px phones</td><td>Buttons size to their labels below 375 px</td><td>Website</td><td><span class="chip ok">Published · v115</span></td></tr>
       <tr><td>Seva day tiles wrap 5+2 / 6+1; artist names wrap word by word; three jump links land under the top edge; consent checkbox 22 px</td><td>One row of 7; date above names on small phones; proper landing space; 24 px checkbox</td><td>Website</td><td><span class="chip ok">Published · v116</span></td></tr>
+      <tr><td>Phone Home: a leftover WhatsApp “જોડાઓ” button sat over the દર્શન section</td><td>Removed (as decided earlier)</td><td>Website</td><td><span class="chip ok">Published · v118</span></td></tr>
+      <tr><td>History index at 320 px: chapter title ran into its label</td><td>Label under the title below 375 px</td><td>Website</td><td><span class="chip ok">Published · v119</span></td></tr>
+      <tr><td>Phones turned sideways: Home button cut, darshan time out of its card</td><td>Buttons wrap; times wrap inside the card</td><td>Website</td><td><span class="chip ok">Published · v120</span></td></tr>
+      <tr><td>Festival chart labels “રામ કથા”, “રમેલ” 11 px on phones</td><td>13 px</td><td>Website</td><td><span class="chip ok">Published · v121</span></td></tr>
+      <tr><td>WhatsApp band at 1000–1279 px: heading broken word by word</td><td>Smaller badge, tighter gaps; heading on one line</td><td>Website</td><td><span class="chip ok">Published · v122</span></td></tr>
+      <tr><td>Small links and buttons 25–40 px tall on phones</td><td>Invisible touch areas of at least 44 px</td><td>Website</td><td><span class="chip ok">Published · v123</span></td></tr>
       <tr><td>Heading levels skip (h2 → h4)</td><td>Footer and Seva headings re-levelled, same look</td><td>Website</td><td><span class="chip ok">Published · v116</span></td></tr>
     </tbody>
   </table>
@@ -561,6 +567,29 @@ td.n { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--mut
     <figure><img src="img/v115-home-buttons.webp" alt="Home banner buttons at 320 px before and after" loading="lazy"><figcaption>v115 · home buttons on a 320 px phone.</figcaption></figure>
     <figure><img src="img/v116-seva-days-1024.webp" alt="Seva festival day tiles at 1024 px before and after" loading="lazy"><figcaption>v116 · Seva festival days, 1024 px.</figcaption></figure>
     <figure class="phone"><img src="img/v116-night-names-320.webp" alt="Festival night cards at 320 px in large text, before and after" loading="lazy"><figcaption>v116 · festival night cards, 320 px, large text.</figcaption></figure>
+  </article>
+</section>
+
+<!-- ============================ Responsive check (v118–v123) ============================ -->
+<section class="board" id="resp" aria-labelledby="rst">
+  <header><p class="eyebrow">Responsive and UI check · published as versions 118 to 123 (16 Oct 2026)</p><h2 id="rst">Every page on 34 screen sizes — six fixes</h2><p>At your request: every page checked on phones (320–760 px, upright and turned sideways), tablets both ways, laptops and monitors up to 2560 px, in normal and large text — 930 page renders plus a look by eye. No page scrolled sideways anywhere and no script errors. Six real problems were found and fixed, each as its own version. Version 117 in the history is a re-save by the design tool with no change. All 28 live files were checked against what was sent.</p></header>
+  <article class="comp">
+    <div class="comp-head"><h3>What each version changed</h3><span class="chip ok">Published · v118–v123</span></div>
+    <dl class="spec">
+      <dt>v118</dt><dd>Phone Home page: the leftover green WhatsApp “જોડાઓ” button that sat over the દર્શન section is removed (the earlier review had already decided to remove it; the bottom bar and the WhatsApp band cover it).</dd>
+      <dt>v119</dt><dd>History chapter index on the smallest phones: the grey label sits under the chapter title instead of running into it.</dd>
+      <dt>v120</dt><dd>Phones turned sideways: “મહોત્સવ વિશે જાણો →” is never cut, and the darshan times stay inside their card.</dd>
+      <dt>v121</dt><dd>Festival overview chart on phones: the “રામ કથા” and “રમેલ” labels are 13 px instead of 11 px.</dd>
+      <dt>v122</dt><dd>WhatsApp band on small laptops (1000–1279 px): smaller round badge and tighter spacing, so the heading fits on one line.</dd>
+      <dt>v123</dt><dd>Phones and touch screens: every small link and button now has a touch area of at least 44 px (footer links, breadcrumb, calendar chips, અ+ …). Nothing moves or changes on screen.</dd>
+      <dt>Checks</dt><dd>The same 930-render scan on the final version: every problem gone, nothing new. Pixel compare of all 24 boards: only the three intended spots differ. Touch areas: 156 of 156 small targets reach 44 px (before: none). Tested in Chromium only.</dd>
+      <dt>For coding</dt><dd>A developer guide is in the project repository (DEVELOPER_HANDOFF.md): one responsive page per route (the phone boards are the same pages), what to strip from the design files, breakpoints, page behaviour, images with real names, and acceptance checks.</dd>
+    </dl>
+    <figure class="phone"><img src="img/v118_whatsapp_button.webp" alt="Phone home page before and after removing the leftover WhatsApp button" loading="lazy"><figcaption>v118 · phone Home, 390 px.</figcaption></figure>
+    <figure class="phone"><img src="img/v119_history_index_320.webp" alt="History chapter index at 320 px before and after" loading="lazy"><figcaption>v119 · History index, 320 px.</figcaption></figure>
+    <figure><img src="img/v120_sideways_phone.webp" alt="Home on phones turned sideways, before and after" loading="lazy"><figcaption>v120 · phones turned sideways (568 and 640 px wide).</figcaption></figure>
+    <figure class="phone"><img src="img/v121_chart_labels.webp" alt="Festival overview chart on phones, before and after" loading="lazy"><figcaption>v121 · festival chart, 320 and 390 px.</figcaption></figure>
+    <figure><img src="img/v122_whatsapp_band.webp" alt="WhatsApp band at 1024 and 1180 px, before and after" loading="lazy"><figcaption>v122 · WhatsApp band, 1024 and 1180 px.</figcaption></figure>
   </article>
 </section>
 

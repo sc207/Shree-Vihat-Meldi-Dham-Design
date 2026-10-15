@@ -18,7 +18,7 @@ The Gujarati-only website design for **શ્રી વિહત મેલડી
 
 ## 2. Read first
 
-1. This file. 2. [CLAUDE.md](CLAUDE.md). Then only as needed:
+1. This file. 2. [CLAUDE.md](CLAUDE.md). Then only as needed (developers building the site: [DEVELOPER_HANDOFF.md](DEVELOPER_HANDOFF.md)):
 [PROJECT_STATE.md](PROJECT_STATE.md) (versions, open items) · [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) (styling, wording rules) ·
 [PAGE_CONTENT.md](PAGE_CONTENT.md) (every text; search it instead of opening page files) · [TESTING.md](TESTING.md) · [CHANGELOG.md](CHANGELOG.md).
 
@@ -26,11 +26,11 @@ The Gujarati-only website design for **શ્રી વિહત મેલડી
 
 | | Version | Version id | Notes |
 |---|---|---|---|
-| **Live design (published)** | **v116** | `1791970043-58bb` | 14 Oct 2026: the six audit fixes v111–v116 (Seva column, tablet menu, Seva form errors, phone menu ✕, Home buttons, polish); new Karamshibapa photo (v110); banner light (v109); new chakra (v108). `design/project/` refreshed, checksums regenerated; `design/assets/` now 27 images (27 = `0719d6d6a37c83a09b9880ba4507c70f.webp`). |
-| Previous known-good | v115 … v110 | see [CHANGELOG.md](CHANGELOG.md) | Each fix is its own version: roll back one by publishing the previous version's files. v110 `1791960914-1d1c` = before the fixes; v109 `1791922103-42cb` before the photo; v108 `1791920313-6e1c` for v109. v107 `1791918685-cd89` = v106 content; earlier ids: [CHANGELOG.md](CHANGELOG.md). Version numbers follow the artifact's own count. |
+| **Live design (published)** | **v123** | `1792090563-62eb` | 16 Oct 2026: responsive / UI-UX fixes v118–v123 (see CHANGELOG); v117 = Design-type re-save. Earlier: audit fixes v111–v116, Karamshibapa photo v110, banner light v109, chakra v108. `design/project/` refreshed, checksums regenerated; 27 images. |
+| Previous known-good | v122 … v110 | see [CHANGELOG.md](CHANGELOG.md) | Each fix is its own version: roll back one by publishing the previous version's files. v110 `1791960914-1d1c` = before the fixes; v109 `1791922103-42cb` before the photo; v108 `1791920313-6e1c` for v109. v107 `1791918685-cd89` = v106 content; earlier ids: [CHANGELOG.md](CHANGELOG.md). Version numbers follow the artifact's own count. |
 | Local working copy | none | — | Items 1–6 published as v111–v116 (source, report and tests stay in `tasks/fixes-1-6/`). |
 
-On 13 Oct the live id changed to `1791918685-cd89` without any content change (Design type re-save, counted as v107); v108–v116 were published on 14 Oct.
+On 13 Oct the live id changed to `1791918685-cd89` without any content change (Design type re-save, counted as v107); v108–v116 were published on 14 Oct; on 15–16 Oct the Design type re-saved (v117, no content change) and v118–v123 were published.
 
 ## 4. Completed in the previous session (v97 → v106, all on 10 Oct 2026)
 

@@ -72,3 +72,5 @@ python3 tools/gen_page_content.py design/project PAGE_CONTENT.md "design vNNN (<
 - [CHANGELOG.md](CHANGELOG.md) — what changed in each version and how it was tested
 - [TESTING.md](TESTING.md) — tools, viewports, checks, known limitations, last results
 - [tasks/audit-report-v106.md](tasks/audit-report-v106.md) — design audit findings (P0–P3), root causes and the proposed fix plan
+- [DEVELOPER_HANDOFF.md](DEVELOPER_HANDOFF.md) — for the coding team: routes, one responsive page per route, canvas-only parts to strip, breakpoints, behaviour, images (`handoff/assets.json`), acceptance checks
+- [tasks/responsive-v116/README.md](tasks/responsive-v116/README.md) — device scan (34 sizes) and fixes v118–v123

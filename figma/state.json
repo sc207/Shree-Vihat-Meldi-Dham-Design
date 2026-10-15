@@ -299,6 +299,48 @@
       "date": "2026-10-14",
       "change": "polish: Seva day tiles 7 columns 1000-1179, night cards stacked <360 (<390 large), jump-link scroll margins, h4/h3 -> h2 (21 pages), checkbox 24 px",
       "rollback": "v115 (1791970022-cc11)"
+    },
+    "v117": {
+      "id": "1792089084-a7b0",
+      "date": "2026-10-15",
+      "change": "Design-type re-save, no content change",
+      "rollback": "v116 (1791970043-58bb)"
+    },
+    "v118": {
+      "id": "1792090496-e0cb",
+      "date": "2026-10-16",
+      "change": "phone Home: leftover floating WhatsApp button removed",
+      "rollback": "v117 (1792089084-a7b0)"
+    },
+    "v119": {
+      "id": "1792090520-491b",
+      "date": "2026-10-16",
+      "change": "History chapter index < 375 px: label under title",
+      "rollback": "v118 (1792090496-e0cb)"
+    },
+    "v120": {
+      "id": "1792090533-1e4c",
+      "date": "2026-10-16",
+      "change": "phones sideways: Home banner buttons wrap, darshan card times wrap",
+      "rollback": "v119 (1792090520-491b)"
+    },
+    "v121": {
+      "id": "1792090543-73a4",
+      "date": "2026-10-16",
+      "change": "festival overview chart night labels 13 px on phones",
+      "rollback": "v120 (1792090533-1e4c)"
+    },
+    "v122": {
+      "id": "1792090553-d712",
+      "date": "2026-10-16",
+      "change": "WhatsApp band 1000–1279 px: badge 64, gaps 32, heading 28, balanced; HomeTabletL frame 8104",
+      "rollback": "v121 (1792090543-73a4)"
+    },
+    "v123": {
+      "id": "1792090563-62eb",
+      "date": "2026-10-16",
+      "change": "touch areas >= 44 px (invisible ::after) on phones / coarse pointers",
+      "rollback": "v122 (1792090553-d712)"
     }
   },
   "figma_sync_todo": [
@@ -312,7 +354,8 @@
     "v108: every chakra = the lotus mandala (Home dark 'નવું મંદિર' band ornament, CTA card corner ornament on New Temple / Festival); no oval-petal chakra anywhere",
     "v109: banner gold light + halo drawn inside the picture frame (follows the picture on tablet portrait / phone / phone landscape); desktop look unchanged",
     "v110: image 27 `27_portrait_karamshibapa_blessing-glow` (/_blob/0719d6d6a37c83a09b9880ba4507c70f, 1086x1448, owner's photo 14 Oct) replaces 07 in the Karamshibapa arch (home pair), home photo strip, History ch.3 portrait, Gallery banner trio. Add 27 to the image set (body5_images.js INV / call5) and fill those slots with it; 07 no longer used on the site",
-    "v111-v116: tablet menu panel (open state of ☰ below 1180 px, like the phone menu page, centred ≤720 px); phone menu close icon ivory; Seva consent checkbox 24 px; Seva day tiles one row of 7 at 1000-1179 px; festival night cards: date above names below 360 px; Seva help card sticky (desktop); heading tags only (no visual change); form error/confirmation focus = behaviour only"
+    "v111-v116: tablet menu panel (open state of ☰ below 1180 px, like the phone menu page, centred ≤720 px); phone menu close icon ivory; Seva consent checkbox 24 px; Seva day tiles one row of 7 at 1000-1179 px; festival night cards: date above names below 360 px; Seva help card sticky (desktop); heading tags only (no visual change); form error/confirmation focus = behaviour only",
+    "v118-v123: phone Home has no floating WhatsApp button; History index (<375 px) label under title; WhatsApp band at 1000-1279 px: 64 px badge, 32 px gaps, 28 px heading; festival chart night labels 13 px; sideways-phone Home buttons wrap; touch areas are code-only (no visual)"
   ],
   "notes_v105": "Contact/404 compute a local weekday but never display it — left unchanged. The પૂનમ list (EV) covers Oct 2026–Apr 2027 and must be extended each year (existing comment in the page).",
   "awaiting_trust": [

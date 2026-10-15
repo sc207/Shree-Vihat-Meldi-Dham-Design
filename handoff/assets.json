@@ -1,0 +1,608 @@
+{
+ "source": "design/assets (copy of the Claude Design artifact image store); pages refer to /_blob/<blob>",
+ "decorative_if_alt_empty": "alt=\"\" means decorative (or the text beside it names the picture)",
+ "images": [
+  {
+   "no": 1,
+   "name": "01_deity_vihat-maa_cutout.webp",
+   "blob": "9e553826353008ace0348667feebc15c",
+   "design_url": "/_blob/9e553826353008ace0348667feebc15c",
+   "width": 1200,
+   "height": 1500,
+   "bytes": 364462,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Contact",
+    "ContactMobile",
+    "Darshan",
+    "DarshanMobile",
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile",
+    "HomeMobile",
+    "HomeMobile2",
+    "HomePhoneL",
+    "HomeTablet",
+    "HomeTabletL",
+    "Main",
+    "NewTemple",
+    "NewTempleMobile",
+    "PranPratishtha",
+    "PranPratishthaMobile"
+   ],
+   "alt_texts": [
+    "જય શ્રી વિહત માઁ",
+    "જય શ્રી વિહત માઁ — વાહન પર બિરાજમાન"
+   ],
+   "note": "Contact, Darshan, Gallery, History, Main, NewTemple, PranPratishtha"
+  },
+  {
+   "no": 2,
+   "name": "02_deity_meldi-maa_cutout.webp",
+   "blob": "11b539b692a86f3ebd187f4cdccda6f2",
+   "design_url": "/_blob/11b539b692a86f3ebd187f4cdccda6f2",
+   "width": 1200,
+   "height": 1500,
+   "bytes": 311006,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Contact",
+    "ContactMobile",
+    "Darshan",
+    "DarshanMobile",
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile",
+    "HomeMobile",
+    "HomeMobile2",
+    "HomePhoneL",
+    "HomeTablet",
+    "HomeTabletL",
+    "Main",
+    "NewTemple",
+    "NewTempleMobile",
+    "PranPratishtha",
+    "PranPratishthaMobile"
+   ],
+   "alt_texts": [
+    "જય શ્રી મેલડી માઁ",
+    "જય શ્રી મેલડી માઁ — વાહન પર બિરાજમાન"
+   ],
+   "note": "Contact, Darshan, Gallery, History, Main, NewTemple, PranPratishtha"
+  },
+  {
+   "no": 3,
+   "name": "03_deity_vihat-maa_glow.webp",
+   "blob": "5db2fa3066346bbda071d80127890079",
+   "design_url": "/_blob/5db2fa3066346bbda071d80127890079",
+   "width": 760,
+   "height": 905,
+   "bytes": 88512,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile"
+   ],
+   "alt_texts": [
+    "",
+    "જય શ્રી વિહત માઁ"
+   ],
+   "note": "Gallery, History"
+  },
+  {
+   "no": 4,
+   "name": "04_deity_meldi-maa_glow.webp",
+   "blob": "67db8acad0ff4fc9a1690e90a08d539b",
+   "design_url": "/_blob/67db8acad0ff4fc9a1690e90a08d539b",
+   "width": 670,
+   "height": 921,
+   "bytes": 78184,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile"
+   ],
+   "alt_texts": [
+    "જય શ્રી મેલડી માઁ"
+   ],
+   "note": "Gallery, History"
+  },
+  {
+   "no": 5,
+   "name": "05_deity_lakhnechi-maa_glow.webp",
+   "blob": "e31c2f7a518cb9d094489412d6c323c8",
+   "design_url": "/_blob/e31c2f7a518cb9d094489412d6c323c8",
+   "width": 380,
+   "height": 534,
+   "bytes": 19230,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile"
+   ],
+   "alt_texts": [
+    "જય શ્રી લાખણેચી માઁ"
+   ],
+   "note": "Gallery, History"
+  },
+  {
+   "no": 6,
+   "name": "06_deity_goga-maharaj_glow.webp",
+   "blob": "713e6519487a5ab4a26d821bbca861a8",
+   "design_url": "/_blob/713e6519487a5ab4a26d821bbca861a8",
+   "width": 393,
+   "height": 534,
+   "bytes": 19524,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile"
+   ],
+   "alt_texts": [
+    "જય શ્રી ગોગા મહારાજ"
+   ],
+   "note": "Gallery, History"
+  },
+  {
+   "no": 7,
+   "name": "07_portrait_karamshibapa_closeup-glow.webp",
+   "blob": "692526c97fb81800db3adb90c432cc9a",
+   "design_url": "/_blob/692526c97fb81800db3adb90c432cc9a",
+   "width": 1100,
+   "height": 985,
+   "bytes": 49974,
+   "type": "image/webp",
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used since v110; replaced by 27)"
+  },
+  {
+   "no": 8,
+   "name": "08_portrait_karamshibapa_standing-white.webp",
+   "blob": "01d1d891218823b7fc6777885d8634d1",
+   "design_url": "/_blob/01d1d891218823b7fc6777885d8634d1",
+   "width": 1000,
+   "height": 1497,
+   "bytes": 84254,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile"
+   ],
+   "alt_texts": [
+    "(no <img> tag: listed in the page logic, e.g. the gallery data, with its caption)"
+   ],
+   "note": "Gallery"
+  },
+  {
+   "no": 9,
+   "name": "09_portrait_karamshibapa_seated-poster.webp",
+   "blob": "361278fe9fd6e85e999500f1f74013a3",
+   "design_url": "/_blob/361278fe9fd6e85e999500f1f74013a3",
+   "width": 784,
+   "height": 1045,
+   "bytes": 157316,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile"
+   ],
+   "alt_texts": [
+    "ભગવાન શ્રી કરમશીબાપા"
+   ],
+   "note": "Gallery"
+  },
+  {
+   "no": 10,
+   "name": "10_portrait_sureshbapa_blessing-glow.webp",
+   "blob": "4e30bcd6319bfef6bce709ce0ef4afb1",
+   "design_url": "/_blob/4e30bcd6319bfef6bce709ce0ef4afb1",
+   "width": 1100,
+   "height": 1019,
+   "bytes": 36570,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile",
+    "HomeMobile2",
+    "HomePhoneL",
+    "HomeTablet",
+    "HomeTabletL",
+    "Main"
+   ],
+   "alt_texts": [
+    "",
+    "પરમ પૂજ્ય ભુવાજી શ્રી સુરેશબાપા — આશીર્વાદ મુદ્રામાં",
+    "ભુવાજી શ્રી સુરેશબાપા"
+   ],
+   "note": "Gallery, History, Main"
+  },
+  {
+   "no": 11,
+   "name": "11_portrait_sureshbapa_candid.webp",
+   "blob": "e1b6930a984c9f3a8eb9b9783ae97fe9",
+   "design_url": "/_blob/e1b6930a984c9f3a8eb9b9783ae97fe9",
+   "width": 585,
+   "height": 882,
+   "bytes": 38626,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile"
+   ],
+   "alt_texts": [
+    "પરમ પૂજ્ય ભુવાજી શ્રી સુરેશબાપા — પ્રસન્ન મુદ્રામાં"
+   ],
+   "note": "Gallery, History"
+  },
+  {
+   "no": 12,
+   "name": "12_portrait_sureshbapa_seated-poster.webp",
+   "blob": "ea3a22f667e1db20db6134f406df44bb",
+   "design_url": "/_blob/ea3a22f667e1db20db6134f406df44bb",
+   "width": 960,
+   "height": 1279,
+   "bytes": 155240,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile"
+   ],
+   "alt_texts": [
+    "(no <img> tag: listed in the page logic, e.g. the gallery data, with its caption)"
+   ],
+   "note": "Gallery"
+  },
+  {
+   "no": 13,
+   "name": "13_portrait_sureshbapa_smiling-cutout.webp",
+   "blob": "f784ff0d57da00d73030819bb850bb43",
+   "design_url": "/_blob/f784ff0d57da00d73030819bb850bb43",
+   "width": 470,
+   "height": 501,
+   "bytes": 28228,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile"
+   ],
+   "alt_texts": [
+    "(no <img> tag: listed in the page logic, e.g. the gallery data, with its caption)"
+   ],
+   "note": "Gallery"
+  },
+  {
+   "no": 14,
+   "name": "14_temple_new-temple-render.webp",
+   "blob": "ade906fff7b8cbe4a63f246237926871",
+   "design_url": "/_blob/ade906fff7b8cbe4a63f246237926871",
+   "width": 2400,
+   "height": 1881,
+   "bytes": 627378,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile",
+    "HomeMobile",
+    "HomeMobile2",
+    "HomePhoneL",
+    "HomeTablet",
+    "HomeTabletL",
+    "Main",
+    "NewTemple",
+    "NewTempleMobile",
+    "PranPratishthaMobile"
+   ],
+   "alt_texts": [
+    "નવા મંદિરનું ચિત્ર",
+    "નવા શ્રી વિહત મેલડી ધામનું સ્થાપત્ય ચિત્ર",
+    "નવા શ્રી વિહત મેલડી ધામનું સ્થાપત્ય ચિત્ર — શિખર પર ધજા",
+    "નવું મંદિર — પ્રવેશદ્વાર",
+    "નવું મંદિર — મંડપ",
+    "નવું મંદિર — શિખર",
+    "નવું મંદિર — શિખર અને ધજા",
+    "નવું મંદિર — સંપૂર્ણ સ્થાપત્ય ચિત્ર",
+    "નવું મંદિર — સ્તંભ અને કોતરણી",
+    "નવું મંદિર — સ્થાપત્ય ચિત્ર"
+   ],
+   "note": "Gallery, History, Main, NewTemple, PranPratishtha"
+  },
+  {
+   "no": 15,
+   "name": "15_banner_dham-family.webp",
+   "blob": "cd5574347256c288677d3f0e7b95dbc2",
+   "design_url": "/_blob/cd5574347256c288677d3f0e7b95dbc2",
+   "width": 1800,
+   "height": 1199,
+   "bytes": 176452,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile"
+   ],
+   "alt_texts": [
+    "(no <img> tag: listed in the page logic, e.g. the gallery data, with its caption)"
+   ],
+   "note": "Gallery"
+  },
+  {
+   "no": 16,
+   "name": "16_logo_mark-red.png",
+   "blob": "e1c9cc4c85b15c1aea37fad5675f6596",
+   "design_url": "/_blob/e1c9cc4c85b15c1aea37fad5675f6596",
+   "width": 708,
+   "height": 708,
+   "bytes": 29315,
+   "type": "image/png",
+   "used_on_boards": [
+    "Contact",
+    "ContactMobile",
+    "Darshan",
+    "DarshanMobile",
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile",
+    "HomeMobile",
+    "HomePhoneL",
+    "HomeTablet",
+    "HomeTabletL",
+    "Main",
+    "NewTemple",
+    "NewTempleMobile",
+    "NotFound",
+    "NotFoundMobile",
+    "OfflineMobile",
+    "PranPratishtha",
+    "PranPratishthaMobile",
+    "Seva",
+    "SevaMobile"
+   ],
+   "alt_texts": [
+    ""
+   ],
+   "note": "Contact, Darshan, Gallery, History, Main, NewTemple, NotFound, Offline, PranPratishtha, Seva"
+  },
+  {
+   "no": 17,
+   "name": "17_logo_mark-ivory.png",
+   "blob": "6cb43041a704672ae77ed549a7399de9",
+   "design_url": "/_blob/6cb43041a704672ae77ed549a7399de9",
+   "width": 708,
+   "height": 708,
+   "bytes": 20503,
+   "type": "image/png",
+   "used_on_boards": [
+    "Contact",
+    "ContactMobile",
+    "Darshan",
+    "DarshanMobile",
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile",
+    "HomeMobile",
+    "HomePhoneL",
+    "HomeTablet",
+    "HomeTabletL",
+    "Main",
+    "MenuMobile",
+    "NewTemple",
+    "NewTempleMobile",
+    "NotFound",
+    "NotFoundMobile",
+    "PranPratishtha",
+    "PranPratishthaMobile",
+    "Seva",
+    "SevaMobile"
+   ],
+   "alt_texts": [
+    ""
+   ],
+   "note": "Contact, Darshan, Gallery, History, Main, Menu, NewTemple, NotFound, PranPratishtha, Seva"
+  },
+  {
+   "no": 18,
+   "name": "18_logo_lockup-ivory_footer.png",
+   "blob": "b3915972ce74551f3675e24488a5ed84",
+   "design_url": "/_blob/b3915972ce74551f3675e24488a5ed84",
+   "width": 2914,
+   "height": 812,
+   "bytes": 67647,
+   "type": "image/png",
+   "used_on_boards": [
+    "Contact",
+    "ContactMobile",
+    "Darshan",
+    "DarshanMobile",
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile",
+    "HomeMobile2",
+    "HomePhoneL",
+    "HomeTablet",
+    "HomeTabletL",
+    "Main",
+    "NewTemple",
+    "NewTempleMobile",
+    "NotFound",
+    "NotFoundMobile",
+    "PranPratishtha",
+    "PranPratishthaMobile",
+    "Seva",
+    "SevaMobile"
+   ],
+   "alt_texts": [
+    "જય શ્રી વિહત મેલડી માઁ તીર્થધામ – સાણંદ"
+   ],
+   "note": "Contact, Darshan, Gallery, History, Main, NewTemple, NotFound, PranPratishtha, Seva"
+  },
+  {
+   "no": 19,
+   "name": "19_qr_whatsapp-channel.png",
+   "blob": "d359256f876ef152e1aa584ebb20b4e8",
+   "design_url": "/_blob/d359256f876ef152e1aa584ebb20b4e8",
+   "width": 624,
+   "height": 624,
+   "bytes": 3447,
+   "type": "image/png",
+   "used_on_boards": [
+    "Contact",
+    "ContactMobile",
+    "Darshan",
+    "DarshanMobile",
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile",
+    "HomePhoneL",
+    "HomeTablet",
+    "HomeTabletL",
+    "Main",
+    "NewTemple",
+    "NewTempleMobile",
+    "PranPratishtha",
+    "PranPratishthaMobile"
+   ],
+   "alt_texts": [
+    "WhatsApp ચેનલનો QR કોડ"
+   ],
+   "note": "Contact, Darshan, Gallery, History, Main, NewTemple, PranPratishtha"
+  },
+  {
+   "no": 20,
+   "name": "20_unused_logo_lockup-red.png",
+   "blob": "935458ac98acacb809b0d1329e9b374e",
+   "design_url": "/_blob/935458ac98acacb809b0d1329e9b374e",
+   "width": 2914,
+   "height": 812,
+   "bytes": 95688,
+   "type": "image/png",
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used)"
+  },
+  {
+   "no": 21,
+   "name": "21_unused_deity_vihat-maa_cutout-large.webp",
+   "blob": "95787e5469dde0e0ecebc09bef4a4a4a",
+   "design_url": "/_blob/95787e5469dde0e0ecebc09bef4a4a4a",
+   "width": 1768,
+   "height": 2000,
+   "bytes": 539100,
+   "type": "image/webp",
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used)"
+  },
+  {
+   "no": 22,
+   "name": "22_unused_deity_meldi-maa_cutout-large.webp",
+   "blob": "a6fe6bdb26e6dded27110709664aea5a",
+   "design_url": "/_blob/a6fe6bdb26e6dded27110709664aea5a",
+   "width": 1446,
+   "height": 2000,
+   "bytes": 446952,
+   "type": "image/webp",
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used)"
+  },
+  {
+   "no": 23,
+   "name": "23_unused_gaadi_cutout.webp",
+   "blob": "41bb877f7d1d833f978493c6366d07a1",
+   "design_url": "/_blob/41bb877f7d1d833f978493c6366d07a1",
+   "width": 531,
+   "height": 470,
+   "bytes": 50014,
+   "type": "image/webp",
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used)"
+  },
+  {
+   "no": 24,
+   "name": "24_unused_diya_cutout.webp",
+   "blob": "70db10d832218539d0ef40367176309a",
+   "design_url": "/_blob/70db10d832218539d0ef40367176309a",
+   "width": 478,
+   "height": 521,
+   "bytes": 17920,
+   "type": "image/webp",
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used)"
+  },
+  {
+   "no": 25,
+   "name": "25_unused_naag_cutout-small.webp",
+   "blob": "624e213ce2a19b887b8069e53658baea",
+   "design_url": "/_blob/624e213ce2a19b887b8069e53658baea",
+   "width": 183,
+   "height": 275,
+   "bytes": 15458,
+   "type": "image/webp",
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used)"
+  },
+  {
+   "no": 26,
+   "name": "26_unused_poster_karamshibapa-e-j-vihat.webp",
+   "blob": "d142fc2cdd2cad709f1a711292912aac",
+   "design_url": "/_blob/d142fc2cdd2cad709f1a711292912aac",
+   "width": 960,
+   "height": 1279,
+   "bytes": 192286,
+   "type": "image/webp",
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used)"
+  },
+  {
+   "no": 27,
+   "name": "27_portrait_karamshibapa_blessing-glow.webp",
+   "blob": "0719d6d6a37c83a09b9880ba4507c70f",
+   "design_url": "/_blob/0719d6d6a37c83a09b9880ba4507c70f",
+   "width": 1086,
+   "height": 1448,
+   "bytes": 138656,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile",
+    "HomeMobile2",
+    "HomePhoneL",
+    "HomeTablet",
+    "HomeTabletL",
+    "Main"
+   ],
+   "alt_texts": [
+    "",
+    "પરમ પૂજ્ય ભગવાન શ્રી કરમશીબાપા",
+    "ભગવાન શ્રી કરમશીબાપા"
+   ],
+   "note": "Gallery (banner), History, Main — owner's photo, added 14 Oct 2026 (v110)"
+  }
+ ]
+}

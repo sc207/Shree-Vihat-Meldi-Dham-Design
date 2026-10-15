@@ -1,0 +1,86 @@
+runs 930 · page wider than screen 0 · JS errors 0 · crashed 0
+
+== ISSUES (13 distinct)
+ 92  overlap small [in-t] "ફેબ્રુઆરી ૨૦૨૭" × span.vm-numeral [in-t] "૮"
+      boards PranPratishtha,PranPratishthaMobile · sizes 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960 667x375 680x1000 740x360 760x1024 … · text big/std · e.g. p small [in-t] "ફેબ્રુઆરી ૨૦૨૭" × span.vm-numeral [in-t] "૮"
+ 92  overlap span.vm-numeral [in-t] "૮" × em [in-t] "સોમવાર"
+      boards PranPratishtha,PranPratishthaMobile · sizes 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960 667x375 680x1000 740x360 760x1024 … · text big/std · e.g. overlap span.vm-numeral [in-t] "૮" × em [in-t] "સોમવાર"
+ 92  overlap small [ch7] "ફેબ્રુઆરી ૨૦૨૭" × span.vm-numeral [ch7] "૮"
+      boards History,HistoryMobile · sizes 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960 667x375 680x1000 740x360 760x1024 … · text big/std · e.g. lap small [ch7] "ફેબ્રુઆરી ૨૦૨૭" × span.vm-numeral [ch7] "૮"
+ 92  overlap span.vm-numeral [ch7] "૮" × em [ch7] "સોમવાર"
+      boards History,HistoryMobile · sizes 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960 667x375 680x1000 740x360 760x1024 … · text big/std · e.g. overlap span.vm-numeral [ch7] "૮" × em [ch7] "સોમવાર"
+ 72  overlap li.is-gadi [hours] "રવિવાર · માતાજીની ગાદી" × li [hours] "સોમવાર"
+      boards Darshan,DarshanMobile · sizes 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 768x1024 800x1280 820x1180 834x1194 844x390 896x414 … · text big/std · e.g. -gadi [hours] "રવિવાર · માતાજીની ગાદી" × li [hours] "સોમવાર"
+ 72  overlap li.is-gadi [hours] "મંગળવાર · માતાજીની ગાદી" × li [hours] "બુધવાર"
+      boards Darshan,DarshanMobile · sizes 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 768x1024 800x1280 820x1180 834x1194 844x390 896x414 … · text big/std · e.g. gadi [hours] "મંગળવાર · માતાજીની ગાદી" × li [hours] "બુધવાર"
+  4  overlap b [h1] "આધ્યાત્મિક પરંપરા" × small [h1] "માતાજી અને ધામ પરિવાર"
+      boards History,HistoryMobile · sizes 320x568 · text big/std · e.g. h1] "આધ્યાત્મિક પરંપરા" × small [h1] "માતાજી અને ધામ પરિવાર"
+  4  overlap p.vx-dt__title [darshan] "દર્શન અને આરતીનો સમય" × a.vm-wa-fab.vx-fab [] "જોડાઓ"
+      boards HomeMobile · sizes 568x320 667x375 · text big/std · e.g. shan] "દર્શન અને આરતીનો સમય" × a.vm-wa-fab.vx-fab [] "જોડાઓ"
+ 50  spill section.vm-section.vx-sec [schedule] "કાર્યક્રમદિવસવાર રૂપરેખાટ્" by Npx "શ્રી ગણેશ પૂજા, કળશ પૂજા"
+      boards PranPratishtha,PranPratishthaMobile · sizes 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960 667x375 680x1000 740x360 760x1024 · text big/std · e.g. યક્રમદિવસવાર રૂપરેખાટ્" by 1442px "શ્રી ગણેશ પૂજા, કળશ પૂજા"
+  2  spill a.vm-btn.vm-btn--light [hero-title] "મહોત્સવ વિશે જાણો" by Npx "મહોત્સવ વિશે જાણો"
+      boards HomeMobile · sizes 568x320 · text big/std · e.g. [hero-title] "મહોત્સવ વિશે જાણો" by 12px "મહોત્સવ વિશે જાણો"
+  2  spill div.vx-dt [darshan] "દર્શન અને આરતીનો સમયહાલ દર" by Npx "સવારે ૬:૦૦ – રાત્રે ૧૦:૦"
+      boards HomeMobile · sizes 568x320 · text big/std · e.g. ્શન અને આરતીનો સમયહાલ દર" by 31px "સવારે ૬:૦૦ – રાત્રે ૧૦:૦"
+ 50  tiny-text span [ov-t] "રામ કથા"
+      boards PranPratishtha,PranPratishthaMobile · sizes 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960 667x375 680x1000 740x360 760x1024 · text big/std · e.g. tiny-text 11.0px span [ov-t] "રામ કથા"
+ 50  tiny-text span [ov-t] "રમેલ"
+      boards PranPratishtha,PranPratishthaMobile · sizes 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960 667x375 680x1000 740x360 760x1024 · text big/std · e.g. tiny-text 11.0px span [ov-t] "રમેલ"
+
+== NOTES (55 distinct)
+ 85  soft-2x img [photos] "ભુવાજી શ્રી સુરેશબાપા" soft  [Gallery,GalleryMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 60  soft-2x img [photos] "જય શ્રી લાખણેચી માઁ" soft  [Gallery,GalleryMobile] 568x320 600x960 667x375 680x1000 740x360 760x1024 768x1024 800x1280 820x1180 834x1194
+ 58  soft-2x img [photos] "જય શ્રી ગોગા મહારાજ" soft  [Gallery,GalleryMobile] 600x960 667x375 680x1000 740x360 760x1024 768x1024 800x1280 820x1180 834x1194 844x390
+ 34  soft-2x img [ch2] "જય શ્રી લાખણેચી માઁ" soft  [History,HistoryMobile] 568x320 600x960 667x375 680x1000 740x360 760x1024 768x1024 800x1280 820x1180 834x1194
+ 32  soft-2x img [ch2] "જય શ્રી ગોગા મહારાજ" soft  [History,HistoryMobile] 600x960 667x375 680x1000 740x360 760x1024 768x1024 800x1280 820x1180 834x1194 844x390
+ 18  soft-2x img [arc-t] "નવું મંદિર — સ્તંભ અને કોત" soft  [NewTemple,NewTempleMobile] 740x360 760x1024 768x1024 800x1280 820x1180 834x1194 844x390 896x414
+ 18  soft-2x img [up-t] "ભગવાન શ્રી કરમશીબાપા" soft  [Gallery,GalleryMobile] 568x320 600x960 667x375 680x1000 740x360 760x1024
+ 12  soft-2x img.vx-flag-fix [vis-t] "નવું મંદિર — શિખર અને ધજા" soft  [NewTemple,NewTempleMobile] 667x375 680x1000 740x360 760x1024
+ 12  soft-2x img [arc-t] "નવું મંદિર — પ્રવેશદ્વાર" soft  [NewTemple,NewTempleMobile] 760x1024 820x1180 834x1194 844x390 896x414
+  2  soft-2x img [photos] "પરમ પૂજ્ય ભુવાજી શ્રી સુરે" soft  [Gallery] 896x414
+450  tap<44 a [vm-footer] "દર્શન અને યાત્રા"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,HomeMobile2,Main,NewTemple,NewTe] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+450  tap<44 a [vm-footer] "નવું મંદિર"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,HomeMobile2,Main,NewTemple,NewTe] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+450  tap<44 a [vm-footer] "પ્રાણ પ્રતિષ્ઠા"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,HomeMobile2,Main,NewTemple,NewTe] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+450  tap<44 a [vm-footer] "સેવા નોંધણી"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,HomeMobile2,Main,NewTemple,NewTe] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+450  tap<44 a [vm-footer] "મંદિરનો ઇતિહાસ"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,HomeMobile2,Main,NewTemple,NewTe] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+450  tap<44 a [vm-footer] "સંપર્ક"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,HomeMobile2,Main,NewTemple,NewTe] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+450  tap<44 a [vm-footer] "કાર્યક્રમની રૂપરેખા"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,HomeMobile2,Main,NewTemple,NewTe] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+450  tap<44 a [vm-footer] "જાહેરાતો"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,HomeMobile2,Main,NewTemple,NewTe] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+450  tap<44 a [vm-footer] "સામાન્ય પ્રશ્નો"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,HomeMobile2,Main,NewTemple,NewTe] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+450  tap<44 a [vm-footer] "99095 52020"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,HomeMobile2,Main,NewTemple,NewTe] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+450  tap<44 a [vm-footer] "WhatsApp પર સંદેશ"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,HomeMobile2,Main,NewTemple,NewTe] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+432  tap<44 a [vm-footer] "ગેલેરી અને સમાચાર"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,HomeMobile2,Main,NewTemple,NewTe] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+400  tap<44 a [] "વિગતો જુઓ"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,NewTemple,NewTempleMobile,NotFou] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+350  tap<44 a [h1] "મુખ્ય પૃષ્ઠ"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,NewTemple,NewTempleMobile,PranPr] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+225  tap<44 button.vm-lang.vx-fs [vm-header] "અ+"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,HomeMobile,Main,NewTemple,NewTem] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+225  tap<44 button.vm-lang.vx-fs [vm-header] "અ"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,HomeMobile,Main,NewTemple,NewTem] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+180  tap<44 a.vm-brand [vm-header] "શ્રી વિહત મેલડી ધામસાણંદ ·"  [Contact,ContactMobile,Darshan,DarshanMobile,Gallery,GalleryMobile,History,HistoryMobile,HomeMobile,Main,NewTemple,NewTem] 320x568 360x780 375x667 390x844 412x915
+ 50  tap<44 button.vx-marquee__btn [] "માહિતી પટ્ટી થોભાવો"  [HomeMobile,Main] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [darshan] "સંપૂર્ણ સમયપત્રક"  [HomeMobile,Main] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [darshan] "મંગળા આરતી"  [HomeMobile,Main] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [darshan] "સંધ્યા આરતી"  [HomeMobile,Main] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [darshan] "ફોનનું કેલેન્ડર"  [HomeMobile,Main] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a.vx-upnext__more [darshan] "સંપૂર્ણ પંચાંગ"  [HomeMobile,Main] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [in-t] "Google Calendar"  [PranPratishtha,PranPratishthaMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [in-t] "ફોનનું કેલેન્ડર"  [PranPratishtha,PranPratishthaMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [schedule] "રાત્રિ કાર્યક્રમના કલાકારો"  [PranPratishtha,PranPratishthaMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 label [vm-section] "પૂરું નામ *"  [Seva,SevaMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 label [vm-section] "મોબાઇલ નંબર *"  [Seva,SevaMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 label [vm-section] "ગામ / શહેર *"  [Seva,SevaMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 label [vm-section] "ઉંમર"  [Seva,SevaMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 label [vm-section] "સરનામું"  [Seva,SevaMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a.vx-tel [] "99095 52020"  [Seva,SevaMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a.vm-contact__value [ct-t] "99095 52020"  [Contact,ContactMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [ct-t] "WhatsApp સંદેશ"  [Contact,ContactMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [ct-t] "દર્શન અને યાત્રાની વિગત"  [Contact,ContactMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a.vx-tel [fq-t] "99095 52020"  [Contact,ContactMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [hours] "મંગળા આરતી"  [Darshan,DarshanMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [hours] "સંધ્યા આરતી"  [Darshan,DarshanMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [hours] "ફોનનું કેલેન્ડર"  [Darshan,DarshanMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 46  tap<44 a.vx-tel [] "WhatsApp પર સંદેશ"  [Seva,SevaMobile] 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960 667x375
+ 46  tap<44 a.vx-tel [fq-t] "WhatsApp પર સંદેશ"  [Contact,ContactMobile] 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960 667x375
+ 28  tap<44 a [] "99095 52020"  [OfflineMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 14  tap<44 button.vm-lang.vx-fs [vm-mnav] "અ+"  [MenuMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 14  tap<44 button.vm-lang.vx-fs [vm-mnav] "અ"  [MenuMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 10  tap<44 a.vm-brand [vm-mnav] "શ્રી વિહત મેલડી ધામસાણંદ ·"  [MenuMobile] 320x568 360x780 375x667 390x844 412x915
