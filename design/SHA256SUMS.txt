@@ -25,4 +25,4 @@ e94f70191c526f65b3f73755438524e91372235ede1e619c58c20a03b4f1e613  ./Seva.dc.html
 add40275c844dc29bdccdb181f960081b2eec302a464692d7c08dfd35fd93ed7  ./canvas.json
 2097c7ee2c856752f42e121beba53d117cd81cf01f0e49d0376ee6b3449ba648  ./ds/vihatmeldimandir/components/bundle.css
 8c749e0d5ddbedb7ce1c4d6b1bc82fd6e44c0a9c7f4cde38df280bce8ae68b8e  ./ds/vihatmeldimandir/tokens.json
-d60ed3c0bdc655acd14c3b9d78295a7a59c2285bf53e18e27104c6cb8c544bed  ./site.css
+f6be5bf6df2ef4f92f7535bf8cc9cf309b7694bb0aa69e43529f787fdbd08515  ./site.css

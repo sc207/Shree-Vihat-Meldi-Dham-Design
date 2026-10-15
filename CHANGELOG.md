@@ -6,6 +6,22 @@ History before v97 (the original build, 30 Sep – 9 Oct 2026) lives in the arti
 
 Standard verification after every publish below: the changed files were read back from the live artifact and compared byte-for-byte with what was sent (all matched).
 
+_v126 onward come from the owner's follow-up of 16 Oct 2026: "also check other images have this issue" (after v125). Image check of every
+picture on every page, findings and pictures: [tasks/image-audit/README.md](tasks/image-audit/README.md)._
+
+## v126 · `1792095937-de85` — gallery viewer opens on screen and fits phones (16 Oct 2026)
+
+- **Files:** `site.css` (one block at the end; script `tools/examples/apply_v126_gallery_viewer.py <project>`).
+- **What was wrong:** the photo viewer (tap a Gallery photo) was `position: absolute` at the top of the page: a photo opened from lower down
+  showed only the dark scrim — the photo was off-screen above (240 of 242 test openings had the panel partly or fully off screen).
+  Its image area was a fixed 680 px (caption and ✕ below the edge of a 1440×900 laptop) and it had no phone rules: on a 390 px phone the
+  photo was 214 px wide above ~450 px of empty panel.
+- **Change:** fixed to the screen and centred (same as the phone menu `.vm-mnav`), z-index above the bottom bar; image area at most the screen
+  height minus the panel; phones: 16 px margins, photo across the full panel width; phones sideways: compact panel.
+- **Tests:** `tasks/image-audit/scripts/test_viewer.py` — 11 photos × 11 screen sizes (1920×1080 … 320×568, 844×390, 667×375) × normal/large text:
+  panel and ✕ fully on screen 242/242 (v125: 2/242); phone photo 334 px wide at 390 (was 214). Pixel compare Gallery + GalleryMobile with
+  the viewer closed: identical. Only these two pages have the viewer.
+
 ## v125 · `1792094175-7284` — the four ધામ પરિવાર pictures in HD, aligned (16 Oct 2026)
 
 - **Owner's request:** "images not alligned and set properly. make sure those images should be HD and if not make it hd that looks good and does not

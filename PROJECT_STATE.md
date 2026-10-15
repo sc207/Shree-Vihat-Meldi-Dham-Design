@@ -1,12 +1,13 @@
 # PROJECT_STATE.md
 
-_Last updated: 16 Oct 2026, night IST (v125: deity pictures HD + aligned; earlier that night v118–v123 responsive fixes and the developer hand-off)._ _14 Oct: v111–v116 (the six audit fixes)._ _Earlier: 10 Oct 2026, evening IST (audit Phases A–C reported). Update this file only when the project state meaningfully changes._
+_Last updated: 16 Oct 2026, night IST (v126: gallery viewer; v125: deity pictures HD + aligned; earlier that night v118–v123 responsive fixes and the developer hand-off)._ _14 Oct: v111–v116 (the six audit fixes)._ _Earlier: 10 Oct 2026, evening IST (audit Phases A–C reported). Update this file only when the project state meaningfully changes._
 
 ## Versions
 
 | | Version | Id | Verified |
 |---|---|---|---|
-| **Live (published) design** | **v125** | `1792094175-7284` | 16 Oct 2026: the four ધામ પરિવાર pictures (History ch. 2, Gallery grid + banner trio) replaced by HD images 28–31, composed the same way (1200×1500 = the arch frame, one warm-gold background, same figure height and baseline). 4 page files; read back byte-identical; 28/28 live files = `design/project/`. Owner: "images not alligned and set properly. make sure those images should be HD…". Report: [tasks/deity-hd/README.md](tasks/deity-hd/README.md). |
+| **Live (published) design** | **v126** | `1792095937-de85` | 16 Oct 2026: gallery viewer (lightbox) fixed to the screen and centred, fits the screen height, phone layout (`site.css` block); read back byte-identical; 28/28 live files = `design/project/`. Owner: "also check other images have this issue". Report: [tasks/image-audit/README.md](tasks/image-audit/README.md). |
+| v125 | v125 | `1792094175-7284` | 16 Oct 2026: the four ધામ પરિવાર pictures (History ch. 2, Gallery grid + banner trio) replaced by HD images 28–31, composed the same way (1200×1500 = the arch frame, one warm-gold background, same figure height and baseline). 4 page files; read back byte-identical; Owner: "images not alligned and set properly. make sure those images should be HD…". Report: [tasks/deity-hd/README.md](tasks/deity-hd/README.md). |
 | v124 | v123 content | `1792093482-e8c1` | 16 Oct 2026: editor / Design-type re-save, no content change. |
 | v123 | v123 | `1792090563-62eb` | 16 Oct 2026: responsive / UI-UX fixes from the device scan, one version each — v118 `1792090496-e0cb` leftover WhatsApp button removed (phone Home) · v119 `1792090520-491b` History index < 375 px · v120 `1792090533-1e4c` phones sideways (Home buttons, darshan card) · v121 `1792090543-73a4` festival chart labels 13 px · v122 `1792090553-d712` WhatsApp band 1000–1279 px (+ HomeTabletL frame 8104) · v123 `1792090563-62eb` 44 px touch areas. Owner: "…fix it and make website design easy to go for coding part". Report: [tasks/responsive-v116/README.md](tasks/responsive-v116/README.md). |
 | v117 | v116 content | `1792089084-a7b0` | 15–16 Oct 2026: Design-type re-save, no content change. |
@@ -97,7 +98,7 @@ MenuMobile and OfflineMobile are phone-screen boards (fixed 844 px), not content
    **Design audit v106 (Phases A–C):** done, no changes made — report [tasks/audit-report-v106.md](tasks/audit-report-v106.md)
    (page: `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU`). 0 P0, 1 P1 (A1 header menu 761–1179 px), 4 P2, 9 P3, 1 owner decision (D1 hero).
    Phase D waits for the owner's approval; proposed order v107 Seva → v108 A1 → v109 B3 → v110 B4 → v111 B2 → polish.
-3. **Spec page:** up to date with v123 (16 Oct); v125 (deity pictures) still to be added. **Developer hand-off:** [DEVELOPER_HANDOFF.md](DEVELOPER_HANDOFF.md) (routes, one page per route, canvas-only parts, breakpoints, behaviour, images, acceptance checks). Add each new version there after publishing.
+3. **Spec page:** up to date with v123 (16 Oct); v125 (deity pictures) and v126 (gallery viewer) still to be added. **Developer hand-off:** [DEVELOPER_HANDOFF.md](DEVELOPER_HANDOFF.md) (routes, one page per route, canvas-only parts, breakpoints, behaviour, images, acceptance checks). Add each new version there after publishing.
 4. **Figma Gate A:** when the allowance returns — one read-only check first; if blocked, stop. Then run `figma/scripts/call1.js` … in order
    (see `figma/state.json` → `run_order`), after the owner drops the 26 original images (original filenames) onto the Components page.
    Then sync Figma with website changes v99–v106 (`figma/state.json` → `figma_sync_todo`; the scripts already contain the v97 Gate A design).
