@@ -9,6 +9,17 @@ Standard verification after every publish below: the changed files were read bac
 _v126 onward come from the owner's follow-up of 16 Oct 2026: "also check other images have this issue" (after v125). Image check of every
 picture on every page, findings and pictures: [tasks/image-audit/README.md](tasks/image-audit/README.md)._
 
+## v128 · `1792098080-6f1e` — સુરેશબાપા blessing photo in HD (16 Oct 2026)
+
+- **Files:** `Main`, `HomeMobile2`, `HomeTablet`, `HomeTabletL`, `HomePhoneL`, `History`, `HistoryMobile`, `Gallery`, `GalleryMobile` (.dc.html) —
+  image address only, 14 places (home boards use it twice: pair + strip). Script `tools/examples/apply_v128_blessing_hd.py <project>`.
+- **Why:** the re-measure after v127 left image 10 (1100×1019; Home pair, History arch, Gallery) at 0.64 of the pixels a 3× phone needs
+  (0.87–0.96 on 2× screens) — by the same rule as v127 it gets the same treatment.
+- **Change:** 10 → 34 (2200×2038, exactly 2×; Real-ESRGAN x4plus halved). Face and raised hand compared at 1:1 with the original (eyes, tilak,
+  ear-rings, rings and palm lines unchanged; shrunk back it matches the original at 38.9 dB).
+- **Tests:** `check_layout.py` Main, HomeMobile2, History, HistoryMobile, Gallery, GalleryMobile — 66 runs, 0 new problems; frames (9 boards) 0 to change;
+  wording unchanged; no page uses 10 any more; server checksum of 34 matches `design/assets/`.
+
 ## v127 · `1792096917-c470` — two સુરેશબાપા photos in HD (16 Oct 2026)
 
 - **Files:** `Gallery.dc.html`, `GalleryMobile.dc.html`, `History.dc.html`, `HistoryMobile.dc.html` — image addresses only

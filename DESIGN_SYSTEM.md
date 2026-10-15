@@ -88,7 +88,7 @@ Families: **display** = "Noto Serif Gujarati", "Noto Serif", Georgia, serif · *
 
 **Layout:** `--content-max` 1320px · `--text-max` 680px · `--header-height` 88px · `--header-height-compact` 68px
 
-### Image inventory (33 files; `design/assets/<blob-id>.<ext>`, pages use `/_blob/<blob-id>`)
+### Image inventory (34 files; `design/assets/<blob-id>.<ext>`, pages use `/_blob/<blob-id>`)
 
 | # | Original file name (keep unchanged) | Blob id | Pixels | Used on |
 |---|---|---|---|---|
@@ -101,7 +101,7 @@ Families: **display** = "Noto Serif Gujarati", "Noto Serif", Georgia, serif · *
 | 07 | `07_portrait_karamshibapa_closeup-glow` | `692526c97fb81800db3adb90c432cc9a` | 1100×985 | — (not used since v110; replaced by 27) |
 | 08 | `08_portrait_karamshibapa_standing-white` | `01d1d891218823b7fc6777885d8634d1` | 1000×1497 | Gallery |
 | 09 | `09_portrait_karamshibapa_seated-poster` | `361278fe9fd6e85e999500f1f74013a3` | 784×1045 | Gallery |
-| 10 | `10_portrait_sureshbapa_blessing-glow` | `4e30bcd6319bfef6bce709ce0ef4afb1` | 1100×1019 | Gallery, History, Main |
+| 10 | `10_portrait_sureshbapa_blessing-glow` | `4e30bcd6319bfef6bce709ce0ef4afb1` | 1100×1019 | — (not used since v128; replaced by 34) |
 | 11 | `11_portrait_sureshbapa_candid` | `e1b6930a984c9f3a8eb9b9783ae97fe9` | 585×882 | — (not used since v127; replaced by 33) |
 | 12 | `12_portrait_sureshbapa_seated-poster` | `ea3a22f667e1db20db6134f406df44bb` | 960×1279 | Gallery |
 | 13 | `13_portrait_sureshbapa_smiling-cutout` | `f784ff0d57da00d73030819bb850bb43` | 470×501 | — (not used since v127; replaced by 32) |
@@ -125,10 +125,11 @@ Families: **display** = "Noto Serif Gujarati", "Noto Serif", Georgia, serif · *
 | 31 | `31_deity_goga-maharaj_hd-arch` | `707057297d216df873c2b29940cce2e3` | 1200×1500 | Gallery, History — made from 06 (enlarged ×4), added 16 Oct 2026 (v125) |
 | 32 | `32_portrait_sureshbapa_smiling-cutout_hd` | `fc35afd1b74520e77020323b6e293a68` | 940×1002 | Gallery — 13 at exactly 2× (Real-ESRGAN x4plus, halved), added 16 Oct 2026 (v127) |
 | 33 | `33_portrait_sureshbapa_candid_hd` | `805bf02d7a1d405c2fc9caea541abbee` | 1170×1764 | Gallery, History — 11 at exactly 2× (Real-ESRGAN x4plus, halved), added 16 Oct 2026 (v127) |
+| 34 | `34_portrait_sureshbapa_blessing-glow_hd` | `f4d99b08a58c4d7320683cd72bbc67cc` | 2200×2038 | Gallery, History, Main — 10 at exactly 2× (Real-ESRGAN x4plus, halved), added 16 Oct 2026 (v128) |
 
-`Used on` names the page family (Main = all home boards; each page includes its phone version). Images 20–26 are supplied but unused (21/22 are the sources of 28/29); 07 unused since v110; 03–06 unused since v125; 11 and 13 unused since v127.
+`Used on` names the page family (Main = all home boards; each page includes its phone version). Images 20–26 are supplied but unused (21/22 are the sources of 28/29); 07 unused since v110; 03–06 unused since v125; 11 and 13 unused since v127; 10 unused since v128.
 28–31 are the four ધામ પરિવાર pictures composed the same way (4:5 = the arch frame, one warm-gold background, same figure height and baseline); how they were made: [tasks/deity-hd/README.md](tasks/deity-hd/README.md).
-32–33 are HD versions of two સુરેશબાપા photos; faces were checked against the originals. 09 was deliberately not upscaled (the upscalers drew new outlines on the face): [tasks/image-audit/README.md](tasks/image-audit/README.md).
+32–34 are HD versions of three સુરેશબાપા photos; faces were checked against the originals. 09 was deliberately not upscaled (the upscalers drew new outlines on the face): [tasks/image-audit/README.md](tasks/image-audit/README.md).
 The owner's originals for 27 (and an unused seated full-length photo) are in `tasks/bapa-photo/originals/`.
 Keep the **original file names** unchanged (they are also how the Figma script matches images).
 

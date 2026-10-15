@@ -182,23 +182,9 @@
    "height": 1019,
    "bytes": 36570,
    "type": "image/webp",
-   "used_on_boards": [
-    "Gallery",
-    "GalleryMobile",
-    "History",
-    "HistoryMobile",
-    "HomeMobile2",
-    "HomePhoneL",
-    "HomeTablet",
-    "HomeTabletL",
-    "Main"
-   ],
-   "alt_texts": [
-    "",
-    "પરમ પૂજ્ય ભુવાજી શ્રી સુરેશબાપા — આશીર્વાદ મુદ્રામાં",
-    "ભુવાજી શ્રી સુરેશબાપા"
-   ],
-   "note": "Gallery, History, Main"
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used since v128; replaced by 34)"
   },
   {
    "no": 11,
@@ -681,6 +667,33 @@
     "પરમ પૂજ્ય ભુવાજી શ્રી સુરેશબાપા — પ્રસન્ન મુદ્રામાં"
    ],
    "note": "Gallery, History — 11 at exactly 2× (Real-ESRGAN x4plus, halved), added 16 Oct 2026 (v127)"
+  },
+  {
+   "no": 34,
+   "name": "34_portrait_sureshbapa_blessing-glow_hd.webp",
+   "blob": "f4d99b08a58c4d7320683cd72bbc67cc",
+   "design_url": "/_blob/f4d99b08a58c4d7320683cd72bbc67cc",
+   "width": 2200,
+   "height": 2038,
+   "bytes": 123598,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile",
+    "HomeMobile2",
+    "HomePhoneL",
+    "HomeTablet",
+    "HomeTabletL",
+    "Main"
+   ],
+   "alt_texts": [
+    "",
+    "પરમ પૂજ્ય ભુવાજી શ્રી સુરેશબાપા — આશીર્વાદ મુદ્રામાં",
+    "ભુવાજી શ્રી સુરેશબાપા"
+   ],
+   "note": "Gallery, History, Main — 10 at exactly 2× (Real-ESRGAN x4plus, halved), added 16 Oct 2026 (v128)"
   }
  ]
 }

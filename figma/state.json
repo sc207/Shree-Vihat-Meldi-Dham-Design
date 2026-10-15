@@ -365,6 +365,12 @@
       "date": "2026-10-16",
       "change": "Sureshbapa photos 13 -> 32 and 11 -> 33 (exactly 2x HD) on Gallery + History",
       "rollback": "v126 (1792095937-de85)"
+    },
+    "v128": {
+      "id": "1792098080-6f1e",
+      "date": "2026-10-16",
+      "change": "Sureshbapa blessing photo 10 -> 34 (exactly 2x HD) on Home boards, History, Gallery",
+      "rollback": "v127 (1792096917-c470)"
     }
   },
   "figma_sync_todo": [
@@ -382,7 +388,8 @@
     "v118-v123: phone Home has no floating WhatsApp button; History index (<375 px) label under title; WhatsApp band at 1000-1279 px: 64 px badge, 32 px gaps, 28 px heading; festival chart night labels 13 px; sideways-phone Home buttons wrap; touch areas are code-only (no visual)",
     "v125: ધામ પરિવાર images are now 28-31 (Vihat, Meldi, Lakhnechi, Goga; 1200x1500 HD, same composition) instead of 03-06 — replace the image fills in the History and Gallery frames",
     "v126: gallery viewer — phone variant: 16 px margins, 12 px panel padding, photo full panel width, caption 19 px",
-    "v127: Sureshbapa smiling cut-out and candid photo image fills -> 32 / 33 (HD)"
+    "v127: Sureshbapa smiling cut-out and candid photo image fills -> 32 / 33 (HD)",
+    "v128: Sureshbapa blessing photo image fills (Home pair + strip, History arch, Gallery) -> 34 (HD)"
   ],
   "notes_v105": "Contact/404 compute a local weekday but never display it — left unchanged. The પૂનમ list (EV) covers Oct 2026–Apr 2027 and must be extended each year (existing comment in the page).",
   "awaiting_trust": [

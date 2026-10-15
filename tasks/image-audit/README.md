@@ -1,4 +1,4 @@
-# Image check of the whole site — v126, v127 (16 Oct 2026)
+# Image check of the whole site — v126–v128 (16 Oct 2026)
 
 **Owner's request** (after v125, the ધામ પરિવાર pictures): "also check other images have this issue" — the issue being pictures that are
 not aligned / not set properly / not HD. Each fix was published as its own version (CLAUDE.md rule 3: the request hands the decision over).
@@ -22,7 +22,7 @@ not aligned / not set properly / not HD. Each fix was published as its own versi
 | 11 સુરેશબાપા candid 585×882 | 0.65 (viewer), 0.77 (tile) | Gallery, History small portrait | **Fixed in v127** → 33 (1170×1764) |
 | 09 કરમશીબાપા seated poster 784×1045 | 0.77 (viewer) | Gallery news card, tile, viewer | **Left as supplied** — both upscalers drew new dark outlines on his face and neck ([picture](pictures/upscaler_09_karamshibapa_rejected.png)); needs a larger original from the trust |
 | 14 new-temple render 2400×1881 | 0.66 | NewTemple 834 px zoomed crop only (≥ 0.82 elsewhere) | Left — slightly soft in one tablet crop; AI sharpening could invent carving details on an architectural design |
-| 10 સુરેશબાપા blessing 1100×1019 | 0.87 at 2× | History / Home arch | Adequate; pairs well with 27 (Home and History pairs checked by eye) |
+| 10 સુરેશબાપા blessing 1100×1019 | 0.64 on 3× phones (0.87–0.96 on 2×) | Home pair + strip, History arch, Gallery | **Fixed in v128** → 34 (2200×2038), same method as v127 |
 | 27, 08, 12, 15, 01, 02, 28–31, logos, QR | ≥ 0.91 | everywhere | Sharp |
 
 Gallery grid, Home and History pairs and the news cards were also checked by eye for cropping and alignment: no other problem
@@ -53,6 +53,16 @@ Faithfulness checks (`scripts/portrait_compare.py NAME x0 y0 x1 y1`):
 
 In place: [cut-out tile](pictures/v127_sureshbapa_cutout_tile_before_after.png) · [candid tile](pictures/v127_sureshbapa_candid_tile_before_after.png).
 Checks: `check_layout.py` History/Gallery + phone 44 runs, 0 new problems; frames 0 to change; wording unchanged; server checksums match.
+
+## v128 — the blessing photo in HD
+
+The re-measure after v127 ([results/measure_v127.json](results/measure_v127.json)) left 10 at 0.64 on 3× phones, so it got the same treatment:
+34 = exactly 2× (x4plus halved). Face: [comparison](pictures/upscaler_10_sureshbapa_blessing.png) (38.9 dB shrunk back), hand and rings:
+[detail](pictures/v128_blessing_hand_detail.png). In place: [Home pair](pictures/v128_blessing_home_before_after.png) ·
+[History, phone](pictures/v128_blessing_history_phone_before_after.png). Swapped in 14 places on 9 boards; layout check 66 runs, 0 new problems.
+
+After v128 every picture on the site is at least 0.91 of the pixels a 2× / 3× screen needs, except 09 (left as supplied, see above) and the
+zoomed tablet crop of 14.
 
 ## Still open
 
