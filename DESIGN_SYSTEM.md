@@ -88,7 +88,7 @@ Families: **display** = "Noto Serif Gujarati", "Noto Serif", Georgia, serif · *
 
 **Layout:** `--content-max` 1320px · `--text-max` 680px · `--header-height` 88px · `--header-height-compact` 68px
 
-### Image inventory (34 files; `design/assets/<blob-id>.<ext>`, pages use `/_blob/<blob-id>`)
+### Image inventory (37 files; `design/assets/<blob-id>.<ext>`, pages use `/_blob/<blob-id>`)
 
 | # | Original file name (keep unchanged) | Blob id | Pixels | Used on |
 |---|---|---|---|---|
@@ -126,6 +126,9 @@ Families: **display** = "Noto Serif Gujarati", "Noto Serif", Georgia, serif · *
 | 32 | `32_portrait_sureshbapa_smiling-cutout_hd` | `fc35afd1b74520e77020323b6e293a68` | 940×1002 | Gallery — 13 at exactly 2× (Real-ESRGAN x4plus, halved), added 16 Oct 2026 (v127) |
 | 33 | `33_portrait_sureshbapa_candid_hd` | `805bf02d7a1d405c2fc9caea541abbee` | 1170×1764 | Gallery, History — 11 at exactly 2× (Real-ESRGAN x4plus, halved), added 16 Oct 2026 (v127) |
 | 34 | `34_portrait_sureshbapa_blessing-glow_hd` | `f4d99b08a58c4d7320683cd72bbc67cc` | 2200×2038 | Gallery, History, Main — 10 at exactly 2× (Real-ESRGAN x4plus, halved), added 16 Oct 2026 (v128) |
+| 35 | `35_render_garbhagruh-door` | `c8cf833cc152ab8b5dc0b97f8865e332` | 400×400 | NewTemple — close-up of 14 (doorway with માતાજી), card ૦૧ ગર્ભગૃહ, added 16 Oct 2026 (v138) |
+| 36 | `36_render_mandap-pillars` | `a6e4902a5aa10b4aa465188e5b48cdcd` | 480×480 | NewTemple — close-up of 14 (pillared hall), card ૦૨ મંડપ, added 16 Oct 2026 (v138) |
+| 37 | `37_render_praveshdwar-steps` | `57821e4c0639457c075c918ecee6d7f4` | 480×480 | NewTemple — close-up of 14 (entrance steps and porch), card ૦૩ પ્રવેશદ્વાર, added 16 Oct 2026 (v138) |
 
 `Used on` names the page family (Main = all home boards; each page includes its phone version). Images 20–26 are supplied but unused (21/22 are the sources of 28/29); 07 unused since v110; 03–06 unused since v125; 11 and 13 unused since v127; 10 unused since v128.
 28–31 are the four ધામ પરિવાર pictures composed the same way (4:5 = the arch frame, one warm-gold background, same figure height and baseline); how they were made: [tasks/deity-hd/README.md](tasks/deity-hd/README.md).
@@ -213,6 +216,10 @@ so search for `ફેબ્રુઆરી,` or use a regex `ફેબ્રુ�
 
 Approved variants already on the site (keep as they are):
 - Phone festival strip uses the short form "૨–૮ ફેબ્રુ." (8 phone pages); desktop strips use the full date.
+- Banner date strip: festival page "૮ ફેબ્રુઆરી, સોમવાર" (full, v136); Home banner keeps "૮ ફેબ્રુ., સોમવાર" (the full form wraps on sideways phones).
+- Placeholders no longer end in "— ટ્રસ્ટ દ્વારા" (owner, 16 Oct, v134); a sentence that needs a subject uses "મંદિર દ્વારા". New-temple introduction says
+  "મંદિરનો મુખ્ય હેતુ" / "મંદિરનો વિશ્વાસ" and no longer mentions દાન (v135).
+- Pictures cut from the architectural render carry the visible label "સ્થાપત્ય ચિત્ર" (never presented as photographs).
 - Quotations and verse keep their own wording: “કરમશીબાપા એ જ વિહત” (home/history) and the New Temple verse "… શ્રી સુરેશબાપાના સાનિધ્યથી …".
 - Address lines read "ગેપ્પરા, સાણંદ, ગુજરાત ૩૮૨૧૧૦" (and "ગેપ્પરા, સાણંદ"); brand line "સાણંદ · ગુજરાત".
 - Hours appear as "દરરોજ સવારે ૬ થી રાત્રે ૧૦", "સવારે ૬ – રાત્રે ૧૦" and "સવારે ૬:૦૦ – રાત્રે ૧૦:૦૦ · વિરામ વિના" (timetable).

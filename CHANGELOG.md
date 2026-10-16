@@ -9,6 +9,64 @@ Standard verification after every publish below: the changed files were read bac
 _v126 onward come from the owner's follow-up of 16 Oct 2026: "also check other images have this issue" (after v125). Image check of every
 picture on every page, findings and pictures: [tasks/image-audit/README.md](tasks/image-audit/README.md)._
 
+_v133–v138 come from the owner's list of 16 Oct 2026, 19:40 IST (Home photos, new-temple introduction, "ટ્રસ્ટ દ્વારા", the દર્શનનો માર્ગ pictures,
+the પ્રાણ પ્રતિષ્ઠા date, the Darshan travel cards; the tagline request is answered with options, not published). One version per item; the request
+handed the decisions over. Before/after pictures: `tasks/owner-fixes-1016/pictures/`. Live files read back after v138: 25/25 byte-identical._
+
+## v138 · `1792162446-ce3e` — દર્શનનો માર્ગ: pictures from the architectural render (16 Oct 2026)
+
+- **Owner:** "[પ્રવેશથી ગર્ભગૃહ સુધી ભક્તનો અનુભવ …] is that any way that we can showcase the proper image even if it will be visualise".
+- **Files:** `NewTemple`, `NewTempleMobile`, `site.css` (block); new images 35–37 (close-ups cut from the render 14, no AI). Script `apply_v138_route_images.py`.
+- **Change:** the empty [ફોટો] boxes of ૦૧ ગર્ભગૃહ, ૦૨ મંડપ, ૦૩ પ્રવેશદ્વાર show the doorway with માતાજી, the pillared hall and the entrance steps
+  and porch, each labelled "સ્થાપત્ય ચિત્ર" (so they are not taken for photographs). ૦૪ [અન્ય વિભાગ] stays a placeholder (not in the render).
+- **Tests:** layout check NewTemple + phone 22 runs, 0 new problems; frames unchanged; images ≥ 1.0 of the pixels a 2× screen needs.
+
+## v137 · `1792162441-23e8` — Home photo order: મંદિર, માતાજી, કરમશીબાપા, સુરેશબાપા (16 Oct 2026)
+
+- **Owner:** "main page phto : mandir, mataji, karamshi bapa, suresh bapa".
+- **Files:** `Main`, `HomeTablet`, `HomeTabletL`, `HomePhoneL`, `HomeMobile2`, `site.css` (block), `canvas.json`. Script `apply_v137_home_photo_order.py`.
+- **Change:** order મંદિર · વિહત માઁ · મેલડી માઁ · કરમશીબાપા · સુરેશબાપા (was મંદિર · કરમશીબાપા · વિહત માઁ · સુરેશબાપા · મેલડી માઁ). Phones (≤ 760 px)
+  showed only the first three tiles (સુરેશબાપા and મેલડી માઁ hidden; with the new order both Bapas would have been hidden) — now all five:
+  temple full width, the two માતાજી, the two Bapas. HomeMobile2 frame 5750 → 5986 (canvas h too).
+- **Tests:** layout check Main + HomeMobile2 22 runs, 0 new problems; frames 0 to change after the update.
+
+## v136 · `1792162435-c602` — પ્રાણ પ્રતિષ્ઠા date written in full (16 Oct 2026)
+
+- **Owner:** "પ્રાણ પ્રતિષ્ઠા page · પ્રાણ પ્રતિષ્ઠા · બપોરે ૧૨:૩૯ · ૮ ફેબ્રુ., સોમવાર full".
+- **Files:** `PranPratishtha`, `PranPratishthaMobile`. **Change:** banner date strip "૮ ફેબ્રુ., સોમવાર" → "૮ ફેબ્રુઆરી, સોમવાર".
+- **Not changed:** the same strip in the Home banner keeps "૮ ફેબ્રુ." — tested: the full form wraps both boxes onto two lines on sideways
+  phones (HomePhoneL +28 px) and runs past the strip at 320 px. (The short form already overruns by 2 px at 320 px — noted, not changed.)
+- **Tests:** fits on one line at 320 px (19 px spare) and desktop; layout check 22 runs, 0 new problems; frames unchanged.
+
+## v135 · `1792162429-bdf2` — new-temple introduction: "મંદિરનો", no "દાન" (16 Oct 2026)
+
+- **Owner:** "nava mandir no parichay : replace ટ્રસ્ટનો to Mandir no. remove દાન".
+- **Files:** `NewTemple`, `NewTempleMobile`, `Main`, `HomeTablet`, `HomeTabletL`, `HomePhoneL`, `HomeMobile`. Script `apply_v135_intro_mandir.py`.
+- **Change:** "… એ જ ટ્રસ્ટનો મુખ્ય હેતુ છે." → "… એ જ મંદિરનો મુખ્ય હેતુ છે." (all 7 boards); "ટ્રસ્ટનો વિશ્વાસ છે કે ભક્તોના સહયોગ, દાન અને નિઃસ્વાર્થ
+  સેવાથી …" → "મંદિરનો વિશ્વાસ છે કે ભક્તોના સહયોગ અને નિઃસ્વાર્થ સેવાથી …" (New Temple). No "ટ્રસ્ટનો" left on the site.
+- **Tests:** layout check 44 runs, 0 new problems; frames unchanged.
+
+## v134 · `1792162423-7494` — "ટ્રસ્ટ દ્વારા" removed (16 Oct 2026)
+
+- **Owner:** "ટ્રસ્ટ દ્વારા remove this word and check if we can set mandir and not require then dont add anything".
+- **Files:** 12 pages (Contact, Gallery, History, NewTemple, PranPratishtha, Seva + phone pages). Script `apply_v134_remove_trust_by.py`.
+- **Change:** all 15 texts: 13 placeholders lose " — ટ્રસ્ટ દ્વારા"; "ટ્રસ્ટ દ્વારા ફોટો મળ્યે ઉમેરાશે" → "ફોટો મળ્યે ઉમેરાશે"; "ટ્રસ્ટ દ્વારા ચકાસાયેલ
+  લખાણ" → "ચકાસાયેલ લખાણ"; the one sentence that needs a subject: "મંદિર દ્વારા જાહેર થયેલ સત્તાવાર કાર્યક્રમ." Other trust mentions
+  ("ટ્રસ્ટ તરફથી …", "[ટ્રસ્ટ કાર્યાલય…]", "ટ્રસ્ટને") were not part of the request and stay. Frames: GalleryMobile 10455 → 10403,
+  NewTempleMobile 11846 → 11812 (placeholders now fit on fewer lines).
+- **Tests:** layout check 12 boards, 132 runs, 0 new problems; frames 0 to change after the update; wording diff = exactly these 15 texts.
+
+## v133 · `1792162413-08a8` — Darshan: gap between the travel cards and the map (16 Oct 2026)
+
+- **Owner:** "the gap between રેલવે / બસ / માર્ગ / હવાઈ માર્ગ cards and the direction — no gap" (screenshot).
+- **Files:** `site.css` (block: `.vx-dmap` margin-top 24 px — it had no spacing rule), `Darshan`, `DarshanMobile` (frames 5030 → 5054,
+  7090 → 7114), `canvas.json` (h). Script `apply_v133_travel_gap.py`.
+- **Tests:** layout check 22 runs, 0 new problems; frames 0 to change after the update.
+
+## v132 · `1792156846-744e` — re-save, no content change (16 Oct 2026)
+
+- Design-type update; 25 project files read and byte-identical to v131 (the other 3 unchanged in size). Counted because the artifact numbers it.
+
 _v130–v131 come from the owner's message of 16 Oct 2026, 12:21 IST: "If you think we need to modify any fixes then do it and push it"._
 
 ## v131 · `1792133852-3202` — gallery viewer: Escape, tap outside, keyboard focus (16 Oct 2026)

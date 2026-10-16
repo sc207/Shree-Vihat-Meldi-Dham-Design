@@ -389,6 +389,41 @@
       "date": "2026-10-16",
       "change": "gallery viewer: Escape / tap outside close, focus to close button and back (logic only, no visual change)",
       "rollback": "v130 (1792133845-2a4a)"
+    },
+    "v132": {
+      "id": "1792156846-744e",
+      "date": "2026-10-16",
+      "change": "Design-type re-save, no content change (= v131)"
+    },
+    "v133": {
+      "id": "1792162413-08a8",
+      "date": "2026-10-16",
+      "change": "Darshan: gap between travel cards and map; Darshan frames 5054 / 7114"
+    },
+    "v134": {
+      "id": "1792162423-7494",
+      "date": "2026-10-16",
+      "change": "\"ટ્રસ્ટ દ્વારા\" removed from 15 texts; GalleryMobile / NewTempleMobile frames"
+    },
+    "v135": {
+      "id": "1792162429-bdf2",
+      "date": "2026-10-16",
+      "change": "new-temple intro: મંદિરનો, no દાન"
+    },
+    "v136": {
+      "id": "1792162435-c602",
+      "date": "2026-10-16",
+      "change": "festival page date strip: ૮ ફેબ્રુઆરી, સોમવાર"
+    },
+    "v137": {
+      "id": "1792162441-23e8",
+      "date": "2026-10-16",
+      "change": "Home photo order mandir, mataji x2, Bapas x2; all five on phones; HomeMobile2 frame 5986"
+    },
+    "v138": {
+      "id": "1792162446-ce3e",
+      "date": "2026-10-16",
+      "change": "NewTemple દર્શનનો માર્ગ: render close-ups 35-37 with સ્થાપત્ય ચિત્ર label"
     }
   },
   "figma_sync_todo": [
@@ -407,7 +442,8 @@
     "v125: ધામ પરિવાર images are now 28-31 (Vihat, Meldi, Lakhnechi, Goga; 1200x1500 HD, same composition) instead of 03-06 — replace the image fills in the History and Gallery frames",
     "v126: gallery viewer — phone variant: 16 px margins, 12 px panel padding, photo full panel width, caption 19 px",
     "v127: Sureshbapa smiling cut-out and candid photo image fills -> 32 / 33 (HD)",
-    "v128: Sureshbapa blessing photo image fills (Home pair + strip, History arch, Gallery) -> 34 (HD)"
+    "v128: Sureshbapa blessing photo image fills (Home pair + strip, History arch, Gallery) -> 34 (HD)",
+    "v133-v138: Darshan map gap 24 px; placeholder texts without \"ટ્રસ્ટ દ્વારા\"; intro wording; festival date full; Home strip order (temple, Vihat, Meldi, Karamshibapa, Sureshbapa) and phone 2x2; NewTemple area cards with render close-ups 35-37 + label"
   ],
   "notes_v105": "Contact/404 compute a local weekday but never display it — left unchanged. The પૂનમ list (EV) covers Oct 2026–Apr 2027 and must be extended each year (existing comment in the page).",
   "awaiting_trust": [

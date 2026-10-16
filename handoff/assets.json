@@ -694,6 +694,60 @@
     "ભુવાજી શ્રી સુરેશબાપા"
    ],
    "note": "Gallery, History, Main — 10 at exactly 2× (Real-ESRGAN x4plus, halved), added 16 Oct 2026 (v128)"
+  },
+  {
+   "no": 35,
+   "name": "35_render_garbhagruh-door.webp",
+   "blob": "c8cf833cc152ab8b5dc0b97f8865e332",
+   "design_url": "/_blob/c8cf833cc152ab8b5dc0b97f8865e332",
+   "width": 400,
+   "height": 400,
+   "bytes": 40548,
+   "type": "image/webp",
+   "used_on_boards": [
+    "NewTemple",
+    "NewTempleMobile"
+   ],
+   "alt_texts": [
+    "ગર્ભગૃહ — સ્થાપત્ય ચિત્ર"
+   ],
+   "note": "NewTemple — close-up of 14 (doorway with માતાજી), card ૦૧ ગર્ભગૃહ, added 16 Oct 2026 (v138)"
+  },
+  {
+   "no": 36,
+   "name": "36_render_mandap-pillars.webp",
+   "blob": "a6e4902a5aa10b4aa465188e5b48cdcd",
+   "design_url": "/_blob/a6e4902a5aa10b4aa465188e5b48cdcd",
+   "width": 480,
+   "height": 480,
+   "bytes": 46444,
+   "type": "image/webp",
+   "used_on_boards": [
+    "NewTemple",
+    "NewTempleMobile"
+   ],
+   "alt_texts": [
+    "મંડપ — સ્થાપત્ય ચિત્ર"
+   ],
+   "note": "NewTemple — close-up of 14 (pillared hall), card ૦૨ મંડપ, added 16 Oct 2026 (v138)"
+  },
+  {
+   "no": 37,
+   "name": "37_render_praveshdwar-steps.webp",
+   "blob": "57821e4c0639457c075c918ecee6d7f4",
+   "design_url": "/_blob/57821e4c0639457c075c918ecee6d7f4",
+   "width": 480,
+   "height": 480,
+   "bytes": 51728,
+   "type": "image/webp",
+   "used_on_boards": [
+    "NewTemple",
+    "NewTempleMobile"
+   ],
+   "alt_texts": [
+    "પ્રવેશદ્વાર — સ્થાપત્ય ચિત્ર"
+   ],
+   "note": "NewTemple — close-up of 14 (entrance steps and porch), card ૦૩ પ્રવેશદ્વાર, added 16 Oct 2026 (v138)"
   }
  ]
 }

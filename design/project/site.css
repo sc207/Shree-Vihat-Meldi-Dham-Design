@@ -1671,3 +1671,19 @@ html { scroll-behavior: smooth; }
   .vm-root .vx-lb__box { padding: 12px; gap: 8px; }
   .vm-root .vx-lb__img { height: calc(100vh - 104px); height: calc(100dvh - 104px); }
 }
+
+/* v133 — Darshan "ધામ સુધી કેવી રીતે પહોંચશો": gap between the travel cards and the map (the map touched the cards). */
+.vm-root .vx-dmap { margin-top: var(--space-lg); }
+
+/* v137 — Home "ફોટો ગેલેરી" on phones: show all five photos (temple full width, then the two માતાજી, then the two Bapas).
+   Was: only the first three (the rest hidden by `.vx-strip figure:nth-child(n+4) { display: none; }`). */
+@media (max-width: 760px) {
+  .vm-root .vx-strip figure:nth-child(n+4) { display: block; }
+}
+
+/* v138 — New Temple "દર્શનનો માર્ગ": close-ups from the architectural render fill the area boxes, marked "સ્થાપત્ય ચિત્ર". */
+.vm-root .vx-area__img--render { position: relative; }
+.vm-root .vx-area__img--render img { width: 100%; height: 100%; object-fit: cover; }
+.vm-root .vx-area__tag { position: absolute; left: 8px; bottom: 8px; padding: 1px 8px; border-radius: var(--radius-pill); background: rgba(28,10,16,.74);
+  color: var(--ivory); font-size: 13px; font-weight: 600; line-height: 1.7; white-space: nowrap; }
+@media (max-width: 999px) { .vm-root .vx-area__tag { left: 5px; bottom: 5px; padding: 0 6px; line-height: 1.6; } }

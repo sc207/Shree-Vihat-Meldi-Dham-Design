@@ -1,12 +1,14 @@
 # PROJECT_STATE.md
 
-_Last updated: 16 Oct 2026, 13:10 IST (v130 to-do note, v131 viewer keys); earlier that night (v128: blessing photo in HD; v127: two portraits in HD; v126: gallery viewer; v125: deity pictures HD + aligned; earlier that night v118–v123 responsive fixes and the developer hand-off)._ _14 Oct: v111–v116 (the six audit fixes)._ _Earlier: 10 Oct 2026, evening IST (audit Phases A–C reported). Update this file only when the project state meaningfully changes._
+_Last updated: 16 Oct 2026, evening IST (v133–v138 owner's list); 13:10 IST (v130 to-do note, v131 viewer keys); earlier that night (v128: blessing photo in HD; v127: two portraits in HD; v126: gallery viewer; v125: deity pictures HD + aligned; earlier that night v118–v123 responsive fixes and the developer hand-off)._ _14 Oct: v111–v116 (the six audit fixes)._ _Earlier: 10 Oct 2026, evening IST (audit Phases A–C reported). Update this file only when the project state meaningfully changes._
 
 ## Versions
 
 | | Version | Id | Verified |
 |---|---|---|---|
-| **Live (published) design** | **v131** | `1792133852-3202` | 16 Oct 2026, 12:21–13:10 IST, owner: "If you think we need to modify any fixes then do it and push it" — v131 gallery viewer: Escape, tap outside, keyboard focus (completes v126) · v130 `1792133845-2a4a` canvas to-do note (PDF line corrected as approved on 10 Oct; larger કરમશીબાપા photo requested). Live files read back byte-identical; 28/28 = `design/project/`. |
+| **Live (published) design** | **v138** | `1792162446-ce3e` | 16 Oct 2026, evening — owner's list, one version each: v133 `1792162413-08a8` Darshan travel cards gap · v134 `1792162423-7494` "ટ્રસ્ટ દ્વારા" removed (15 texts) · v135 `1792162429-bdf2` new-temple intro "મંદિરનો", no "દાન" · v136 `1792162435-c602` festival date "૮ ફેબ્રુઆરી, સોમવાર" · v137 `1792162441-23e8` Home photos મંદિર, માતાજી, કરમશીબાપા, સુરેશબાપા (all five on phones) · v138 દર્શનનો માર્ગ render close-ups (35–37). Live files read back byte-identical; 28/28 = `design/project/`. Tagline: options given to the owner, nothing published. Report: [tasks/owner-fixes-1016/README.md](tasks/owner-fixes-1016/README.md). |
+| v132 | v131 content | `1792156846-744e` | 16 Oct 2026: Design-type re-save, no content change. |
+| v131 | v131 | `1792133852-3202` | 16 Oct 2026, 12:21–13:10 IST, owner: "If you think we need to modify any fixes then do it and push it" — v131 gallery viewer: Escape, tap outside, keyboard focus (completes v126) · v130 `1792133845-2a4a` canvas to-do note (PDF line corrected as approved on 10 Oct; larger કરમશીબાપા photo requested). |
 | v129 | v128 content | `1792098632-85c8` | 16 Oct 2026, 12:20 IST: Design-type re-save, no content change. |
 | v128 | v128 | `1792098080-6f1e` | 16 Oct 2026: સુરેશબાપા blessing photo in HD (image 34 replaces 10 on 9 boards); read back byte-identical; Image check v126–v128, owner: "also check other images have this issue". Report: [tasks/image-audit/README.md](tasks/image-audit/README.md). |
 | v127 | v127 | `1792096917-c470` | 16 Oct 2026: two સુરેશબાપા photos in HD (images 32, 33 replace 13, 11 on Gallery + History); read back byte-identical; Owner: "also check other images have this issue". Report: [tasks/image-audit/README.md](tasks/image-audit/README.md). |
@@ -24,7 +26,7 @@ _Last updated: 16 Oct 2026, 13:10 IST (v130 to-do note, v131 viewer keys); earli
 | Visual-effects work | — | — | Owner's brief [tasks/visual-effects-audit.md](tasks/visual-effects-audit.md): glow fixed in v109, old chakra replaced in v108. Remaining sweep items: see Outstanding tasks. |
 | Local working version | none | — | Items 1–6 (saved in [tasks/fixes-1-6/](tasks/fixes-1-6/)) are now live as v111–v116. Nothing unpublished. |
 | Older rollback | v107 / v106 content | `1791918685-cd89` | Any earlier version is in the artifact's history (list in [CHANGELOG.md](CHANGELOG.md)). Version numbers follow the artifact's own count from v107 on. |
-| Spec / review page | v22 | `1792133922-94ce` | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` — records v97–v131 (sections "Banner light & chakra", "Karamshibapa photo", "Audit fixes", "Responsive check", "Image check"); source + pictures in `tasks/spec-page/` |
+| Spec / review page | v23 | `1792162579-17fc` | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` — records v97–v138 (sections "Banner light & chakra", "Karamshibapa photo", "Audit fixes", "Responsive check", "Image check"); source + pictures in `tasks/spec-page/` |
 | Audit report page | v3 | `1791970198-ef0e` | `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU` — audit of v106 + status after v116 (A1, B1–B4, C2–C6 fixed); source `tasks/audit-v106/audit-page.html` |
 
 Website artifact: `https://claude.ai/artifact/HWR4J5u9qBPjri6oUg7nVa` (type Design, `https://claude.ai/artifact/QKN21svewxgyPb6SYRqWnd`).
@@ -102,7 +104,7 @@ MenuMobile and OfflineMobile are phone-screen boards (fixed 844 px), not content
    **Design audit v106 (Phases A–C):** done, no changes made — report [tasks/audit-report-v106.md](tasks/audit-report-v106.md)
    (page: `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU`). 0 P0, 1 P1 (A1 header menu 761–1179 px), 4 P2, 9 P3, 1 owner decision (D1 hero).
    Phase D waits for the owner's approval; proposed order v107 Seva → v108 A1 → v109 B3 → v110 B4 → v111 B2 → polish.
-3. **Spec page:** up to date with v131 (16 Oct, spec v22). **Developer hand-off:** [DEVELOPER_HANDOFF.md](DEVELOPER_HANDOFF.md) (routes, one page per route, canvas-only parts, breakpoints, behaviour, images, acceptance checks). Add each new version there after publishing.
+3. **Spec page:** up to date with v138 (16 Oct, spec v23). **Tagline:** options sent to the owner (16 Oct evening); nothing on the site until chosen. **Developer hand-off:** [DEVELOPER_HANDOFF.md](DEVELOPER_HANDOFF.md) (routes, one page per route, canvas-only parts, breakpoints, behaviour, images, acceptance checks). Add each new version there after publishing.
 4. **Figma Gate A:** when the allowance returns — one read-only check first; if blocked, stop. Then run `figma/scripts/call1.js` … in order
    (see `figma/state.json` → `run_order`), after the owner drops the 26 original images (original filenames) onto the Components page.
    Then sync Figma with website changes v99–v106 (`figma/state.json` → `figma_sync_todo`; the scripts already contain the v97 Gate A design).
