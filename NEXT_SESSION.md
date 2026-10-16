@@ -26,7 +26,7 @@ The Gujarati-only website design for **શ્રી વિહત મેલડી
 
 | | Version | Version id | Notes |
 |---|---|---|---|
-| **Live design (published)** | **v128** | `1792098080-6f1e` | 16 Oct 2026: three સુરેશબાપા photos in HD (v127 `1792096917-c470`, v128); gallery viewer fits the screen (v126 `1792095937-de85`); the four ધામ પરિવાર pictures in HD and aligned (v125 `1792094175-7284`; v124 = re-save). Before that: responsive / UI-UX fixes v118–v123 (see CHANGELOG); v117 = Design-type re-save. Earlier: audit fixes v111–v116, Karamshibapa photo v110, banner light v109, chakra v108. `design/project/` refreshed, checksums regenerated; 34 images. |
+| **Live design (published)** | **v129** (= v128 content, re-save) | `1792098632-85c8` | 16 Oct 2026: v128 `1792098080-6f1e`; three સુરેશબાપા photos in HD (v127 `1792096917-c470`, v128); gallery viewer fits the screen (v126 `1792095937-de85`); the four ધામ પરિવાર pictures in HD and aligned (v125 `1792094175-7284`; v124 = re-save). Before that: responsive / UI-UX fixes v118–v123 (see CHANGELOG); v117 = Design-type re-save. Earlier: audit fixes v111–v116, Karamshibapa photo v110, banner light v109, chakra v108. `design/project/` refreshed, checksums regenerated; 34 images. |
 | Previous known-good | v122 … v110 | see [CHANGELOG.md](CHANGELOG.md) | Each fix is its own version: roll back one by publishing the previous version's files. v110 `1791960914-1d1c` = before the fixes; v109 `1791922103-42cb` before the photo; v108 `1791920313-6e1c` for v109. v107 `1791918685-cd89` = v106 content; earlier ids: [CHANGELOG.md](CHANGELOG.md). Version numbers follow the artifact's own count. |
 | Local working copy | none | — | Items 1–6 published as v111–v116 (source, report and tests stay in `tasks/fixes-1-6/`). |
 

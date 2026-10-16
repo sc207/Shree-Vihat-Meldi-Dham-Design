@@ -9,6 +9,10 @@ Standard verification after every publish below: the changed files were read bac
 _v126 onward come from the owner's follow-up of 16 Oct 2026: "also check other images have this issue" (after v125). Image check of every
 picture on every page, findings and pictures: [tasks/image-audit/README.md](tasks/image-audit/README.md)._
 
+## v129 · `1792098632-85c8` — re-save, no content change (16 Oct 2026)
+
+- Design-type update (its own `app.js` changed); all 28 project files byte-identical to v128 (checked 16 Oct, 12:20 IST). Counted because the artifact numbers it.
+
 ## v128 · `1792098080-6f1e` — સુરેશબાપા blessing photo in HD (16 Oct 2026)
 
 - **Files:** `Main`, `HomeMobile2`, `HomeTablet`, `HomeTabletL`, `HomePhoneL`, `History`, `HistoryMobile`, `Gallery`, `GalleryMobile` (.dc.html) —

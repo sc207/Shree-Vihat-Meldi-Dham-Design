@@ -371,6 +371,12 @@
       "date": "2026-10-16",
       "change": "Sureshbapa blessing photo 10 -> 34 (exactly 2x HD) on Home boards, History, Gallery",
       "rollback": "v127 (1792096917-c470)"
+    },
+    "v129": {
+      "id": "1792098632-85c8",
+      "date": "2026-10-16",
+      "change": "Design-type re-save, no content change (= v128)",
+      "rollback": "v128 (1792098080-6f1e)"
     }
   },
   "figma_sync_todo": [
