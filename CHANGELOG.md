@@ -9,6 +9,21 @@ Standard verification after every publish below: the changed files were read bac
 _v126 onward come from the owner's follow-up of 16 Oct 2026: "also check other images have this issue" (after v125). Image check of every
 picture on every page, findings and pictures: [tasks/image-audit/README.md](tasks/image-audit/README.md)._
 
+## v147 · `1792167781-b26d` — ભગવાન શ્રી કરમશીબાપા photo: blessing hand and face in focus (16 Oct 2026)
+
+- **Owner:** "it looks good. just now sharp that image as you can see if we zoom see blessing hand it does not looks in focus. so do it as we did
+  in suresh bapa." — then, while it was being made: "as like blessing hand also focus on face so it looks more better and also check if sharpness
+  required or not".
+- **What was found:** in 38 the hand was clearly softer than the face (focus ratio, fine ÷ medium detail: hand 0.35, fingers 0.32, face 0.56) — already
+  so in the supplied photo; and 38 was saved at 1.5×, where સુરેશબાપા's 34 is at the full 2×. Turban (0.46) and clothes were checked at 1:1: crisp, left alone.
+- **Change:** 38 → 39 (2172×2896 = exactly 2× like 34, same 3:4 shape, 448 KB WebP q90): same HD step and finish as 38, plus edge sharpening
+  that cannot draw rims (every pixel stays inside its 9×9 neighbourhood's own range) — hand, rings and wrist at 0.9 / 1.3 (limited to skin and
+  rings, so the gold background and white cloth beside the hand are untouched), face, eyes, moustache and ear-rings lightly at 0.4 / 0.9.
+  After: hand 0.51, fingers 0.45, face 0.79, eyes 0.70. Colour unchanged (mean RGB within 0.5). Shrunk back to the original size: 32.5 dB.
+  Same 14 places on 9 pages; `tasks/karamshi-natural/scripts/make_38_sharp.py`, `tools/examples/apply_v147_karamshibapa_hand_focus.py`.
+- **Tests:** layout check on all 9 boards — 72 runs, 0 new problems; frames 0 to change; 9 live files read back byte-identical, asset checksum
+  matches `design/assets/`. Picture: `tasks/karamshi-natural/pictures/v147_hand_face_zoom_before_after.png` (History on a phone, pinch-zoomed 2×).
+
 ## v146 · `1792165942-c158` — ભગવાન શ્રી કરમશીબાપા photo in HD (16 Oct 2026)
 
 - **Owner:** "karamshi bapa image actually looks like ai generated … suresh bapa image how their skin tone and actual looks original. same hd and

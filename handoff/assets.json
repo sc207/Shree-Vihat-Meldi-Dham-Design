@@ -744,6 +744,19 @@
    "height": 2172,
    "bytes": 257392,
    "type": "image/webp",
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used since v147; replaced by 39) — 27 through the same HD step (x4plus halved) + photographic finish, saved at 1.5×; owner chose this (option B), 16 Oct 2026 (v146)"
+  },
+  {
+   "no": 39,
+   "name": "39_portrait_karamshibapa_blessing-glow_hd_hand-focus.webp",
+   "blob": "3cc36279d9180905d49a932af9ea9e1a",
+   "design_url": "/_blob/3cc36279d9180905d49a932af9ea9e1a",
+   "width": 2172,
+   "height": 2896,
+   "bytes": 447812,
+   "type": "image/webp",
    "used_on_boards": [
     "Gallery",
     "GalleryMobile",
@@ -760,7 +773,7 @@
     "પરમ પૂજ્ય ભગવાન શ્રી કરમશીબાપા",
     "ભગવાન શ્રી કરમશીબાપા"
    ],
-   "note": "Gallery (banner), History, Main — 27 through the same HD step (x4plus halved) + photographic finish, saved at 1.5×; owner chose this (option B), 16 Oct 2026 (v146)"
+   "note": "Gallery (banner), History, Main — 38 made again at the full 2× with the blessing hand and the face brought into focus (halo-free edge sharpening), 16 Oct 2026 (v147)"
   }
  ]
 }

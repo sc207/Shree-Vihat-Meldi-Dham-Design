@@ -435,6 +435,12 @@
       "date": "2026-10-16",
       "change": "Karamshibapa blessing photo 27 -> 38 (HD, photographic finish) in 14 places",
       "rollback": "v145 (1792164754-08ae)"
+    },
+    "v147": {
+      "id": "1792167781-b26d",
+      "date": "2026-10-16",
+      "change": "Karamshibapa blessing photo 38 -> 39 (full 2x, hand and face in focus) in 14 places",
+      "rollback": "v146 (1792165942-c158)"
     }
   },
   "figma_sync_todo": [
@@ -455,7 +461,8 @@
     "v127: Sureshbapa smiling cut-out and candid photo image fills -> 32 / 33 (HD)",
     "v128: Sureshbapa blessing photo image fills (Home pair + strip, History arch, Gallery) -> 34 (HD)",
     "v133-v138: Darshan map gap 24 px; placeholder texts without \"ટ્રસ્ટ દ્વારા\"; intro wording; festival date full; Home strip order (temple, Vihat, Meldi, Karamshibapa, Sureshbapa) and phone 2x2; NewTemple area cards with render close-ups 35-37 + label",
-    "v146: Karamshibapa image fills (Home pair + strip, History arch, Gallery banner) -> 38 (HD)"
+    "v146: Karamshibapa image fills (Home pair + strip, History arch, Gallery banner) -> 38 (HD)",
+    "v147: same Karamshibapa image fills -> 39 (2172x2896, hand and face in focus); 38 no longer used"
   ],
   "notes_v105": "Contact/404 compute a local weekday but never display it — left unchanged. The પૂનમ list (EV) covers Oct 2026–Apr 2027 and must be extended each year (existing comment in the page).",
   "awaiting_trust": [

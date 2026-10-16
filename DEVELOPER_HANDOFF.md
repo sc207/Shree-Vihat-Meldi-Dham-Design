@@ -110,7 +110,7 @@ browsers without scroll timelines simply show everything.
 
 ## 5. Images
 
-38 files (22 used). Use `handoff/assets.json` for names, sizes, alt texts and where each appears; export them with real names:
+39 files (22 used). Use `handoff/assets.json` for names, sizes, alt texts and where each appears; export them with real names:
 `python3 tools/export_assets.py --export public/images`.
 
 - Deity art and portraits sit in the arch frame (`.vm-arch`); cover-cropping rules (`object-position`) are in the pages — keep them.
