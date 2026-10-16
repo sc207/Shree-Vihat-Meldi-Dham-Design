@@ -9,6 +9,26 @@ Standard verification after every publish below: the changed files were read bac
 _v126 onward come from the owner's follow-up of 16 Oct 2026: "also check other images have this issue" (after v125). Image check of every
 picture on every page, findings and pictures: [tasks/image-audit/README.md](tasks/image-audit/README.md)._
 
+## v146 · `1792165942-c158` — ભગવાન શ્રી કરમશીબાપા photo in HD (16 Oct 2026)
+
+- **Owner:** "karamshi bapa image actually looks like ai generated … suresh bapa image how their skin tone and actual looks original. same hd and
+  humanize image set for karamshibapa image. if have same image in other pages also fix over there"; then (screenshot of the blessing photo) "make it
+  feels image and person skin real just like we have fixed the suresh bapa image".
+- **What was found:** image 27 (owner's photo of 14 Oct) was used exactly as supplied (v110, no processing); its skin already carries a generated,
+  smoothed texture. Three options were shown side by side (`tasks/karamshi-natural/pictures/options_A_B_C.png`): A keep, **B the blessing photo
+  through the same HD step as સુરેશબાપા's**, C his genuine camera photo (08) on the same golden glow. The owner chose **B**.
+- **Change:** 27 → 38 (1629×2172, same 3:4 shape): Real-ESRGAN x4plus halved to 2× + photographic finish (gentle clarity, fine grain), saved at 1.5×
+  (`tasks/karamshi-natural/scripts/photo_finish.py`). 14 places on 9 pages (Home pair + strip on every Home board, History ch. 3, Gallery banner).
+  Built on the live files of v145 (see below). Script `tools/examples/apply_v146_karamshibapa_hd.py`.
+- **Tests:** layout check Main, HomeMobile2, History, HistoryMobile, Gallery, GalleryMobile — 66 runs, 0 new problems; frames unchanged; every frame
+  ≥ 1.36× the pixels needed (3× phones); 15 live files read back byte-identical; asset checksum matches `design/assets/`.
+
+## v139–v145 · last `1792164754-08ae` — editor saves, no visible change (16 Oct 2026, evening)
+
+- Saved by the design editor while the owner had the canvas open. Compared with v138: 7 pages (ContactMobile, GalleryMobile, HistoryMobile, NewTemple,
+  NewTempleMobile, PranPratishthaMobile, SevaMobile) now write the no-break spaces as `&nbsp;` instead of the U+00A0 character (same text, checked),
+  and `canvas.json` ends with a newline. `design/project/` follows the live files; v146 was built on them.
+
 _v133–v138 come from the owner's list of 16 Oct 2026, 19:40 IST (Home photos, new-temple introduction, "ટ્રસ્ટ દ્વારા", the દર્શનનો માર્ગ pictures,
 the પ્રાણ પ્રતિષ્ઠા date, the Darshan travel cards; the tagline request is answered with options, not published). One version per item; the request
 handed the decisions over. Before/after pictures: `tasks/owner-fixes-1016/pictures/`. Live files read back after v138: 25/25 byte-identical._

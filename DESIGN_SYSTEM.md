@@ -88,7 +88,7 @@ Families: **display** = "Noto Serif Gujarati", "Noto Serif", Georgia, serif · *
 
 **Layout:** `--content-max` 1320px · `--text-max` 680px · `--header-height` 88px · `--header-height-compact` 68px
 
-### Image inventory (37 files; `design/assets/<blob-id>.<ext>`, pages use `/_blob/<blob-id>`)
+### Image inventory (38 files; `design/assets/<blob-id>.<ext>`, pages use `/_blob/<blob-id>`)
 
 | # | Original file name (keep unchanged) | Blob id | Pixels | Used on |
 |---|---|---|---|---|
@@ -118,7 +118,7 @@ Families: **display** = "Noto Serif Gujarati", "Noto Serif", Georgia, serif · *
 | 24 | `24_unused_diya_cutout` | `70db10d832218539d0ef40367176309a` | 478×521 | — (not used) |
 | 25 | `25_unused_naag_cutout-small` | `624e213ce2a19b887b8069e53658baea` | 183×275 | — (not used) |
 | 26 | `26_unused_poster_karamshibapa-e-j-vihat` | `d142fc2cdd2cad709f1a711292912aac` | 960×1279 | — (not used) |
-| 27 | `27_portrait_karamshibapa_blessing-glow` | `0719d6d6a37c83a09b9880ba4507c70f` | 1086×1448 | Gallery (banner), History, Main — owner's photo, added 14 Oct 2026 (v110) |
+| 27 | `27_portrait_karamshibapa_blessing-glow` | `0719d6d6a37c83a09b9880ba4507c70f` | 1086×1448 | — (not used since v146; replaced by 38) — owner's photo, added 14 Oct 2026 (v110) |
 | 28 | `28_deity_vihat-maa_hd-arch` | `6a5dfa42bf4395ad0c91358b6d58b309` | 1200×1500 | Gallery, History — made from 21 (HD), added 16 Oct 2026 (v125) |
 | 29 | `29_deity_meldi-maa_hd-arch` | `8c6bc0f2d3dd302001ff1f0156ef263c` | 1200×1500 | Gallery, History — made from 22 (HD), added 16 Oct 2026 (v125) |
 | 30 | `30_deity_lakhnechi-maa_hd-arch` | `64fea5310ba43b3bb3862a6fbc35b15d` | 1200×1500 | Gallery, History — made from 05 (enlarged ×4), added 16 Oct 2026 (v125) |
@@ -129,8 +129,9 @@ Families: **display** = "Noto Serif Gujarati", "Noto Serif", Georgia, serif · *
 | 35 | `35_render_garbhagruh-door` | `c8cf833cc152ab8b5dc0b97f8865e332` | 400×400 | NewTemple — close-up of 14 (doorway with માતાજી), card ૦૧ ગર્ભગૃહ, added 16 Oct 2026 (v138) |
 | 36 | `36_render_mandap-pillars` | `a6e4902a5aa10b4aa465188e5b48cdcd` | 480×480 | NewTemple — close-up of 14 (pillared hall), card ૦૨ મંડપ, added 16 Oct 2026 (v138) |
 | 37 | `37_render_praveshdwar-steps` | `57821e4c0639457c075c918ecee6d7f4` | 480×480 | NewTemple — close-up of 14 (entrance steps and porch), card ૦૩ પ્રવેશદ્વાર, added 16 Oct 2026 (v138) |
+| 38 | `38_portrait_karamshibapa_blessing-glow_hd` | `12fd255804899d0ead71c2e9e83930e0` | 1629×2172 | Gallery (banner), History, Main — 27 through the same HD step (x4plus halved) + photographic finish, saved at 1.5×; owner chose this (option B), 16 Oct 2026 (v146) |
 
-`Used on` names the page family (Main = all home boards; each page includes its phone version). Images 20–26 are supplied but unused (21/22 are the sources of 28/29); 07 unused since v110; 03–06 unused since v125; 11 and 13 unused since v127; 10 unused since v128.
+`Used on` names the page family (Main = all home boards; each page includes its phone version). Images 20–26 are supplied but unused (21/22 are the sources of 28/29); 07 unused since v110; 03–06 unused since v125; 11 and 13 unused since v127; 10 unused since v128; 27 unused since v146.
 28–31 are the four ધામ પરિવાર pictures composed the same way (4:5 = the arch frame, one warm-gold background, same figure height and baseline); how they were made: [tasks/deity-hd/README.md](tasks/deity-hd/README.md).
 32–34 are HD versions of three સુરેશબાપા photos; faces were checked against the originals. 09 was deliberately not upscaled (the upscalers drew new outlines on the face): [tasks/image-audit/README.md](tasks/image-audit/README.md).
 The owner's originals for 27 (and an unused seated full-length photo) are in `tasks/bapa-photo/originals/`.

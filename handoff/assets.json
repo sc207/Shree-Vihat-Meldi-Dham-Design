@@ -531,23 +531,9 @@
    "height": 1448,
    "bytes": 138656,
    "type": "image/webp",
-   "used_on_boards": [
-    "Gallery",
-    "GalleryMobile",
-    "History",
-    "HistoryMobile",
-    "HomeMobile2",
-    "HomePhoneL",
-    "HomeTablet",
-    "HomeTabletL",
-    "Main"
-   ],
-   "alt_texts": [
-    "",
-    "પરમ પૂજ્ય ભગવાન શ્રી કરમશીબાપા",
-    "ભગવાન શ્રી કરમશીબાપા"
-   ],
-   "note": "Gallery (banner), History, Main — owner's photo, added 14 Oct 2026 (v110)"
+   "used_on_boards": [],
+   "alt_texts": [],
+   "note": "— (not used since v146; replaced by 38) — owner's photo, added 14 Oct 2026 (v110)"
   },
   {
    "no": 28,
@@ -748,6 +734,33 @@
     "પ્રવેશદ્વાર — સ્થાપત્ય ચિત્ર"
    ],
    "note": "NewTemple — close-up of 14 (entrance steps and porch), card ૦૩ પ્રવેશદ્વાર, added 16 Oct 2026 (v138)"
+  },
+  {
+   "no": 38,
+   "name": "38_portrait_karamshibapa_blessing-glow_hd.webp",
+   "blob": "12fd255804899d0ead71c2e9e83930e0",
+   "design_url": "/_blob/12fd255804899d0ead71c2e9e83930e0",
+   "width": 1629,
+   "height": 2172,
+   "bytes": 257392,
+   "type": "image/webp",
+   "used_on_boards": [
+    "Gallery",
+    "GalleryMobile",
+    "History",
+    "HistoryMobile",
+    "HomeMobile2",
+    "HomePhoneL",
+    "HomeTablet",
+    "HomeTabletL",
+    "Main"
+   ],
+   "alt_texts": [
+    "",
+    "પરમ પૂજ્ય ભગવાન શ્રી કરમશીબાપા",
+    "ભગવાન શ્રી કરમશીબાપા"
+   ],
+   "note": "Gallery (banner), History, Main — 27 through the same HD step (x4plus halved) + photographic finish, saved at 1.5×; owner chose this (option B), 16 Oct 2026 (v146)"
   }
  ]
 }

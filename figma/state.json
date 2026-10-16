@@ -424,6 +424,17 @@
       "id": "1792162446-ce3e",
       "date": "2026-10-16",
       "change": "NewTemple દર્શનનો માર્ગ: render close-ups 35-37 with સ્થાપત્ય ચિત્ર label"
+    },
+    "v139-v145": {
+      "id": "1792164754-08ae",
+      "date": "2026-10-16",
+      "change": "editor saves: no-break spaces written as &nbsp; in 7 pages; no visible change"
+    },
+    "v146": {
+      "id": "1792165942-c158",
+      "date": "2026-10-16",
+      "change": "Karamshibapa blessing photo 27 -> 38 (HD, photographic finish) in 14 places",
+      "rollback": "v145 (1792164754-08ae)"
     }
   },
   "figma_sync_todo": [
@@ -443,7 +454,8 @@
     "v126: gallery viewer — phone variant: 16 px margins, 12 px panel padding, photo full panel width, caption 19 px",
     "v127: Sureshbapa smiling cut-out and candid photo image fills -> 32 / 33 (HD)",
     "v128: Sureshbapa blessing photo image fills (Home pair + strip, History arch, Gallery) -> 34 (HD)",
-    "v133-v138: Darshan map gap 24 px; placeholder texts without \"ટ્રસ્ટ દ્વારા\"; intro wording; festival date full; Home strip order (temple, Vihat, Meldi, Karamshibapa, Sureshbapa) and phone 2x2; NewTemple area cards with render close-ups 35-37 + label"
+    "v133-v138: Darshan map gap 24 px; placeholder texts without \"ટ્રસ્ટ દ્વારા\"; intro wording; festival date full; Home strip order (temple, Vihat, Meldi, Karamshibapa, Sureshbapa) and phone 2x2; NewTemple area cards with render close-ups 35-37 + label",
+    "v146: Karamshibapa image fills (Home pair + strip, History arch, Gallery banner) -> 38 (HD)"
   ],
   "notes_v105": "Contact/404 compute a local weekday but never display it — left unchanged. The પૂનમ list (EV) covers Oct 2026–Apr 2027 and must be extended each year (existing comment in the page).",
   "awaiting_trust": [
