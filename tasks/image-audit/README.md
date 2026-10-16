@@ -35,8 +35,8 @@ the phone menu `.vm-mnav`); image area `min(680px, 100dvh − 176px)`; ≤ 760 p
 `max-height: 100dvh − 150px`; landscape phones (`max-height: 500px`): compact panel.
 Test `scripts/test_viewer.py PORT OUTDIR [--shots]`: 11 photos × 11 screen sizes × 2 text sizes — panel and ✕ on screen **242/242** (v125: 2/242).
 Pictures: [phone, lower photo](pictures/v126_viewer_phone_lower_photo.png) · [phone, top photo](pictures/v126_viewer_phone_top_photo.png) ·
-[laptop 1440×900](pictures/v126_viewer_desktop_1440x900.png). The design pages close the viewer with ✕ only (Escape and focus handling are
-listed for the developers in DEVELOPER_HANDOFF.md).
+[laptop 1440×900](pictures/v126_viewer_desktop_1440x900.png). **v131** completed it: Escape and a tap on the dark area close it, focus moves to ✕ and back to the photo
+(`scripts/test_viewer_keys.py`: 84/84 checks; v129: 64 fail).
 
 ## v127 — two portraits in HD
 

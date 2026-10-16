@@ -377,6 +377,18 @@
       "date": "2026-10-16",
       "change": "Design-type re-save, no content change (= v128)",
       "rollback": "v128 (1792098080-6f1e)"
+    },
+    "v130": {
+      "id": "1792133845-2a4a",
+      "date": "2026-10-16",
+      "change": "canvas to-do note: PDF line corrected, larger Karamshibapa seated photo requested (canvas.json only)",
+      "rollback": "v129 (1792098632-85c8)"
+    },
+    "v131": {
+      "id": "1792133852-3202",
+      "date": "2026-10-16",
+      "change": "gallery viewer: Escape / tap outside close, focus to close button and back (logic only, no visual change)",
+      "rollback": "v130 (1792133845-2a4a)"
     }
   },
   "figma_sync_todo": [

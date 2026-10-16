@@ -26,7 +26,7 @@ The Gujarati-only website design for **શ્રી વિહત મેલડી
 
 | | Version | Version id | Notes |
 |---|---|---|---|
-| **Live design (published)** | **v129** (= v128 content, re-save) | `1792098632-85c8` | 16 Oct 2026: v128 `1792098080-6f1e`; three સુરેશબાપા photos in HD (v127 `1792096917-c470`, v128); gallery viewer fits the screen (v126 `1792095937-de85`); the four ધામ પરિવાર pictures in HD and aligned (v125 `1792094175-7284`; v124 = re-save). Before that: responsive / UI-UX fixes v118–v123 (see CHANGELOG); v117 = Design-type re-save. Earlier: audit fixes v111–v116, Karamshibapa photo v110, banner light v109, chakra v108. `design/project/` refreshed, checksums regenerated; 34 images. |
+| **Live design (published)** | **v131** | `1792133852-3202` | 16 Oct 2026: v131 gallery viewer keys, v130 `1792133845-2a4a` canvas to-do note; v129 = re-save; v128 `1792098080-6f1e`; three સુરેશબાપા photos in HD (v127 `1792096917-c470`, v128); gallery viewer fits the screen (v126 `1792095937-de85`); the four ધામ પરિવાર pictures in HD and aligned (v125 `1792094175-7284`; v124 = re-save). Before that: responsive / UI-UX fixes v118–v123 (see CHANGELOG); v117 = Design-type re-save. Earlier: audit fixes v111–v116, Karamshibapa photo v110, banner light v109, chakra v108. `design/project/` refreshed, checksums regenerated; 34 images. |
 | Previous known-good | v122 … v110 | see [CHANGELOG.md](CHANGELOG.md) | Each fix is its own version: roll back one by publishing the previous version's files. v110 `1791960914-1d1c` = before the fixes; v109 `1791922103-42cb` before the photo; v108 `1791920313-6e1c` for v109. v107 `1791918685-cd89` = v106 content; earlier ids: [CHANGELOG.md](CHANGELOG.md). Version numbers follow the artifact's own count. |
 | Local working copy | none | — | Items 1–6 published as v111–v116 (source, report and tests stay in `tasks/fixes-1-6/`). |
 
@@ -51,7 +51,7 @@ Details and tests: [CHANGELOG.md](CHANGELOG.md); evidence in `tasks/visual-effec
   are in [PROJECT_STATE.md](PROJECT_STATE.md#outstanding-tasks). Asked most recently (New Temple page): સ્થપતિ (architect) name · સંકલ્પ વર્ષ ·
   આયોજન detail · current construction progress · expected completion · optional dated story of the સંકલ્પ for History ch. 6.
 - **Owner's queue (10 Oct):** (1) **Seva desktop page: empty right column** — fix prepared as v107, patch in `tasks/audit-v106/seva_v107_pending.diff`,
-  **awaiting approval**; (2) correct the canvas to-do note's PDF line (approved; `canvas.json` only); (3) **design audit** — Phases A–C done, report in
+  **awaiting approval**; (2) correct the canvas to-do note's PDF line — done in v130; (3) **design audit** — Phases A–C done, report in
   [tasks/audit-report-v106.md](tasks/audit-report-v106.md) (brief: [tasks/full-design-audit.md](tasks/full-design-audit.md)); Phase D waits for the owner's approval and answers. Decided: **no** extra closing line in the સંકલ્પ section. Details: [PROJECT_STATE.md](PROJECT_STATE.md#owners-decisions-and-task-queue-10-oct-2026-end-of-the-handover-session).
 - **Figma (Gate A):** paused — Starter plan allowance exhausted on 9 Oct. 0 of 6 checklist items confirmed. Scripts are ready in `figma/`
   (they include the v97 Gate A design); Figma must later also receive the website changes **v99–v109** (`figma/state.json` → `figma_sync_todo`).

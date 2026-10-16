@@ -9,6 +9,27 @@ Standard verification after every publish below: the changed files were read bac
 _v126 onward come from the owner's follow-up of 16 Oct 2026: "also check other images have this issue" (after v125). Image check of every
 picture on every page, findings and pictures: [tasks/image-audit/README.md](tasks/image-audit/README.md)._
 
+_v130–v131 come from the owner's message of 16 Oct 2026, 12:21 IST: "If you think we need to modify any fixes then do it and push it"._
+
+## v131 · `1792133852-3202` — gallery viewer: Escape, tap outside, keyboard focus (16 Oct 2026)
+
+- **Files:** `Gallery.dc.html`, `GalleryMobile.dc.html` — page logic and the dialog element only (script `tools/examples/apply_v131_viewer_keys.py <project>`).
+- **Why:** completes v126. The viewer closed with ✕ only: Escape did nothing, tapping the dark area did nothing, and keyboard focus stayed on the
+  photo behind the dialog (a keyboard or screen-reader user could not reach ✕ directly). The developer guide already promised Escape.
+- **Change:** same pattern as the tablet menu — focus moves to ✕ when the viewer opens (Tab stays inside), Escape closes, a tap/click on the dark
+  area around the panel closes (not on the photo or caption), and focus returns to the photo that opened it; the page does not move.
+- **Tests:** `tasks/image-audit/scripts/test_viewer_keys.py` — 3 photos × 4 screen sizes (1440, 1024, 390, 320) × 7 checks: 84/84 pass, no script
+  errors (v129: 64 of 84 fail). Layout check Gallery + phone 22 runs: 0 new problems; pixel compare with the viewer closed: identical; wording unchanged.
+
+## v130 · `1792133845-2a4a` — canvas to-do note brought up to date (16 Oct 2026)
+
+- **Files:** `canvas.json` only (`notes.todo`; script `tools/examples/apply_v130_todo_note.py <project>`). No page changes.
+- **Change:** (1) the PDF line, approved on 10 Oct: `• કાર્યક્રમ પત્રિકાની PDF — "કાર્યક્રમ પત્રિકા (PDF)" બટન તૈયાર છે, લિંક મૂકવાની બાકી` →
+  `• કાર્યક્રમ પત્રિકાની PDF (હાલ બટન છુપાવેલું છે)` (the button has been hidden since v102; same form as the Facebook line).
+  (2) new line after the photo requests: `• પરમ પૂજ્ય ભગવાન શ્રી કરમશીબાપાના આસન પર બિરાજમાન ફોટાની મોટી મૂળ ફાઇલ (હાલનો ફોટો નાનો છે)` (image 09, see v127).
+  (3) `maxH` 1377 → 1480 so the longer note is not cut (measured +101 px; nothing below the note on the canvas).
+- **Tests:** JSON valid; everything else in `canvas.json` identical; read back byte-identical.
+
 ## v129 · `1792098632-85c8` — re-save, no content change (16 Oct 2026)
 
 - Design-type update (its own `app.js` changed); all 28 project files byte-identical to v128 (checked 16 Oct, 12:20 IST). Counted because the artifact numbers it.
