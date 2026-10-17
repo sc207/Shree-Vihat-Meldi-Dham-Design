@@ -14,7 +14,7 @@ cac5cee0abb4adcbb1f2d19c93704fbb46d1d6704a4ea750d73cf921bcacd1fc  ./HomePhoneL.d
 49a1c42de9474dd4419524fb4dc519393e557e1d31ca227583a813532359c52f  ./Main.dc.html
 b0b8bd7d4f98824abb4000949c219d4ec04378dc11be00c70ee4968a51045325  ./MenuMobile.dc.html
 4202c0163fdb695a7cd4677cc6750d05f4417c5cad9792774d969f38e27f29c5  ./NewTemple.dc.html
-1f74456d045bcb598bea42ee175697a876d99a8dfd54647bc46ab9358c0683a4  ./NewTempleMobile.dc.html
+811daefda0a815aa6ff2b5f355cc745333277c4450a05e793b93ae0a8e81869a  ./NewTempleMobile.dc.html
 f4f87a858c7c3e3e36b3450fcf3ebb0b4ac906c243f603e27deb7e257bbafe94  ./NotFound.dc.html
 66c1ba0c187aea4dd2d9a6e55ddb39064a5e1f52cbaf3af1073951cc14ad8265  ./NotFoundMobile.dc.html
 9d3bca217d2837fa8a543b437f29d3db08bffdcd64f04448fcfa275e191ab88f  ./OfflineMobile.dc.html
@@ -25,4 +25,4 @@ f185be17f58085d980d930923df2e75aa01436959642cfe813c76b2be21c826a  ./SevaMobile.d
 6f72d58a636c6b385174cd7c3f54d1a9a1dbcb48cdbdc381729c30cd97437ee8  ./canvas.json
 2097c7ee2c856752f42e121beba53d117cd81cf01f0e49d0376ee6b3449ba648  ./ds/vihatmeldimandir/components/bundle.css
 8c749e0d5ddbedb7ce1c4d6b1bc82fd6e44c0a9c7f4cde38df280bce8ae68b8e  ./ds/vihatmeldimandir/tokens.json
-707bee8c384c49d5d52a8ee531aa2fff531c536bbda60f68c82ee207065e872c  ./site.css
+7292a80ca4d743228b56a72a40b1b90f809768b7f69c5fd545eee4ccadf114d6  ./site.css

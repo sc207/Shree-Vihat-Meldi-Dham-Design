@@ -9,6 +9,42 @@ Standard verification after every publish below: the changed files were read bac
 _v126 onward come from the owner's follow-up of 16 Oct 2026: "also check other images have this issue" (after v125). Image check of every
 picture on every page, findings and pictures: [tasks/image-audit/README.md](tasks/image-audit/README.md)._
 
+_v149–v152 come from the owner's request of 16 Oct 2026, 21:58 IST: "check now if any bug related to design, ux ui and responsiveness issue
+then fix it for all device like laptop, tablet, mobile". Check, findings and pictures: [tasks/ux-check-v147/README.md](tasks/ux-check-v147/README.md).
+All four are CSS blocks at the end of `site.css` (script `tools/examples/apply_v149_v152_ux.py <project> <part>`); no wording change._
+
+## v152 · `1792236815-ee81` — New Temple construction photos on tablets (17 Oct 2026)
+
+- **Problem:** "નિર્માણ સ્થળની તાજી તસવીરો" at 761–999 px: the three small update cards kept the 148 px laptop thumbnail, leaving 75–130 px for
+  the date and text. **Fix:** the phone's compact card (104 px thumbnail, 12 px gap, 10 px padding) → text 130–222 px. Laptops and phones unchanged.
+- **Tests:** layout check NewTemple/NewTempleMobile 22 runs, 0 new problems; pixel compare 24 boards: no change at the boards' own widths; measured 760–1024 px.
+
+## v151 · `1792236803-5f4e` — New Temple "દર્શનનો માર્ગ" cards on small phones (17 Oct 2026)
+
+- **Problem:** at 320 px the text beside each picture was 96 px wide (6+ lines of one or two words; "·" and "×" starting lines). **Fix:** ≤ 400 px:
+  picture 120 → 88 px, card padding and gap 16 px → text 152 px at 320 (192 at 360, 222 at 390); the "સ્થાપત્ય ચિત્ર" label stays inside the picture.
+  Files: `site.css`, `NewTempleMobile` (frame 11812 → 11659; canvas "h" stays 8000).
+- **Tests:** layout check 22 runs, 0 new problems; pixel compare: only NewTempleMobile (shorter); frames 0 to change after the update.
+
+## v150 · `1792236763-4a97` — Home banner dates at 320 px (17 Oct 2026)
+
+- **Problem:** "૮ ફેબ્રુ., સોમવાર" ran 3 px over the right border of the date box at 320 px (noted on 16 Oct). **Fix:** below 340 px dates 18 → 16 px,
+  side padding 14 → 10 px; 340 px and wider unchanged. The same file also corrects the comment label of the v149 block ("v148" → "v149").
+- **Tests:** overrun 3 → 0 px at 320 (normal and large text), 0 at 340–390 before and after; layout check HomeMobile/Main 22 runs, 0 new problems.
+
+## v149 · `1792228161-49f7` — Home photo gallery: names readable on the photos (17 Oct 2026)
+
+- **Problem:** the names on the five Home photos (white 16 px) sat on a light gradient that looked grey on the cream backgrounds and the white
+  clothes of the Bapa photos: 1.9–2.8 : 1 on every Home board. **Fix:** deeper band (same height on one-line names) + soft text shadow →
+  4.5–7.8 : 1 on Main 1440/1024/768, HomeTablet, HomeTabletL, HomePhoneL, HomeMobile2 390/320. Published with its comment saying "v148"
+  (the artifact had counted a re-save as v148); corrected in v150.
+- **Tests:** layout check 5 Home boards 28 runs, 0 new problems; pixel compare 24 boards: only the strip on the 5 Home boards.
+
+## v148 · (Design-type re-save) — no content change (16–17 Oct 2026)
+
+- The Design type was updated (release `1792190836-9749`) and re-saved the artifact. All 24 pages, `canvas.json` and the design-system files read
+  back byte-identical to v147; v149 was built on them.
+
 ## v147 · `1792167781-b26d` — ભગવાન શ્રી કરમશીબાપા photo: blessing hand and face in focus (16 Oct 2026)
 
 - **Owner:** "it looks good. just now sharp that image as you can see if we zoom see blessing hand it does not looks in focus. so do it as we did

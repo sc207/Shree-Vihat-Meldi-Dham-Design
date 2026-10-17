@@ -1,0 +1,63 @@
+runs 90 · page wider than screen 0 · JS errors 0 · crashed 0
+
+== ISSUES (7 distinct)
+ 10  overlap small [in-t] "ફેબ્રુઆરી ૨૦૨૭" × span.vm-numeral [in-t] "૮"
+      boards PranPratishtha · sizes 568x320 667x375 740x360 844x390 896x414 · text big/std · e.g. p small [in-t] "ફેબ્રુઆરી ૨૦૨૭" × span.vm-numeral [in-t] "૮"
+ 10  overlap span.vm-numeral [in-t] "૮" × em [in-t] "સોમવાર"
+      boards PranPratishtha · sizes 568x320 667x375 740x360 844x390 896x414 · text big/std · e.g. overlap span.vm-numeral [in-t] "૮" × em [in-t] "સોમવાર"
+ 10  overlap small [ch7] "ફેબ્રુઆરી ૨૦૨૭" × span.vm-numeral [ch7] "૮"
+      boards History · sizes 568x320 667x375 740x360 844x390 896x414 · text big/std · e.g. lap small [ch7] "ફેબ્રુઆરી ૨૦૨૭" × span.vm-numeral [ch7] "૮"
+ 10  overlap span.vm-numeral [ch7] "૮" × em [ch7] "સોમવાર"
+      boards History · sizes 568x320 667x375 740x360 844x390 896x414 · text big/std · e.g. overlap span.vm-numeral [ch7] "૮" × em [ch7] "સોમવાર"
+  4  overlap li.is-gadi [hours] "રવિવાર · માતાજીની ગાદી" × li [hours] "સોમવાર"
+      boards Darshan · sizes 844x390 896x414 · text big/std · e.g. -gadi [hours] "રવિવાર · માતાજીની ગાદી" × li [hours] "સોમવાર"
+  4  overlap li.is-gadi [hours] "મંગળવાર · માતાજીની ગાદી" × li [hours] "બુધવાર"
+      boards Darshan · sizes 844x390 896x414 · text big/std · e.g. gadi [hours] "મંગળવાર · માતાજીની ગાદી" × li [hours] "બુધવાર"
+  6  spill section.vm-section.vx-sec [schedule] "કાર્યક્રમદિવસવાર રૂપરેખામં" by Npx "શ્રી ગણેશ પૂજા, કળશ પૂજા"
+      boards PranPratishtha · sizes 568x320 667x375 740x360 · text big/std · e.g. યક્રમદિવસવાર રૂપરેખામં" by 2648px "શ્રી ગણેશ પૂજા, કળશ પૂજા"
+
+== NOTES (44 distinct)
+  6  soft-2x img [arc-t] "નવું મંદિર — સ્તંભ અને કોત" soft  [NewTemple] 740x360 844x390 896x414
+  6  soft-2x img [up-t] "ભગવાન શ્રી કરમશીબાપા" soft  [Gallery] 568x320 667x375 740x360
+  4  soft-2x img.vx-flag-fix [vis-t] "નવું મંદિર — શિખર અને ધજા" soft  [NewTemple] 667x375 740x360
+  4  soft-2x img [arc-t] "નવું મંદિર — પ્રવેશદ્વાર" soft  [NewTemple] 844x390 896x414
+ 54  tap<44 a [vm-footer] "દર્શન અને યાત્રા"  [Contact,Darshan,Gallery,History,Main,NewTemple,NotFound,PranPratishtha,Seva] 568x320 667x375 740x360
+ 54  tap<44 a [vm-footer] "નવું મંદિર"  [Contact,Darshan,Gallery,History,Main,NewTemple,NotFound,PranPratishtha,Seva] 568x320 667x375 740x360
+ 54  tap<44 a [vm-footer] "પ્રાણ પ્રતિષ્ઠા"  [Contact,Darshan,Gallery,History,Main,NewTemple,NotFound,PranPratishtha,Seva] 568x320 667x375 740x360
+ 54  tap<44 a [vm-footer] "સેવા નોંધણી"  [Contact,Darshan,Gallery,History,Main,NewTemple,NotFound,PranPratishtha,Seva] 568x320 667x375 740x360
+ 54  tap<44 a [vm-footer] "ગેલેરી અને સમાચાર"  [Contact,Darshan,Gallery,History,Main,NewTemple,NotFound,PranPratishtha,Seva] 568x320 667x375 740x360
+ 54  tap<44 a [vm-footer] "મંદિરનો ઇતિહાસ"  [Contact,Darshan,Gallery,History,Main,NewTemple,NotFound,PranPratishtha,Seva] 568x320 667x375 740x360
+ 54  tap<44 a [vm-footer] "સંપર્ક"  [Contact,Darshan,Gallery,History,Main,NewTemple,NotFound,PranPratishtha,Seva] 568x320 667x375 740x360
+ 54  tap<44 a [vm-footer] "કાર્યક્રમની રૂપરેખા"  [Contact,Darshan,Gallery,History,Main,NewTemple,NotFound,PranPratishtha,Seva] 568x320 667x375 740x360
+ 54  tap<44 a [vm-footer] "જાહેરાતો"  [Contact,Darshan,Gallery,History,Main,NewTemple,NotFound,PranPratishtha,Seva] 568x320 667x375 740x360
+ 54  tap<44 a [vm-footer] "સામાન્ય પ્રશ્નો"  [Contact,Darshan,Gallery,History,Main,NewTemple,NotFound,PranPratishtha,Seva] 568x320 667x375 740x360
+ 54  tap<44 a [vm-footer] "99095 52020"  [Contact,Darshan,Gallery,History,Main,NewTemple,NotFound,PranPratishtha,Seva] 568x320 667x375 740x360
+ 54  tap<44 a [vm-footer] "WhatsApp પર સંદેશ"  [Contact,Darshan,Gallery,History,Main,NewTemple,NotFound,PranPratishtha,Seva] 568x320 667x375 740x360
+ 48  tap<44 a [] "વિગતો જુઓ"  [Contact,Darshan,Gallery,History,NewTemple,NotFound,PranPratishtha,Seva] 568x320 667x375 740x360
+ 42  tap<44 a [h1] "મુખ્ય પૃષ્ઠ"  [Contact,Darshan,Gallery,History,NewTemple,PranPratishtha,Seva] 568x320 667x375 740x360
+ 27  tap<44 button.vm-lang.vx-fs [vm-header] "અ+"  [Contact,Darshan,Gallery,History,Main,NewTemple,NotFound,PranPratishtha,Seva] 568x320 667x375 740x360
+ 27  tap<44 button.vm-lang.vx-fs [vm-header] "અ"  [Contact,Darshan,Gallery,History,Main,NewTemple,NotFound,PranPratishtha,Seva] 568x320 667x375 740x360
+  6  tap<44 button.vx-marquee__btn [] "માહિતી પટ્ટી થોભાવો"  [Main] 568x320 667x375 740x360
+  6  tap<44 a [darshan] "સંપૂર્ણ સમયપત્રક"  [Main] 568x320 667x375 740x360
+  6  tap<44 a [darshan] "મંગળા આરતી"  [Main] 568x320 667x375 740x360
+  6  tap<44 a [darshan] "સંધ્યા આરતી"  [Main] 568x320 667x375 740x360
+  6  tap<44 a [darshan] "ફોનનું કેલેન્ડર"  [Main] 568x320 667x375 740x360
+  6  tap<44 a.vx-upnext__more [darshan] "સંપૂર્ણ પંચાંગ"  [Main] 568x320 667x375 740x360
+  6  tap<44 a [in-t] "Google Calendar"  [PranPratishtha] 568x320 667x375 740x360
+  6  tap<44 a [in-t] "ફોનનું કેલેન્ડર"  [PranPratishtha] 568x320 667x375 740x360
+  6  tap<44 a [schedule] "રાત્રિ કાર્યક્રમના કલાકારો"  [PranPratishtha] 568x320 667x375 740x360
+  6  tap<44 label [vm-section] "પૂરું નામ *"  [Seva] 568x320 667x375 740x360
+  6  tap<44 label [vm-section] "મોબાઇલ નંબર *"  [Seva] 568x320 667x375 740x360
+  6  tap<44 label [vm-section] "ગામ / શહેર *"  [Seva] 568x320 667x375 740x360
+  6  tap<44 label [vm-section] "ઉંમર"  [Seva] 568x320 667x375 740x360
+  6  tap<44 label [vm-section] "સરનામું"  [Seva] 568x320 667x375 740x360
+  6  tap<44 a.vx-tel [] "99095 52020"  [Seva] 568x320 667x375 740x360
+  6  tap<44 a.vx-tel [] "WhatsApp પર સંદેશ"  [Seva] 568x320 667x375 740x360
+  6  tap<44 a.vm-contact__value [ct-t] "99095 52020"  [Contact] 568x320 667x375 740x360
+  6  tap<44 a [ct-t] "WhatsApp સંદેશ"  [Contact] 568x320 667x375 740x360
+  6  tap<44 a [ct-t] "દર્શન અને યાત્રાની વિગત"  [Contact] 568x320 667x375 740x360
+  6  tap<44 a.vx-tel [fq-t] "99095 52020"  [Contact] 568x320 667x375 740x360
+  6  tap<44 a.vx-tel [fq-t] "WhatsApp પર સંદેશ"  [Contact] 568x320 667x375 740x360
+  6  tap<44 a [hours] "મંગળા આરતી"  [Darshan] 568x320 667x375 740x360
+  6  tap<44 a [hours] "સંધ્યા આરતી"  [Darshan] 568x320 667x375 740x360
+  6  tap<44 a [hours] "ફોનનું કેલેન્ડર"  [Darshan] 568x320 667x375 740x360

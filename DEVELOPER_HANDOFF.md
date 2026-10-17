@@ -79,9 +79,9 @@ Fonts (Google Fonts): Noto Serif Gujarati (display, 400–700) and Hind Vadodara
 
 | Range | Layout |
 |---|---|
-| ≤ 359 / 374 / 389 px | very small phones: stacking tweaks (night cards, home buttons, History index) |
+| ≤ 339 / 359 / 374 / 389 / 400 px | very small phones: stacking tweaks (Home banner dates, night cards, home buttons, History index, New Temple route cards) |
 | ≤ 760 px | **phone** layout, bottom action bar `.vx-abar` |
-| 761–999 px | tablet portrait; banner pictures move below the text (art column hidden ≤ 999) |
+| 761–999 px | tablet portrait; banner pictures move below the text (art column hidden ≤ 999); compact construction update cards |
 | 1000–1179 px | small laptop; header links still in the ☰ panel |
 | ≥ 1180 px | full header navigation (8 links) |
 | ≥ 1280 / 1300 px | widest layouts (content max 1320 px, centred) |

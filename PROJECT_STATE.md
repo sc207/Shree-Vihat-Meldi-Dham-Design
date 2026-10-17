@@ -1,12 +1,13 @@
 # PROJECT_STATE.md
 
-_Last updated: 16 Oct 2026, ~22:00 IST (v147 કરમશીબાપા hand and face in focus); ~21:30 IST (v146 કરમશીબાપા photo HD; v139–v145 editor saves); evening (v133–v138 owner's list); 13:10 IST (v130 to-do note, v131 viewer keys); earlier that night (v128: blessing photo in HD; v127: two portraits in HD; v126: gallery viewer; v125: deity pictures HD + aligned; earlier that night v118–v123 responsive fixes and the developer hand-off)._ _14 Oct: v111–v116 (the six audit fixes)._ _Earlier: 10 Oct 2026, evening IST (audit Phases A–C reported). Update this file only when the project state meaningfully changes._
+_Last updated: 17 Oct 2026 (v149–v152 UI/UX check fixes; v148 re-save); 16 Oct 2026, ~22:00 IST (v147 કરમશીબાપા hand and face in focus); ~21:30 IST (v146 કરમશીબાપા photo HD; v139–v145 editor saves); evening (v133–v138 owner's list); 13:10 IST (v130 to-do note, v131 viewer keys); earlier that night (v128: blessing photo in HD; v127: two portraits in HD; v126: gallery viewer; v125: deity pictures HD + aligned; earlier that night v118–v123 responsive fixes and the developer hand-off)._ _14 Oct: v111–v116 (the six audit fixes)._ _Earlier: 10 Oct 2026, evening IST (audit Phases A–C reported). Update this file only when the project state meaningfully changes._
 
 ## Versions
 
 | | Version | Id | Verified |
 |---|---|---|---|
-| **Live (published) design** | **v147** | `1792167781-b26d` | 16 Oct 2026, ~22:00 IST: કરમશીબાપા blessing photo — hand and face in focus, full 2× (39 replaces 38 in 14 places). 9 live files read back byte-identical; `design/project/` = live. Report: [tasks/karamshi-natural/README.md](tasks/karamshi-natural/README.md). |
+| **Live (published) design** | **v152** | `1792236815-ee81` | 17 Oct 2026: UI/UX check of every page (930 + 90 renders, nothing new since v123) and four fixes, one version each — v149 `1792228161-49f7` Home photo names readable · v150 `1792236763-4a97` Home dates at 320 px · v151 `1792236803-5f4e` New Temple route cards on small phones · v152 New Temple construction list on tablets. v148 = Design-type re-save, no content change. Live files read back byte-identical; `design/project/` = live. Report: [tasks/ux-check-v147/README.md](tasks/ux-check-v147/README.md). |
+| v147 | v147 | `1792167781-b26d` | 16 Oct 2026, ~22:00 IST: કરમશીબાપા blessing photo — hand and face in focus, full 2× (39 replaces 38 in 14 places). |
 | v146 | v146 | `1792165942-c158` | 16 Oct 2026, ~21:30 IST: ભગવાન શ્રી કરમશીબાપા blessing photo in HD (38 replaces 27 in 14 places; owner chose option B of three). |
 | v139–v145 | v138 content | `1792164754-08ae` (last) | 16 Oct 2026 evening: editor saves while the owner had the canvas open — no-break spaces re-encoded as `&nbsp;` in 7 pages; no visible change. |
 | v138 | v138 | `1792162446-ce3e` | 16 Oct 2026, evening — owner's list, one version each: v133 `1792162413-08a8` Darshan travel cards gap · v134 `1792162423-7494` "ટ્રસ્ટ દ્વારા" removed (15 texts) · v135 `1792162429-bdf2` new-temple intro "મંદિરનો", no "દાન" · v136 `1792162435-c602` festival date "૮ ફેબ્રુઆરી, સોમવાર" · v137 `1792162441-23e8` Home photos મંદિર, માતાજી, કરમશીબાપા, સુરેશબાપા (all five on phones) · v138 દર્શનનો માર્ગ render close-ups (35–37). Tagline: options given to the owner, nothing published. Report: [tasks/owner-fixes-1016/README.md](tasks/owner-fixes-1016/README.md). |
@@ -29,7 +30,7 @@ _Last updated: 16 Oct 2026, ~22:00 IST (v147 કરમશીબાપા hand an
 | Visual-effects work | — | — | Owner's brief [tasks/visual-effects-audit.md](tasks/visual-effects-audit.md): glow fixed in v109, old chakra replaced in v108. Remaining sweep items: see Outstanding tasks. |
 | Local working version | none | — | Items 1–6 (saved in [tasks/fixes-1-6/](tasks/fixes-1-6/)) are now live as v111–v116. Nothing unpublished. |
 | Older rollback | v107 / v106 content | `1791918685-cd89` | Any earlier version is in the artifact's history (list in [CHANGELOG.md](CHANGELOG.md)). Version numbers follow the artifact's own count from v107 on. |
-| Spec / review page | v25 | `1792167885-f02b` | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` — records v97–v147 (sections "Banner light & chakra", "Karamshibapa photo", "Audit fixes", "Responsive check", "Image check"); source + pictures in `tasks/spec-page/` |
+| Spec / review page | v26 | `1792238864-80c4` | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` — records v97–v152 (sections "Banner light & chakra", "Karamshibapa photo", "Audit fixes", "Responsive check", "Image check"); source + pictures in `tasks/spec-page/` |
 | Audit report page | v3 | `1791970198-ef0e` | `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU` — audit of v106 + status after v116 (A1, B1–B4, C2–C6 fixed); source `tasks/audit-v106/audit-page.html` |
 
 Website artifact: `https://claude.ai/artifact/HWR4J5u9qBPjri6oUg7nVa` (type Design, `https://claude.ai/artifact/QKN21svewxgyPb6SYRqWnd`).
@@ -107,7 +108,7 @@ MenuMobile and OfflineMobile are phone-screen boards (fixed 844 px), not content
    **Design audit v106 (Phases A–C):** done, no changes made — report [tasks/audit-report-v106.md](tasks/audit-report-v106.md)
    (page: `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU`). 0 P0, 1 P1 (A1 header menu 761–1179 px), 4 P2, 9 P3, 1 owner decision (D1 hero).
    Phase D waits for the owner's approval; proposed order v107 Seva → v108 A1 → v109 B3 → v110 B4 → v111 B2 → polish.
-3. **Spec page:** up to date with v147 (16 Oct, spec v25). **Tagline:** options sent to the owner (16 Oct evening); nothing on the site until chosen. **Developer hand-off:** [DEVELOPER_HANDOFF.md](DEVELOPER_HANDOFF.md) (routes, one page per route, canvas-only parts, breakpoints, behaviour, images, acceptance checks). Add each new version there after publishing.
+3. **Spec page:** up to date with v152 (17 Oct, spec v26). **Tagline:** options sent to the owner (16 Oct evening); nothing on the site until chosen. **Developer hand-off:** [DEVELOPER_HANDOFF.md](DEVELOPER_HANDOFF.md) (routes, one page per route, canvas-only parts, breakpoints, behaviour, images, acceptance checks). Add each new version there after publishing.
 4. **Figma Gate A:** when the allowance returns — one read-only check first; if blocked, stop. Then run `figma/scripts/call1.js` … in order
    (see `figma/state.json` → `run_order`), after the owner drops the 26 original images (original filenames) onto the Components page.
    Then sync Figma with website changes v99–v106 (`figma/state.json` → `figma_sync_todo`; the scripts already contain the v97 Gate A design).

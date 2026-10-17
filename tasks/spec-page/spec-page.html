@@ -108,7 +108,7 @@ td.n { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--mut
     <div><b>Gate A checklist</b><span>0 of 6 confirmed. Preview checks pass on all 12 phone pages at 4 widths; nothing counts as verified until its Figma screenshot has been inspected.</span></div>
   </div>
   <nav class="toc" aria-label="On this page">
-    <a href="#c4">Banners &amp; headings</a><a href="#c5">Images &amp; frames</a><a href="#c6">Cards</a><a href="#c7">Festival</a><a href="#c8">Page endings</a><a href="#record">Audit change record</a><a href="#full">Full-layout phone check</a><a href="#home">Home summary preview</a><a href="#darshan">Darshan timetable</a><a href="#effects">Banner light &amp; chakra</a><a href="#photo">Karamshibapa photo</a><a href="#fixes">Audit fixes</a><a href="#resp">Responsive check</a><a href="#images">Image check</a><a href="#ownerfix">Your list · 16 Oct</a><a href="#plan">Figma build plan</a><a href="#open">Decisions &amp; checklist</a>
+    <a href="#c4">Banners &amp; headings</a><a href="#c5">Images &amp; frames</a><a href="#c6">Cards</a><a href="#c7">Festival</a><a href="#c8">Page endings</a><a href="#record">Audit change record</a><a href="#full">Full-layout phone check</a><a href="#home">Home summary preview</a><a href="#darshan">Darshan timetable</a><a href="#effects">Banner light &amp; chakra</a><a href="#photo">Karamshibapa photo</a><a href="#fixes">Audit fixes</a><a href="#resp">Responsive check</a><a href="#images">Image check</a><a href="#ownerfix">Your list · 16 Oct</a><a href="#uxcheck">UI/UX check · 17 Oct</a><a href="#plan">Figma build plan</a><a href="#open">Decisions &amp; checklist</a>
   </nav>
 </section>
 
@@ -409,6 +409,10 @@ td.n { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--mut
       <tr><td>દર્શનનો માર્ગ: empty photo boxes</td><td>Close-ups from the architectural render, labelled “સ્થાપત્ય ચિત્ર”</td><td>Website</td><td><span class="chip ok">Published · v138</span></td></tr>
       <tr><td>કરમશીબાપા photo looked AI-generated</td><td>Same HD step as સુરેશબાપા’s photo, photographic finish (you chose option B of three)</td><td>Website</td><td><span class="chip ok">Published · v146</span></td></tr>
       <tr><td>કરમશીબાપા photo: blessing hand not in focus when zoomed; face too</td><td>Hand and face brought into focus, kept at full 2× like સુરેશબાપા’s photo; turban and clothes checked — already crisp</td><td>Website</td><td><span class="chip ok">Published · v147</span></td></tr>
+      <tr><td>Home photo names hard to read on the photos (1.9–2.8 : 1)</td><td>Deeper band and text shadow behind the names (4.5–7.8 : 1)</td><td>Website</td><td><span class="chip ok">Published · v149</span></td></tr>
+      <tr><td>Home banner dates ran over the box at 320 px</td><td>Slightly smaller dates below 340 px</td><td>Website</td><td><span class="chip ok">Published · v150</span></td></tr>
+      <tr><td>New Temple route cards: text squeezed on small phones</td><td>Smaller picture, wider text column (≤ 400 px)</td><td>Website</td><td><span class="chip ok">Published · v151</span></td></tr>
+      <tr><td>New Temple construction cards squeezed on tablets</td><td>Compact card with a smaller thumbnail (761–999 px)</td><td>Website</td><td><span class="chip ok">Published · v152</span></td></tr>
       <tr><td>A tagline for the temple</td><td>Options sent to you; nothing added until you choose</td><td>Owner</td><td><span class="chip later">Waiting</span></td></tr>
       <tr><td>કરમશીબાપા seated poster soft in the photo viewer (784×1045)</td><td>A larger original from the trust (AI enlargement changed his face)</td><td>Trust</td><td><span class="chip later">Waiting</span></td></tr>
       <tr><td>Heading levels skip (h2 → h4)</td><td>Footer and Seva headings re-levelled, same look</td><td>Website</td><td><span class="chip ok">Published · v116</span></td></tr>
@@ -654,6 +658,26 @@ td.n { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--mut
     <figure><img src="img/v146_karamshibapa_hd.webp" alt="કરમશીબાપા photo in the History arch, before and after, real screen pixels" loading="lazy"><figcaption>v146 · History arch, real screen pixels.</figcaption></figure>
     <figure><img src="img/v147_karamshibapa_focus.webp" alt="કરમશીબાપા photo, blessing hand and face, before and after, zoomed on a phone" loading="lazy"><figcaption>v147 · History on a phone, pinch-zoomed 2×: hand and face.</figcaption></figure>
     <figure><img src="img/v138_route_images.webp" alt="દર્શનનો માર્ગ cards with render close-ups, before and after" loading="lazy"><figcaption>v138 · New Temple, 1440 px.</figcaption></figure>
+  </article>
+</section>
+
+<!-- ============================ UI/UX check of v147 (v149–v152) ============================ -->
+<section class="board" id="uxcheck" aria-labelledby="uxt">
+  <header><p class="eyebrow">UI / UX and responsive check · published as versions 149 to 152 (17 Oct 2026)</p><h2 id="uxt">Every page checked again — four fixes</h2><p>At your request (“check now if any bug related to design, ux ui and responsiveness issue then fix it for all device”): every page on 34 screen sizes, from 320 px phones to 2560 px monitors, upright and sideways, in normal and large text — 1,020 page renders, plus a look by eye at laptop, tablet and phone. Nothing scrolls sideways, no script errors, and nothing new since the last check. Two new checks looked for things the scan cannot see: text written over photos, and text squeezed into narrow columns. They found four problems, each fixed as its own version. Version 148 in the history is a re-save by the design tool with no change.</p></header>
+  <article class="comp">
+    <div class="comp-head"><h3>What each version changed</h3><span class="chip ok">Published · v149–v152</span></div>
+    <dl class="spec">
+      <dt>v149</dt><dd>Home “ફોટો ગેલેરી”: the names on the five photos were hard to read (white text on a pale grey band, especially “ભગવાન શ્રી કરમશીબાપા” on his white clothes). The band behind the names is now deeper, with a soft shadow on the text — on every Home layout, laptop to phone. Same height, same photos.</dd>
+      <dt>v150</dt><dd>Home banner on the smallest phones (320 px): “૮ ફેબ્રુ., સોમવાર” ran over the right edge of the date box. Below 340 px the dates are slightly smaller and fit; wider screens unchanged.</dd>
+      <dt>v151</dt><dd>New Temple, દર્શનનો માર્ગ, on small phones: the text beside each picture was squeezed into a narrow strip (one or two words per line). The picture is a little smaller, so the text gets half as much room again; the “સ્થાપત્ય ચિત્ર” label stays on the picture.</dd>
+      <dt>v152</dt><dd>New Temple, નિર્માણ સ્થળની તાજી તસવીરો, on tablets held upright: the three small update cards left very little room for the date and text. They now use the compact phone card. Laptops and phones unchanged.</dd>
+      <dt>Checks</dt><dd>Each fix checked on the pages it touches (normal and large text, 1440 → 320 px): no new problems; a pixel compare of all 24 boards shows changes only at the intended places. The eight touched boards were scanned again on the final version: no problems. All live files match what was sent. Tested in Chromium only.</dd>
+    </dl>
+    <figure><img src="img/v149_home_photo_names_1440.webp" alt="Home photo gallery at 1440 px, before and after" loading="lazy"><figcaption>v149 · Home photo gallery, laptop 1440 px.</figcaption></figure>
+    <figure class="phone"><img src="img/v149_home_photo_names_390.webp" alt="Home photo gallery on a phone, before and after" loading="lazy"><figcaption>v149 · Home photo gallery, phone 390 px.</figcaption></figure>
+    <figure class="phone"><img src="img/v150_home_dates_320.webp" alt="Home banner date box at 320 px, before and after" loading="lazy"><figcaption>v150 · Home banner dates, 320 px.</figcaption></figure>
+    <figure class="phone"><img src="img/v151_route_cards_320.webp" alt="New Temple route cards at 320 px, before and after" loading="lazy"><figcaption>v151 · New Temple, દર્શનનો માર્ગ, 320 px.</figcaption></figure>
+    <figure><img src="img/v152_construction_list_768.webp" alt="New Temple construction photos at 768 px, before and after" loading="lazy"><figcaption>v152 · New Temple, construction photos, tablet 768 px.</figcaption></figure>
   </article>
 </section>
 

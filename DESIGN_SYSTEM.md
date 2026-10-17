@@ -151,7 +151,8 @@ Keep the **original file names** unchanged (they are also how the Figma script m
 - **Boards** (canvas artboards): desktop 1440 · tablet portrait 834 (`HomeTablet`) · tablet landscape 1180 (`HomeTabletL`) · phone landscape 844 (`HomePhoneL`) ·
   phone 390 (`…Mobile`). The real site is fluid; boards are fixed-size previews. Content max width 1320 px; prose max ~68ch.
 - **Breakpoints in use** (site.css / bundle.css): phone ≤ 760 · tablet 761–899 / 761–1023 / 761–1099 · stacked facts and hero art hidden ≤ 999 ·
-  two-column splits from 768 (`.vm-grid--split` 5:7) · 3-column grids from 1100 · small phones ≤ 360 · short landscape (`max-height: 500px`).
+  two-column splits from 768 (`.vm-grid--split` 5:7) · 3-column grids from 1100 · small phones ≤ 360 · short landscape (`max-height: 500px`) ·
+  since v150–v152: Home banner dates ≤ 339 · New Temple route cards ≤ 400 · construction update cards 761–999.
 - Must work at **320, 360, 390, 430** px and tablet/desktop widths without sideways scrolling, clipped Gujarati, or broken button labels.
 - Phone rules established in Gate A: buttons `white-space: nowrap`, button rows wrap; headings `text-wrap: balance`; a year never sits alone
   on a line (non-breaking space before ૨૦૨૭ — 75 occurrences in the pages); CTA cards 32 px / 24 px padding on phones.

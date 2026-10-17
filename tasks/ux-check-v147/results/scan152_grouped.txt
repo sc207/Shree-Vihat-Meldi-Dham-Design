@@ -1,0 +1,31 @@
+runs 230 · page wider than screen 0 · JS errors 0 · crashed 0
+
+== ISSUES (0 distinct)
+
+== NOTES (26 distinct)
+ 18  soft-2x img [arc-t] "નવું મંદિર — સ્તંભ અને કોત" soft  [NewTemple,NewTempleMobile] 740x360 760x1024 768x1024 800x1280 820x1180 834x1194 844x390 896x414
+ 12  soft-2x img.vx-flag-fix [vis-t] "નવું મંદિર — શિખર અને ધજા" soft  [NewTemple,NewTempleMobile] 667x375 680x1000 740x360 760x1024
+ 12  soft-2x img [arc-t] "નવું મંદિર — પ્રવેશદ્વાર" soft  [NewTemple,NewTempleMobile] 760x1024 820x1180 834x1194 844x390 896x414
+100  tap<44 a [vm-footer] "દર્શન અને યાત્રા"  [HomeMobile2,Main,NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+100  tap<44 a [vm-footer] "નવું મંદિર"  [HomeMobile2,Main,NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+100  tap<44 a [vm-footer] "પ્રાણ પ્રતિષ્ઠા"  [HomeMobile2,Main,NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+100  tap<44 a [vm-footer] "સેવા નોંધણી"  [HomeMobile2,Main,NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+100  tap<44 a [vm-footer] "મંદિરનો ઇતિહાસ"  [HomeMobile2,Main,NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+100  tap<44 a [vm-footer] "સંપર્ક"  [HomeMobile2,Main,NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+100  tap<44 a [vm-footer] "કાર્યક્રમની રૂપરેખા"  [HomeMobile2,Main,NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+100  tap<44 a [vm-footer] "જાહેરાતો"  [HomeMobile2,Main,NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+100  tap<44 a [vm-footer] "સામાન્ય પ્રશ્નો"  [HomeMobile2,Main,NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+100  tap<44 a [vm-footer] "99095 52020"  [HomeMobile2,Main,NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+100  tap<44 a [vm-footer] "WhatsApp પર સંદેશ"  [HomeMobile2,Main,NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 96  tap<44 a [vm-footer] "ગેલેરી અને સમાચાર"  [HomeMobile2,Main,NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 button.vm-lang.vx-fs [vm-header] "અ+"  [HomeMobile,Main,NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 button.vx-marquee__btn [] "માહિતી પટ્ટી થોભાવો"  [HomeMobile,Main] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [darshan] "સંપૂર્ણ સમયપત્રક"  [HomeMobile,Main] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [darshan] "મંગળા આરતી"  [HomeMobile,Main] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [darshan] "સંધ્યા આરતી"  [HomeMobile,Main] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [darshan] "ફોનનું કેલેન્ડર"  [HomeMobile,Main] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a.vx-upnext__more [darshan] "સંપૂર્ણ પંચાંગ"  [HomeMobile,Main] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 button.vm-lang.vx-fs [vm-header] "અ"  [HomeMobile,Main,NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [] "વિગતો જુઓ"  [NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 50  tap<44 a [h1] "મુખ્ય પૃષ્ઠ"  [NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915 430x932 480x854 540x720 568x320 600x960
+ 40  tap<44 a.vm-brand [vm-header] "શ્રી વિહત મેલડી ધામસાણંદ ·"  [HomeMobile,Main,NewTemple,NewTempleMobile] 320x568 360x780 375x667 390x844 412x915

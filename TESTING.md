@@ -72,6 +72,10 @@ hide the phone action bar (`.vx-abar{display:none}`) so it does not cover conten
   (`design/assets/SHA256SUMS.txt`); `tools/rebuild_image_zip.py` rebuilds the owner's original 26-image ZIP byte-for-byte.
 - Tools validated on the v106 snapshot: `frame_heights.py` (Darshan, HomeMobile, NewTemple, Seva: 0 changes; MenuMobile/OfflineMobile skipped), `check_layout.py` (Darshan 1440/390, NewTempleMobile 1440/390:
   8 runs, 0 problems), `pixel_regress.py` (4 boards identical); all Python tools and the 15 Figma scripts parse.
+- 17 Oct (v149–v152, UI/UX check of v147): device scan 930 + 90 renders — no sideways scroll, no JS errors, nothing new since v123; new checks
+  `tasks/ux-check-v147/scripts/cap_contrast.py PORT OUT.json Board@W,…` (text over photos: Home strip 1.9–2.8 : 1 → 4.5–7.8 : 1) and
+  `narrow.py PORT W MINW Boards` (squeezed text columns). Per stage: check_layout 28/22/22/22 runs 0 new problems; pixel compare only at the
+  intended places; re-scan of the 8 touched boards on v152: 230 renders, 0 issues, no new notes. Results in `tasks/ux-check-v147/results/`.
 - 16 Oct (v118–v123, responsive check): device scan `tasks/responsive-v116/scripts/scan_run.py PORT SHARD NSHARDS OUT.json [--only Boards] [--sizes WxH,…]`
   (34 sizes × normal/large, 930 renders; group with `aggregate.py OUT.txt files…`), touch areas `test_tap_areas.py PORT [W]`, first screens
   `first_screens.py`, close-ups `viewport_shot.py PORT BOARD W H SCROLL|selector@offset OUT.png`, full-page sheets `shots_full.py`. Results:

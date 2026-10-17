@@ -1687,3 +1687,30 @@ html { scroll-behavior: smooth; }
 .vm-root .vx-area__tag { position: absolute; left: 8px; bottom: 8px; padding: 1px 8px; border-radius: var(--radius-pill); background: rgba(28,10,16,.74);
   color: var(--ivory); font-size: 13px; font-weight: 600; line-height: 1.7; white-space: nowrap; }
 @media (max-width: 999px) { .vm-root .vx-area__tag { left: 5px; bottom: 5px; padding: 0 6px; line-height: 1.6; } }
+
+/* v149 — Home "ફોટો ગેલેરી" strip: the names on the photos are readable on every board.
+   Was: white 16 px text on a light gradient (0 → 72 % maroon over 32 px) — on the cream backgrounds and the white clothes of the Bapa photos
+   the band looked grey and the text measured 1.9–2.8 : 1. Now a deeper band (same height on one-line names) and a soft text shadow. */
+.vm-root .vx-strip figcaption { padding-top: 36px;
+  background: linear-gradient(180deg, rgba(28,10,16,0) 0%, rgba(28,10,16,.74) 48%, rgba(28,10,16,.88) 100%);
+  text-shadow: 0 1px 3px rgba(20,6,10,.6); }
+
+/* v150 — Home banner date box on 320 px phones: "૮ ફેબ્રુ., સોમવાર" ran 2 px over the right border (the first column took its full
+   one-line width). Below 340 px: slightly smaller dates and side padding; 340 px and wider unchanged. */
+@media (max-width: 339px) {
+  .vm-root .vx-home-hero .vm-datestrip > div { padding-left: 10px; padding-right: 10px; }
+  .vm-root .vx-home-hero .vm-datestrip b { font-size: 16px; }
+}
+
+/* v151 — New Temple "દર્શનનો માર્ગ" cards on small phones: picture 120 → 88 px, card padding and gap 16 px, so the text beside it gets
+   152 px instead of 96 px at 320 px (it broke into 6+ short lines, "·" and "×" starting lines). 401 px and wider unchanged. */
+@media (max-width: 400px) {
+  .vm-root .vx-area { grid-template-columns: 88px minmax(0, 1fr); gap: 16px; padding: 16px; }
+}
+
+/* v152 — New Temple "નિર્માણ સ્થળની તાજી તસવીરો" on tablets (761–999 px): the three small update cards used the laptop thumbnail
+   (148 px), leaving ~75 px for the date and text. Same compact card as on phones (104 px thumbnail). Phones and laptops unchanged. */
+@media (min-width: 761px) and (max-width: 999px) {
+  .vm-root .vx-prog__list li { grid-template-columns: 104px minmax(0, 1fr); gap: 12px; padding: 10px; }
+  .vm-root .vx-prog__list .vx-slot { min-height: 80px; }
+}

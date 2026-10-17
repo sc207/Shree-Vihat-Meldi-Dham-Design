@@ -441,6 +441,32 @@
       "date": "2026-10-16",
       "change": "Karamshibapa blessing photo 38 -> 39 (full 2x, hand and face in focus) in 14 places",
       "rollback": "v146 (1792165942-c158)"
+    },
+    "v148": {
+      "id": "(not recorded)",
+      "date": "2026-10-17",
+      "change": "Design-type re-save (type release 1792190836-9749); no content change"
+    },
+    "v149": {
+      "id": "1792228161-49f7",
+      "date": "2026-10-17",
+      "change": "Home photo strip captions: deeper band + text shadow (contrast 1.9-2.8 -> 4.5-7.8)"
+    },
+    "v150": {
+      "id": "1792236763-4a97",
+      "date": "2026-10-17",
+      "change": "Home banner dates below 340 px: 16 px, side padding 10 px"
+    },
+    "v151": {
+      "id": "1792236803-5f4e",
+      "date": "2026-10-17",
+      "change": "New Temple route cards <= 400 px: picture 88 px, padding/gap 16 px; NewTempleMobile frame 11659"
+    },
+    "v152": {
+      "id": "1792236815-ee81",
+      "date": "2026-10-17",
+      "change": "New Temple construction update cards 761-999 px: 104 px thumbnail",
+      "rollback": "v147 (1792167781-b26d) for all four"
     }
   },
   "figma_sync_todo": [
@@ -462,7 +488,8 @@
     "v128: Sureshbapa blessing photo image fills (Home pair + strip, History arch, Gallery) -> 34 (HD)",
     "v133-v138: Darshan map gap 24 px; placeholder texts without \"ટ્રસ્ટ દ્વારા\"; intro wording; festival date full; Home strip order (temple, Vihat, Meldi, Karamshibapa, Sureshbapa) and phone 2x2; NewTemple area cards with render close-ups 35-37 + label",
     "v146: Karamshibapa image fills (Home pair + strip, History arch, Gallery banner) -> 38 (HD)",
-    "v147: same Karamshibapa image fills -> 39 (2172x2896, hand and face in focus); 38 no longer used"
+    "v147: same Karamshibapa image fills -> 39 (2172x2896, hand and face in focus); 38 no longer used",
+    "v149: Home photo strip caption band: gradient 0 -> 74% (48%) -> 88% maroon-black over 36 px + text above, text shadow 0 1 3 rgba(20,6,10,.6); v151: phone New Temple route cards picture 88 px, padding 16 px (frame 11659)"
   ],
   "notes_v105": "Contact/404 compute a local weekday but never display it — left unchanged. The પૂનમ list (EV) covers Oct 2026–Apr 2027 and must be extended each year (existing comment in the page).",
   "awaiting_trust": [
