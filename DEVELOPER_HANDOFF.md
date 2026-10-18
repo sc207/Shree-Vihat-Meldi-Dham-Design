@@ -1,6 +1,6 @@
 # DEVELOPER_HANDOFF.md — building the real website from this design
 
-_For the developers who will code શ્રી વિહત મેલડી ધામ's website. Written 16 Oct 2026 against design **v123** (`1792090563-62eb`)._
+_For the developers who will code શ્રી વિહત મેલડી ધામ's website. Written 16 Oct 2026 against design **v123** (`1792090563-62eb`); `design/` now holds **v177** (`1792315235-dd28`, 18 Oct) — later changes are content, photos and small CSS blocks listed in CHANGELOG.md._
 _Everything below was checked against the design files in [`design/project/`](design/project/) (an exact copy of the live design)._
 
 **In one sentence:** build **one responsive page per route** from the desktop design files, keep the two stylesheets and the
@@ -155,8 +155,8 @@ mode · touch areas ≥ 44 px on phones and touch screens · colour pairs from t
 
 ## 8. Content rules (from the trust — do not relax)
 
-Gujarati only. Never invent content: every `[square-bracket]` text is a placeholder that stays until the trust supplies the real text
-or photo (61 open — list at the end of `PAGE_CONTENT.md`). Keep the approved wording, names, spellings and date format
+Gujarati only. Never invent content. Since v170/v173 the design has no `[square-bracket]` placeholders: details only the trust can give read
+"વિગત ટૂંક સમયમાં" or are left out (open list: `canvas.json` → notes.todo). Keep the approved wording, names, spellings and date format
 (`DESIGN_SYSTEM.md` → Gujarati wording). Key facts: festival 2–8 Feb 2027; prāṇa-pratiṣṭhā 8 Feb 2027, 12:39 IST; darshan daily 06:00–22:00.
 
 ## 9. Acceptance checks for the build

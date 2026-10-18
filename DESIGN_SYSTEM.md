@@ -143,7 +143,7 @@ Keep the **original file names** unchanged (they are also how the Figma script m
 - Deities and portraits sit in the **arch frame** (`.vm-arch`, top corners `--radius-arch`), with `.vx-portrait-fix` keeping faces in frame.
 - The new-temple render (14) is cropped with `.vx-crop` frames; `.vx-flag-fix` keeps the flag inside the crop.
 - Phone festival banner: **one** image (14, whole, 190 px tall, below the buttons); desktop/tablet keep the deity pair (01 + 02).
-- Missing photos use the "photo coming soon" tile (cream, faint chakra, `[placeholder]` caption) — never a stock photo.
+- Missing photos use the "photo coming soon" tile (cream, faint chakra, caption without brackets since v173) — never a stock photo.
 - Logos: 16 (red mark) on light grounds, 17 (ivory mark) on dark, 18 (ivory lockup) in the footer. 19 = WhatsApp channel QR (hidden on small screens).
 
 ## Layout and responsive behaviour

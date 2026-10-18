@@ -1714,3 +1714,107 @@ html { scroll-behavior: smooth; }
   .vm-root .vx-prog__list li { grid-template-columns: 104px minmax(0, 1fr); gap: 12px; padding: 10px; }
   .vm-root .vx-prog__list .vx-slot { min-height: 80px; }
 }
+
+/* Construction photos (owner, 18 Oct 2026): real photos in New Temple "નિર્માણ સ્થળની તાજી તસવીરો" fill the places of the dashed
+   placeholders — same size and corners (big photo fills its column, at least 360 px / 240 on phones; small ones 100 px high, 80 below 1000 px). */
+.vm-root .vx-prog__main .vx-prog__photo { flex: 1 1 0; width: 100%; height: 0; min-height: 360px; object-fit: cover; object-position: 50% 55%; border-radius: 18px; background: var(--surface-alt); }
+.vm-root .vx-prog__list .vx-prog__photo { width: 100%; height: 100px; object-fit: cover; border-radius: 12px; background: var(--surface-alt); }
+@media (max-width: 999px) { .vm-root .vx-prog__list .vx-prog__photo { height: 80px; } }
+@media (max-width: 760px) { .vm-root .vx-prog__main .vx-prog__photo { min-height: 240px; } }
+.vm-root .vx-prog__done { align-self: flex-start; padding: 1px 10px; border-radius: 999px; background: var(--surface-alt); color: var(--gold-ink); font-size: 13px; font-weight: 600; }
+.vm-root .vx-prog__list .is-done small { font-size: 14px; color: var(--ink-muted); }
+
+/* ════════ v169 — History: one complete timeline (ઇતિહાસની મુખ્ય સમયરેખા, ૧૯૭૩ → ૨૦૨૭) in chapter 1 ════════
+   Was: two half-timelines (chapter 1: 1973–2021, chapter 5: 1984–2027). 3 + 3 on laptops, 2 + 2 + 2 below 1000 px (the existing rules),
+   one list with the year beside the text on phones ≤ 560 px. */
+.vm-root .vx-era__t { margin: 8px 0 -8px; font-family: var(--font-display); font-size: 22px; font-weight: 600; line-height: 1.4; color: var(--heading); }
+@media (min-width: 1000px) {
+  .vm-root .vx-era--full { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .vm-root .vx-era--full > div:nth-child(3n+1) { padding-left: 0; border-left: 0; }
+  .vm-root .vx-era--full > div:nth-child(n+4) { margin-top: 16px; border-top: 1px solid var(--line); }
+}
+@media (max-width: 560px) {
+  .vm-root .vx-era--full { grid-template-columns: minmax(0, 1fr); }
+  .vm-root .vx-era--full > div { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; align-items: baseline;
+    padding: 16px 0 0 !important; margin-top: 0 !important; border-left: 0 !important; }
+  .vm-root .vx-era--full > div + div { margin-top: 16px !important; border-top: 1px solid var(--line); }
+}
+
+/* ════════ v171 — tablets: no lone card at the end of a grid ════════
+   2-column grids with an odd number of cards left an empty half row. Breakpoints are where each grid has 2 (or 3) columns:
+   .vm-grid--3 768–1099 (bundle.css), .vx-rites 616–967 (auto-fit 280 px), .vx-nights 761–1100, .vx-trv 840–1099 (auto-fit 240 px). */
+@media (min-width: 768px) and (max-width: 1099px) {
+  .vm-root .vm-grid--3 > .vm-announce:last-child:nth-child(odd) { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr; column-gap: 40px; row-gap: 12px; align-content: start; }
+  .vm-root .vm-grid--3 > .vm-announce:last-child:nth-child(odd) > .vm-announce__head { grid-column: 1; grid-row: 1; }
+  .vm-root .vm-grid--3 > .vm-announce:last-child:nth-child(odd) > h3 { grid-column: 1; grid-row: 2 / span 2; align-self: start; }
+  .vm-root .vm-grid--3 > .vm-announce:last-child:nth-child(odd) > p { grid-column: 2; grid-row: 1 / span 2; align-self: start; }
+  .vm-root .vm-grid--3 > .vm-announce:last-child:nth-child(odd) > .vm-announce__foot { grid-column: 2; grid-row: 3; margin-top: 4px; }
+  .vm-root .vm-grid--3 > .vm-update:last-child:nth-child(odd) { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr; column-gap: 0; row-gap: 12px; align-content: start; }
+  .vm-root .vm-grid--3 > .vm-update:last-child:nth-child(odd) > .vm-update__img { grid-column: 1; grid-row: 1 / -1; aspect-ratio: auto; height: 100%; min-height: 260px; }
+  .vm-root .vm-grid--3 > .vm-update:last-child:nth-child(odd) > :not(.vm-update__img) { grid-column: 2; margin-left: 32px; margin-right: 32px; }
+  .vm-root .vm-grid--3 > .vm-update:last-child:nth-child(odd) > .vm-update__meta { margin-top: 32px; }
+  .vm-root .vm-grid--3 > .vm-update:last-child:nth-child(odd) > :last-child { margin-bottom: 32px; }
+}
+@media (min-width: 616px) and (max-width: 967px) {
+  .vm-root .vx-rites > .vx-rite:last-child:nth-child(odd) { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr; column-gap: 40px; align-content: start; }
+  .vm-root .vx-rites > .vx-rite:last-child:nth-child(odd) > .vx-rite__no { grid-column: 1; grid-row: 1; }
+  .vm-root .vx-rites > .vx-rite:last-child:nth-child(odd) > h3 { grid-column: 1; grid-row: 2; }
+  .vm-root .vx-rites > .vx-rite:last-child:nth-child(odd) > .vx-rite__when { grid-column: 1; grid-row: 3; align-self: start; }
+  .vm-root .vx-rites > .vx-rite:last-child:nth-child(odd) > p { grid-column: 2; grid-row: 1 / -1; align-self: start; }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .vm-root .vx-nights:has(> li:nth-child(5):last-child) { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .vm-root .vx-nights:has(> li:nth-child(5):last-child) > li { grid-column: span 2; }
+  .vm-root .vx-nights:has(> li:nth-child(5):last-child) > li:nth-child(n+4) { grid-column: span 3; }
+}
+@media (min-width: 840px) and (max-width: 1099px) {
+  .vm-root .vx-trv:has(> :nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ════════ v172 — phones: New Temple detail pictures as a list (picture left, text right) ════════
+   Was: 2 × 2 tiles below 560 px — the long fourth caption ran to 7 lines in a 132 px column at 320 px. */
+@media (max-width: 560px) {
+  .vm-root .vx-crops { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .vm-root .vx-crops > .vx-crop { display: grid; grid-template-columns: minmax(0, 38%) minmax(0, 1fr); column-gap: 18px; align-items: center; }
+  .vm-root .vx-crops > .vx-crop figcaption { gap: 4px; }
+}
+
+/* ════════ v175 — festival page without artist names: the night programme as three cards (ડાયરો · રામ કથા · રમેલ) ════════
+   Was: a "ભવ્ય લોક ડાયરો" header, five per-night artist cards, then રામ કથા + રમેલ. The .vx-nights / .vx-night rules above are no longer used. */
+.vm-root .vx-nfeats--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 48px; }
+.vm-root .vx-nfeats--3 > .vx-nfeat > :last-child { margin-top: auto; }
+.vm-root .vx-nfeats--3 > .vx-nfeat > .vx-nfeat__sub { margin-bottom: 14px; }
+.vx-nfeat__days { list-style: none; margin: 0; padding: 16px 0 0; border-top: 1px solid rgba(226,194,122,.25); display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.vx-nfeat__days li { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 2px 9px; border-radius: 12px; box-shadow: inset 0 0 0 1px rgba(226,194,122,.4);
+  background: rgba(226,194,122,.06); font-size: 12px; font-weight: 600; line-height: 1.3; color: var(--ink-inverse-muted); text-align: center; }
+.vx-nfeat__days b { font-family: var(--font-display); font-size: 26px; font-weight: 500; line-height: 1; color: var(--gold-soft); }
+.vm-root .vx-nfeats--3 .vx-nfeat__who { margin-top: auto; }
+.vx-av--ic svg { width: 30px; height: 30px; color: var(--gold-soft); }
+.vx-pday__nk:last-child { margin-bottom: 0; }
+.vx-nfeat__days .vx-ds { display: none; }
+/* tablets and small laptops (761–1279): ડાયરો card across the full width — title left, the five nights right (as the v171 full-width cards);
+   three cards side by side from 1280 px, where the five day tiles have room */
+@media (min-width: 761px) and (max-width: 1279px) {
+  .vm-root .vx-nfeats--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .vm-root .vx-nfeats--3 > .vx-nfeat:first-child { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    grid-template-rows: auto auto 1fr; column-gap: 32px; row-gap: 6px; align-content: start; }
+  .vm-root .vx-nfeats--3 > .vx-nfeat:first-child > :not(.vx-nfeat__days) { grid-column: 1; }
+  .vm-root .vx-nfeats--3 > .vx-nfeat:first-child > .vx-nfeat__sub { margin-bottom: 0; }
+  .vm-root .vx-nfeats--3 > .vx-nfeat:first-child > .vx-nfeat__days { grid-column: 2; grid-row: 1 / -1; align-self: center; margin: 0; padding: 0; border-top: 0; }
+}
+@media (max-width: 760px) {
+  .vm-root .vx-nfeats--3 { grid-template-columns: minmax(0, 1fr); margin-top: 32px; }
+  .vx-nfeat__days { gap: 6px; }
+  .vx-nfeat__days li { padding: 8px 0 7px; font-size: 11px; }
+  .vx-nfeat__days b { font-size: 22px; }
+  .vx-av--ic svg { width: 26px; height: 26px; }
+}
+/* small phones: short day names (મંગળ, બુધ …) as in the phone programme tabs */
+@media (max-width: 400px) {
+  .vx-nfeat__days .vx-dl { display: none; }
+  .vx-nfeat__days .vx-ds { display: inline; }
+  .vx-nfeat__days li { font-size: 12px; }
+}

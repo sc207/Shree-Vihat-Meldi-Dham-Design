@@ -1,12 +1,13 @@
 # PROJECT_STATE.md
 
-_Last updated: 17 Oct 2026 (v149–v152 UI/UX check fixes; v148 re-save); 16 Oct 2026, ~22:00 IST (v147 કરમશીબાપા hand and face in focus); ~21:30 IST (v146 કરમશીબાપા photo HD; v139–v145 editor saves); evening (v133–v138 owner's list); 13:10 IST (v130 to-do note, v131 viewer keys); earlier that night (v128: blessing photo in HD; v127: two portraits in HD; v126: gallery viewer; v125: deity pictures HD + aligned; earlier that night v118–v123 responsive fixes and the developer hand-off)._ _14 Oct: v111–v116 (the six audit fixes)._ _Earlier: 10 Oct 2026, evening IST (audit Phases A–C reported). Update this file only when the project state meaningfully changes._
+_Last updated: 18 Oct 2026 (v153–v177 recorded and synced after the account switch — tasks/recovery-1018); 17 Oct 2026 (v149–v152 UI/UX check fixes; v148 re-save); 16 Oct 2026, ~22:00 IST (v147 કરમશીબાપા hand and face in focus); ~21:30 IST (v146 કરમશીબાપા photo HD; v139–v145 editor saves); evening (v133–v138 owner's list); 13:10 IST (v130 to-do note, v131 viewer keys); earlier that night (v128: blessing photo in HD; v127: two portraits in HD; v126: gallery viewer; v125: deity pictures HD + aligned; earlier that night v118–v123 responsive fixes and the developer hand-off)._ _14 Oct: v111–v116 (the six audit fixes)._ _Earlier: 10 Oct 2026, evening IST (audit Phases A–C reported). Update this file only when the project state meaningfully changes._
 
 ## Versions
 
 | | Version | Id | Verified |
 |---|---|---|---|
-| **Live (published) design** | **v152** | `1792236815-ee81` | 17 Oct 2026: UI/UX check of every page (930 + 90 renders, nothing new since v123) and four fixes, one version each — v149 `1792228161-49f7` Home photo names readable · v150 `1792236763-4a97` Home dates at 320 px · v151 `1792236803-5f4e` New Temple route cards on small phones · v152 New Temple construction list on tablets. v148 = Design-type re-save, no content change. Live files read back byte-identical; `design/project/` = live. Report: [tasks/ux-check-v147/README.md](tasks/ux-check-v147/README.md). |
+| **Live (published) design** | **v177** | `1792315235-dd28` | 18 Oct 2026, 14:50 IST: v153–v177 (YouTube link, history chapters, photos, ૨૭ નક્ષત્ર, news, calendar to 13 Dec 2027, old/new temple tags, one timeline, no `[brackets]`, tablet grids, stuti, night programme, venue, ભોજનશાળા બારેમાસ અવિરત). Recorded and synced on 18 Oct after the account switch: 28/28 live files = `design/project/`, 56 images. Report: [tasks/recovery-1018/README.md](tasks/recovery-1018/README.md). |
+| v152 | v152 | `1792236815-ee81` | 17 Oct 2026: UI/UX check of every page (930 + 90 renders, nothing new since v123) and four fixes, one version each — v149 `1792228161-49f7` Home photo names readable · v150 `1792236763-4a97` Home dates at 320 px · v151 `1792236803-5f4e` New Temple route cards on small phones · v152 New Temple construction list on tablets. v148 = Design-type re-save, no content change. Live files read back byte-identical; `design/project/` = live. Report: [tasks/ux-check-v147/README.md](tasks/ux-check-v147/README.md). |
 | v147 | v147 | `1792167781-b26d` | 16 Oct 2026, ~22:00 IST: કરમશીબાપા blessing photo — hand and face in focus, full 2× (39 replaces 38 in 14 places). |
 | v146 | v146 | `1792165942-c158` | 16 Oct 2026, ~21:30 IST: ભગવાન શ્રી કરમશીબાપા blessing photo in HD (38 replaces 27 in 14 places; owner chose option B of three). |
 | v139–v145 | v138 content | `1792164754-08ae` (last) | 16 Oct 2026 evening: editor saves while the owner had the canvas open — no-break spaces re-encoded as `&nbsp;` in 7 pages; no visible change. |
@@ -30,7 +31,7 @@ _Last updated: 17 Oct 2026 (v149–v152 UI/UX check fixes; v148 re-save); 16 Oct
 | Visual-effects work | — | — | Owner's brief [tasks/visual-effects-audit.md](tasks/visual-effects-audit.md): glow fixed in v109, old chakra replaced in v108. Remaining sweep items: see Outstanding tasks. |
 | Local working version | none | — | Items 1–6 (saved in [tasks/fixes-1-6/](tasks/fixes-1-6/)) are now live as v111–v116. Nothing unpublished. |
 | Older rollback | v107 / v106 content | `1791918685-cd89` | Any earlier version is in the artifact's history (list in [CHANGELOG.md](CHANGELOG.md)). Version numbers follow the artifact's own count from v107 on. |
-| Spec / review page | v26 | `1792238864-80c4` | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` — records v97–v152 (sections "Banner light & chakra", "Karamshibapa photo", "Audit fixes", "Responsive check", "Image check"); source + pictures in `tasks/spec-page/` |
+| Spec / review page | 18 Oct | `1792315277-f9e1` (records to v177) — before: v26 `1792238864-80c4` | `https://claude.ai/artifact/XzsLf5Ef672Cwr1i9QDJNW` — records v97–v152 (sections "Banner light & chakra", "Karamshibapa photo", "Audit fixes", "Responsive check", "Image check"); source + pictures in `tasks/spec-page/` |
 | Audit report page | v3 | `1791970198-ef0e` | `https://claude.ai/artifact/FJjnL8j4NB95mK2tcSjQuU` — audit of v106 + status after v116 (A1, B1–B4, C2–C6 fixed); source `tasks/audit-v106/audit-page.html` |
 
 Website artifact: `https://claude.ai/artifact/HWR4J5u9qBPjri6oUg7nVa` (type Design, `https://claude.ai/artifact/QKN21svewxgyPb6SYRqWnd`).
@@ -95,7 +96,7 @@ MenuMobile and OfflineMobile are phone-screen boards (fixed 844 px), not content
 
 ## Outstanding tasks
 
-1. **Trust content** — 61 placeholders (end of [PAGE_CONTENT.md](PAGE_CONTENT.md)). Latest request (New Temple): સ્થપતિ name, સંકલ્પ વર્ષ,
+1. **Trust content** — since v170/v173 no `[brackets]`; details the trust must give read "વિગત ટૂંક સમયમાં" or are left out. Current open list = `canvas.json` → notes.todo (18 Oct). Older list (v152, 61 placeholders) for reference: Latest request (New Temple): સ્થપતિ name, સંકલ્પ વર્ષ,
    આયોજન detail, construction progress, expected completion; optional dated સંકલ્પ story for History ch. 6.
    Other open items from the canvas to-do note (`canvas.json` → notes.todo): ગેપ્પરા spelling confirmation, Facebook link (button hidden), ભાગવત કથાકાર name,
    યજ્ઞશાળા/ભોજનશાળા location, યજ્ઞ પૂર્ણાહુતિ time, ગાદી on 2 and 7 Feb during the festival, place of શ્રી લાખણેચી માઁ and શ્રી ગોગા મહારાજ in the
@@ -112,7 +113,7 @@ MenuMobile and OfflineMobile are phone-screen boards (fixed 844 px), not content
 4. **Figma Gate A:** when the allowance returns — one read-only check first; if blocked, stop. Then run `figma/scripts/call1.js` … in order
    (see `figma/state.json` → `run_order`), after the owner drops the 26 original images (original filenames) onto the Components page.
    Then sync Figma with website changes v99–v106 (`figma/state.json` → `figma_sync_todo`; the scripts already contain the v97 Gate A design).
-5. **Before the March 2027 પૂનમ:** extend the date lists — `const EV` (Darshan, Contact, NotFound + phone pages) and `const EVH` + `const POONAM`
+5. **Date lists — extended to 13 Dec 2027 in v163** (Acharya's confirmation not recorded). Before that (v152) the task was: extend the date lists — `const EV` (Darshan, Contact, NotFound + phone pages) and `const EVH` + `const POONAM`
    (Main, HomeTablet, HomeTabletL, HomePhoneL, HomeMobile). Last પૂનમ listed: 20 Feb 2027; calendars end 15 Apr 2027. Dates need the Acharya's confirmation.
 
 ## Owner's decisions and task queue (10 Oct 2026, end of the handover session)

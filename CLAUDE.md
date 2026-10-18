@@ -20,14 +20,14 @@ The official **Gujarati-only** website design for **શ્રી વિહત �
 
 ## Rules (from the project owner — do not relax them)
 
-1. **Gujarati only** on the site. No invented content. Unknown facts stay as `[square-bracket placeholders]`.
+1. **Gujarati only** on the site. No invented content. Unknown facts read "વિગત ટૂંક સમયમાં" or are left out (owner's decision, v170/v173 — no `[brackets]` on the site any more).
 2. Respectful temple language. Keep existing approved wording and the date format. No new devotional copy unless the trust supplies it.
 3. **Publish only with the owner's approval.** If the owner's request itself hands you the decision (e.g. "add it to the design, it's on you"),
    that request is the approval for that change — afterwards report exactly what changed. Otherwise show the change (before/after pictures) first.
    One change = one published version. The previous version stays for rollback.
 4. Do not touch Figma until the agreed allowance check (see [NEXT_SESSION.md](NEXT_SESSION.md)). Do not upgrade any plan. Do not edit or delete the scheduled reminder.
 5. Preserve unrelated pages, existing design, copy and behaviour. Smallest possible change.
-6. Removed items stay removed. Placeholders stay until the trust provides the content.
+6. Removed items stay removed. "વિગત ટૂંક સમયમાં" lines and left-out details stay until the trust provides the content (open list: `canvas.json` → notes.todo).
 7. Never put passwords, tokens or keys in this repo.
 8. If the live design version is newer than the one recorded in [PROJECT_STATE.md](PROJECT_STATE.md), the owner edited it in the editor:
    re-read the live files and build on them — never overwrite the owner's edits.
@@ -68,7 +68,7 @@ python3 tools/gen_page_content.py design/project PAGE_CONTENT.md "design vNNN (<
 - [NEXT_SESSION.md](NEXT_SESSION.md) — start here: state, first action, safe workflow
 - [PROJECT_STATE.md](PROJECT_STATE.md) — versions, open tasks, known issues
 - [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) — colours, type, layout, breakpoints, components, images, Gujarati wording rules
-- [PAGE_CONTENT.md](PAGE_CONTENT.md) — every text on every page (generated), with all open placeholders
+- [PAGE_CONTENT.md](PAGE_CONTENT.md) — every text on every page (generated); v177 has no bracket placeholders
 - [CHANGELOG.md](CHANGELOG.md) — what changed in each version and how it was tested
 - [TESTING.md](TESTING.md) — tools, viewports, checks, known limitations, last results
 - [tasks/audit-report-v106.md](tasks/audit-report-v106.md) — design audit findings (P0–P3), root causes and the proposed fix plan

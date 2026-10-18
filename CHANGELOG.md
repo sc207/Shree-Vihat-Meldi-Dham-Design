@@ -13,6 +13,115 @@ _v149–v152 come from the owner's request of 16 Oct 2026, 21:58 IST: "check now
 then fix it for all device like laptop, tablet, mobile". Check, findings and pictures: [tasks/ux-check-v147/README.md](tasks/ux-check-v147/README.md).
 All four are CSS blocks at the end of `site.css` (script `tools/examples/apply_v149_v152_ux.py <project> <part>`); no wording change._
 
+_v153–v177 were published on 17–18 Oct 2026 from the owner's requests in a conversation whose account stopped while publishing v177.
+They were recorded on the spec page (its "Audit change record" and "History & photos · 18 Oct" sections; source and pictures in
+[tasks/spec-page/](tasks/spec-page/)) but not committed here at the time. Added on 18 Oct 2026 from that record and checked against the live
+files ([tasks/recovery-1018/README.md](tasks/recovery-1018/README.md)). Per-version ids were not recorded except v177; earlier versions remain in
+the artifact's history. Combined check of v153–v177 against v152: layout 216 runs, 0 new problems._
+
+## v177 · `1792315235-dd28` — ભોજનશાળા બારેમાસ અવિરત (18 Oct 2026)
+
+- "ધામની ભોજનશાળા બારેમાસ અવિરત" on the festival page (venue, programme band, notice), the Contact FAQ and the Darshan card; the festival
+  meal times are removed. Live content verified on 18 Oct (all six desktop/phone files).
+
+## v176 — festival venue list (18 Oct 2026)
+
+- The two "coming soon" rows became ભોજન પ્રસાદ and પૂછપરછ, with facts already on the page.
+
+## v175 — festival night programme (18 Oct 2026)
+
+- Artist names removed everywhere; the night programme is three cards: ભવ્ય લોક ડાયરો (the five nights as date tiles), રામ કથા, માતાજીની રમેલ.
+
+## v174 — stuti in the band above the footer (18 Oct 2026)
+
+- The owner's stuti "॥ શ્રીવિહતમેલડીદેવિ દિવ્યતેજોમયેશ્વરિ । સાણન્દધામવાસિનિ જગદમ્બે નમોઽસ્તુ તે ॥" replaces "યા દેવી સર્વભૂતેષુ …" on every page.
+
+## v170, v173 — pending content filled; no `[brackets]` left (18 Oct 2026)
+
+- Owner's request: pending text filled only from facts the site already states; details only the trust can give read "વિગત ટૂંક સમયમાં"
+  or are left out. v173: the two Gallery "photo coming soon" tiles without brackets — the last placeholders. `PAGE_CONTENT.md`: 61 → 0.
+
+## v172 — New Temple detail pictures on phones (18 Oct 2026)
+
+- One row per picture with the text beside it (long captions were squeezed).
+
+## v171 — tablets: no lone card at the end of a grid (18 Oct 2026)
+
+- 616–1100 px: the last card runs the full width (news, announcements, notices, rites); festival nights 3 + 2; Darshan travel 2 + 2.
+
+## v169 — History: one timeline (18 Oct 2026)
+
+- ઇતિહાસની મુખ્ય સમયરેખા ૧૯૭૩ → ૨૦૨૭ in chapter 1, no longer split between chapters 1 and 5.
+
+## v168 — old temple vs today (18 Oct 2026)
+
+- Tag "જૂનું મંદિર" and captions on the three મઢ photos (Gallery) and in History ch. 5 ("દર્શન" on the shrine photo); "નવું મંદિર" on the render;
+  the night-programme news card no longer uses the old-temple photo.
+
+## v167 — History chapter 5 second photo (18 Oct 2026)
+
+- "મંદિરમાં માતાજીનાં દર્શન".
+
+## v166 — Gallery news and announcements (18 Oct 2026)
+
+- All six cards with picture, date, title, one line and link; two announcements filled.
+
+## v165 — construction photos dated (18 Oct 2026)
+
+- Dated ૧૭ ઑક્ટોબર, ૨૦૨૬; the big photo's white sky toned to a soft blue haze, entrance photo toned.
+
+## v164 — New Temple "દર્શનનો માર્ગ" card ૦૪ (18 Oct 2026)
+
+- Photo of ॥ પ.પૂ. ભગવાન શ્રી કરમશીબાપા ભુવન ॥ with its text; card ૦૩ and the lead filled.
+
+## v163 — આગામી પાવન દિવસો through 13 Dec 2027 (18 Oct 2026)
+
+- Every પૂનમ and festival day through 13 Dec 2027 (`POONAM`, `EVH`, `EV` lists); past days hide, the next 6 show.
+  Whether the Acharya confirmed these dates is not recorded.
+
+## v162 — Home Bapa photos: tile-sized copies (18 Oct 2026)
+
+- The Home tiles loaded a 2172 px file and looked grainy; now tile-sized copies (કરમશીબાપા and સુરેશબાપા).
+
+## v161 — Home news (18 Oct 2026)
+
+- Date ૧૭ ઑક્ટોબર, ૨૦૨૬, titles and one line on all three cards ("નવા મંદિરનું નિર્માણ કાર્ય પ્રગતિમાં", "મહોત્સવની તૈયારી — સેવા નોંધણી શરૂ"
+  with the ધામ પરિવાર picture).
+
+## v160 — Gallery grid without gaps (18 Oct 2026)
+
+- New order and frame sizes for photos 40–51: no empty cells at any width, same page height.
+
+## v159 — History chapter 7 spelling (18 Oct 2026)
+
+- "ઊજવીએ", matching "ઊજવાશે" on the festival page.
+
+## v158 — ૨૭ નક્ષત્ર (18 Oct 2026)
+
+- New Temple caption and કોતરણી card: "ભારતીય જ્યોતિષનાં તમામ ૨૭ નક્ષત્ર — અશ્વિનીથી રેવતી સુધી." (owner: 27, not 10).
+
+## v157 — photos of શ્રી વિહત મેલડી માઁનો મઢ (17–18 Oct 2026)
+
+- Gallery (3 photos) and the old-temple photo in History chapter 5.
+
+## v156 — construction and temple photos (17–18 Oct 2026)
+
+- Nine photos: new temple, શિખર, સ્તંભ, પ્રવેશદ્વાર, મંડપનો ઘુમ્મટ under construction; ॥ પ.પૂ. ભગવાન શ્રી કરમશીબાપા ભુવન ॥ as "પૂર્ણ કાર્ય";
+  three darshan photos in the Gallery; Home news card.
+
+## v155 — New Temple સંકલ્પ year (17–18 Oct 2026)
+
+- ૨૦૨૪ (the શિલાયજ્ઞ of 14 March 2024).
+
+## v154 — History: the dham's story (17–18 Oct 2026)
+
+- From ભુવાજી શ્રી સુરેશબાપા's recording (written version), in his words: chapters 1, 3, 4, 5, 7. Still awaited: Karamshibapa's birth,
+  both Bapas' messages, old photos, the માતાજી's own story.
+
+## v153 — YouTube link (17 Oct 2026)
+
+- The temple's YouTube channel ("SANAND MA VIHAT") next to Instagram and WhatsApp — footer, menus and Contact, on every page.
+
 ## v152 · `1792236815-ee81` — New Temple construction photos on tablets (17 Oct 2026)
 
 - **Problem:** "નિર્માણ સ્થળની તાજી તસવીરો" at 761–999 px: the three small update cards kept the 148 px laptop thumbnail, leaving 75–130 px for

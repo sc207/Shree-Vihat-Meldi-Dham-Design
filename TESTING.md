@@ -65,6 +65,10 @@ hide the phone action bar (`.vx-abar{display:none}`) so it does not cover conten
 
 ## Last verified results
 
+- 18 Oct 2026 (recovery + GitHub sync, live v177 `1792315235-dd28`): 28/28 live project files = `design/project/`; 56/56 images = live asset store;
+  `check_layout.py` live v177 vs v152 on all 24 boards, `--widths auto`, normal + large text, clock 18 Oct 16:30 IST: 216 runs, 0 new problems.
+  Fonts were taken from the fontsource GitHub repo (`git clone --filter=blob:none --sparse https://github.com/fontsource/font-files`, then
+  `--fonts <clone>/fonts/google`) because npm was blocked. Details: [tasks/recovery-1018/README.md](tasks/recovery-1018/README.md).
 10 Oct 2026, design v106:
 
 
