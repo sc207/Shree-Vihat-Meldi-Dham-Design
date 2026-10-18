@@ -116,6 +116,9 @@ MenuMobile and OfflineMobile are phone-screen boards (fixed 844 px), not content
 5. **Date lists — extended to 13 Dec 2027 in v163** (Acharya's confirmation not recorded). Before that (v152) the task was: extend the date lists — `const EV` (Darshan, Contact, NotFound + phone pages) and `const EVH` + `const POONAM`
    (Main, HomeTablet, HomeTabletL, HomePhoneL, HomeMobile). Last પૂનમ listed: 20 Feb 2027; calendars end 15 Apr 2027. Dates need the Acharya's confirmation.
 
+6. **Proposed v178 (18 Oct, NOT published, waiting for the owner's approval):** festival ડાયરો day tiles on phones 401–760 px 11 → 12 px with short day names up to 560 px; New Temple card ૦૪ keeps "·" and the closing "॥" with the word before them. Script `tools/examples/apply_v178_nights_bhuvan.py <project>`; tested on a copy of v177: layout 74 runs 0 new problems, pixel compare only NewTempleMobile card ૦૪, no wording or frame change.
+7. **Owner's poster canvas** `https://claude.ai/artifact/MwLPukDNTAnXfDDuQ8npsp` (મંગલારોહણ: A3 poster, 4:5 social, logo, car sticker): portrait boards do not fit the 4:3 news-card picture (cover cuts the wordmark and the Matas). Suggested a 1200×900 card board; waiting for the owner.
+
 ## Owner's decisions and task queue (10 Oct 2026, end of the handover session)
 
 Decided:
