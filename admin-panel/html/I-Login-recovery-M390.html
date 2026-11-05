@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="gu"><head><link rel="stylesheet" href="../assets/fonts.css"><style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<meta charset="utf-8">
+<title>રિકવરી કોડ વાપરો · મોબાઇલ 390</title>
+<style>x-dc{display:none!important}</style>
+<link rel="stylesheet" href="../assets/phc.css">
+<style data-dc-tpl="3">body{margin:0;background:#FBF7EF}</style><style data-dc-tpl="3">
+body{margin:0;background:#481022}
+a{color:#741A32}a:hover{color:#5C1227}
+</style></head>
+<body>
+<div id="dc-root"><div class="sc-host" data-sc-name="I-Login-recovery-M390"><div data-dc-tpl="4" class="p-full" style="min-height: 100vh;"><div data-dc-tpl="5" style="min-height: 100vh;"><div class="sc-host" data-sc-name="Login" data-dc-tpl="6"><div data-dc-tpl="4" class="p-root"><div data-dc-tpl="5" class="p-login"><div data-dc-tpl="6" class="p-login__top"><button data-dc-tpl="7" type="button" class="p-ibtn p-aplus" aria-label="મોટા અક્ષર">અ+</button></div><main data-dc-tpl="8" class="p-lcard" aria-labelledby="lg-t"><div data-dc-tpl="9" class="p-lbrand"><img data-dc-tpl="10" src="../assets/emblem.png" alt="" width="52" height="52"><span data-dc-tpl="11"><b data-dc-tpl="12">શ્રી વિહત મેલડી ધામ</b><small data-dc-tpl="13">એડમિન પેનલ</small></span></div><h1 data-dc-tpl="15" id="lg-t">બે-પગલાંની ચકાસણી</h1><p data-dc-tpl="16" style="margin: 0px;">તમારી ઓથેન્ટિકેટર એપમાંથી 6 અંકનો કોડ લખો.</p><div data-dc-tpl="17" class="p-field"><label data-dc-tpl="18" for="lg-c">ઓથેન્ટિકેટર ઍપનો 6 અંકનો કોડ</label><input data-dc-tpl="19" id="lg-c" class="p-input p-otp" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" value="482913" style=""></div><button data-dc-tpl="20" type="button" class="p-btn p-btn--pri">ચકાસો અને પ્રવેશ કરો</button><div data-dc-tpl="21" style="display: flex; flex-direction: column; gap: 4px;"><a data-dc-tpl="22" class="p-link" href="#">રિકવરી કોડ વાપરો</a><span data-dc-tpl="23" class="p-small p-muted">કોડ ન મળે તો સુપર એડમિનનો સંપર્ક કરો.</span></div></main><p data-dc-tpl="47" class="p-lfoot">આ ખાનગી વ્યવસ્થાપન ક્ષેત્ર છે. દરેક કાર્ય ઓડિટ ઇતિહાસમાં નોંધાય છે.</p></div></div></div></div><div data-dc-tpl="7" class="p-root" style="background: transparent;"><div data-dc-tpl="8" class="ov-scrim" style="background: rgba(72, 16, 34, 0.55);"></div><div data-dc-tpl="9" class="ov-scrim"></div><div data-dc-tpl="10" class="ov-modal ov-modal--sm" role="dialog" aria-modal="true" aria-labelledby="ovt"><div data-dc-tpl="11" class="ov-grab" aria-hidden="true"></div><div data-dc-tpl="12" class="ov-hd"><h2 data-dc-tpl="13" id="ovt">રિકવરી કોડ વાપરો</h2><button data-dc-tpl="14" type="button" class="p-ibtn" aria-label="બંધ કરો"><svg data-dc-tpl="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path data-dc-tpl="16" d="M6 6l12 12M18 6L6 18"></path></svg></button></div><span data-dc-tpl="17" class="p-check-tag">આ સ્ક્રીનનું લખાણ ચકાસણી બાકી</span><p data-dc-tpl="18" class="p-muted">ઓથેન્ટિકેટર ન હોય ત્યારે એક વખત વાપરી શકાય એવો રિકવરી કોડ લખો.</p><div data-dc-tpl="19" class="p-field"><label data-dc-tpl="20" for="rc">રિકવરી કોડ</label><input data-dc-tpl="21" id="rc" class="p-input" type="text" placeholder="" autocomplete="one-time-code" autocapitalize="characters" value="" style=""></div><p data-dc-tpl="22" class="p-small p-muted">કોડ ન હોય તો સુપર એડમિનનો સંપર્ક કરો.</p><div data-dc-tpl="23" class="ov-act"><button data-dc-tpl="24" type="button" class="p-btn p-btn--sec">પાછા જાઓ</button><button data-dc-tpl="25" type="button" class="p-btn p-btn--pri">ચકાસો અને પ્રવેશ કરો</button></div></div></div></div></div></div>
+
+
+
+</body></html>

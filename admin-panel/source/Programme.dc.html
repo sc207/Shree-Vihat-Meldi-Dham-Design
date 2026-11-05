@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>મહોત્સવ કાર્યક્રમ</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root p-fsroot">
+<dc-import name="Shell" active="fest" hint-size="100%,64px"></dc-import>
+<div class="p-fsbody">
+<main class="p-page" style="gap: 16px;">
+<nav class="p-subnav" aria-label="મહોત્સવ અને નિમંત્રણ"><a href="#" aria-current="page">કાર્યક્રમ</a><a href="Invitations.dc.html">નિમંત્રણ યાદી</a><a href="Whatsapp.dc.html">WhatsApp મેસેજ</a><a href="Notifications.dc.html">મેસેજની સ્થિતિ</a></nav>
+<div class="p-ph"><div><span class="p-eyebrow">મહોત્સવ તૈયારી · મહોત્સવ અને નિમંત્રણ</span><h1>મહોત્સવ કાર્યક્રમ</h1><p>આ કાર્યક્રમ વેબસાઇટ પર જાહેર થયેલા કાર્યક્રમ જેવો જ છે. અહીં તેમાં ફેરફાર થઈ શકતો નથી.</p></div><span class="p-badge p-badge--off"><i></i>ફક્ત જોવા માટે</span></div>
+<div class="p-note p-note--warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a8 8 0 1 0 0 16a8 8 0 1 0 0-16M12 11v5M12 8v.3"></path></svg><span>કાર્યક્રમની વિગતો વેબસાઇટ પરથી આવશે. નીચેનું બધું ઉદાહરણ છે — પાનાનું બાકીનું લખાણ હાલની સિસ્ટમમાં જોઈને નક્કી કરવાનું <span class="p-check-tag">ચકાસણી બાકી</span></span></div>
+<sc-for list="{{days}}" as="d" hint-placeholder-count="3">
+<section class="p-card">
+<div class="p-card__h"><h2 class="p-h2">{{d.d}}</h2><span class="p-sample">ઉદાહરણ</span></div>
+<sc-for list="{{d.items}}" as="it" hint-placeholder-count="3">
+<div class="p-row"><div class="p-row__t" style="flex: 0 0 120px;"><b class="p-tnum">{{it.t}}</b></div><div class="p-row__t"><b>{{it.n}}</b><small>{{it.p}}</small></div></div>
+</sc-for>
+</section>
+</sc-for>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const it = (t, n, p) => ({ t, n, p });
+    return {
+      days: [
+        { d: 'પહેલો દિવસ · ૧૫ નવેમ્બર ૨૦૨૬', items: [it('સવારે ૭:૦૦', '[કાર્યક્રમનું નામ]', '[સ્થળ — વેબસાઇટ પરથી]'), it('સવારે ૧૦:૩૦', '[કાર્યક્રમનું નામ]', '[સ્થળ]'), it('સાંજે ૭:૦૦', '[કાર્યક્રમનું નામ]', '[સ્થળ]')] },
+        { d: 'બીજો દિવસ · ૧૬ નવેમ્બર ૨૦૨૬', items: [it('સવારે ૭:૦૦', '[કાર્યક્રમનું નામ]', '[સ્થળ]'), it('બપોરે ૧૨:૦૦', '[કાર્યક્રમનું નામ]', '[સ્થળ]')] }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>મારું ખાતું</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root p-fsroot">
+<dc-import name="Shell" active="none" hint-size="100%,64px"></dc-import>
+<div class="p-fsbody">
+<main class="p-page" style="gap: 16px; max-width: 1040px;">
+<div class="p-ph"><div><span class="p-eyebrow">મારું ખાતું</span><h1>મારું ખાતું અને સુરક્ષા</h1><p>તમારો પાસવર્ડ, બીજું પગલું અને સત્રો. · <span class="p-sample">ઉદાહરણ</span></p></div></div>
+<div class="p-grid2">
+<section class="p-card" aria-labelledby="ac-pw">
+<div class="p-card__h"><h2 id="ac-pw" class="p-h2">પાસવર્ડ</h2><span class="p-small p-muted">છેલ્લે બદલ્યો: ૧૨ ઑક્ટો. ૨૦૨૬</span></div>
+<div class="p-form" style="grid-template-columns: minmax(0, 1fr);">
+<div class="p-field"><label for="a1">હાલનો પાસવર્ડ</label><input id="a1" class="p-input" type="password" autocomplete="current-password"></div>
+<div class="p-field"><label for="a2">નવો પાસવર્ડ</label><input id="a2" class="p-input" type="password" autocomplete="new-password"><span class="p-help">ઓછામાં ઓછા 12 અક્ષર.</span></div>
+<div class="p-field"><label for="a3">નવો પાસવર્ડ ફરી લખો</label><input id="a3" class="p-input is-err" type="password" autocomplete="new-password" aria-invalid="true" aria-describedby="a3-err"><span class="p-err" id="a3-err">બંને પાસવર્ડ સરખા નથી <span class="p-check-tag">લખાણ ચકાસણી બાકી</span></span></div>
+</div>
+<div style="display: flex; justify-content: flex-end; margin-top: 14px;"><button type="button" class="p-btn p-btn--pri">પાસવર્ડ બદલો</button></div>
+</section>
+<section class="p-card" aria-labelledby="ac-2">
+<div class="p-card__h"><h2 id="ac-2" class="p-h2">બીજું પગલું (ઓથેન્ટિકેટર)</h2><span class="p-badge p-badge--ok"><i></i>ચાલુ છે</span></div>
+<p class="p-small p-muted" style="margin: 0 0 12px;">આ ભૂમિકા માટે જરૂરી છે.</p>
+<div class="p-row"><div class="p-row__t"><b>બાકી રિકવરી કોડ: 8</b><small>નવા કોડ બનાવતાં જૂના બધા કોડ બંધ થશે. નવા કોડ ફક્ત એક જ વાર દેખાશે.</small></div><button type="button" class="p-btn p-btn--sec p-btn--sm">રિકવરી કોડ ફરી બનાવો</button></div>
+<div class="p-note p-note--off" style="margin-top: 10px;">ફોન બદલાયો કે ઓથેન્ટિકેટર ખોવાયું? સુપર એડમિનનો સંપર્ક કરો.</div>
+</section>
+</div>
+<section class="p-card" aria-labelledby="ac-s">
+<div class="p-card__h"><h2 id="ac-s" class="p-h2">મારા સત્રો</h2></div>
+<p class="p-small p-muted" style="margin: 0 0 8px;">નિષ્ક્રિય રહેવાથી ૩૦ મિનિટ પછી અથવા વધુમાં વધુ ૮ કલાકે સત્ર સમાપ્ત થાય છે.</p>
+<div class="p-row"><div class="p-row__t"><b>Chrome · Windows <span class="p-badge p-badge--ok"><i></i>આ ઉપકરણ</span></b><small>શરૂ: આજે, ૦૯:૦૨ · ઉદાહરણ</small></div></div>
+<div class="p-row"><div class="p-row__t"><b>Safari · iPhone</b><small>શરૂ: ગઈકાલે, ૧૮:૪૦ · ઉદાહરણ</small></div></div>
+</section>
+<section class="p-card" aria-labelledby="ac-r">
+<div class="p-card__h"><h2 id="ac-r" class="p-h2">ખાતું પાછું મેળવવા</h2></div>
+<p class="p-small" style="margin: 0;">પાસવર્ડ કે ચકાસણી કોડ ખોવાઈ જાય તો સુપર એડમિનનો સંપર્ક કરો. <span class="p-check-tag">હાલનું લખાણ ચકાસણી બાકી</span></p>
+</section>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

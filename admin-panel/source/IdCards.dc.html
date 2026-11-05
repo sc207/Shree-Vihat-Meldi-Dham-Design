@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>ઓળખકાર્ડ</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root p-fsroot">
+<dc-import name="Shell" active="reg" hint-size="100%,64px"></dc-import>
+<div class="p-fsbody">
+<main class="p-page" style="gap: 16px;">
+<nav class="p-subnav" aria-label="નોંધણી વિભાગ"><a href="Regs.dc.html">નોંધણી યાદી</a><a href="#" aria-current="page">ઓળખકાર્ડ</a><a href="Intake.dc.html">નવી નોંધણી ચાલુ/બંધ</a></nav>
+<div class="p-ph">
+<div><span class="p-eyebrow">નોંધણી</span><h1>ઓળખકાર્ડ</h1><p>પાકી નોંધણીઓના કાર્ડ તૈયાર કરવા, છાપવા અને લેવા માટે આપવા. · <span class="p-sample">ઉદાહરણ</span></p></div>
+</div>
+
+<div class="p-tabs" role="tablist" aria-label="કાર્ડની સ્થિતિ">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="7">
+<button type="button" class="p-tab" role="tab" aria-selected="{{t.sel}}">{{t.t}} <span class="p-cnt">{{t.n}}</span></button>
+</sc-for>
+</div>
+
+<div class="p-tools">
+<label class="p-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14M20 20l-4-4"></path></svg><span class="p-vh">શોધો</span><input type="search" placeholder="નામ કે SEVA નંબર"></label>
+</div>
+
+<div class="p-bulk" style="flex-wrap: wrap;">
+<b>૨ પસંદ કર્યા</b>
+<button type="button" class="p-btn p-btn--light p-btn--sm">પસંદ કરેલા તૈયાર કરવા</button>
+<button type="button" class="p-btn p-btn--onDark p-btn--sm">પસંદ કરેલા મંજૂર કરવા</button>
+<button type="button" class="p-btn p-btn--onDark p-btn--sm">પસંદ કરેલા છપાયા ચિહ્નિત કરવા</button>
+<button type="button" class="p-btn p-btn--onDark p-btn--sm">પસંદ કરેલાનું પ્રિવ્યૂ અને પ્રિન્ટ</button>
+</div>
+
+<div class="p-tablebox p-rtbox">
+<table class="p-table p-rt">
+<caption class="p-vh">ઓળખકાર્ડ યાદી</caption>
+<thead><tr><th scope="col" class="p-cbcell"><span class="p-vh">પસંદ</span></th><th scope="col">નામ</th><th scope="col">નોંધણી નંબર</th><th scope="col">સેવા</th><th scope="col">ફોટો</th><th scope="col">કાર્ડની સ્થિતિ</th><th scope="col"><span class="p-vh">કાર્ય</span></th></tr></thead>
+<tbody>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="7">
+<tr class="{{r.rc}}">
+<td class="p-cbcell"><label class="p-cblab"><input class="p-cb" type="checkbox" checked="{{r.sel}}" readOnly="{{true}}" aria-label="{{r.cbl}}"></label></td>
+<td class="p-rt-main"><span class="p-nm">{{r.name}}</span></td>
+<td class="p-tnum" data-label="નોંધણી નંબર">{{r.id}}</td>
+<td data-label="સેવા">{{r.seva}}</td>
+<td data-label="ફોટો">{{r.photo}}</td>
+<td data-label="સ્થિતિ"><span class="{{r.bcls}}"><i></i>{{r.st}}</span></td>
+<td class="p-rt-act"><a class="p-link" href="#">પ્રિવ્યૂ</a></td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+<p class="p-small p-muted" style="margin: 0;">જૂના ફોર્મની નોંધણીનું કાર્ડ બનતું નથી.</p>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const ST = [
+      ['તૈયાર નથી', 'p-badge p-badge--off', '૧૮'], ['સમીક્ષા માટે તૈયાર', 'p-badge p-badge--new', '૨૪'], ['છાપવા માટે મંજૂર', 'p-badge p-badge--warn', '૧૨'],
+      ['છપાયું', 'p-badge p-badge--ok', '૩૦'], ['લેવા માટે તૈયાર', 'p-badge p-badge--ok', '૯૦'], ['લઈ લીધું', 'p-badge p-badge--off', '૯૦૦'], ['ફરી છાપવું જરૂરી', 'p-badge p-badge--bad', '૨']
+    ];
+    const raw = [
+      ['રમેશભાઈ પટેલ', 'SEVA-000142', 'ભોજનાલય સેવા', 'છે', 1, false],
+      ['ગીતાબેન શાહ', 'SEVA-000141', 'સ્વચ્છતા સેવા', 'છે', 1, true],
+      ['કિશનભાઈ દેસાઈ', 'SEVA-000140', 'પાર્કિંગ સેવા', 'છે', 1, true],
+      ['હેતલબેન પરમાર', 'SEVA-000139', 'પાણી સેવા', 'બાકી', 1, false],
+      ['મનોજભાઈ ચૌહાણ', 'SEVA-000138', 'ભોજનાલય સેવા', 'છે', 1, false],
+      ['વિપુલભાઈ મકવાણા', 'SEVA-000136', 'સ્વચ્છતા સેવા', 'છે', 1, false],
+      ['દક્ષાબેન જોષી', 'SEVA-000135', 'ભોજનાલય સેવા', 'છે', 1, false]
+    ];
+    return {
+      tabs: ST.map((s, i) => ({ t: s[0], n: s[2], sel: i === 1 ? 'true' : 'false' })),
+      rows: raw.map((x) => ({ name: x[0], id: x[1], seva: x[2], photo: x[3], st: ST[x[4]][0], bcls: ST[x[4]][1], sel: x[5], rc: x[5] ? 'has-cb is-sel' : 'has-cb', cbl: x[0] + ' પસંદ કરો' }))
+    };
+  }
+}
+</script>
+</body>
+</html>

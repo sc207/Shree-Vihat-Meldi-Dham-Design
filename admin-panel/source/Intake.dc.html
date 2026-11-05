@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>નવી નોંધણી ચાલુ/બંધ</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root p-fsroot">
+<dc-import name="Shell" active="reg" hint-size="100%,64px"></dc-import>
+<div class="p-fsbody">
+<main class="p-page" style="gap: 16px; padding-bottom: 0;">
+<nav class="p-subnav" aria-label="નોંધણી વિભાગ"><a href="Regs.dc.html">નોંધણી યાદી</a><a href="IdCards.dc.html">ઓળખકાર્ડ</a><a href="#" aria-current="page">નવી નોંધણી ચાલુ/બંધ</a></nav>
+<div class="p-ph"><div><span class="p-eyebrow">નોંધણી</span><h1>નવી નોંધણી ચાલુ/બંધ</h1><p>નવી નોંધણીઓ કેટલી અને ક્યારે સ્વીકારવી તેનું નિયંત્રણ · <span class="p-sample">ઉદાહરણ</span></p></div></div>
+
+<div class="p-grid2">
+<section class="p-card" aria-labelledby="in-now">
+<div class="p-card__h"><h2 id="in-now" class="p-h2">અત્યારની સ્થિતિ</h2><span class="p-badge p-badge--ok"><i></i>ચાલુ — નવી નોંધણી આવે છે</span></div>
+<ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 14.5px;">
+<li>મેન્યુઅલ બંધ — હંમેશાં પહેલું; ખોલીએ ત્યાં સુધી ખુલતું નથી. <span class="p-badge p-badge--off"><i></i>લાગુ નથી</span></li>
+<li>દૈનિક મર્યાદા પૂર્ણ — આપમેળે થોભે, આવતીકાલે સવારે ૧૨:૦૦ (ભારતીય સમય) આપમેળે ખુલે. <span class="p-badge p-badge--off"><i></i>લાગુ નથી</span></li>
+<li>કુલ મર્યાદા પૂર્ણ — ફરી ખોલવા મર્યાદા વધારવી પડે. <span class="p-badge p-badge--off"><i></i>લાગુ નથી</span></li>
+</ol>
+</section>
+<section class="p-card" aria-labelledby="in-sw">
+<div class="p-card__h"><h2 id="in-sw" class="p-h2">સેવા નોંધણી — ચાલુ / બંધ</h2></div>
+<span class="p-switch"><span class="p-switch__t is-on" aria-hidden="true"></span><b>નવી નોંધણી સ્વીકારો</b> — ચાલુ</span>
+<div class="p-note p-note--off" style="margin-top: 10px;">બંધ કરવાથી ફક્ત નવી નોંધણી અટકે છે. હાલની નોંધણીઓ, ફોટો અને ડેટા કાઢી નાખાતા નથી.</div>
+<p class="p-small p-muted" style="margin: 10px 0 0;">ડિઝાઇનમાં સ્વિચ ફક્ત દેખાવ છે — કોઈ સાચી સ્વિચ જોડાયેલી નથી.</p>
+</section>
+</div>
+
+<section class="p-card" aria-labelledby="in-lim">
+<div class="p-card__h"><h2 id="in-lim" class="p-h2">મર્યાદા</h2></div>
+<div class="p-form">
+<div class="p-field"><label for="in1">દૈનિક સ્વીકાર મર્યાદા</label><input id="in1" class="p-input" type="number" inputmode="numeric" value="50"><span class="p-help">દરરોજ મહત્તમ નવી નોંધણી. રદ થયેલી સહિત ગણાય.</span></div>
+<div class="p-field"><label for="in2">કુલ અભિયાન મર્યાદા</label><input id="in2" class="p-input" type="number" inputmode="numeric" value="2000"><span class="p-help">કુલ મહત્તમ નોંધણી. રદ થયેલી ગણાતી નથી.</span></div>
+<div class="p-field"><label for="in3">ચેતવણી ક્યારે બતાવવી</label><input id="in3" class="p-input is-err" type="number" inputmode="numeric" value="120" aria-invalid="true" aria-describedby="in3-err"><span class="p-err" id="in3-err"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9.5 17h-19zM12 10v4.5M12 17.5v.3"></path></svg>૧ થી ૧૦૦ વચ્ચેની ટકાવારી લખો <span class="p-check-tag">ભૂલનું લખાણ ચકાસણી બાકી</span></span></div>
+<div class="p-field"><span class="p-flab">ગણતરી</span><p class="p-small p-muted" style="margin: 0;">ભારતીય સમય મુજબ દરેક તારીખની ગણતરી અલગ. નિષ્ફળ પ્રયાસ, ફરી મોકલેલા અને મુલાકાતીઓ ગણાતા નથી. સ્વીકૃત = નવી અને સમીક્ષા થયેલી નોંધણીઓ.</p></div>
+</div>
+</section>
+
+<div class="p-grid2">
+<section class="p-card" aria-labelledby="in-date">
+<div class="p-card__h"><h2 id="in-date" class="p-h2">ચોક્કસ તારીખ માટે અલગ મર્યાદા</h2><button type="button" class="p-btn p-btn--sec p-btn--sm">+ નવી તારીખ ઉમેરો</button></div>
+<div class="p-row"><div class="p-row__t"><b>૧૫ નવેમ્બર ૨૦૨૬</b><small>દૈનિક મર્યાદા ૮૦</small></div><button type="button" class="p-btn p-btn--ghost p-btn--sm">બદલો</button></div>
+<div class="p-row"><div class="p-row__t"><b>૧૬ નવેમ્બર ૨૦૨૬</b><small>દૈનિક મર્યાદા ૮૦</small></div><button type="button" class="p-btn p-btn--ghost p-btn--sm">બદલો</button></div>
+</section>
+<section class="p-card" aria-labelledby="in-hist">
+<div class="p-card__h"><h2 id="in-hist" class="p-h2">ફેરફાર ઇતિહાસ</h2><button type="button" class="p-btn p-btn--ghost p-btn--sm">ગણતરીની ચકાસણી કરો</button></div>
+<ol class="p-tl">
+<li><span>દૈનિક મર્યાદા ૪૦ → ૫૦ કરી<small>ઉદાહરણ વપરાશકર્તા · ૩ નવે., ૧૮:૦૪</small></span></li>
+<li><span>ચેતવણીની સીમા ૮૦% કરી<small>ઉદાહરણ વપરાશકર્તા · ૧ નવે., ૧૦:૧૫</small></span></li>
+</ol>
+<p class="p-small p-muted" style="margin: 10px 0 0;">“ગણતરીની ચકાસણી” દરેક મર્યાદાનો ઉપયોગ નોંધણીઓ સાથે મેળવીને જુએ છે. કંઈ બદલાતું નથી.</p>
+</section>
+</div>
+
+<div class="p-actbar"><span class="p-small p-muted" style="margin-right: auto; align-self: center;">ફેરફાર નથી કર્યો ત્યાં સુધી “સાચવો” બંધ રહે</span><button type="button" class="p-btn p-btn--ghost">રહેવા દો</button><button type="button" class="p-btn p-btn--pri" disabled>સાચવો</button></div>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
