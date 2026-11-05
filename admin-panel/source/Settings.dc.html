@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>સેટિંગ્સ</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root p-fsroot">
+<dc-import name="Shell" active="set" hint-size="100%,64px"></dc-import>
+<div class="p-fsbody">
+<main class="p-page" style="gap: 16px; padding-bottom: 0;">
+<nav class="p-subnav" aria-label="સેટિંગ્સ વિભાગ"><a href="#" aria-current="page">સેટિંગ્સ</a><a href="Site.dc.html">વેબસાઇટ સ્થિતિ</a><a href="Users.dc.html">યુઝર્સ</a><a href="Audit.dc.html">કોણે શું કર્યું</a></nav>
+<div class="p-ph"><div><span class="p-eyebrow">સેટિંગ્સ</span><h1>સેટિંગ્સ</h1><p>રોજિંદા કામ માટેના સામાન્ય મૂલ્યો. દરેક ફેરફાર ઓડિટમાં નોંધાય છે. · <span class="p-sample">ઉદાહરણ મૂલ્યો</span></p></div></div>
+<section class="p-card" aria-label="સેટિંગ્સ">
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="4">
+<div class="p-row">
+<div class="p-row__t"><b>{{r.t}}</b><small>{{r.h}}</small></div>
+<div class="p-field" style="width: 200px;"><label class="p-vh" for="{{r.id}}">{{r.t}}</label><div style="display: flex; align-items: center; gap: 8px;"><input id="{{r.id}}" class="{{r.cls}}" type="number" inputmode="numeric" value="{{r.v}}" aria-invalid="{{r.inv}}" aria-describedby="{{r.desc}}" style="width: 110px;"><span class="p-small p-muted">{{r.u}}</span></div><sc-if value="{{r.err}}" hint-placeholder-val="{{false}}"><span class="p-err" id="{{r.eid}}">{{r.err}}</span></sc-if></div>
+</div>
+</sc-for>
+</section>
+<section class="p-card" aria-labelledby="st-o">
+<div class="p-card__h"><h2 id="st-o" class="p-h2">બીજા સેટિંગ ક્યાં છે</h2></div>
+<div class="p-row"><div class="p-row__t"><b>નવી નોંધણી ચાલુ/બંધ અને મર્યાદા</b><small>નોંધણી › નવી નોંધણી ચાલુ/બંધ</small></div><a class="p-link" href="Intake.dc.html">ખોલો</a></div>
+<div class="p-row"><div class="p-row__t"><b>WhatsApp મોડ અને મર્યાદા</b><small>મહોત્સવ અને નિમંત્રણ › WhatsApp મેસેજ</small></div><a class="p-link" href="Whatsapp.dc.html">ખોલો</a></div>
+<div class="p-row"><div class="p-row__t"><b>દિવસ મુજબ સેવક જગ્યા</b><small>ટીમો અને હાજરી › દિવસ મુજબ સેવક જગ્યા</small></div><a class="p-link" href="CapacityDates.dc.html">ખોલો</a></div>
+</section>
+<div class="p-actbar"><span class="p-small p-muted" style="margin-right: auto; align-self: center;">એક ખાનામાં ભૂલ છે — સુધાર્યા પછી જ સાચવી શકાય</span><button type="button" class="p-btn p-btn--ghost">રહેવા દો</button><button type="button" class="p-btn p-btn--pri" disabled>સાચવો</button></div>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const ok = 'p-input', bad = 'p-input is-err';
+    return {
+      rows: [
+        { id: 'st1', t: 'નિમંત્રણ પછી ફોલો-અપ', h: '૧ થી ૬૦ વચ્ચેની પૂર્ણ સંખ્યા · સામાન્ય મૂલ્ય: ૩', v: '3', u: 'દિવસ', cls: ok },
+        { id: 'st2', t: 'પધરામણી સમયનો ટકરાવ', h: 'બે પધરામણી વચ્ચેનો સમય (ચકાસણી બાકી)', v: '90', u: 'મિનિટ', cls: ok },
+        { id: 'st3', t: 'પધરામણી સંભવિત બેવડી વિનંતી', h: 'એક જ વિનંતી ફરી આવે તો જણાવવું (ચકાસણી બાકી)', v: '7', u: 'દિવસ', cls: ok },
+        { id: 'st4', t: 'એક નોંધણીને વધુમાં વધુ સેવા', h: '૧ થી ૬૦ વચ્ચેની પૂર્ણ સંખ્યા · સામાન્ય મૂલ્ય: ૩', v: '0', u: 'સેવા', cls: bad, inv: 'true', eid: 'st4-err', desc: 'st4-err', err: '૧ થી ૬૦ વચ્ચેની પૂર્ણ સંખ્યા લખો (ઉદાહરણ ભૂલ)' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

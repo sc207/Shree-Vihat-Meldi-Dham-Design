@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>રિપોર્ટ</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root p-fsroot">
+<dc-import name="Shell" active="rep" hint-size="100%,64px"></dc-import>
+<div class="p-fsbody">
+<main class="p-page" style="gap: 16px;">
+<nav class="p-subnav" aria-label="રિપોર્ટ વિભાગ"><a href="#" aria-current="page">રિપોર્ટ</a><a href="Analytics.dc.html">પેનલના આંકડા</a></nav>
+<div class="p-ph">
+<div><span class="p-eyebrow">રિપોર્ટ</span><h1>રિપોર્ટ</h1><p>નોંધણી, સેવા અને ટીમના આંકડા. · <span class="p-sample">ઉદાહરણ આંકડા</span></p></div>
+<div class="p-ph__act"><button type="button" class="p-btn p-btn--sec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>CSV ડાઉનલોડ</button><button type="button" class="p-btn p-btn--sec">પ્રિન્ટ / PDF</button></div>
+</div>
+
+<section class="p-stats" aria-label="નોંધણીના આંકડા">
+<div class="p-stat"><span>કુલ નોંધણીઓ</span><b>૧,૩૦૪</b></div>
+<div class="p-stat"><span>સમીક્ષા બાકી</span><b>૧૨</b></div>
+<div class="p-stat"><span>પાકી <span class="p-check-tag">અર્થ ચકાસણી બાકી</span></span><b>૧,૨૩૬</b></div>
+<div class="p-stat"><span>રદ</span><b>૫૬</b></div>
+<div class="p-stat"><span>અલગ વ્યક્તિઓ</span><b>૧,૧૯૦</b></div>
+</section>
+<p class="p-small p-muted" style="margin: -6px 0 0;">અલગ વ્યક્તિઓ: રદ ન થયેલી નોંધણીઓમાં નામ અને મોબાઇલથી ગણાયેલી અલગ વ્યક્તિઓ.</p>
+
+<div class="p-grid2">
+<section class="p-card" aria-labelledby="rp-d">
+<div class="p-card__h"><h2 id="rp-d" class="p-h2">તારીખ મુજબ</h2></div>
+<div class="p-tablebox p-rtbox"><table class="p-table p-rt"><caption class="p-vh">તારીખ મુજબ નોંધણી</caption><thead><tr><th scope="col">સેવાનો દિવસ</th><th scope="col">નોંધણી</th><th scope="col">રદ</th></tr></thead><tbody>
+<sc-for list="{{days}}" as="r" hint-placeholder-count="5"><tr><td class="p-rt-main">{{r.d}}</td><td class="p-tnum" data-label="નોંધણી">{{r.n}}</td><td class="p-tnum" data-label="રદ">{{r.c}}</td></tr></sc-for>
+</tbody></table></div>
+<p class="p-small p-muted" style="margin: 10px 0 0;">જૂના ફોર્મની નોંધણીઓ (તારીખ વગર): ૧૦</p>
+</section>
+<section class="p-card" aria-labelledby="rp-s">
+<div class="p-card__h"><h2 id="rp-s" class="p-h2">સેવા પ્રમાણે</h2></div>
+<div class="p-mix">
+<sc-for list="{{mix}}" as="m" hint-placeholder-count="5"><div class="p-mix__r"><span>{{m.t}}</span><b>{{m.v}}</b><div class="p-meter"><span style="{{m.w}}"></span></div></div></sc-for>
+</div>
+<p class="p-small p-muted" style="margin: 12px 0 0;">એક વ્યક્તિ એકથી વધુ સેવા પસંદ કરી શકે, એટલે સરવાળો નોંધણીઓ કરતાં વધુ હોઈ શકે. સેવાનાં નામ ઉદાહરણ.</p>
+</section>
+</div>
+
+<div class="p-grid2">
+<section class="p-card" aria-labelledby="rp-t">
+<div class="p-card__h"><h2 id="rp-t" class="p-h2">ટીમ</h2></div>
+<div class="p-row"><div class="p-row__t"><b>પાકી નોંધણી, ટીમ ફાળવાઈ નથી</b><small>ટીમમાં મૂકવાની બાકી</small></div><b class="p-tnum">૪૮</b></div>
+</section>
+<section class="p-card" aria-labelledby="rp-v">
+<div class="p-card__h"><h2 id="rp-v" class="p-h2">ભક્તો</h2></div>
+<div class="p-stats">
+<div class="p-stat"><span>સક્રિય ભક્તો</span><b>૮૪૦</b></div><div class="p-stat"><span>આર્કાઇવ</span><b>૨૧</b></div><div class="p-stat"><span>મોબાઇલ સાથે</span><b>૮૦૨</b></div>
+<div class="p-stat"><span>મોબાઇલ વગર</span><b>૩૮</b></div><div class="p-stat"><span>નોંધણી સાથે જોડાયેલા</span><b>૬૧૦</b></div><div class="p-stat"><span>સરખા લાગતા (તપાસવાના)</span><b>૭</b></div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      days: [{ d: '૧૫ નવે.', n: '૪૧૦', c: '૧૨' }, { d: '૧૬ નવે.', n: '૩૮૦', c: '૧૮' }, { d: '૧૭ નવે.', n: '૨૯૦', c: '૧૦' }, { d: '૧૮ નવે.', n: '૧૫૦', c: '૯' }, { d: '૧૯ નવે.', n: '૬૪', c: '૭' }],
+      mix: [{ t: 'ભોજનાલય સેવા', v: '૪૧૦', w: 'width: 100%' }, { t: 'સ્વચ્છતા સેવા', v: '૨૬૦', w: 'width: 63%' }, { t: 'પાર્કિંગ સેવા', v: '૨૧૦', w: 'width: 51%' }, { t: 'પાણી સેવા', v: '૧૮૦', w: 'width: 44%' }, { t: 'અન્ય', v: '૧૮૮', w: 'width: 46%' }]
+    };
+  }
+}
+</script>
+</body>
+</html>

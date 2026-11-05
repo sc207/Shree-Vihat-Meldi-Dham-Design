@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>મેસેજની સ્થિતિ</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root p-fsroot">
+<dc-import name="Shell" active="fest" hint-size="100%,64px"></dc-import>
+<div class="p-fsbody">
+<main class="p-page" style="gap: 16px;">
+<nav class="p-subnav" aria-label="મહોત્સવ અને નિમંત્રણ"><a href="Programme.dc.html">કાર્યક્રમ</a><a href="Invitations.dc.html">નિમંત્રણ યાદી</a><a href="Whatsapp.dc.html">WhatsApp મેસેજ</a><a href="#" aria-current="page">મેસેજની સ્થિતિ</a></nav>
+<div class="p-ph"><div><span class="p-eyebrow">મહોત્સવ તૈયારી · મહોત્સવ અને નિમંત્રણ</span><h1>મેસેજની સ્થિતિ</h1><p>WhatsApp સંદેશ માટે શું તૈયાર થયું તેની સ્થિતિ. · <span class="p-sample">ઉદાહરણ</span></p></div></div>
+<div class="p-note p-note--off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V8a5 5 0 0 1 10 0v3M5 11h14v10H5z"></path></svg><span><b>સંદેશ મોકલવાનું બંધ છે.</b> ૮ ફેરફાર નોંધાયા — હજી કોઈ સંદેશ બન્યો નથી, કંઈ મોકલાયું નથી.</span></div>
+<section class="p-card" aria-labelledby="ms-s">
+<div class="p-card__h"><h2 id="ms-s" class="p-h2">નોંધાયેલા ફેરફારનો સારાંશ</h2></div>
+<div class="p-tablebox p-rtbox"><table class="p-table p-rt"><caption class="p-vh">નોંધાયેલા ફેરફારનો સારાંશ</caption><thead><tr><th scope="col">પ્રકાર</th><th scope="col">કુલ</th><th scope="col">પ્રક્રિયા બાકી</th></tr></thead><tbody>
+<sc-for list="{{sum}}" as="r" hint-placeholder-count="6"><tr><td class="p-rt-main">{{r.t}}<sc-if value="{{r.code}}" hint-placeholder-val="{{false}}"> <span class="p-pz">હાલ કોડ “{{r.code}}” દેખાય છે — ગુજરાતી નામ: પ્રસ્તાવિત — મંજૂર નથી</span></sc-if></td><td class="p-tnum" data-label="કુલ">{{r.n}}</td><td class="p-tnum" data-label="પ્રક્રિયા બાકી">{{r.p}}</td></tr></sc-for>
+</tbody></table></div>
+</section>
+<section class="p-card" aria-labelledby="ms-l">
+<div class="p-card__h"><h2 id="ms-l" class="p-h2">મેસેજ</h2></div>
+<div class="p-tablebox p-rtbox"><table class="p-table p-rt"><caption class="p-vh">મેસેજ</caption><thead><tr><th scope="col">પ્રાપ્તકર્તા (ઢંકાયેલ)</th><th scope="col">ટેમ્પ્લેટ</th><th scope="col">સંમતિ</th><th scope="col">સ્થિતિ</th><th scope="col">સમય</th></tr></thead><tbody>
+<sc-for list="{{msgs}}" as="m" hint-placeholder-count="4"><tr><td class="p-rt-main p-tnum">{{m.to}}</td><td data-label="ટેમ્પ્લેટ">{{m.tp}}</td><td data-label="સંમતિ">{{m.c}}</td><td data-label="સ્થિતિ"><span class="{{m.bc}}"><i></i>{{m.st}}</span></td><td data-label="સમય">{{m.t}}</td></tr></sc-for>
+</tbody></table></div>
+<p class="p-small p-muted" style="margin: 10px 0 0;">“API એ સ્વીકાર્યા” પહોંચ્યો નથી. “પહોંચ્યા” ફક્ત WhatsApp જણાવે ત્યારે.</p>
+</section>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      sum: [
+        { t: 'નોંધણી મળી', n: '૩', p: '૩' }, { t: 'નોંધણી પાકી', n: '૨', p: '૨' }, { t: 'નોંધણી રદ', n: '૧', p: '૧' }, { t: 'કાર્ડ લેવા માટે તૈયાર', n: '૧', p: '૧' }, { t: 'સેવા સોંપી', n: '૧', p: '૧', code: 'seva_assigned' }
+      ],
+      msgs: [
+        { to: '98XXXXXX21', tp: 'નોંધણી મળી', c: 'હા', st: 'કતારમાં', bc: 'p-badge p-badge--warn', t: '—' },
+        { to: '97XXXXXX08', tp: 'નોંધણી મળી', c: 'હા', st: 'API એ સ્વીકાર્યા', bc: 'p-badge p-badge--new', t: '૩ નવે., ૧૦:૦૨' },
+        { to: '99XXXXXX64', tp: 'નોંધણી મળી', c: 'હા', st: 'પહોંચ્યા', bc: 'p-badge p-badge--ok', t: '૩ નવે., ૧૦:૦૫' },
+        { to: '94XXXXXX17', tp: 'કાર્ડ લેવા માટે તૈયાર', c: 'હા', st: 'નિષ્ફળ', bc: 'p-badge p-badge--bad', t: '૨ નવે., ૧૮:૪૦' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

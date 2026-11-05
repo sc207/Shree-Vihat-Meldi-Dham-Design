@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>સેટિંગ્સ — સાચવાઈ ગયું (સૂચના)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+.ov-sheet{position:fixed;left:0;right:0;bottom:0;z-index:42;max-height:88vh;overflow:auto;border-radius:20px 20px 0 0;background:#FFFDF8;border-top:1px solid #E4D6BE;box-shadow:0 -8px 32px rgba(72,16,34,.18);padding:8px 16px calc(16px + env(safe-area-inset-bottom))}
+.ov-grab{width:40px;height:4px;border-radius:2px;background:#9C8A73;margin:0 auto 10px}
+.ov-center{position:fixed;inset:0;z-index:42;display:grid;place-items:center;padding:16px}
+.ov-toast{position:fixed;z-index:60;right:24px;bottom:24px;display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;background:#29272A;color:#FBF7EF;font-size:15px;box-shadow:0 12px 32px rgba(0,0,0,.25)}
+@media (max-width:699px){.ov-toast{left:16px;right:16px;bottom:84px}}
+</style>
+</helmet>
+<div style="min-height:100vh"><dc-import name="Settings" hint-size="100%,100vh"></dc-import></div>
+<div class="ov-toast" role="status"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#E2C27A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L19 7"></path></svg><span>સાચવાઈ ગયું</span> <span class="p-check-tag" style="color:#E2C27A;border-color:#E2C27A">લખાણ ચકાસણી બાકી</span></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic { renderVals(){ return {}; } }
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>એડમિન શેલ — મેનુ C</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="p-root p-fs" style="font-family: 'Hind Vadodara', 'Noto Sans Gujarati', sans-serif; color: #29272A;">
+<aside class="p-side" aria-label="મુખ્ય મેનુ">
+<div class="p-brand"><span class="p-emb"><img src="/_blob/3f1091500bdbb5ec48a47fce1ab31208" alt="" width="40" height="40"></span><span class="p-brand__t"><b>શ્રી વિહત મેલડી ધામ</b><small>એડમિન પેનલ</small></span></div>
+<nav aria-label="વિભાગો">
+<ul class="p-nav">
+<sc-for list="{{main}}" as="it" hint-placeholder-count="5">
+<li><a href="#" aria-current="{{it.cur}}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{it.d}}"></path></svg><span class="p-lbl">{{it.t}}</span><span class="p-sl">{{it.s}}</span></a></li>
+</sc-for>
+<li class="p-only-land"><a href="ComponentsPhone.dc.html" aria-current="{{moreCur}}" aria-label="વધુ — બધા વિભાગ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="p-lbl">વધુ</span></a></li>
+</ul>
+<div class="p-ngroup">
+<div class="p-ngroup__h">મહોત્સવ તૈયારી</div>
+<ul class="p-nav">
+<sc-for list="{{group}}" as="it" hint-placeholder-count="3">
+<li><a href="#" aria-current="{{it.cur}}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{it.d}}"></path></svg><span class="p-lbl">{{it.t}}</span><span class="p-sl">{{it.s}}</span></a></li>
+</sc-for>
+</ul>
+</div>
+</nav>
+<div class="p-side__foot">
+<div class="p-who"><span class="p-avatar" aria-hidden="true">ઉ</span><span class="p-who__t"><b>ઉદાહરણ વપરાશકર્તા</b><small>{{role}}</small></span></div>
+<button type="button" class="p-logout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M18 12H9"></path></svg>લૉગઆઉટ</button>
+</div>
+</aside>
+<header class="p-top">
+<div class="p-top__brand"><span class="p-emb"><img src="/_blob/3152a68bd766f07ab3774c82f8c243f1" alt="" width="34" height="34"></span><b>શ્રી વિહત મેલડી ધામ</b></div>
+<label class="p-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14M20 20l-4-4"></path></svg><span class="p-vh">શોધો</span><input type="search" placeholder="નામ, SEVA નંબર કે મોબાઇલના છેલ્લા 4 અંક"></label>
+<span class="p-top__sp"></span>
+<button type="button" class="p-ibtn p-ibtn--search" aria-label="શોધો"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14M20 20l-4-4"></path></svg></button>
+<button type="button" class="p-ibtn p-aplus" aria-label="મોટા અક્ષર">અ+</button>
+<button type="button" class="p-ibtn" aria-label="સૂચનાઓ, ૩ નવી"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20.5a2 2 0 0 0 4 0"></path></svg><span class="p-count" aria-hidden="true">૩</span></button>
+</header>
+<nav class="p-bbar" aria-label="મુખ્ય મેનુ">
+<ul>
+<sc-for list="{{bottom}}" as="it" hint-placeholder-count="4">
+<li><a href="#" aria-current="{{it.cur}}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{it.d}}"></path></svg>{{it.t}}</a></li>
+</sc-for>
+</ul>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"active":{"editor":"enum","options":["home","reg","padh","rep","set","team","dev","fest","none"],"default":"home"},"role":{"editor":null,"default":"એડમિન"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const a = this.props.active ?? 'home';
+    const I = {
+      home: 'M4 11l8-7 8 7v9H4zM10 20v-5h4v5',
+      reg: 'M8 3.5h8v3H8zM6.5 5H5v15.5h14V5h-1.5M8.5 11h7M8.5 15h5',
+      padh: 'M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11zM12 7.6a2.4 2.4 0 1 0 0 4.8a2.4 2.4 0 1 0 0-4.8',
+      rep: 'M5 20V11M12 20V4M19 20v-6M3 20.5h18',
+      set: 'M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1',
+      team: 'M9 5a3 3 0 1 0 0 6a3 3 0 1 0 0-6M3 20c0-3.4 2.6-5.5 6-5.5s6 2.1 6 5.5M16 6.5a3 3 0 0 1 0 5.5M18 14.8c2 .6 3.2 2.4 3.2 5.2',
+      dev: 'M12 4a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7M5 20c0-3.9 3.1-6.5 7-6.5s7 2.6 7 6.5',
+      fest: 'M4 6h16v12H4zM4 7l8 6 8-6',
+      more: 'M4 7h16M4 12h16M4 17h16'
+    };
+    const cur = (k) => (k === a ? 'page' : undefined);
+    const inMore = ['rep', 'set', 'team', 'dev', 'fest'].includes(a);
+    return {
+      role: this.props.role ?? 'એડમિન',
+      moreCur: ['team', 'dev', 'fest'].includes(a) ? 'page' : undefined,
+      main: [
+        { t: 'આજનું કામ', s: 'આજનું કામ', d: I.home, cur: cur('home') },
+        { t: 'નોંધણી', s: 'નોંધણી', d: I.reg, cur: cur('reg') },
+        { t: 'પધરામણી', s: 'પધરામણી', d: I.padh, cur: cur('padh') },
+        { t: 'રિપોર્ટ', s: 'રિપોર્ટ', d: I.rep, cur: cur('rep') },
+        { t: 'સેટિંગ્સ', s: 'સેટિંગ્સ', d: I.set, cur: cur('set') }
+      ],
+      group: [
+        { t: 'ટીમો અને હાજરી', s: 'ટીમો', d: I.team, cur: cur('team') },
+        { t: 'ભક્તો', s: 'ભક્તો', d: I.dev, cur: cur('dev') },
+        { t: 'મહોત્સવ અને નિમંત્રણ', s: 'મહોત્સવ', d: I.fest, cur: cur('fest') }
+      ],
+      bottom: [
+        { t: 'આજનું કામ', d: I.home, cur: cur('home') },
+        { t: 'નોંધણી', d: I.reg, cur: cur('reg') },
+        { t: 'પધરામણી', d: I.padh, cur: cur('padh') },
+        { t: 'વધુ', d: I.more, cur: inMore ? 'page' : undefined }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

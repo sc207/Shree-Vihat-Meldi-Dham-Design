@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>રંગ, અક્ષર અને માપ</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root" style="width: 1440px; min-height: 1980px; padding: 56px 64px 64px; display: flex; flex-direction: column; gap: 40px;">
+
+<header style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px;">
+<div>
+<p class="p-muted" style="margin: 0; font-weight: 600;">Phase C · બેચ ૧ · ફક્ત ડિઝાઇન</p>
+<h1 style="margin: 4px 0 0; font-family: var(--display); font-size: 40px; line-height: 1.3; font-weight: 600; color: #741A32;">રંગ, અક્ષર અને માપ</h1>
+<p style="margin: 6px 0 0; max-width: 760px; color: #675A51;">વેબસાઇટ અને મંજૂર ડિઝાઇન કેન્વાસના જ રંગ અને અક્ષર. કોઈ નવો બ્રાન્ડ રંગ ઉમેર્યો નથી. સ્થિતિ (status) માટેના રંગ Admin Checkpoint 1 પ્રમાણે.</p>
+</div>
+<span class="p-pz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9.5 17h-19zM12 10v4.5M12 17.5v.3"></path></svg>પ્રસ્તાવિત — મંજૂર નથી</span>
+</header>
+
+<section class="p-sec" aria-labelledby="h-brand">
+<div class="p-sec__h"><h2 id="h-brand" class="p-h2">મંદિરના રંગ</h2><span class="p-small p-muted">આંકડો = આઇવરી પર વાંચવાની સ્પષ્ટતા (contrast)</span></div>
+<div style="display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 16px;">
+<sc-for list="{{brand}}" as="c" hint-placeholder-count="16">
+<div class="p-sw"><div class="p-sw__c" style="background: {{c.hex}};"></div><b>{{c.n}}</b><small>{{c.hex}} · {{c.cr}}</small><small>{{c.use}}</small></div>
+</sc-for>
+</div>
+</section>
+
+<section class="p-sec" aria-labelledby="h-status">
+<div class="p-sec__h"><h2 id="h-status" class="p-h2">સ્થિતિના રંગ</h2><span class="p-small p-muted">રંગ ઉપરાંત આકાર અને શબ્દ પણ — ફક્ત રંગથી અર્થ નહીં</span></div>
+<div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px;">
+<div class="p-card" style="display: flex; flex-direction: column; gap: 10px;"><span class="p-badge p-badge--new" style="align-self: flex-start;"><i></i>નવી</span><b>માહિતી / નવું</b><small class="p-muted">#1F4E79 પર #E5EEF7 · 7.4:1</small><small class="p-muted">નવી નોંધણી, માહિતી સંદેશ</small></div>
+<div class="p-card" style="display: flex; flex-direction: column; gap: 10px;"><span class="p-badge p-badge--ok" style="align-self: flex-start;"><i></i>સમીક્ષા થઈ</span><b>બરાબર / પૂરું</b><small class="p-muted">#1F5F5B પર #E3F1EF · 6.4:1</small><small class="p-muted">ચાલુ, પૂરું, સમીક્ષા થઈ</small></div>
+<div class="p-card" style="display: flex; flex-direction: column; gap: 10px;"><span class="p-badge p-badge--warn" style="align-self: flex-start;"><i></i>બાકી</span><b>ધ્યાન આપો</b><small class="p-muted">#7A4A0E પર #FBEFD6 · 6.5:1</small><small class="p-muted">બાકી કામ, જગ્યા ઓછી</small></div>
+<div class="p-card" style="display: flex; flex-direction: column; gap: 10px;"><span class="p-badge p-badge--bad" style="align-self: flex-start;"><i></i>મોકલાયો નથી</span><b>તકલીફ</b><small class="p-muted">#B03A1E પર #FBE7E1 · 5.1:1</small><small class="p-muted">નિષ્ફળ, ભૂલ, જોખમી કાર્ય</small></div>
+<div class="p-card" style="display: flex; flex-direction: column; gap: 10px;"><span class="p-badge p-badge--off" style="align-self: flex-start;"><i></i>રદ</span><b>બંધ / રદ</b><small class="p-muted">#5A524C પર #EFEAE3 · 6.4:1</small><small class="p-muted">રદ, બંધ, ઉપલબ્ધ નથી</small></div>
+</div>
+<p class="p-small p-muted" style="margin: 0;">ફેરફાર: “નવી” હવે ગુલાબી નહીં, વાદળી માહિતી-રંગમાં — જેથી ભૂલ/જોખમ જેવો ન લાગે. “રદ” લાલ નહીં, રાખોડી — રદ થવું ભૂલ નથી.</p>
+</section>
+
+<div style="display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px;">
+<section class="p-sec" aria-labelledby="h-type">
+<h2 id="h-type" class="p-h2">અક્ષર</h2>
+<div class="p-card" style="display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; align-items: baseline; gap: 16px;"><small class="p-muted" style="width: 132px; flex: none;">પાનાનું શીર્ષક · 28</small><span style="font-family: var(--display); font-size: 28px; font-weight: 600; color: #741A32; line-height: 1.3;">આજનું કામ</span></div>
+<div style="display: flex; align-items: baseline; gap: 16px;"><small class="p-muted" style="width: 132px; flex: none;">ફોન શીર્ષક · 24</small><span style="font-family: var(--display); font-size: 24px; font-weight: 600; color: #741A32; line-height: 1.3;">નોંધણી</span></div>
+<div style="display: flex; align-items: baseline; gap: 16px;"><small class="p-muted" style="width: 132px; flex: none;">વિભાગ · 19</small><span style="font-family: var(--display); font-size: 19px; font-weight: 600; color: #741A32;">છેલ્લા ૧૪ દિવસની નોંધણી</span></div>
+<div style="display: flex; align-items: baseline; gap: 16px;"><small class="p-muted" style="width: 132px; flex: none;">મુખ્ય લખાણ · 15</small><span style="font-size: 15px;">નવી નોંધણી તપાસીને “સમીક્ષા થઈ” તરીકે ચિહ્નિત કરો.</span></div>
+<div style="display: flex; align-items: baseline; gap: 16px;"><small class="p-muted" style="width: 132px; flex: none;">બટન · 15 જાડું</small><span style="font-size: 15px; font-weight: 600;">CSV ડાઉનલોડ</span></div>
+<div style="display: flex; align-items: baseline; gap: 16px;"><small class="p-muted" style="width: 132px; flex: none;">નાનું · 13.5</small><span style="font-size: 13.5px; color: #675A51;">સૌથી જૂની: ૩ દિવસ પહેલાં</span></div>
+<p class="p-small p-muted" style="margin: 0;">શીર્ષક: Noto Serif Gujarati (ફક્ત પાના અને વિભાગના શીર્ષક). બાકી બધું: Hind Vadodara. સૌથી નાનું લખાણ 12px થી નીચે નહીં.</p>
+</div>
+</section>
+<section class="p-sec" aria-labelledby="h-num">
+<h2 id="h-num" class="p-h2">આંકડા કઈ લિપિમાં</h2>
+<div class="p-card" style="display: flex; flex-direction: column; gap: 12px;">
+<div><b>ગુજરાતી અંક</b> <span class="p-muted">— ગણતરી, તારીખ, સમય, પાનાં</span></div>
+<div style="font-size: 18px;">૧,૨૪૮ નોંધણી · ૪ નવેમ્બર ૨૦૨૬ · સવારે ૧૦:૩૦ · પાનું ૨</div>
+<div style="border-top: 1px solid #E4D6BE; padding-top: 12px;"><b>અંગ્રેજી અંક</b> <span class="p-muted">— ફોન, નોંધણી નંબર, OTP, ટેકનિકલ ઓળખ</span></div>
+<div style="font-size: 18px; font-variant-numeric: tabular-nums;">98XXXXXX21 · SEVA-000142 · OTP 4829</div>
+<p class="p-small p-muted" style="margin: 0;">કારણ: ફોન અને નંબર લોકો બીજે ટાઇપ કરે છે અથવા વાંચીને કહે છે — ત્યાં અંગ્રેજી અંક જ સરળ.</p>
+</div>
+</section>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px;">
+<section class="p-sec" aria-labelledby="h-space">
+<h2 id="h-space" class="p-h2">જગ્યા (spacing)</h2>
+<div class="p-card" style="display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; align-items: center; gap: 12px;"><span style="display: block; width: 4px; height: 16px; background: #741A32; border-radius: 2px;"></span><small>4 · ચિહ્ન અને શબ્દ વચ્ચે</small></div>
+<div style="display: flex; align-items: center; gap: 12px;"><span style="display: block; width: 8px; height: 16px; background: #741A32; border-radius: 2px;"></span><small>8 · બટનો વચ્ચે</small></div>
+<div style="display: flex; align-items: center; gap: 12px;"><span style="display: block; width: 16px; height: 16px; background: #741A32; border-radius: 2px;"></span><small>16 · કાર્ડ વચ્ચે, ફોન કિનારી</small></div>
+<div style="display: flex; align-items: center; gap: 12px;"><span style="display: block; width: 24px; height: 16px; background: #741A32; border-radius: 2px;"></span><small>24 · વિભાગ વચ્ચે</small></div>
+<div style="display: flex; align-items: center; gap: 12px;"><span style="display: block; width: 40px; height: 16px; background: #741A32; border-radius: 2px;"></span><small>40 · મોટા વિભાગ</small></div>
+<div style="display: flex; align-items: center; gap: 12px;"><span style="display: block; width: 64px; height: 16px; background: #741A32; border-radius: 2px;"></span><small>64 · પાનાની ઉપર</small></div>
+</div>
+</section>
+<section class="p-sec" aria-labelledby="h-rad">
+<h2 id="h-rad" class="p-h2">ખૂણા અને સ્પર્શ</h2>
+<div class="p-card" style="display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end;">
+<div style="display: flex; flex-direction: column; gap: 4px; align-items: center;"><span style="display: block; width: 56px; height: 44px; border: 2px solid #741A32; border-radius: 8px;"></span><small>8</small></div>
+<div style="display: flex; flex-direction: column; gap: 4px; align-items: center;"><span style="display: block; width: 56px; height: 44px; border: 2px solid #741A32; border-radius: 12px;"></span><small>12</small></div>
+<div style="display: flex; flex-direction: column; gap: 4px; align-items: center;"><span style="display: block; width: 56px; height: 44px; border: 2px solid #741A32; border-radius: 16px;"></span><small>16</small></div>
+<div style="display: flex; flex-direction: column; gap: 4px; align-items: center;"><span style="display: block; width: 72px; height: 44px; border: 2px solid #741A32; border-radius: 999px;"></span><small>ગોળ</small></div>
+<div style="display: flex; flex-direction: column; gap: 4px; align-items: center;"><span style="display: block; width: 44px; height: 52px; border: 2px solid #741A32; border-radius: 22px 22px 8px 8px;"></span><small>કમાન</small></div>
+</div>
+<p class="p-small p-muted" style="margin: 0;">દરેક બટન, લિંક અને ચેકબોક્સનો સ્પર્શ-વિસ્તાર ઓછામાં ઓછો 44×44. ફોકસ વખતે 3px કેસરી-ભૂરી રેખા (#B25E12).</p>
+</div>
+</section>
+<section class="p-sec" aria-labelledby="h-mark">
+<h2 id="h-mark" class="p-h2">પ્રસ્તાવનું નિશાન</h2>
+<div class="p-card" style="display: flex; flex-direction: column; gap: 14px;">
+<span class="p-pz" style="align-self: flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9.5 17h-19zM12 10v4.5M12 17.5v.3"></path></svg>પ્રસ્તાવિત — મંજૂર નથી</span>
+<div class="p-pzbox"><span class="p-pz">પ્રસ્તાવિત — મંજૂર નથી</span><small>આ તૂટક સોનેરી કિનારીમાંનું વર્તન હાલની સિસ્ટમમાં નથી અથવા બદલાય છે. ફક્ત દેખાવ માટે — ક્લિક કરવાથી કંઈ થતું નથી.</small></div>
+<span class="p-sample"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a8 8 0 1 0 0 16a8 8 0 1 0 0-16M12 11v5M12 8v.3"></path></svg>ઉદાહરણ — બધાં નામ, નંબર અને આંકડા ઉદાહરણ છે</span>
+</div>
+</section>
+</div>
+
+<section class="p-sec" aria-labelledby="h-bp">
+<h2 id="h-bp" class="p-h2">આઠ માપ — મેનુ કેવું દેખાશે</h2>
+<div class="p-tablebox">
+<table class="p-table">
+<thead><tr><th scope="col">માપ</th><th scope="col">ઉપકરણ</th><th scope="col">મેનુ</th><th scope="col">ડેશબોર્ડ આંકડા</th><th scope="col">નોંધણી યાદી</th><th scope="col">વિગત પેનલ</th></tr></thead>
+<tbody>
+<tr><td class="p-tnum">1440×1100, 1366×768</td><td>ડેસ્કટોપ</td><td>પૂરું બાજુ-મેનુ, નામ સાથે (256px)</td><td>૩ કૉલમ</td><td>કોષ્ટક, બધી કૉલમ</td><td>જમણી બાજુ પેનલ 520px</td></tr>
+<tr><td class="p-tnum">1180×820, 1024×768</td><td>નાનું લેપટોપ / ટેબ્લેટ આડું</td><td>ચિહ્ન + ટૂંકું નામ (92px)</td><td>૩ કૉલમ</td><td>કોષ્ટક (1024 પર “નોંધણી સમય” છુપાય)</td><td>જમણી બાજુ પેનલ</td></tr>
+<tr><td class="p-tnum">834×1194</td><td>ટેબ્લેટ ઊભું</td><td>ચિહ્ન + ટૂંકું નામ (92px)</td><td>૩ કૉલમ</td><td>કોષ્ટક; નામ નીચે SEVA નંબર અને મોબાઇલ</td><td>જમણી બાજુ પેનલ</td></tr>
+<tr><td class="p-tnum">390×844, 360×800</td><td>ફોન ઊભો</td><td>નીચે ૪ બટન: આજનું કામ · નોંધણી · પધરામણી · વધુ</td><td>૧ કૉલમ</td><td>કાર્ડ યાદી</td><td>આખી સ્ક્રીન</td></tr>
+<tr><td class="p-tnum">844×390</td><td>ફોન આડો</td><td>પાતળી પટ્ટી (64px): ૫ મુખ્ય વિભાગ + “વધુ”</td><td>૩ કૉલમ</td><td>એક સાધન-પટ્ટી; પસંદગી-પટ્ટી નીચે</td><td>જમણી બાજુ પેનલ</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1980}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      brand: [
+        { n: 'મરૂન', hex: '#741A32', cr: '10.1:1', use: 'મુખ્ય બટન, શીર્ષક' },
+        { n: 'ઘેરો મરૂન', hex: '#5C1227', cr: '12.5:1', use: 'બટન પર માઉસ' },
+        { n: 'બર્ગન્ડી', hex: '#481022', cr: '14.3:1', use: 'બાજુ-મેનુ' },
+        { n: 'સોનેરી', hex: '#B78A35', cr: '2.9:1', use: 'ફક્ત શણગાર — લખાણ નહીં' },
+        { n: 'આછું સોનેરી', hex: '#E2C27A', cr: 'મેનુ પર 8.9:1', use: 'મેનુમાં જૂથ-શીર્ષક' },
+        { n: 'સોનેરી લખાણ', hex: '#86621F', cr: '5.2:1', use: 'પ્રસ્તાવ ટૅગ' },
+        { n: 'આઇવરી', hex: '#FBF7EF', cr: '—', use: 'પાનાની પાછળ' },
+        { n: 'ક્રીમ', hex: '#F2E6D2', cr: '—', use: 'ચિપ, પસંદગી' },
+        { n: 'કાર્ડ', hex: '#FFFDF8', cr: '—', use: 'કાર્ડ, પેનલ' },
+        { n: 'શાહી', hex: '#29272A', cr: '13.9:1', use: 'મુખ્ય લખાણ' },
+        { n: 'આછી શાહી', hex: '#675A51', cr: '6.2:1', use: 'નાનું લખાણ' },
+        { n: 'રેખા', hex: '#E4D6BE', cr: '—', use: 'કાર્ડની કિનારી' },
+        { n: 'ઘેરી રેખા', hex: '#9C8A73', cr: '3.1:1', use: 'ઇનપુટ કિનારી' },
+        { n: 'ફોકસ', hex: '#B25E12', cr: '4.4:1', use: 'કીબોર્ડ ફોકસ રેખા' },
+        { n: 'કેસરી', hex: '#B4461A', cr: '5.1:1', use: 'નાનું નિશાન (આજનો દિવસ)' },
+        { n: 'લીલો-વાદળી', hex: '#1F5F5B', cr: '6.9:1', use: 'સફળ, ચાલુ' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

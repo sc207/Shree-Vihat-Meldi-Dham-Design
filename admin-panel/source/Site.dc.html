@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>વેબસાઇટ સ્થિતિ</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root p-fsroot">
+<dc-import name="Shell" active="set" hint-size="100%,64px"></dc-import>
+<div class="p-fsbody">
+<main class="p-page" style="gap: 16px;">
+<nav class="p-subnav" aria-label="સેટિંગ્સ વિભાગ"><a href="Settings.dc.html">સેટિંગ્સ</a><a href="#" aria-current="page">વેબસાઇટ સ્થિતિ</a><a href="Users.dc.html">યુઝર્સ</a><a href="Audit.dc.html">કોણે શું કર્યું</a></nav>
+<div class="p-ph"><div><span class="p-eyebrow">સેટિંગ્સ</span><h1>વેબસાઇટ સ્થિતિ</h1><p>વેબસાઇટ હાલ કઈ સ્થિતિમાં છે તે ફક્ત જોવા માટે. અહીંથી કંઈ બદલાતું નથી. · <span class="p-sample">ઉદાહરણ</span></p></div><span class="p-badge p-badge--off"><i></i>ફક્ત જોવા માટે</span></div>
+<div class="p-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a8 8 0 1 0 0 16a8 8 0 1 0 0-16M12 11v5M12 8v.3"></path></svg><span>ફેરફાર ફક્ત અલગ “વેબસાઇટ કંટ્રોલ” (પોતાના અલગ પ્રવેશ સાથે) માંથી થાય છે. આ એડમિન પેનલમાંથી વેબસાઇટ ખોલી કે બંધ કરી શકાતી નથી.</span></div>
+<section class="p-card" aria-labelledby="ws-v">
+<div class="p-tablebox p-rtbox"><table class="p-table p-rt">
+<caption id="ws-v" class="p-vh">વેબસાઇટની સ્થિતિ</caption>
+<thead><tr><th scope="col">વિષય</th><th scope="col">હમણાંની સ્થિતિ</th><th scope="col">નોંધાયેલી સ્થિતિ</th></tr></thead>
+<tbody>
+<tr><td class="p-rt-main"><span class="p-nm">વેબસાઇટની દૃશ્યતા</span></td><td data-label="હમણાંની સ્થિતિ"><span class="p-badge p-badge--ok"><i></i>જાહેર</span></td><td data-label="નોંધાયેલી સ્થિતિ"><span class="p-badge p-badge--ok"><i></i>જાહેર</span></td></tr>
+<tr><td class="p-rt-main"><span class="p-nm">સુવિધાના સ્વિચ (ફક્ત ચાલુ/બંધ)</span></td><td data-label="હમણાંની સ્થિતિ">જોવા માટે ખોલો</td><td data-label="નોંધાયેલી સ્થિતિ">—</td></tr>
+<tr><td class="p-rt-main"><span class="p-nm">સમારોહ પાનું</span></td><td data-label="હમણાંની સ્થિતિ"><span class="p-badge p-badge--ok"><i></i>ચાલુ</span></td><td data-label="નોંધાયેલી સ્થિતિ"><span class="p-badge p-badge--ok"><i></i>ચાલુ</span></td></tr>
+</tbody></table></div>
+<p class="p-small p-muted" style="margin: 10px 0 0;">સુવિધાના સ્વિચનાં નામ અહીં હાલની સિસ્ટમમાંથી જ આવશે <span class="p-check-tag">યાદી ચકાસણી બાકી</span></p>
+</section>
+<section class="p-card" aria-labelledby="ws-n">
+<div class="p-card__h"><h2 id="ws-n" class="p-h2">તાજેતરની નોંધ</h2></div>
+<div class="p-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h9l3 3V20.5H6zM9 11h6M9 15h6"></path></svg><b>હજી કોઈ નોંધ નથી.</b><span class="p-small">(ખાલી સ્થિતિનું ઉદાહરણ)</span></div>
+</section>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

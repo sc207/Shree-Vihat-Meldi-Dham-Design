@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>લોડિંગ, ખાલી અને ભૂલની સ્થિતિ</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root" style="width: 1440px; min-height: 2600px; padding: 56px 64px 64px; display: flex; flex-direction: column; gap: 28px;">
+<header>
+<p class="p-muted" style="margin: 0; font-weight: 600;">Phase C · બધાં પાનાં</p>
+<h1 style="margin: 4px 0 0; font-family: var(--display); font-size: 40px; line-height: 1.3; font-weight: 600; color: #741A32;">લોડિંગ, ખાલી, ભૂલ અને બંધ સ્થિતિ</h1>
+<p style="margin: 6px 0 0; max-width: 900px; color: #675A51;">દરેક પાના માટે એક જ નિયમ: લોડિંગમાં પાનાનો આકાર (skeleton), ખાલીમાં શું નથી અને શું કરવું, ભૂલમાં શું થયું અને “ફરી પ્રયત્ન કરો”. લીલું ✓ = હાલની સિસ્ટમનું લખાણ; બાકીનું ડિઝાઇનનું લખાણ — ચકાસણી બાકી.</p>
+</header>
+
+<section class="p-grid3" aria-label="સામાન્ય ઘટકો" style="grid-template-columns: repeat(4, minmax(0, 1fr));">
+<div class="p-card"><b>લોડિંગ</b><span class="p-skel" style="width: 70%;"></span><span class="p-skel"></span><span class="p-skel" style="width: 85%;"></span><span class="p-skel" style="width: 50%;"></span><p class="p-small p-muted" style="margin: 6px 0 0;">સ્ક્રીન રીડર: “લાવી રહ્યા છીએ…”. 1 સેકન્ડથી ઓછું હોય તો કંઈ ન બતાવો.</p></div>
+<div class="p-card"><div class="p-empty" style="padding: 8px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h9l3 3V20.5H6z"></path></svg><b>હજી કંઈ નથી</b><span class="p-small">એક લીટીમાં કારણ + એક બટન</span></div></div>
+<div class="p-card" style="display: flex; flex-direction: column; gap: 10px;"><div class="p-note p-note--bad" role="alert">માહિતી લાવી શકાઈ નહીં. ઇન્ટરનેટ તપાસીને ફરી પ્રયત્ન કરો.</div><button type="button" class="p-btn p-btn--sec p-btn--sm" style="align-self: flex-start;">ફરી પ્રયત્ન કરો</button><span class="p-check-tag" style="align-self: flex-start;">લખાણ ચકાસણી બાકી</span></div>
+<div class="p-card" style="display: flex; flex-direction: column; gap: 10px;"><div class="p-note p-note--off">આ વિભાગ માટે પરવાનગી નથી ✓</div><button type="button" class="p-btn p-btn--pri" disabled>સાચવો</button><span class="p-small p-muted">બંધ બટન: ફેરફાર ન હોય, ભૂલ હોય કે પરવાનગી ન હોય ત્યારે</span></div>
+</section>
+
+<section class="p-tablebox">
+<table class="p-table">
+<caption style="text-align: left; padding: 14px 16px; font-family: var(--display); font-size: 19px; font-weight: 600; color: #741A32;">દરેક પાનું — ખાલી અને ભૂલનું લખાણ</caption>
+<thead><tr><th scope="col">પાનું</th><th scope="col">લોડિંગ</th><th scope="col">ખાલી સ્થિતિ</th><th scope="col">ભૂલ</th><th scope="col">બંધ / ફક્ત જોવા</th></tr></thead>
+<tbody>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="21">
+<tr><td class="p-nm">{{r.p}}</td><td>{{r.l}}</td><td>{{r.e}}</td><td>{{r.x}}</td><td>{{r.d}}</td></tr>
+</sc-for>
+</tbody>
+</table>
+</section>
+<p class="p-small p-muted" style="margin: 0;">✓ = હાલની સિસ્ટમ કે ઓડિટમાં નોંધાયેલું લખાણ. બીજું લખાણ ડિઝાઇનનું — હાલની સિસ્ટમમાં જોઈને નક્કી કરવાનું. “પરવાનગી નથી” અને “પાનું મળ્યું નથી” માટે અલગ સંદેશ: પ્રસ્તાવિત — મંજૂર નથી.</p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2600}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const L = 'યાદીનો skeleton', C = 'કાર્ડનો skeleton', X = 'સામાન્ય ભૂલ + ફરી પ્રયત્ન';
+    const r = (p, l, e, x, d) => ({ p, l, e, x, d });
+    return {
+      rows: [
+        r('લૉગિન', 'બટન: “લૉગિન થાય છે…”', '—', 'ખોટું નામ/પાસવર્ડ; સત્ર સમાપ્ત ✓', 'લોડિંગમાં ખાનાં બંધ'),
+        r('આજનું કામ', C, 'હાલ કોઈ ચેતવણી નથી. ✓', X, 'ફક્ત જોવા માટે સ્થિતિ-પટ્ટી'),
+        r('નોંધણી', L, 'કોઈ નોંધણી નથી — ફિલ્ટર હટાવો', X, 'CSV ડાઉનલોડ પરવાનગી વગર બંધ'),
+        r('નોંધણી વિગત', 'પેનલનો skeleton', 'હજી કોઈ ફેરફાર નથી. ✓', X, 'સેવા ફાળવવા માટે પહેલા નોંધણી પાકી કરો. ✓'),
+        r('ઓળખકાર્ડ', L, 'આ સ્થિતિમાં કોઈ નોંધણી નથી. ✓', X, '૦ પસંદ કર્યા — બધાં બટન બંધ ✓'),
+        r('નવી નોંધણી ચાલુ/બંધ', C, 'મર્યાદા નક્કી નથી ✓', 'સાચવી શકાયું નહીં', 'ફેરફાર વગર “સાચવો” બંધ'),
+        r('પધરામણી', L, 'આ વિભાગમાં કોઈ પધરામણી નથી. ✓', X, '—'),
+        r('પધરામણી વિનંતી ફોર્મ', '—', '—', 'જરૂરી ખાનું ખાલી', 'મોકલતી વખતે બટન બંધ'),
+        r('રિપોર્ટ', C, 'હજુ કોઈ નોંધણી નથી. ✓', X, '—'),
+        r('પેનલના આંકડા', C, 'Google Analytics હજી જોડાયું નથી ✓', X, '—'),
+        r('સેટિંગ્સ', L, '—', '૧ થી ૬૦ વચ્ચે ✓ (મર્યાદા)', 'ભૂલ હોય તો “સાચવો” બંધ'),
+        r('વેબસાઇટ સ્થિતિ', C, 'હજી કોઈ નોંધ નથી', X, 'આખું પાનું ફક્ત જોવા ✓'),
+        r('યુઝર્સ', L, '—', X, 'નિષ્ક્રિય ન થાય: આ તમારું પોતાનું ખાતું છે ✓'),
+        r('કોણે શું કર્યું', L, 'આ ફિલ્ટરમાં કોઈ નોંધ નથી', X, '—'),
+        r('મારું ખાતું', C, '—', 'પાસવર્ડ સરખા નથી', '—'),
+        r('ટીમો', C, 'હજુ કોઈ ટીમ નથી. “ટીમ ઉમેરો” દબાવીને પહેલી ટીમ બનાવો. ✓', X, 'નંબર જોવાનું: બંધ ✓'),
+        r('કોણ ક્યારે આવી શકે', L, 'હજી કોઈ ઉપલબ્ધતા નોંધાઈ નથી. ✓', X, '—'),
+        r('દિવસ મુજબ સેવક જગ્યા', C, 'આ દિવસે કોઈ સોંપણી નથી. ✓', X, 'દિવસ બંધ હોય તો ખાનાં બંધ'),
+        r('ભક્તો', L, 'ઉપર “ભક્ત ઉમેરો” દબાવો. ✓', X, '—'),
+        r('મહોત્સવ કાર્યક્રમ', C, '—', X, 'આખું પાનું ફક્ત જોવા ✓'),
+        r('નિમંત્રણ યાદી', C, '—', X, 'બંધ યાદી ફક્ત જોવા'),
+        r('WhatsApp મેસેજ', C, '—', X, 'અસલી મોકલવાનું: ફક્ત સુપર એડમિન ✓'),
+        r('મેસેજની સ્થિતિ', L, 'સંદેશ મોકલવાનું બંધ છે. ✓', X, '—'),
+        r('શોધ', L, 'કોઈ પરિણામ મળ્યું નથી.', X, 'ઓછામાં ઓછા ૨ અક્ષર લખો. ✓')
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

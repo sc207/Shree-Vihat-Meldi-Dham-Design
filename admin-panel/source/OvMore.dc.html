@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>“વધુ” — બધા વિભાગ (ફોન)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+.ov-sheet{position:fixed;left:0;right:0;bottom:0;z-index:42;max-height:88vh;overflow:auto;border-radius:20px 20px 0 0;background:#FFFDF8;border-top:1px solid #E4D6BE;box-shadow:0 -8px 32px rgba(72,16,34,.18);padding:8px 16px calc(16px + env(safe-area-inset-bottom))}
+.ov-grab{width:40px;height:4px;border-radius:2px;background:#9C8A73;margin:0 auto 10px}
+.ov-center{position:fixed;inset:0;z-index:42;display:grid;place-items:center;padding:16px}
+.ov-toast{position:fixed;z-index:60;right:24px;bottom:24px;display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;background:#29272A;color:#FBF7EF;font-size:15px;box-shadow:0 12px 32px rgba(0,0,0,.25)}
+@media (max-width:699px){.ov-toast{left:16px;right:16px;bottom:84px}}
+</style>
+</helmet>
+<div style="min-height:100vh"><dc-import name="DashC" hint-size="100%,100vh"></dc-import></div>
+<div class="p-scrim"></div>
+<div class="ov-sheet" role="dialog" aria-modal="true" aria-labelledby="ovm-t"><div class="ov-grab" aria-hidden="true"></div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:0 4px 4px"><b id="ovm-t" style="font-family:var(--display);font-size:19px;color:#741A32;font-weight:600">બધા વિભાગ</b><button type="button" class="p-ibtn" aria-label="બંધ કરો"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></div><div style="margin:8px 4px 0;padding-top:10px;border-top:1px solid #E4D6BE"><b style="font-size:13.5px;color:#86621F">મુખ્ય</b></div><ul class="p-menu" style="list-style:none;margin:0;box-shadow:none;border:0;padding:0;min-width:0"><li><button type="button" style="min-height:48px;font-size:16px">આજનું કામ</button></li><li><button type="button" style="min-height:48px;font-size:16px">નોંધણી</button></li><li><button type="button" style="min-height:48px;font-size:16px">પધરામણી</button></li><li><button type="button" style="min-height:48px;font-size:16px">રિપોર્ટ</button></li><li><button type="button" style="min-height:48px;font-size:16px">સેટિંગ્સ</button></li></ul><div style="margin:8px 4px 0;padding-top:10px;border-top:1px solid #E4D6BE"><b style="font-size:13.5px;color:#86621F">મહોત્સવ તૈયારી</b></div><ul class="p-menu" style="list-style:none;margin:0;box-shadow:none;border:0;padding:0;min-width:0"><li><button type="button" style="min-height:48px;font-size:16px">ટીમો અને હાજરી</button></li><li><button type="button" style="min-height:48px;font-size:16px">ભક્તો</button></li><li><button type="button" style="min-height:48px;font-size:16px">મહોત્સવ અને નિમંત્રણ</button></li></ul>
+<div style="margin:10px 4px 0;padding-top:12px;border-top:1px solid #E4D6BE;display:flex;align-items:center;gap:10px"><span class="p-avatar" aria-hidden="true">ઉ</span><span style="flex:1;min-width:0"><b style="display:block;font-size:15px">ઉદાહરણ વપરાશકર્તા</b><small class="p-muted">એડમિન · મારું ખાતું</small></span><button type="button" class="p-btn p-btn--sec p-btn--sm">લૉગઆઉટ</button></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic { renderVals(){ return {}; } }
+</script>
+</body>
+</html>
