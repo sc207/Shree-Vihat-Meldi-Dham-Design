@@ -1,6 +1,15 @@
-# Admin panel — MASTER design v6 (15 Nov 2026)
+# Admin panel — MASTER design v7 (15 Nov 2026)
 
 > **ગુજરાતીમાં:** આ એડમિન પેનલની અંતિમ (માસ્ટર) ડિઝાઇન છે. `meldi-admin-master.html` બ્રાઉઝરમાં ખોલો: ઉપર "Master v5 decisions" વિભાગ, પછી ક્લિક થતો પ્રોટોટાઇપ (ડેસ્કટોપ, ફોન, ટૅબ્લેટ), દરેક સ્ક્રીનની ગેલેરી અને અંદર Claude Code માટેનું પૂરું build brief છે. આ ફાઇલ જૂની Phase C (`../README-FOR-CLAUDE-CODE.md`) કરતાં ઉપર છે.
+
+## v7 (15 Nov 2026) — professional admin patterns
+
+- Dashboard order: festival card → "આજે ધ્યાન આપવાનું" (tap to open the work) → four KPI tiles with icons → preparation phases → live status and charts.
+- Lists on phones: one toolbar (search, filter icon with a count, CSV icon) instead of two big buttons.
+- Tables: sticky header, calmer rows, hover, and a pager ("૧–૩૦ બતાવી છે · કુલ ૬૪" with previous / next).
+- Chip rows fade at the edge so people see they scroll.
+- Keyboard focus ring on every control; sheet titles in the serif; sheet buttons stay at the bottom.
+- Fixed: tablet-portrait bottom bar (icon above label, badge on the icon) and the devotee's Padhramni list.
 
 ## v6 (15 Nov 2026) — owner chose the HTML design
 

@@ -813,6 +813,48 @@ ul.r{margin:0;padding-left:18px;display:grid;gap:7px;font-size:14px}
 .A .ph .pt{padding-bottom:6px}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .A .side{background:var(--chakra-faint) no-repeat left -150px bottom -150px/330px,var(--side)}}
 @media (forced-colors:active){.A .hero::after,.A .prof::after,.A .empty::before,.lgbrand .mandala{display:none}}
+/* ===== v7 (15 Nov 2026): professional admin patterns ===== */
+/* focus ring on every control (keyboard) */
+.A button:focus-visible,.A a:focus-visible,.A input:focus-visible,.A select:focus-visible,.A textarea:focus-visible,.A [tabindex]:focus-visible{outline:2px solid #b25e12;outline-offset:2px}
+/* dashboard: attention first, then numbers */
+.A .att{display:grid;gap:8px;flex-shrink:0}
+.A .sh2{display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.A .sh2 h5{margin:0;font-family:var(--serif);font-size:17px;color:var(--heading)}
+.A .kp{flex-shrink:0}
+.A .kpi{position:relative;padding:12px 14px;border-radius:14px;display:grid;gap:2px}
+.A .kpi .ki{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--gold-soft);color:var(--gold-ink)}
+.A .kpi .ki svg{width:16px;height:16px}
+.A .kpi.ok .ki{background:var(--ok-soft);color:var(--ok)}
+.A .kpi.bad .ki{background:var(--bad-soft);color:var(--bad)}
+.A .kpi .l{padding-right:36px;font-weight:600}
+.A .kpi .v{font-family:var(--serif);font-size:30px;color:var(--ink)}
+/* lists: toolbar (search + filter + export) on phones */
+.A .tbar{display:flex;gap:8px;align-items:center;flex-shrink:0}
+.A .tbar .srch{flex:1;height:44px}
+.A .tbar .ib{width:44px;height:44px;border-radius:12px;position:relative;flex-shrink:0}
+.A .tbar .fb.on{border-color:var(--accent);color:var(--accent);background:var(--gold-soft)}
+.A .tbar .d2{position:absolute;top:-5px;right:-5px;min-width:18px;height:18px;border-radius:9px;background:var(--accent);color:var(--on-accent);font-size:11px;font-weight:700;display:grid;place-items:center;padding:0 4px}
+/* chip rows: fade the edge so people see they scroll */
+.A.mob .dsel,.A.tport .dsel{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 28px),transparent);padding-right:28px}
+/* tables: sticky header, calmer rows, hover, pager */
+.A .tblw thead th{position:sticky;top:0;z-index:1;background:var(--alt);font-size:12.5px;font-weight:600;color:var(--ink-muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+.A .tblw tbody td{padding:10px 12px;border-bottom:1px solid color-mix(in oklab,var(--line) 70%,transparent);vertical-align:middle}
+.A .tblw tbody tr:last-child td{border-bottom:0}
+.A .tblw tbody tr.clk{cursor:pointer;transition:background .12s}
+.A .tblw tbody tr.clk:hover{background:color-mix(in oklab,var(--gold-soft) 55%,transparent)}
+.A .pager{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;flex-shrink:0}
+.A .pager .pgb{display:flex;gap:6px}
+.A .pager .ib{width:40px;height:40px}
+.A .pager .ib[disabled]{opacity:.4}
+/* tablet portrait bottom bar: icon above label, badge on the icon */
+.A.tab .tabbar{padding:6px 24px 18px}
+.A.tab .tabbar button{grid-auto-flow:row!important;justify-items:center;align-items:center;gap:2px!important;font-size:12.5px}
+.A.tab .tabbar .bd{top:-2px!important;left:calc(50% + 6px)!important;right:auto!important}
+/* lists inside cards without an avatar (devotee's Padhramni) */
+.A .card .lrow:not(:has(.av2)),.A .sheet .lrow:not(:has(.av2)){grid-template-columns:1fr auto}
+/* sheets: title row stronger, actions stick to the bottom */
+.A .sheet h5{font-family:var(--serif);font-size:19px;color:var(--heading)}
+.A .sheet .sbtns{position:sticky;bottom:0;background:linear-gradient(180deg,transparent,var(--surface) 30%);padding-top:12px;z-index:2}
 </style>
 </head>
 <body>
@@ -1559,7 +1601,7 @@ The artifact "Meldi Dham Admin Redesign" is one self-contained HTML file (no ext
 
 </script>
 <header style="display:grid;gap:14px">
-  <div class="eyebrow">Master design · v6 · website chakra and polish (15 Nov 2026) · owner decisions of 14 Nov · built on v4</div>
+  <div class="eyebrow">Master design · v7 · professional admin patterns (15 Nov 2026) · v6 chakra · owner decisions of 14 Nov · built on v4</div>
   <h1>Meldi Dham Admin — Master Design</h1>
   <p class="lead">A clickable redesign of the Shree Vihat Meldi Dham admin panel and seva form, built around the trust's plan: take as many registrations as WhatsApp can confirm, then define sevas, plan each festival day, and form teams with a leader and vice‑leader. Colours, fonts and Gujarati wording follow the current site.</p>
   <nav class="toc" aria-label="Sections"><a href="#master">Master v5 decisions</a><a href="#need">Your requirements</a><a href="#proto">Live prototype</a><a href="#pages">Every admin page</a><a href="#gallery">Phones &amp; tablets</a><a href="#fit">Device layout spec</a><a href="#website">Website form</a><a href="#phases">Phase plan</a><a href="#problems">Problems found</a><a href="#ia">New structure</a><a href="#flows">Flows</a><a href="#states">Rules</a><a href="#design">Design rules</a><a href="#build">Build plan</a><a href="#data">Data model</a><a href="#tests">Tests</a><a href="#decide">Decisions</a><a href="#words">Glossary</a><a href="#gaps">Known gaps</a><a href="#handoff">Hand‑off</a></nav>
@@ -2678,7 +2720,7 @@ function ctrlHist(){const H=S.audit.filter(a=>a[2]==='નિયંત્રણ'|
 
 /* ---------- registrations: filters ---------- */
 function passFilt(p){const F=S.filt;if(F.slot&&!Object.values(p.avail).includes(F.slot))return false;if(F.city&&p.c!==F.city)return false;if(F.photo&&p.photo)return false;return true}
-function scrRegs(){const F=S.filt;const on=[F.slot?SLOT[F.slot]:'',F.city,F.photo?'ફોટો બાકી':''].filter(Boolean);const saved=S.people;S.people=S.people.filter(passFilt);let h;try{h=scrRegs0()}finally{S.people=saved}
+function scrRegs5(){const F=S.filt;const on=[F.slot?SLOT[F.slot]:'',F.city,F.photo?'ફોટો બાકી':''].filter(Boolean);const saved=S.people;S.people=S.people.filter(passFilt);let h;try{h=scrRegs0()}finally{S.people=saved}
   const chips=on.length?`<div class="fchips"><span class="note">ફિલ્ટર:</span>${on.map(x=>`<span class="pill gold">${x}</span>`).join('')}<button class="lk" data-a="filtClear">ફિલ્ટર હટાવો</button></div>`:'';
   const mob=isMob()?`<div class="macts"><button class="btn out sm" data-a="sheetFilt">${ic('list')}ફિલ્ટર${on.length?' · '+g(on.length):''}</button><button class="btn out sm" data-a="toast" data-m="CSV ડાઉનલોડ શરૂ">${ic('dl')}CSV</button></div>`:'';
   const i=h.indexOf('<div class="srch"');return i>0?h.slice(0,i)+mob+chips+h.slice(i):h+chips}
@@ -3045,6 +3087,20 @@ function heroCard(){const [o]=isOpen();return `<div class="hero" role="region" a
 function scrDash(){let h=scrDash0();h=h.replace(`શુક્રવાર, ૧૩ નવેમ્બર · મહોત્સવને ${g(81)} દિવસ · પ્રાણ પ્રતિષ્ઠાને ${g(87)} દિવસ`,'શુક્રવાર, ૧૩ નવેમ્બર · આજનું કામ');const pc=phaseCard();const i=h.indexOf(pc);return i<0?heroCard()+h:h.slice(0,i)+heroCard()+h.slice(i)}
 
 function scrMore(){const h=scrMore0();return h.replace('<div class="menu">','<div class="prof"><div class="av">T</div><div class="grow"><b>Temple Administrator</b><small>સુપર એડમિન · શ્રી વિહત મેલડી ધામ</small></div></div><div class="menu">')}
+
+/* ===== v7 (15 Nov 2026): professional admin patterns ===== */
+function scrDash(){const L=live();const acc=L.filter(p=>p.st==='accepted').length;const sent=S.people.filter(p=>p.msg==='sent').length;const fail=S.people.filter(p=>p.msg==='failed').length;
+  const kpi=(i,l,v,h,t)=>`<div class="kpi ${t||''}"><span class="ki" aria-hidden="true">${ic(i)}</span><div class="l">${l}</div><div class="v num">${v}</div><div class="h">${h}</div></div>`;
+  const kp=`<div class="kp">${kpi('reg','કુલ નોંધણી',g(L.length),'રદ સિવાય')}${kpi('check','સ્વીકારેલી',g(acc),g(Math.round(acc/Math.max(1,L.length)*100))+'% નોંધણીમાંથી','ok')}${kpi('msg','WhatsApp પુષ્ટિ',g(sent),g(fail)+' નિષ્ફળ',fail?'bad':'')}${kpi('x','રદ',g(S.people.length-L.length),'કુલ નોંધણીમાંથી')}</div>`;
+  const att=`<div class="att"><div class="sh2"><h5>આજે ધ્યાન આપવાનું</h5><span class="note">ટૅપ કરીને સીધું કામ ખોલો</span></div>${queues()}</div>`;
+  return head('ડેશબોર્ડ','શુક્રવાર, ૧૩ નવેમ્બર · આજનું કામ')+heroCard()+att+kp+phaseCard()+cols(`${liveCard()}${chart14()}`,`${demandCard()}${padDashCard()}${recent()}`,true)}
+function scrRegs(){let h=scrRegs5();
+  h=h.replace(/<p class="note">પહેલી (\S+) બતાવી છે · કુલ (\S+)<\/p>/,(m,a,b)=>`<div class="pager"><span class="note">૧–${a} બતાવી છે · કુલ ${b}</span><span class="pgb"><button class="ib" disabled aria-label="પાછળનું પાનું">${ic('back')}</button><button class="ib" aria-label="આગળનું પાનું"><span style="display:inline-flex;transform:scaleX(-1)">${ic('back')}</span></button></span></div>`);
+  if(isMob()){const F=S.filt;const n=[F.slot,F.city,F.photo].filter(Boolean).length;
+    h=h.replace(/<div class="macts">.*?<\/button><\/div>/,'');
+    h=h.replace(/(<div class="srch" style="max-width:none">.*?<\/div>)/,`<div class="tbar">$1<button class="ib fb ${n?'on':''}" data-a="sheetFilt" aria-label="ફિલ્ટર">${ic('list')}${n?`<span class="d2">${g(n)}</span>`:''}</button><button class="ib" data-a="toast" data-m="CSV ડાઉનલોડ શરૂ" aria-label="CSV ડાઉનલોડ">${ic('dl')}</button></div>`)}
+  return h}
+
 /* export hook used only to generate the canvas boards (no effect on the prototype) */
 window.__exp={EMB,EMBR,
  data:()=>({people:S.people.map(p=>({id:p.id,st:p.st,photo:p.photo,card:p.card})),devs:(S.devs||[]).map(d=>d.id),pads:(S.pads||[]).map(p=>({id:p.id,st:p.st}))}),
