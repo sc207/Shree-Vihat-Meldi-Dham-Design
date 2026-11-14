@@ -1,6 +1,14 @@
-# Admin panel — MASTER design v5 (14 Nov 2026)
+# Admin panel — MASTER design v6 (15 Nov 2026)
 
 > **ગુજરાતીમાં:** આ એડમિન પેનલની અંતિમ (માસ્ટર) ડિઝાઇન છે. `meldi-admin-master.html` બ્રાઉઝરમાં ખોલો: ઉપર "Master v5 decisions" વિભાગ, પછી ક્લિક થતો પ્રોટોટાઇપ (ડેસ્કટોપ, ફોન, ટૅબ્લેટ), દરેક સ્ક્રીનની ગેલેરી અને અંદર Claude Code માટેનું પૂરું build brief છે. આ ફાઇલ જૂની Phase C (`../README-FOR-CLAUDE-CODE.md`) કરતાં ઉપર છે.
+
+## v6 (15 Nov 2026) — owner chose the HTML design
+
+- The owner prefers this HTML design over the Phase C canvas look. The Claude Design canvas (https://claude.ai/artifact/LryATCfbrsGsyoKwr76pJ5) now holds this design: 253 editable artboards, every screen, form and popup, for phone portrait 390, phone landscape 844, tablet portrait 834, tablet landscape 1194 and laptop 1440, plus the ID card artwork and A4 sheet.
+- **Website chakra** (the same SVG as the public website's hero mandala) on the login, the sidebar, the new dashboard festival card, the "વધુ" profile card and the empty states.
+- Dashboard: festival card with both countdowns (મહોત્સવ and પ્રાણ પ્રતિષ્ઠા) and the registration status chip.
+- Softer card shadows, gold underline on page titles, tabular numerals.
+- Where this file and the Phase C screenshots in `../` differ, **this file wins** for look and flow. Phase C `phc.css` still gives the `.idc` card rules.
 
 ## What this is
 
