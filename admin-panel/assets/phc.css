@@ -683,7 +683,7 @@ textarea.p-input{min-height:88px;resize:vertical}
 .idc-sheet .idc{--mm:1mm;box-shadow:none;outline:.2mm dashed #9C8A73;outline-offset:1.5mm}
 @media print{@page{size:A4;margin:0}.idc{box-shadow:none}}
 
-/* event wordmark: મંગળારોહણ (gold-foil look, from the website event poster) */
+/* event wordmark: મંગલારોહણ (gold-foil look, from the website event poster) */
 .idc__mark{position:relative;display:block;margin:calc(1.6*var(--mm)) auto 0;font-family:var(--display);font-weight:700;font-size:calc(6.6*var(--mm));line-height:1.18;letter-spacing:0;background:linear-gradient(180deg,#FFF1C9 0%,#F2D488 38%,#D9AE55 62%,#B78A35 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 calc(.25*var(--mm)) 0 rgba(58,12,26,.55)) drop-shadow(0 0 calc(1.2*var(--mm)) rgba(226,194,122,.35));-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .idc__orn{display:flex;align-items:center;justify-content:center;gap:calc(1.2*var(--mm));margin-top:calc(.5*var(--mm));color:#E2C27A}
 .idc__orn::before,.idc__orn::after{content:"";height:calc(.3*var(--mm));width:calc(7*var(--mm));background:linear-gradient(90deg,transparent,#E2C27A)}

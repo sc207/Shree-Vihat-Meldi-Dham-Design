@@ -1,5 +1,8 @@
 # Shri Vihat Meldi Dham — Admin Panel: final design handoff
 
+> **NEWER: Master design v5 (14 Nov 2026) is in [`master/`](master/README.md).** It decides the menu, features, rules and flows and overrides this Phase C handoff where they differ. Use this folder for the visual detail of screens that exist in both, and for the ID card artwork (wordmark spelled મંગલારોહણ).
+
+
 > **ગુજરાતીમાં ટૂંકમાં:** આ ફોલ્ડર Claude Code ને આપો અને કહો: *"README-FOR-CLAUDE-CODE.md વાંચીને હાલની એડમિન પેનલને આ ડિઝાઇન મુજબ બનાવો. Route, પરવાનગી અને backend બદલશો નહીં."* બધી સ્ક્રીન જોવા માટે `index.html` ખોલો.
 
 This folder is the **approved visual design** for the existing admin panel of shreevihatmeldidhamsanand.com (Phase C, "Menu C"). Use it to restyle and restructure the **existing** admin panel. It is a design reference, not a new product spec.
@@ -138,7 +141,7 @@ Wider screens (1920) and in-between sizes (1180, 768, 430, 360, 932×430) use th
 The ID card is a printable component. Its CSS is the `.idc*` block at the end of `assets/phc.css` (print units via `--mm`).
 
 - **Size:** 54 × 86 mm portrait, 3 mm rounded corners, 3 mm bleed, 3 mm safe area, 8 mm free at the top for the lanyard slot. Paper: PVC card or 300 gsm, laminated.
-- **Front:** "॥ જય શ્રી વિહત મેલડી માઁ ॥", emblem + "શ્રી વિહત મેલડી ધામ / સાણંદ · ગુજરાત", the gold "મંગળારોહણ" event wordmark, "મૂર્તિ પ્રાણ પ્રતિષ્ઠા મહોત્સવ · ૨ થી ૮ ફેબ્રુઆરી, ૨૦૨૭", arch-framed photo, "સ્વયંસેવક" role pill, name, સેવાનો દિવસ, then a bottom band with the seva name, the SEVA number and that volunteer's QR code.
+- **Front:** "॥ જય શ્રી વિહત મેલડી માઁ ॥", emblem + "શ્રી વિહત મેલડી ધામ / સાણંદ · ગુજરાત", the gold "મંગલારોહણ" event wordmark, "મૂર્તિ પ્રાણ પ્રતિષ્ઠા મહોત્સવ · ૨ થી ૮ ફેબ્રુઆરી, ૨૦૨૭", arch-framed photo, "સ્વયંસેવક" role pill, name, સેવાનો દિવસ, then a bottom band with the seva name, the SEVA number and that volunteer's QR code.
 - **Back:** same header, "પ્રાણ પ્રતિષ્ઠા · ૮ ફેબ્રુઆરી, સોમવાર · બપોરે ૧૨:૩૯", a placeholder line for card instructions (to be decided by the trust), and a QR to shreevihatmeldidhamsanand.com with the text "મંદિરની વેબસાઇટ જોવા સ્કેન કરો".
 - **Band colour by seva** (`.idc--b1`…`.idc--b5`: maroon, teal, blue, saffron, grey). The seva name is always written on the band; colour is never the only signal.
 - **QR codes:** front QR holds **only the SEVA number**, back QR holds the website URL. Scanning a card in the panel to open the record or mark attendance is a *proposal, not approved*. Do not build it.
