@@ -1,6 +1,13 @@
-# Admin panel — MASTER design v7 (15 Nov 2026)
+# Admin panel — MASTER design v8 (15 Nov 2026)
 
 > **ગુજરાતીમાં:** આ એડમિન પેનલની અંતિમ (માસ્ટર) ડિઝાઇન છે. `meldi-admin-master.html` બ્રાઉઝરમાં ખોલો: ઉપર "Master v5 decisions" વિભાગ, પછી ક્લિક થતો પ્રોટોટાઇપ (ડેસ્કટોપ, ફોન, ટૅબ્લેટ), દરેક સ્ક્રીનની ગેલેરી અને અંદર Claude Code માટેનું પૂરું build brief છે. આ ફાઇલ જૂની Phase C (`../README-FOR-CLAUDE-CODE.md`) કરતાં ઉપર છે.
+
+## v8 (15 Nov 2026)
+
+- Phones: the page name moves into the top bar (small temple name above it), so each screen gains about 50 px for the work; the dashboard keeps the full temple name.
+- Laptop and tablet: the menu group (e.g. "કામ") sits above each page title.
+- Login on laptop and tablet: emblem centred on the website chakra, the form on a raised card.
+- Padhramni: five summary tiles in one row in phone landscape, tablet and laptop; the filter tabs no longer run under the list/week switch.
 
 ## v7 (15 Nov 2026) — professional admin patterns
 

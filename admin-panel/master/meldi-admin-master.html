@@ -855,6 +855,30 @@ ul.r{margin:0;padding-left:18px;display:grid;gap:7px;font-size:14px}
 /* sheets: title row stronger, actions stick to the bottom */
 .A .sheet h5{font-family:var(--serif);font-size:19px;color:var(--heading)}
 .A .sheet .sbtns{position:sticky;bottom:0;background:linear-gradient(180deg,transparent,var(--surface) 30%);padding-top:12px;z-index:2}
+/* ===== v8 (15 Nov 2026) ===== */
+/* phones: the page name lives in the top bar (more room for the work) */
+.A .mtop .t.tt{font-family:var(--serif);font-size:20px;line-height:1.2;font-weight:700;color:var(--heading)}
+.A .mtop .t.tt small{display:block;font-family:var(--body);font-size:11px;font-weight:500;color:var(--ink-muted);letter-spacing:.01em}
+.A.mob.land .mtop .t.tt{font-size:18px}
+.A.mob.land .mtop .t.tt small{display:none}
+/* laptop and tablet: menu group above the page name */
+.A .ph .eb{font-size:12px;font-weight:600;letter-spacing:.05em;color:var(--gold-ink);margin-bottom:2px}
+/* Padhramni summary: one row of five where there is room */
+.A.mob.land .ptiles,.A.desk .ptiles{grid-template-columns:repeat(5,minmax(0,1fr))}
+/* login on laptop and tablet: centred emblem on the chakra, form on a card */
+.A.desk .lgbrand{justify-content:center;align-items:center;text-align:center;gap:26px}
+.A.desk .lgbrand .mandala{right:auto;bottom:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:min(680px,95%);height:auto;aspect-ratio:1;opacity:.24}
+.A.desk .lgbrand .bt{flex-direction:column;gap:12px}
+.A.desk .lgbrand .bt .lg{width:92px;height:92px;border-radius:50%;background:rgba(255,253,248,.08);border:1px solid rgba(226,194,122,.4);display:grid;place-items:center;padding:14px}
+.A.desk .lgbrand .bt .lg img{width:100%;height:100%;object-fit:contain}
+.A.desk .lgbrand .bt b{font-size:20px!important}
+.A.desk .lgbrand h2{font-size:34px}
+.A.desk .lgbrand>div:last-of-type{justify-items:center}
+.A.desk .lgcard{background:var(--raised);border:1px solid var(--line);border-radius:20px;padding:30px 28px;box-shadow:0 24px 50px -28px rgba(72,16,34,.45)}
+.A.desk .lgcard h3{font-family:var(--serif);font-size:24px;color:var(--heading)}
+/* Padhramni: filter tabs no longer run under the list/week switch */
+.A .ptools .tabs{margin-right:0!important;padding-right:24px}
+.A.mob .tabs,.A.tport .tabs{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 24px),transparent)}
 </style>
 </head>
 <body>
@@ -1601,7 +1625,7 @@ The artifact "Meldi Dham Admin Redesign" is one self-contained HTML file (no ext
 
 </script>
 <header style="display:grid;gap:14px">
-  <div class="eyebrow">Master design · v7 · professional admin patterns (15 Nov 2026) · v6 chakra · owner decisions of 14 Nov · built on v4</div>
+  <div class="eyebrow">Master design · v8 · phone title bar, login, polish (15 Nov 2026) · v7 professional patterns · v6 chakra · owner decisions of 14 Nov · built on v4</div>
   <h1>Meldi Dham Admin — Master Design</h1>
   <p class="lead">A clickable redesign of the Shree Vihat Meldi Dham admin panel and seva form, built around the trust's plan: take as many registrations as WhatsApp can confirm, then define sevas, plan each festival day, and form teams with a leader and vice‑leader. Colours, fonts and Gujarati wording follow the current site.</p>
   <nav class="toc" aria-label="Sections"><a href="#master">Master v5 decisions</a><a href="#need">Your requirements</a><a href="#proto">Live prototype</a><a href="#pages">Every admin page</a><a href="#gallery">Phones &amp; tablets</a><a href="#fit">Device layout spec</a><a href="#website">Website form</a><a href="#phases">Phase plan</a><a href="#problems">Problems found</a><a href="#ia">New structure</a><a href="#flows">Flows</a><a href="#states">Rules</a><a href="#design">Design rules</a><a href="#build">Build plan</a><a href="#data">Data model</a><a href="#tests">Tests</a><a href="#decide">Decisions</a><a href="#words">Glossary</a><a href="#gaps">Known gaps</a><a href="#handoff">Hand‑off</a></nav>
@@ -2268,7 +2292,7 @@ function loginFrame(toast){
 }
 
 /* ---------- frame ---------- */
-function app(){
+function app7(){
   if(S.auth!=='in')return loginFrame(S.toast?`<div class="toast">${ic('check')}${S.toast}</div>`:'');
   const M=isMob();const scr={pad:scrPad,inv:scrInv,dash:scrDash,regs:scrRegs,ctrl:scrCtrl,msgs:scrMsgs,sevas:scrSevas,plan:scrPlan,teams:scrTeams,cards:scrCards,fest:scrFest,reps:scrReps,sets:scrSets,more:scrMore,dev:scrDev,search:scrSearch,states:scrStates}[S.screen]();
   const toast=S.toast?`<div class="toast">${ic('check')}${S.toast}</div>`:'';const failed=qCount('wa')>0;
@@ -3099,6 +3123,14 @@ function scrRegs(){let h=scrRegs5();
   if(isMob()){const F=S.filt;const n=[F.slot,F.city,F.photo].filter(Boolean).length;
     h=h.replace(/<div class="macts">.*?<\/button><\/div>/,'');
     h=h.replace(/(<div class="srch" style="max-width:none">.*?<\/div>)/,`<div class="tbar">$1<button class="ib fb ${n?'on':''}" data-a="sheetFilt" aria-label="ફિલ્ટર">${ic('list')}${n?`<span class="d2">${g(n)}</span>`:''}</button><button class="ib" data-a="toast" data-m="CSV ડાઉનલોડ શરૂ" aria-label="CSV ડાઉનલોડ">${ic('dl')}</button></div>`)}
+  return h}
+
+
+/* ===== v8 (15 Nov 2026): page title in the phone top bar, group eyebrow, login composition ===== */
+function app(){let h=app7();if(S.auth!=='in')return h;
+  if(isMob()&&S.screen!=='dash'&&!S.sel&&!S.padSel){const m=h.match(/<div class="pt">(.*?)<\/div>/);
+    if(m){h=h.replace(m[0],'');h=h.replace('<div class="t">શ્રી વિહત મેલડી ધામ<small>વ્યવસ્થાપન · સાણંદ</small></div>',`<div class="t tt"><small>શ્રી વિહત મેલડી ધામ</small>${m[1]}</div>`)}}
+  if(!isMob()){const grp=NAV.find(([gn,items])=>items.some(i=>i[0]===S.screen));if(grp)h=h.replace('<div class="ph"><div><div class="pt">',`<div class="ph"><div><div class="eb">${grp[0]}</div><div class="pt">`)}
   return h}
 
 /* export hook used only to generate the canvas boards (no effect on the prototype) */
