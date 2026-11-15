@@ -879,6 +879,174 @@ ul.r{margin:0;padding-left:18px;display:grid;gap:7px;font-size:14px}
 /* Padhramni: filter tabs no longer run under the list/week switch */
 .A .ptools .tabs{margin-right:0!important;padding-right:24px}
 .A.mob .tabs,.A.tport .tabs{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 24px),transparent)}
+
+/* ===== v9 (15 Nov 2026): touch targets, sheets, phone + landscape polish ===== */
+
+/* --- 1. touch targets: 44px on phones and tablets ----------------------- */
+.A.mob .ib,.A.tab .ib{width:44px;height:44px}
+.A.mob .ib svg,.A.tab .ib svg{width:20px;height:20px}
+.A.mob .ib .d,.A.tab .ib .d{top:9px;right:10px}
+.A.mob .btn,.A.tab .btn{min-height:46px;border-radius:12px}
+.A.mob .btn.sm,.A.tab .btn.sm{min-height:44px;padding:0 14px;font-size:13.5px;border-radius:11px}
+.A.mob .dfoot .btn,.A.mob .sbtns .btn{min-height:48px;font-size:15px}
+.A.mob .bulk .btn,.A.tab .bulk .btn{min-height:44px}
+.A.mob .inp,.A.tab .inp{min-height:46px}
+.A.mob .tsel,.A.tab .tsel{height:44px;min-height:44px}
+.A.mob .srch,.A.tab .srch{height:46px}
+.A.mob .tbar .srch,.A.mob .tbar .ib{height:46px}
+.A.mob .tbar .ib{width:46px}
+/* chips and tabs: 40px pill, 44px hit area */
+.A.mob .tab,.A.tab .tab{min-height:40px;padding:7px 14px;position:relative;font-size:13.5px}
+.A.mob .tab::before,.A.tab .tab::before,.A.mob .seg2 button::before,.A.tab .seg2 button::before{content:"";position:absolute;inset:-3px 0}
+.A.mob .seg2 button,.A.tab .seg2 button{min-height:40px;position:relative;padding:6px 14px}
+.A.mob .tabs,.A.mob .dsel,.A.tab .tabs,.A.tab .dsel{padding-top:3px;padding-bottom:3px;gap:8px}
+/* steppers: 36/40px circle, 44px hit area */
+.A.mob .mini2 button,.A.tab .mini2 button{width:36px;height:36px;font-size:18px;position:relative}
+.A.mob .mini2 button::before,.A.tab .mini2 button::before{content:"";position:absolute;inset:-4px}
+.A.mob .mini2,.A.tab .mini2{gap:8px}
+.A.mob .mini2 span,.A.tab .mini2 span{font-size:13.5px}
+.A.mob .stepper2 button,.A.tab .stepper2 button{width:44px;height:44px;font-size:20px}
+.A.mob .stepper2 span,.A.tab .stepper2 span{min-height:44px;display:grid;place-items:center;font-size:15px}
+/* switches: 52x32 with a 44px hit area */
+.A.mob .sw,.A.tab .sw{width:52px;height:32px;border-radius:16px}
+.A.mob .sw::after,.A.tab .sw::after{width:26px;height:26px}
+.A.mob .sw[aria-checked="true"]::after,.A.tab .sw[aria-checked="true"]::after{left:23px}
+.A.mob .sw::before,.A.tab .sw::before{content:"";position:absolute;inset:-6px 0}
+/* text links and small controls: invisible 44px hit area */
+.A.mob .lk,.A.tab .lk{position:relative;font-size:13.5px}
+.A.mob .lk::before,.A.tab .lk::before{content:"";position:absolute;inset:-9px -6px}
+.A.mob .ckb,.A.tab .ckb{position:relative}
+.A.mob .ckb::before,.A.tab .ckb::before{content:"";position:absolute;inset:-8px}
+.A.mob .hero .hs{min-height:38px;padding:6px 14px;font-size:13px;position:relative}
+.A.mob .hero .hs::before{content:"";position:absolute;inset:-3px 0}
+.A.mob .dchip,.A.tab .dchip{min-height:48px;min-width:60px}
+
+/* --- 2. focus: one visible ring everywhere ------------------------------ */
+.A button:focus-visible,.A a:focus-visible,.A input:focus-visible,.A select:focus-visible,.A textarea:focus-visible,.A [tabindex]:focus-visible{outline:2.5px solid #b25e12;outline-offset:2px;border-radius:inherit}
+.A .srch:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in oklab,var(--accent) 18%,transparent)}
+.A .inp:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in oklab,var(--accent) 18%,transparent);outline:0}
+
+/* --- 3. popups: the action bar is a solid footer, nothing shows under it - */
+.A .sheet:has(>.sbtns){padding-bottom:0!important}
+.A .sheet>.sbtns{position:sticky;bottom:0;z-index:3;background:var(--surface);margin:0 -18px;padding:12px 18px 30px;border-top:1px solid var(--line)}
+.A.land .sheet>.sbtns{margin:0 -20px;padding:10px 20px 14px}
+.A.desk .sheet>.sbtns{margin:0 -22px;padding:12px 22px 18px}
+.A.mob.port .sheet{border-radius:24px 24px 0 0;padding-top:8px;gap:14px}
+.A.mob.port .sheet h5{font-size:21px;line-height:1.3}
+.A.mob.land .sheet{width:min(600px,74%)}
+.A.mob.land .sheet h5{font-size:19px}
+
+/* --- 4. bottom tab bar: clear current page ------------------------------ */
+.A .tabbar button{min-height:48px}
+.A .tabbar .on::after{content:"";position:absolute;top:-7px;left:50%;transform:translateX(-50%);width:36px;height:3px;border-radius:0 0 3px 3px;background:var(--accent)}
+.A.mob.land .tabbar button{min-height:44px}
+.A.mob.land.ios .tabbar{padding-top:0}
+.A.mob.land .tabbar .on::after{top:0;width:44px}
+.A .tabbar .on svg{stroke-width:2.2}
+.A .tabbar{box-shadow:0 -6px 16px -14px rgba(72,16,34,.35)}
+
+/* --- 5. phone page rhythm ----------------------------------------------- */
+.A.mob .mtop{padding:6px 14px 8px;gap:10px}
+.A.mob.port .content{padding:12px 16px 20px;gap:14px}
+.A.mob.port .tabs,.A.mob.port .dsel,.A.mob.port .phase,.A.mob.port .istep{margin:0 -16px;padding-left:16px;padding-right:16px}
+.A.mob .card{padding:16px;border-radius:16px}
+.A.mob .ch{margin-bottom:12px}
+.A.mob .ch h5,.A.tab .ch h5{font-size:16px;line-height:1.35}
+.A.mob.land.ios .content{padding-top:10px}
+.A.mob.land .pt{margin-top:2px}
+
+/* --- 6. status pill on a tinted status card stays readable -------------- */
+.A .live .row1 .pill{background:var(--raised);border:1px solid color-mix(in oklab,currentColor 30%,transparent);padding:2px 10px}
+.A .live .row1{gap:10px 12px}
+.A.mob .live{padding:16px;border-radius:16px;gap:12px}
+.A.mob .live .big{font-size:18px;line-height:1.3}
+
+/* --- 7. festival-day attendance rows (phone portrait): name, then two equal buttons */
+.A.mob.port .arow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 10px;align-items:center;padding:12px 0}
+.A.mob.port .arow>.abtn{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.A.mob.port .arow b{font-size:14.5px!important}
+.A.mob.land .arow,.A.tab .arow{flex-wrap:nowrap;padding:10px 0}
+.A .abtn .btn{min-width:72px}
+
+/* --- 8. capacity planner rows (phones): name on its own line, controls below */
+.A.mob .sevarow{padding:14px;border-radius:14px;gap:10px}
+.A.mob .sevarow .r1{display:grid;grid-template-columns:1fr auto;gap:8px 10px;align-items:center}
+.A.mob .sevarow .r1 b{grid-column:1/-1;font-size:15.5px;min-width:0}
+.A.mob .sevarow .r1 .btn{justify-self:end;min-width:96px}
+.A.mob .chipsN,.A.tab .chipsN{gap:6px}
+.A.mob .chipsN span,.A.tab .chipsN span{font-size:12.5px;padding:2px 10px}
+
+/* --- 9. audit filters: an even grid on phones --------------------------- */
+.A.mob.port .fchips{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.A.mob.port .fchips .tsel{width:100%;max-width:none}
+.A.mob.land .fchips .tsel{flex:1 1 0;max-width:none}
+
+/* --- 10. detail screen: secondary actions share the row ----------------- */
+.A.mob .mdet .db>div[style*="flex-wrap"]>.btn{flex:1 1 0}
+.A.mob.port .dh{padding:10px 16px 12px}
+.A.mob.port .db{padding:14px 16px 18px;gap:14px}
+.A.mob.port .dfoot{padding:12px 16px 30px}
+.A.mob .kv{grid-template-columns:minmax(96px,34%) 1fr;gap:10px 12px;font-size:14px;align-items:baseline}
+
+/* --- 11. lists ---------------------------------------------------------- */
+.A.mob .lrow{padding:12px;border-radius:14px;gap:12px;grid-template-columns:40px 1fr auto;min-height:64px}
+.A.mob .lrow .av2{width:40px;height:40px;border-radius:12px;font-size:15px}
+.A.mob .lrow .nm{font-size:15.5px}
+.A.mob .lrow .mt{font-size:12.5px;line-height:1.45}
+.A.mob .card .lrow,.A.mob .sheet .lrow{min-height:52px}
+.A.mob .mi{min-height:60px;padding:12px 14px;border-radius:14px;font-size:15px}
+.A.mob.land .menu,.A.tab .menu{grid-template-columns:1fr 1fr;gap:10px}
+.A.mob .pill,.A.tab .pill{font-size:12.5px;padding:2px 10px}
+.A.mob .bulk{padding:8px 8px 8px 16px;border-radius:14px;font-size:14px}
+
+/* --- 12. tables on phone portrait: fit the screen ----------------------- */
+.A.mob.port .tblw thead th{padding:10px 8px;font-size:12px}
+.A.mob.port .tblw tbody td{padding:12px 8px;font-size:13px;line-height:1.4}
+.A.mob.port .tblw th:first-child,.A.mob.port .tblw td:first-child{padding-left:12px}
+.A.mob.port .tblw th:last-child,.A.mob.port .tblw td:last-child{padding-right:12px}
+.A.mob.port .tblw td.mono{font-size:11.5px;overflow-wrap:anywhere}
+.A.mob.port .tblw td .pill{font-size:11.5px;padding:1px 7px;gap:4px;white-space:normal;line-height:1.5}
+.A.mob.port .tblw td:first-child .note{font-size:11.5px}
+.A.mob.port .tblw td:first-child:has(.note){min-width:104px}
+.A.mob .card>.ch:has(.note){align-items:baseline;flex-wrap:wrap}
+.A.mob.port .tblw td.mono:first-child{width:40%}
+.A.mob.port .tblw td.mono{overflow-wrap:break-word;word-break:normal}
+
+/* --- 13. control screen rows on phones: text gets the full width -------- */
+.A.mob .dayrow{grid-template-columns:auto minmax(0,1fr);gap:8px 12px;padding:12px 0}
+.A.mob .dayrow .rt{grid-column:2;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.A.mob .dayrow .dn b{font-size:15px}
+.A.mob .dayrow .dn small{font-size:12.5px;line-height:1.4}
+.A.mob.land .gate:has(.stepper2){grid-template-columns:28px 1fr}
+.A.mob.land .gate:has(.stepper2) .stepper2{grid-column:2}
+.A.mob .gate{padding:13px 0;gap:12px}
+.A.mob .gate b{font-size:15px}
+.A.mob .gate small{font-size:12.5px}
+/* cards in a two-column grid keep their content at the top */
+.A .card[style*="display:grid"]{align-content:start}
+/* remaining small targets */
+.A.mob .tblw tbody tr.clk td,.A.tab .tblw tbody tr.clk td{padding-top:13px;padding-bottom:13px}
+.A.mob .opt,.A.mob .chkline,.A.tab .opt,.A.tab .chkline{min-height:46px}
+.A.mob .lk,.A.tab .lk{min-width:24px}
+.A.mob .lk::before,.A.tab .lk::before{inset:-10px}
+/* --- 14. small repairs --------------------------------------------------- */
+.A .kpi{min-width:0}
+.A.mob.land .g2 .kp,.A.tab .g2 .kp{grid-template-columns:1fr 1fr}
+.A.mob .tblw td:first-child:has(.note),.A.tab .tblw td:first-child:has(.note){min-width:112px}
+.A.mob .tblw td .pill{border-radius:10px}
+.A.mob.land .g2 .tblw thead th{padding:10px 7px;font-size:12px}
+.A.mob.land .g2 .tblw tbody td{padding-left:7px;padding-right:7px;font-size:13px}
+.A.mob.land .g2 .tblw th:first-child,.A.mob.land .g2 .tblw td:first-child{padding-left:12px}
+.A.mob.land .g2 .tblw td:first-child:has(.note){min-width:96px}
+.A.mob.land .g2 .tblw td:first-child .note{font-size:11.5px}
+/* tablets: planner rows as on phones */
+.A.tab .sevarow .r1{display:grid;grid-template-columns:1fr auto;gap:8px 10px;align-items:center}
+.A.tab .sevarow .r1 b{grid-column:1/-1;min-width:0}
+.A.tab .sevarow .r1 .btn{justify-self:end}
+.A.tab .side .nv{min-height:44px}
+.A.tab .hero .hs{min-height:38px;padding:6px 14px;font-size:13px;position:relative}
+.A.tab .hero .hs::before{content:"";position:absolute;inset:-3px 0}
+.A.tab input.chk,.A.mob input.chk{width:24px;height:24px}
 </style>
 </head>
 <body>
@@ -1625,7 +1793,7 @@ The artifact "Meldi Dham Admin Redesign" is one self-contained HTML file (no ext
 
 </script>
 <header style="display:grid;gap:14px">
-  <div class="eyebrow">Master design · v8 · phone title bar, login, polish (15 Nov 2026) · v7 professional patterns · v6 chakra · owner decisions of 14 Nov · built on v4</div>
+  <div class="eyebrow">Master design · v9 · touch targets, sheets, phone and landscape polish (15 Nov 2026) · v8 phone title bar · v7 professional patterns · v6 chakra · owner decisions of 14 Nov · built on v4</div>
   <h1>Meldi Dham Admin — Master Design</h1>
   <p class="lead">A clickable redesign of the Shree Vihat Meldi Dham admin panel and seva form, built around the trust's plan: take as many registrations as WhatsApp can confirm, then define sevas, plan each festival day, and form teams with a leader and vice‑leader. Colours, fonts and Gujarati wording follow the current site.</p>
   <nav class="toc" aria-label="Sections"><a href="#master">Master v5 decisions</a><a href="#need">Your requirements</a><a href="#proto">Live prototype</a><a href="#pages">Every admin page</a><a href="#gallery">Phones &amp; tablets</a><a href="#fit">Device layout spec</a><a href="#website">Website form</a><a href="#phases">Phase plan</a><a href="#problems">Problems found</a><a href="#ia">New structure</a><a href="#flows">Flows</a><a href="#states">Rules</a><a href="#design">Design rules</a><a href="#build">Build plan</a><a href="#data">Data model</a><a href="#tests">Tests</a><a href="#decide">Decisions</a><a href="#words">Glossary</a><a href="#gaps">Known gaps</a><a href="#handoff">Hand‑off</a></nav>

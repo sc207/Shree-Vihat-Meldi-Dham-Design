@@ -1,6 +1,16 @@
-# Admin panel — MASTER design v8 (15 Nov 2026)
+# Admin panel — MASTER design v9 (15 Nov 2026)
 
 > **ગુજરાતીમાં:** આ એડમિન પેનલની અંતિમ (માસ્ટર) ડિઝાઇન છે. `meldi-admin-master.html` બ્રાઉઝરમાં ખોલો: ઉપર "Master v5 decisions" વિભાગ, પછી ક્લિક થતો પ્રોટોટાઇપ (ડેસ્કટોપ, ફોન, ટૅબ્લેટ), દરેક સ્ક્રીનની ગેલેરી અને અંદર Claude Code માટેનું પૂરું build brief છે. આ ફાઇલ જૂની Phase C (`../README-FOR-CLAUDE-CODE.md`) કરતાં ઉપર છે.
+
+## v9 (15 Nov 2026) — touch and phone polish
+
+- Touch targets: icon buttons 44 px, buttons 46 px (sheet and detail footers 48 px), inputs 46 px; tabs, chips, steppers, switches, links, checkboxes and rows reach 44 px on phones and tablets. Stronger focus ring; accent ring on focused inputs.
+- Popups: a solid action footer with a top border (content no longer shows under the buttons); slightly wider in phone landscape.
+- Bottom bar: accent bar above the current tab.
+- Phone portrait: tables fit (message status, templates, reports); attendance rows show name and status first, then equal હાજર / ગેરહાજર buttons; planner rows put the seva name on its own line; audit filters in a 2×2 grid.
+- Phone landscape: "વધુ" in two columns (also tablets); control rows and reports use the width better; analytics tiles no longer overlap.
+- Readable "ચાલુ" pill on the tinted status card.
+- Known small gaps: one text link on two boards is under 44 px; the tablet ID-card table checkbox is 24 px; the card-distribution table scrolls sideways on phone portrait.
 
 ## v8 (15 Nov 2026)
 
