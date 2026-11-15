@@ -1,6 +1,14 @@
-# Admin panel — MASTER design v9 (15 Nov 2026)
+# Admin panel — MASTER design v10 (15 Nov 2026)
 
 > **ગુજરાતીમાં:** આ એડમિન પેનલની અંતિમ (માસ્ટર) ડિઝાઇન છે. `meldi-admin-master.html` બ્રાઉઝરમાં ખોલો: ઉપર "Master v5 decisions" વિભાગ, પછી ક્લિક થતો પ્રોટોટાઇપ (ડેસ્કટોપ, ફોન, ટૅબ્લેટ), દરેક સ્ક્રીનની ગેલેરી અને અંદર Claude Code માટેનું પૂરું build brief છે. આ ફાઇલ જૂની Phase C (`../README-FOR-CLAUDE-CODE.md`) કરતાં ઉપર છે.
+
+## v10 (15 Nov 2026) — ID card rebuilt, final fixes
+
+- **ID card rebuilt** on an exact 54 × 86 mm grid (new `.idk` classes; `idFront` / `idBack` in the master file). Front: maroon header (eyebrow, emblem + temple name, મંગલારોહણ, festival and dates on two lines), gold arch photo frame overlapping the header edge, role chip, name in one line (long names get smaller), a two-column row block (સેવાનો દિવસ, ટીમ લીડર only when set), seva-colour band with seva name, SEVA number and a QR that sits fully inside the band. Back: centred rhythm, website QR panel. No letter-spacing on Gujarati. The bracket line "[કાર્ડ વિશેની સૂચના — ટ્રસ્ટ નક્કી કરશે]" is removed (owner rule: no brackets; the trust adds card instructions later). Pictures: `id-card/`.
+- Phone checkboxes and tablet ID-card checkboxes: 24 px box with a 44 px hit area.
+- The × next to assigned names in the planner: bigger target.
+- Card distribution (Invitations step 6) on phone portrait: one card per village instead of a sideways-scrolling table.
+- Step and day chip rows fade at the edge to show they scroll.
 
 ## v9 (15 Nov 2026) — touch and phone polish
 

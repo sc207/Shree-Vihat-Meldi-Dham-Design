@@ -1047,6 +1047,106 @@ ul.r{margin:0;padding-left:18px;display:grid;gap:7px;font-size:14px}
 .A.tab .hero .hs{min-height:38px;padding:6px 14px;font-size:13px;position:relative}
 .A.tab .hero .hs::before{content:"";position:absolute;inset:-3px 0}
 .A.tab input.chk,.A.mob input.chk{width:24px;height:24px}
+/* ===== v10 (15 Nov 2026): ID card on an exact 54 × 86 mm grid (CR80, portrait) ===== */
+.idk{--mm:3.7795px;--band:#741A32;--ink:#29272A;--ivory:#FBF7EF;--gold:#E2C27A;position:relative;box-sizing:border-box;width:calc(54*var(--mm));height:calc(86*var(--mm));border-radius:calc(3.2*var(--mm));overflow:hidden;background:var(--ivory);color:var(--ink);font-family:'Hind Vadodara','Noto Sans Gujarati',sans-serif;line-height:1.2;text-align:center;flex:none;box-shadow:0 calc(.6*var(--mm)) calc(2.4*var(--mm)) rgba(41,10,20,.22);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.idk *{box-sizing:border-box;margin:0}
+.idk--b1{--band:#741A32}.idk--b2{--band:#1F5F5B}.idk--b3{--band:#1F4E79}.idk--b4{--band:#B4461A}.idk--b5{--band:#5A524C}
+.idk .emb{display:block;width:100%;height:100%;object-fit:contain}
+/* header */
+.idk__hd{position:absolute;inset:0 0 auto 0;height:calc(31*var(--mm));padding-top:calc(6*var(--mm));display:flex;flex-direction:column;align-items:center;gap:calc(.55*var(--mm));color:var(--ivory);background:radial-gradient(120% 90% at 50% 0%,#8a2340 0%,#6b1730 45%,#4a1022 100%);overflow:hidden}
+.idk__hd::before{content:"";position:absolute;width:calc(70*var(--mm));height:calc(70*var(--mm));left:50%;top:calc(-14*var(--mm));transform:translateX(-50%);background:var(--chakra-light) center/contain no-repeat;opacity:.22;pointer-events:none}
+.idk__hd>*{position:relative}
+.idk__slot{position:absolute!important;top:calc(2.1*var(--mm));left:50%;transform:translateX(-50%);width:calc(11*var(--mm));height:calc(2.3*var(--mm));border-radius:calc(1.15*var(--mm));background:rgba(20,4,10,.35);box-shadow:inset 0 0 0 calc(.25*var(--mm)) rgba(226,194,122,.6);z-index:3}
+.idk__jay{font-size:calc(1.75*var(--mm));font-weight:600;color:var(--gold);line-height:1.2}
+.idk__brand{display:flex;align-items:center;justify-content:center;gap:calc(1.2*var(--mm));text-align:left}
+.idk__brand>img{width:calc(5*var(--mm))!important;height:calc(5*var(--mm))!important}
+.idk__brand b{display:block;font-size:calc(2.45*var(--mm));font-weight:700;line-height:1.15}
+.idk__brand small{display:block;font-size:calc(1.6*var(--mm));color:rgba(251,247,239,.82);line-height:1.2}
+.idk__mark{font-family:'Noto Serif Gujarati',serif;font-weight:700;font-size:calc(6.3*var(--mm));line-height:1.18;letter-spacing:0;background:linear-gradient(180deg,#F7DE9F 0%,#E2C27A 45%,#B78A35 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 calc(1*var(--mm))}
+.idk__sub{font-size:calc(1.75*var(--mm));color:rgba(251,247,239,.9);line-height:1.25}
+.idk__sub b{display:block;font-size:calc(1.95*var(--mm));color:var(--gold);font-weight:700}
+/* photo */
+.idk__photo{position:absolute;top:calc(28.4*var(--mm));left:50%;transform:translateX(-50%);width:calc(20*var(--mm));height:calc(24*var(--mm));padding:calc(.7*var(--mm));border-radius:calc(10*var(--mm)) calc(10*var(--mm)) calc(2*var(--mm)) calc(2*var(--mm));background:linear-gradient(160deg,#F2D795,#B78A35);box-shadow:0 calc(.6*var(--mm)) calc(1.8*var(--mm)) rgba(41,10,20,.28);z-index:2}
+.idk__ph{width:100%;height:100%;border-radius:calc(9.3*var(--mm)) calc(9.3*var(--mm)) calc(1.4*var(--mm)) calc(1.4*var(--mm));background:#EFE3CF;color:#CDB894;overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.idk__ph svg{width:88%;height:auto;display:block}
+.idk__noph{align-items:center;color:#86621F;font-size:calc(2*var(--mm));font-weight:600;background:repeating-linear-gradient(135deg,#F5E8C8 0 calc(1*var(--mm)),#EFE3CF calc(1*var(--mm)) calc(2*var(--mm)))}
+/* body */
+.idk__body{position:absolute;top:calc(53.4*var(--mm));left:calc(3*var(--mm));right:calc(3*var(--mm));display:flex;flex-direction:column;align-items:center;gap:calc(.55*var(--mm))}
+.idk__role{display:inline-flex;align-items:center;gap:calc(.6*var(--mm));font-size:calc(1.7*var(--mm));font-weight:700;color:#86621F;background:#F5E8C8;border-radius:999px;padding:calc(.3*var(--mm)) calc(1.8*var(--mm));line-height:1.3}
+.idk__role::before{content:"";width:calc(.9*var(--mm));height:calc(.9*var(--mm));border-radius:50%;background:#B78A35}
+.idk__name{font-family:'Noto Serif Gujarati',serif;font-weight:700;font-size:calc(3.9*var(--mm));color:#741A32;line-height:1.22;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:0}
+.idk__name.long{font-size:calc(3.2*var(--mm))}
+.idk__rows{display:grid;grid-template-columns:auto auto;column-gap:calc(1.6*var(--mm));row-gap:calc(.35*var(--mm));font-size:calc(1.95*var(--mm));line-height:1.3;margin-top:calc(.3*var(--mm))}
+.idk__rows>div{display:contents}
+.idk__rows dt{color:#675A51;text-align:right;font-weight:500}
+.idk__rows dd{text-align:left;font-weight:700;color:var(--ink)}
+/* seva band */
+.idk__band{position:absolute;inset:auto 0 0 0;height:calc(15*var(--mm));display:flex;align-items:center;justify-content:space-between;gap:calc(2*var(--mm));padding:0 calc(2.4*var(--mm)) 0 calc(3.2*var(--mm));background:var(--band);color:#fff;text-align:left;overflow:hidden}
+.idk__band::before{content:"";position:absolute;width:calc(40*var(--mm));height:calc(40*var(--mm));left:calc(-12*var(--mm));top:calc(-10*var(--mm));background:var(--chakra-light) center/contain no-repeat;opacity:.14;pointer-events:none}
+.idk__bt{position:relative;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:calc(.9*var(--mm))}
+.idk__seva{font-size:calc(2.55*var(--mm));font-weight:700;line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.idk__id{font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;font-size:calc(1.95*var(--mm));font-weight:700;letter-spacing:calc(.08*var(--mm));padding:calc(.3*var(--mm)) calc(1.1*var(--mm));border-radius:calc(.8*var(--mm));background:rgba(0,0,0,.18);box-shadow:inset 0 0 0 calc(.22*var(--mm)) rgba(255,255,255,.55);line-height:1.3}
+.idk__qr{position:relative;flex:none;width:calc(11.4*var(--mm));height:calc(11.4*var(--mm));padding:calc(.7*var(--mm));border-radius:calc(1.2*var(--mm));background:#fff}
+.idk__qr svg{display:block;width:100%;height:100%}
+/* back */
+.idk--back{background:radial-gradient(120% 70% at 50% 30%,#8a2340 0%,#6b1730 45%,#3f0d1d 100%);color:var(--ivory)}
+.idk--back::before{content:"";position:absolute;width:calc(78*var(--mm));height:calc(78*var(--mm));left:50%;top:calc(4*var(--mm));transform:translateX(-50%);background:var(--chakra-light) center/contain no-repeat;opacity:.18;pointer-events:none}
+.idk__bk{position:absolute;inset:calc(5.8*var(--mm)) calc(3.2*var(--mm)) calc(3.2*var(--mm));display:flex;flex-direction:column;align-items:center;gap:calc(.6*var(--mm))}
+.idk__emb{width:calc(10*var(--mm));height:calc(10*var(--mm));margin-top:calc(1*var(--mm))}
+.idk__b2{font-size:calc(3*var(--mm));font-weight:700;margin-top:calc(.4*var(--mm))}
+.idk__pl{font-size:calc(1.7*var(--mm));color:rgba(251,247,239,.82)}
+.idk--back .idk__mark{font-size:calc(7.4*var(--mm));margin-top:calc(.6*var(--mm))}
+.idk__orn{display:flex;align-items:center;gap:calc(1*var(--mm));width:calc(26*var(--mm))}
+.idk__orn::before,.idk__orn::after{content:"";flex:1;height:calc(.22*var(--mm));background:linear-gradient(90deg,transparent,#E2C27A)}
+.idk__orn::after{background:linear-gradient(90deg,#E2C27A,transparent)}
+.idk__orn i{width:calc(1.3*var(--mm));height:calc(1.3*var(--mm));background:#E2C27A;transform:rotate(45deg)}
+.idk--back .idk__sub{font-size:calc(2*var(--mm))}
+.idk--back .idk__sub b{font-size:calc(2.3*var(--mm))}
+.idk__muh{font-size:calc(1.75*var(--mm));color:rgba(251,247,239,.86);margin-top:calc(.4*var(--mm))}
+.idk__scan{margin-top:auto;width:100%;display:flex;align-items:center;gap:calc(2*var(--mm));padding:calc(1.6*var(--mm));border-radius:calc(2*var(--mm));background:rgba(255,253,248,.08);box-shadow:inset 0 0 0 calc(.22*var(--mm)) rgba(226,194,122,.45);text-align:left}
+.idk--back .idk__qr{width:calc(14*var(--mm));height:calc(14*var(--mm))}
+.idk__st b{display:block;font-size:calc(2.1*var(--mm));line-height:1.25}
+.idk__st span{display:block;font-size:calc(1.65*var(--mm));color:rgba(251,247,239,.82);margin-top:calc(.5*var(--mm));line-height:1.3}
+.idk__web{font-size:calc(1.85*var(--mm));font-weight:700;color:#E2C27A;margin-top:calc(1.2*var(--mm));letter-spacing:calc(.05*var(--mm))}
+/* where the old card had layout hooks */
+.A .a4.cards .idk{outline:1px dashed rgba(0,0,0,.35);outline-offset:calc(1.5*var(--mm));box-shadow:none}
+.A .cprev{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+@media print{.idk{box-shadow:none}}
+/* back: even rhythm */
+.idk__bk{gap:calc(.9*var(--mm))}
+.idk__emb{width:calc(12.5*var(--mm));height:calc(12.5*var(--mm));margin-top:calc(1.6*var(--mm))}
+.idk__b2{font-size:calc(3.3*var(--mm))}
+.idk--back .idk__mark{font-size:calc(7.8*var(--mm));margin-top:calc(1.4*var(--mm))}
+.idk--back .idk__sub{font-size:calc(2.15*var(--mm))}
+.idk--back .idk__sub b{font-size:calc(2.5*var(--mm))}
+.idk__muh{font-size:calc(1.85*var(--mm));margin-top:calc(.8*var(--mm));padding:calc(.5*var(--mm)) calc(1.8*var(--mm));border-radius:999px;background:rgba(255,253,248,.08)}
+
+/* ===== v10 fixes ===== */
+/* touch checkboxes: 24 px box, 44 px hit area */
+.A.mob input[type=checkbox],.A.tab input[type=checkbox]{-webkit-appearance:none;appearance:none;width:44px;height:44px;margin:-10px;flex:none;border:0;border-radius:10px;background:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Crect%20x%3D%271%27%20y%3D%271%27%20width%3D%2722%27%20height%3D%2722%27%20rx%3D%276%27%20fill%3D%27%23fff%27%20stroke%3D%27%239c8a73%27%20stroke-width%3D%272%27/%3E%3C/svg%3E") center/24px 24px no-repeat;cursor:pointer;vertical-align:middle}
+.A.mob input[type=checkbox]:checked,.A.tab input[type=checkbox]:checked{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Crect%20width%3D%2724%27%20height%3D%2724%27%20rx%3D%276%27%20fill%3D%27%23741a32%27/%3E%3Cpath%20d%3D%27M6%2012.5l4%204%208-9%27%20fill%3D%27none%27%20stroke%3D%27%23fff%27%20stroke-width%3D%272.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27/%3E%3C/svg%3E")}
+.A.mob input[type=checkbox]:focus-visible,.A.tab input[type=checkbox]:focus-visible{outline:2px solid #b25e12;outline-offset:-8px}
+/* remove (×) on assigned names: bigger target */
+.A .chipsN span{display:inline-flex;align-items:center;gap:2px;padding:4px 4px 4px 10px;font-size:12.5px}
+.A .chipsN .lk{position:relative;width:28px;height:28px;display:inline-grid;place-items:center;padding:0!important;border-radius:50%;font-size:16px}
+.A .chipsN .lk::before{content:"";position:absolute;inset:-8px}
+/* scroll rows show they scroll */
+.A.mob .dchips,.A.mob .istep,.A.tport .dchips{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 28px),transparent)}
+/* phone portrait: card distribution as cards */
+.A.mob.port .inv6t{overflow:visible!important;border:0!important;background:none!important;border-radius:0}
+.A.mob.port .inv6t table{min-width:0!important;display:block}
+.A.mob.port .inv6t thead{display:none}
+.A.mob.port .inv6t tbody{display:grid;gap:8px}
+.A.mob.port .inv6t tr{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px 8px;background:var(--raised);border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow-card)}
+.A.mob.port .inv6t td{display:block;padding:0!important;border:0!important;font-size:14px;font-weight:700;min-width:0}
+.A.mob.port .inv6t td:first-child{grid-column:1/-1;font-family:var(--serif);font-size:16px;color:var(--heading)}
+.A.mob.port .inv6t td:nth-child(n+2)::before{display:block;font-size:11px;font-weight:500;color:var(--ink-muted);line-height:1.3;margin-bottom:2px}
+.A.mob.port .inv6t td:nth-child(2)::before{content:"યાદીમાં"}
+.A.mob.port .inv6t td:nth-child(3)::before{content:"WhatsApp પહોંચ્યું"}
+.A.mob.port .inv6t td:nth-child(4)::before{content:"હજી નથી પહોંચ્યું"}
+.A.mob.port .inv6t td:nth-child(5)::before{content:"રૂબરૂ કાર્ડ"}
+.A.mob.port .inv6t td:nth-child(6){grid-column:1/-1}
+.A.mob.port .inv6t td:nth-child(6):empty{display:none}
 </style>
 </head>
 <body>
@@ -1793,7 +1893,7 @@ The artifact "Meldi Dham Admin Redesign" is one self-contained HTML file (no ext
 
 </script>
 <header style="display:grid;gap:14px">
-  <div class="eyebrow">Master design · v9 · touch targets, sheets, phone and landscape polish (15 Nov 2026) · v8 phone title bar · v7 professional patterns · v6 chakra · owner decisions of 14 Nov · built on v4</div>
+  <div class="eyebrow">Master design · v10 · ID card rebuilt, final fixes (15 Nov 2026) · v9 · touch targets, sheets, phone and landscape polish (15 Nov 2026) · v8 phone title bar · v7 professional patterns · v6 chakra · owner decisions of 14 Nov · built on v4</div>
   <h1>Meldi Dham Admin — Master Design</h1>
   <p class="lead">A clickable redesign of the Shree Vihat Meldi Dham admin panel and seva form, built around the trust's plan: take as many registrations as WhatsApp can confirm, then define sevas, plan each festival day, and form teams with a leader and vice‑leader. Colours, fonts and Gujarati wording follow the current site.</p>
   <nav class="toc" aria-label="Sections"><a href="#master">Master v5 decisions</a><a href="#need">Your requirements</a><a href="#proto">Live prototype</a><a href="#pages">Every admin page</a><a href="#gallery">Phones &amp; tablets</a><a href="#fit">Device layout spec</a><a href="#website">Website form</a><a href="#phases">Phase plan</a><a href="#problems">Problems found</a><a href="#ia">New structure</a><a href="#flows">Flows</a><a href="#states">Rules</a><a href="#design">Design rules</a><a href="#build">Build plan</a><a href="#data">Data model</a><a href="#tests">Tests</a><a href="#decide">Decisions</a><a href="#words">Glossary</a><a href="#gaps">Known gaps</a><a href="#handoff">Hand‑off</a></nav>
@@ -3295,11 +3395,29 @@ function scrRegs(){let h=scrRegs5();
 
 
 /* ===== v8 (15 Nov 2026): page title in the phone top bar, group eyebrow, login composition ===== */
-function app(){let h=app7();if(S.auth!=='in')return h;
+function app8(){let h=app7();if(S.auth!=='in')return h;
   if(isMob()&&S.screen!=='dash'&&!S.sel&&!S.padSel){const m=h.match(/<div class="pt">(.*?)<\/div>/);
     if(m){h=h.replace(m[0],'');h=h.replace('<div class="t">શ્રી વિહત મેલડી ધામ<small>વ્યવસ્થાપન · સાણંદ</small></div>',`<div class="t tt"><small>શ્રી વિહત મેલડી ધામ</small>${m[1]}</div>`)}}
   if(!isMob()){const grp=NAV.find(([gn,items])=>items.some(i=>i[0]===S.screen));if(grp)h=h.replace('<div class="ph"><div><div class="pt">',`<div class="ph"><div><div class="eb">${grp[0]}</div><div class="pt">`)}
   return h}
+
+
+/* ===== v10 (15 Nov 2026): ID card rebuilt on an exact 54 × 86 mm grid ===== */
+function idPhoto(p){return p.photo?'<div class="idk__ph"><svg viewBox="0 0 100 120" fill="currentColor" aria-hidden="true"><circle cx="50" cy="44" r="23"/><path d="M6 120c2-30 21-45 44-45s42 15 44 45z"/></svg></div>':'<div class="idk__ph idk__noph">ફોટો બાકી</div>'}
+function idFront(p,mm){const si=sevaIdx(p);const sv=si>=0?S.sevas[si]:null;const t=sv?(S.teams[sv.id]||{}):{};const ld=t.lead?S.people.find(x=>x.id===t.lead):null;
+  const long=[...p.n].length>13?' long':'';
+  return `<article class="idk idk--${BANDS[(si<0?0:si)%5]}" style="--mm:${mm}px" aria-label="સ્વયંસેવક ઓળખકાર્ડ — ${p.n}"><header class="idk__hd"><span class="idk__slot" aria-hidden="true"></span><div class="idk__jay">॥ જય શ્રી વિહત મેલડી માઁ ॥</div><div class="idk__brand">${embImg()}<span><b>શ્રી વિહત મેલડી ધામ</b><small>સાણંદ · ગુજરાત</small></span></div><div class="idk__mark">મંગલારોહણ</div><div class="idk__sub">મૂર્તિ પ્રાણ પ્રતિષ્ઠા મહોત્સવ<b>૨ થી ૮ ફેબ્રુઆરી, ૨૦૨૭</b></div></header><div class="idk__photo">${idPhoto(p)}</div><div class="idk__body"><span class="idk__role">સ્વયંસેવક</span><div class="idk__name${long}">${p.n}</div><dl class="idk__rows"><div><dt>સેવાનો દિવસ</dt><dd>${cardDays(p)}</dd></div>${ld?`<div><dt>ટીમ લીડર</dt><dd>${ld.n}</dd></div>`:''}</dl></div><footer class="idk__band"><div class="idk__bt"><div class="idk__seva">${sv?sv.n:'સેવા ફાળવણી બાકી'}</div><div class="idk__id">${sid(p)}</div></div><div class="idk__qr" role="img" aria-label="QR: ${sid(p)}">${qrSvg(sid(p))}</div></footer></article>`}
+function idBack(mm){return `<article class="idk idk--back" style="--mm:${mm}px" aria-label="ઓળખકાર્ડ — પાછળની બાજુ"><span class="idk__slot" aria-hidden="true"></span><div class="idk__bk"><div class="idk__jay">॥ જય શ્રી વિહત મેલડી માઁ ॥</div><div class="idk__emb">${embImg()}</div><div class="idk__b2">શ્રી વિહત મેલડી ધામ</div><div class="idk__pl">સાણંદ · ગુજરાત</div><div class="idk__mark">મંગલારોહણ</div><div class="idk__orn" aria-hidden="true"><i></i></div><div class="idk__sub">મૂર્તિ પ્રાણ પ્રતિષ્ઠા મહોત્સવ<b>૨ થી ૮ ફેબ્રુઆરી, ૨૦૨૭</b></div><div class="idk__muh">પ્રાણ પ્રતિષ્ઠા · ૮ ફેબ્રુઆરી, સોમવાર · બપોરે ૧૨:૩૯</div><div class="idk__scan"><div class="idk__qr" role="img" aria-label="QR: shreevihatmeldidhamsanand.com">${qrSvg('https://shreevihatmeldidhamsanand.com',29)}</div><div class="idk__st"><b>મંદિરની વેબસાઇટ જોવા સ્કેન કરો</b><span>દર્શન, મહોત્સવ કાર્યક્રમ અને સેવા માહિતી</span></div></div><div class="idk__web">shreevihatmeldidhamsanand.com</div></div></article>`}
+/* phone: card-distribution table becomes cards */
+function app(){let h=app8();if(S.auth==='in'&&S.screen==='inv'&&S.inv&&S.inv.step===6)h=h.replace('<div class="tblw" style="overflow-x:auto"><table>','<div class="tblw inv6t" style="overflow-x:auto"><table>');return h}
+/* used only to build the ID-card design boards */
+window.__card=(kind,mm)=>{const saved=S;S=withSevas(saved);try{const acc=S.people.filter(p=>p.st==='accepted');
+  if(kind==='back')return idBack(mm);
+  if(kind==='set'){const seen={},out=[];for(const p of acc){const i=sevaIdx(p);if(i>=0&&p.photo&&!seen[i%5]){seen[i%5]=1;out.push(p)}}return out.slice(0,5).map(p=>idFront(p,mm))}
+  if(kind==='nophoto'){const p=acc[1]||acc[0];return idFront(Object.assign({},p,{photo:false}),mm)}
+  if(kind==='long'){const p=acc.find(x=>x.photo);return idFront(Object.assign({},p,{n:'ભાગ્યશ્રીબેન મહેન્દ્રભાઈ પ્રજાપતિ'}),mm)}
+  if(kind==='nine')return acc.filter(p=>p.photo).slice(0,9).map(p=>idFront(p,mm));
+  return idFront(acc.find(x=>x.photo),mm)}finally{S=saved}};
 
 /* export hook used only to generate the canvas boards (no effect on the prototype) */
 window.__exp={EMB,EMBR,
