@@ -1,6 +1,17 @@
-# Admin panel — MASTER design v10 (15 Nov 2026)
+# Admin panel — MASTER design v11 (15 Nov 2026)
 
 > **ગુજરાતીમાં:** આ એડમિન પેનલની અંતિમ (માસ્ટર) ડિઝાઇન છે. `meldi-admin-master.html` બ્રાઉઝરમાં ખોલો: ઉપર "Master v5 decisions" વિભાગ, પછી ક્લિક થતો પ્રોટોટાઇપ (ડેસ્કટોપ, ફોન, ટૅબ્લેટ), દરેક સ્ક્રીનની ગેલેરી અને અંદર Claude Code માટેનું પૂરું build brief છે. આ ફાઇલ જૂની Phase C (`../README-FOR-CLAUDE-CODE.md`) કરતાં ઉપર છે.
+
+## v11 (15 Nov 2026) — Control Centre with toggles, WhatsApp queue and recovery
+
+Canvas version `1794729876-5c47` (v10 = `1794723459-e0db` stays in history for rollback). Design only: no code, database, flag, GitHub deployment, staging, production or WhatsApp setting was changed.
+
+- **WhatsApp capacity never closes Seva registration** (owner decision). "નોંધણી નિયંત્રણ" now shows "નોંધણીની મર્યાદા · WhatsApp થી સ્વતંત્ર".
+- **નિયંત્રણ કેન્દ્ર (new, menu કામ → second item; phone "વધુ" first):** every ON/OFF in one place as a toggle (owner, 15 Nov). Website public, emergency private, ceremony page, 7 website sections, website registration, panel intake, 7 festival days, WhatsApp sending, Emergency Stop, live/test mode, 6 modules. Levels: તરત (Admin, reason), માલિક સ્તર (Super Admin, reason + authenticator code), મોડ્યુલ (Super Admin + code, within the server limit), ફક્ત સ્થિતિ. Critical toggles need a typed word ("હા"; Emergency Stop "રોકો"). Locked toggles show why. Every change is audited and listed in the row details.
+- **WhatsApp → કતાર અને ફરી પ્રયાસ (new tab):** policy banner, Meta limit vs panel budget vs 24 h customer-service window, pause / Emergency Stop, filters, message detail with timeline, retry rules; unknown results never auto-retry. Dashboard chip "WhatsApp કતાર · N રાહમાં".
+- Planner "આપમેળે ભરો" shown off (approval pending).
+- Spec: `spec-v11-control-centre-whatsapp-queue.md` (also embedded in the master file as brief section 0B), including the implementation note (switches move to database settings; Render env stays the upper limit) and the open owner decisions.
+- `meldi-admin-all-pages.html`: every screen in one static file (299 screens) for review and sharing.
 
 ## v10 (15 Nov 2026) — ID card rebuilt, final fixes
 

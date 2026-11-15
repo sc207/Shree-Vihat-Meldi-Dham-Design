@@ -1147,6 +1147,65 @@ ul.r{margin:0;padding-left:18px;display:grid;gap:7px;font-size:14px}
 .A.mob.port .inv6t td:nth-child(5)::before{content:"રૂબરૂ કાર્ડ"}
 .A.mob.port .inv6t td:nth-child(6){grid-column:1/-1}
 .A.mob.port .inv6t td:nth-child(6):empty{display:none}
+/* ===== v11: Control Centre + WhatsApp queue ===== */
+.A .ccsum{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;flex-shrink:0}
+.A.port .ccsum{grid-template-columns:1fr 1fr}
+.A .cct2{display:grid;gap:2px;text-align:left;border-radius:14px;padding:12px 14px;border:1px solid var(--line);background:var(--raised);cursor:pointer;font:inherit;color:var(--ink);box-shadow:var(--shadow-card);min-height:64px}
+.A .cct2 small{font-size:12px;color:var(--ink-muted);font-weight:600}.A .cct2 b{font-family:var(--serif);font-size:18px;line-height:1.25}
+.A .cct2.ok{border-color:color-mix(in oklab,var(--ok) 40%,var(--line));background:var(--ok-soft)}.A .cct2.ok b{color:var(--ok)}
+.A .cct2.warn{border-color:color-mix(in oklab,var(--warn) 40%,var(--line));background:var(--warn-soft)}.A .cct2.warn b{color:var(--warn)}
+.A .cct2.bad{border-color:color-mix(in oklab,var(--bad) 40%,var(--line));background:var(--bad-soft)}.A .cct2.bad b{color:var(--bad)}
+.A .cct2.info b{color:var(--info)}.A .cct2.mut b{color:var(--ink-muted)}
+.A .cclg{display:flex;gap:6px;flex-wrap:wrap;flex-shrink:0}
+.A .cct{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 9px;line-height:1.5;white-space:nowrap}
+.A .cct.t-op{background:var(--ok-soft);color:var(--ok)}.A .cct.t-own{background:var(--gold-soft);color:var(--gold-ink)}.A .cct.t-flag,.A .cct.t-dep{background:var(--info-soft);color:var(--info)}.A .cct.t-ro{background:var(--alt);color:var(--ink-muted)}
+.A .cclg .tab.on .cct{background:transparent;color:inherit}
+.A .ccgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.A.mob .ccgrid,.A.tport .ccgrid{grid-template-columns:1fr}
+.A .ccsec{margin:0;display:grid;gap:0;background:var(--raised);border:1px solid var(--line);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow-card)}
+.A .ccsec .ch{margin-bottom:4px}
+.A .ccr{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:0;border-top:1px solid color-mix(in oklab,var(--line) 70%,transparent);padding:10px 0;cursor:pointer;font:inherit;color:var(--ink);min-height:56px}
+.A .ccsec .ch+.ccr,.A .ccsec .note+.ccr{border-top:0}
+.A .ccm{flex:1;min-width:0;display:grid;gap:1px}.A .ccm b{font-size:14px;font-weight:600;line-height:1.35}.A .ccm small{font-size:12px;color:var(--ink-muted);line-height:1.35}
+.A .ccs{display:grid;justify-items:end;gap:4px;flex:none;max-width:48%}
+.A .ccs .pill{white-space:nowrap}
+.A .ccalert,.A .ccok{display:flex;gap:10px;align-items:flex-start;border-radius:14px;padding:12px 14px;flex-shrink:0}
+.A .ccalert{background:var(--bad-soft);border:1px solid color-mix(in oklab,var(--bad) 40%,transparent);color:var(--ink)}
+.A .ccalert svg{color:var(--bad);width:20px;height:20px;flex:none;margin-top:2px}
+.A .ccok{background:var(--ok-soft);border:1px solid color-mix(in oklab,var(--ok) 35%,transparent)}
+.A .ccok svg{color:var(--ok);width:20px;height:20px;flex:none;margin-top:2px}
+.A .ccalert>div,.A .ccok>div{flex:1;display:grid;gap:2px}.A .ccalert span,.A .ccok span{font-size:13px;color:var(--ink-muted)}
+.A .ccnote{background:var(--alt);border-radius:10px;padding:10px 12px;font-size:13px;line-height:1.5;margin:8px 0}
+.A .capx{display:grid;gap:12px}
+.A .cwin{border-top:1px dashed var(--line-strong);padding-top:10px}
+.A .qctl{display:flex;gap:8px;flex-wrap:wrap;align-items:center;flex-shrink:0}
+.A .qctl .demo2{margin-left:auto;display:flex;gap:6px;align-items:center;font-size:12px;color:var(--ink-muted)}
+.A .qlist{display:grid}
+.A .qrow{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:0;border-top:1px solid color-mix(in oklab,var(--line) 70%,transparent);padding:9px 0;cursor:pointer;font:inherit;color:var(--ink);min-height:52px}
+.A .qrow:first-child{border-top:0}
+.A .qrow .grow{display:grid;gap:1px;min-width:0}.A .qrow b{font-size:14px;font-weight:600}.A .qrow small{font-size:12px;color:var(--ink-muted)}
+.A .qflow{margin:0;padding:0 0 0 4px;list-style:none;counter-reset:qf;display:grid;gap:0}
+.A .qflow li{counter-increment:qf;position:relative;padding:0 0 12px 40px;display:grid;gap:2px}
+.A .qflow li::before{content:counter(qf);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font-weight:700;font-size:13px}
+.A .qflow li::after{content:"";position:absolute;left:13px;top:30px;bottom:2px;width:2px;background:var(--line)}
+.A .qflow li:last-child::after{display:none}
+.A .qflow b{font-size:14px}.A .qflow span{font-size:12.5px;color:var(--ink-muted);line-height:1.5}
+.A .secl .gate .sw[disabled]{opacity:.45}
+.A .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
+@media (forced-colors:active){.A .cct{border:1px solid}}
+/* v11 toggles: every ON/OFF switch in one place */
+.A .ccr{cursor:default;padding:8px 0;gap:12px}
+.A .ccm{background:none;border:0;padding:4px 0;text-align:left;font:inherit;color:inherit;cursor:pointer;border-radius:8px;min-height:44px}
+.A .ccm:focus-visible{outline:2px solid var(--accent,#b5651d);outline-offset:2px}
+.A .ccm .ccs{display:flex;flex-wrap:wrap;justify-items:start;justify-content:flex-start;gap:6px;max-width:none;margin-top:4px}
+.A .ccr .sw{width:52px;height:32px;border-radius:16px;margin-left:auto}
+.A .ccr .sw::after{width:26px;height:26px}
+.A .ccr .sw[aria-checked="true"]::after{left:23px}
+.A .ccr .sw.swd[aria-checked="true"]{background:var(--bad,#b3261e)}
+.A .ccr .sw[aria-disabled="true"]{opacity:.42;cursor:not-allowed}
+.A .ccr.dis .ccm b{color:var(--ink-muted)}
+.A .ccdis{color:var(--warn-ink,#8a5a00)}
+.A .ccgo{flex:none;margin-left:auto;width:44px;height:44px}
 </style>
 </head>
 <body>
@@ -1171,6 +1230,96 @@ Source of truth for the trust's intent: Section 2 (requirements). When this brie
 5. **Keep Gujarati.** All UI copy is Gujarati (Section 17 glossary). Use Gujarati digits in UI (૦૧૨૩૪૫૬૭૮૯), dates dd/mm (IST).
 6. **Priorities.** P0 items in Section 4 first (they are live risks), then Phase 1 (registration), then Invitations, then Phases 2–4 (sevas, planner, teams), then optional items.
 7. **Ask the trust** for the decisions in Section 16 when a choice is needed; default to the "Recommended" option meanwhile and make it configurable.
+
+---
+
+## 0B. v11 — Control Centre and WhatsApp queue recovery (15 Nov 2026; overrides 0A where they differ)
+
+Status: **design and prototype only.** No application code, database, feature flag, GitHub, staging, production or WhatsApp setting has been changed. Every item below needs separate, explicit approval before implementation.
+
+### 0B.1 Owner decisions applied
+1. **WhatsApp capacity never closes Seva registration.** Registration acceptance and WhatsApp delivery are independent. This replaces 0A.2 rows 2 and 3 where they tied the daily registration limit to WhatsApp ("દૈનિક મર્યાદા = WhatsApp મર્યાદા"). The daily registration limit is now set by the Super Admin on its own; the message policy only changes how many registrations can be confirmed the same day.
+2. **One Control Centre (નિયંત્રણ કેન્દ્ર), every ON/OFF switched there with a toggle** (owner, 15 Nov: "on off ek j jagya e thi toggle thi thai javu joie"). Groups: Website · Seva registration · WhatsApp · Modules · System status. Each switch shows its real current state.
+
+**Code note** — (read-only check of `feature/admin-idcard-mangalarohan`, 15 Nov): `server/wa-budget.js` / `wa-budget-sql.js` contain a `registration_holds` hold with reason `wa_budget` that would close registration when the WhatsApp budget is full. It is **not wired** into the public form today (`holdSql` is not called by the server). Implementation must keep it unwired or remove it, and add a test that a full WhatsApp budget leaves registration open.
+
+### 0B.2 Control Centre — rules
+- Route `#/control` (menu: કામ → નિયંત્રણ કેન્દ્ર, second item; phone: "વધુ" first item; the dashboard queue chip opens the WhatsApp queue).
+- **Every ON/OFF is a toggle in this one screen.** No switch lives anywhere else; other screens (e.g. "નોંધણી નિયંત્રણ") only link here for switches and keep numbers such as the daily limit.
+- Each row: name, one-line meaning, current state pill (read from the server, never assumed), level pill, and the toggle. Tapping the name opens details: who may change it, what changing it does, why it is locked (if it is), last changes from the audit log.
+- Tapping a toggle never switches at once. It opens a confirmation: "<name>: ચાલુ → બંધ?", what will happen, reason (required, saved in the audit log), plus what the level requires. The server re-checks permission and the current version; if someone else changed it meanwhile, nothing changes and the new state is shown.
+- A toggle that cannot be changed is shown greyed with a lock and the reason (for example "Cloud API સેટ નથી (સર્વર મર્યાદા)", "પહેલાં વેબસાઇટ જાહેર કરો", "પહેલાં ભક્ત યાદી ચાલુ કરો"). Tapping it opens the details, not the confirmation.
+
+Four levels, always labelled:
+
+| Level | Who | Confirmation |
+|---|---|---|
+| તરત (operational) | Super Admin, Admin | reason; critical ones also a typed word ("હા"; Emergency Stop "રોકો") |
+| માલિક સ્તર (owner level) | Super Admin only | reason + Super Admin authenticator code (6 digits) + typed "હા" for critical ones |
+| મોડ્યુલ (module) | Super Admin only | reason + authenticator code; only within the server upper limit |
+| ફક્ત સ્થિતિ (read-only) | — | none; display (some open a screen, e.g. the queue) |
+
+Rows (sample states in the prototype; the server shows real values):
+- **Website:** website public (owner level, critical; locked while emergency private is on) · emergency private (owner level, critical; forces private) · ceremony page (owner level; turning it on does not make the site public) · inauguration record (read-only) · section show/hide for ઇતિહાસ, દર્શન, ગેલેરી, નવું મંદિર, સેવા નોંધણી, WhatsApp સમુદાય, સંપર્ક (owner level; new).
+- **Seva registration:** effective state (read-only, with the blocking reason) · website registration (owner level, critical; locked until the site is public and the consent text is approved) · panel intake (operational, critical) · each festival day 2–8 Feb (operational) · daily limit (read-only here, link) · "WhatsApp capacity full → registration stays open" (read-only, owner decision) · consent version (read-only).
+- **WhatsApp:** sending on/off (operational; locked during Emergency Stop) · Emergency Stop (operational, critical, red toggle) · live sending vs test mode (owner level, critical; locked until the Cloud API is configured) · queue, Meta tier, templates (read-only, links).
+- **Modules:** SEVA_V2 (critical), TEAMS, DEVOTEES, PADHRAMNI and INVITATIONS (locked while DEVOTEES is off), WHATSAPP_MGMT, CEREMONY_REHEARSAL (locked: server limit off). ADMIN_PANEL is shown on and locked: the panel cannot switch itself off.
+- **System:** database, `/healthz`, two-step verification, last backup (read-only).
+
+**Implementation consequence (needs separate approval; nothing changed):** today the website, registration and ceremony switches live on `/website-control` and the modules are Render environment variables. To make them toggles here, they move into database-backed settings that the panel reads and writes, with these safety rules:
+- Render environment values stay as the **upper limit**: a module the server has off cannot be switched on from the panel (shown locked). `WEBSITE_EMERGENCY_PRIVATE` in Render stays as the last-resort override above every toggle.
+- The website reads the setting with a short cache and fails closed (private) if it cannot read it.
+- `/website-control` becomes a fallback or is retired (owner's choice when implementing).
+- Every change is versioned and audited (who, when, from → to, reason).
+
+### 0B.3 WhatsApp queue and recovery (WhatsApp → "કતાર અને ફરી પ્રયાસ")
+Flow: registration saved → eligibility and consent (no WhatsApp consent → no message is created; refusal/STOP → blocked; test mode and number not on the allow-list → blocked) → queued (one event = one message, unique key such as `out:reg:<id>:received`; waits with a visible reason if the approved template is missing) → capacity check (none → "ક્ષમતાની રાહ"; paused or Emergency Stop → nothing is sent) → capacity returns (priority registration → team → others) → send (atomic claim, one worker) → result (sent → delivered → read; temporary error → retry by rule; permanent error → failed; no answer → "result unknown", never retried automatically) → expiry (stale messages are not sent).
+States shown: રાહમાં, ક્ષમતાની રાહ, કતારમાં, ફરી પ્રયાસ નક્કી, મોકલાયો, પહોંચ્યો, નિષ્ફળ, રોકાયેલો, સમય પૂરો, પરિણામ અજાણ્યું; plus "no consent: no message" count.
+Three different things are shown separately and never mixed:
+1. **Meta messaging limit** — unique users reached with messages outside a customer-service window in a moving 24 h, set for the whole business portfolio (tiers 250 · 2,000 · 10,000 · 100,000 · unlimited; this account TIER_250). No fixed midnight reset; the panel shows only an estimate ("when the oldest counted message passes 24 h") and says it is an estimate.
+2. **The panel's internal budget** — 200 attempts and 200 unique recipients per rolling 24 h, 50 held for registration and team messages (current code defaults, editable later).
+3. **Customer-service window** — 24 h after the devotee's last message to the temple, free-form replies are possible; outside it only approved templates. Registration messages are templates, so the window is not a "reset".
+Retry rules: 130429 and 131000/131016 → automatic retry with back-off (1, 5, 15, 60 min; max 6); 131049 → once after 24 h, then failed; 131048 → pause the whole queue and alert, no automatic retry; 131026 → failed, manual only after the number is corrected; 131050 / STOP → blocked and recorded as a refusal; 132000/132001 → wait until the template is fixed; timeout / unknown → never automatic (matches the existing code rule).
+Duplicate prevention: unique key per event, the same key on every retry, atomic claim from `pending`, an attempted message never returns to the queue (existing triggers).
+Emergency Stop: stops every WhatsApp send (registration, team, invitations, retries) at once; registration stays open; nothing is lost; resuming needs a reason and confirmation; both are audited.
+Admin visibility: Dashboard hero chip "WhatsApp કતાર · N રાહમાં", Control Centre tile, queue tab counters and filters, message detail with the full timeline and only the actions that are safe for that state.
+Never: bypass consent, template approval, Meta rate limits or quality rules; send free-form messages outside the customer-service window; auto-retry an unknown result.
+
+### 0B.4 Other requirements — where they stand (design)
+| Requirement | Code today (read-only check) | Prototype v11 | Next |
+|---|---|---|---|
+| Seva and Team separate | Public form (SEVA_V2): dates, time, photo, consent, optional WhatsApp consent; **no Seva choice**. Admin assigns Seva (`registration_sevas`) and Team (`seva_assignments`) separately. No auto-assignment in code. | Planner "આપમેળે ભરો" is now shown as **off, approval pending** | Keep manual until the owner approves auto-assignment |
+| Attendance 2–8 Feb by day, team, member | Present / absent with reason; "not recorded" is never absent; append-only `seva_attendance_history` | Present/absent/pending, QR, team table, A4 sheet | Add a "correction history" sheet per member |
+| WhatsApp safety | Test mode + allow-list, live switch Super Admin only, consent and template checks | Shown in Control Centre | Decide App + API coexistence (0B.5) |
+| Padhramni (one host) | Staff entry, Maps link, Calendar, status history; no duration; no separate digital approval | Full workflow | Add Maps and "add to calendar" buttons on the detail |
+| Reports and audit | Audit log exists | Audit filters by area | Add categories: Seva, Team, WhatsApp send, ID card handover, attendance correction |
+| WhatsApp Community and groups | Not built | Not yet | Full design after confirmation (0B.5) |
+| Invitation patrika, village cards | Manual campaigns and hand-over records; nothing is sent | 6-step flow, village cards | Contacts → approval → send → tracking review |
+| QR attendance identity | Card QR = SEVA number | QR scan screen | Bind scan to the registration and record who scanned |
+| ID card collection | 8 states in code | 8 states, collection details, reprint | Hand-over record with person and time |
+| Roles | Five roles in `server/admin/roles.js` | Settings → roles | A role × permission matrix screen |
+
+### 0B.5 Open owner decisions
+~~1. Where website public/private is switched~~ — **decided 15 Nov:** every ON/OFF is a toggle in the Control Centre (0B.2).
+1. Section show/hide: are the seven sections above the right list, and should a hidden page show "વિગત ટૂંક સમયમાં" (prototype) or disappear?
+2. After the move: keep `/website-control` as a fallback, or retire it?
+3. Message expiry: after how long is an unsent "નોંધણી મળી" no longer sent (proposal: 72 hours, or as soon as a newer message about the same registration supersedes it)?
+4. Retry limits and back-off: approve the table in 0B.3.
+5. Existing WhatsApp Business App: move the number to the API with coexistence, or use a separate number for the API?
+6. Public success page wording when WhatsApp is delayed (proposal: "નોંધણી મળી ગઈ છે. WhatsApp પુષ્ટિ થોડા સમયમાં મળશે.") — needs the trust's approval.
+7. Who may use Emergency Stop: Super Admin and Admin (as `wa.mode` today) or Super Admin only?
+8. WhatsApp Community: add the full design now (see recommended flow in the hand-off note)?
+
+### 0B.6 WhatsApp Community and groups — recommended flow (not built; needs approval)
+- Groups and the Community are created and owned on the temple's own WhatsApp by a person. The panel never creates groups or adds anyone. (The Cloud API Groups feature is limited to small groups and special account status, so it is not used for festival groups.)
+- **Group directory** in the panel: group name, purpose (Community announcements · Seva · Team), invite link (stored encrypted, shown masked, replaceable after a reset), group lead and deputy (taken from team leaders), status (active · closed).
+- A volunteer becomes **eligible** for a group only after the registration is accepted and a team is assigned (Seva and Team stay admin decisions).
+- The link reaches the volunteer either by an approved WhatsApp template that carries the link (needs template approval and the volunteer's WhatsApp consent) or personally from the team lead.
+- Statuses: લિંક મોકલવાની બાકી → લિંક મોકલી (who, when, how) → જોડાયા (recorded by the lead or an admin, with date) · જોડાયા નથી · બહાર નીકળ્યા. The panel never says "added automatically"; "joined" is only what a person confirmed.
+- Link reset: if a link leaks, the group admin resets it in WhatsApp; the panel stores the new link and marks earlier shares "જૂની લિંક".
+- Privacy: members of a group see each other's numbers — the consent wording must say so; a team coordinator sees only the groups of the teams linked to the account.
+- The public website button "WhatsApp સમુદાયમાં જોડાઓ" stays the general Community link (owner-approved), separate from Seva and team groups.
+- Our flow today: nothing in code; only the public website button exists in the design.
 
 ---
 
@@ -1893,11 +2042,28 @@ The artifact "Meldi Dham Admin Redesign" is one self-contained HTML file (no ext
 
 </script>
 <header style="display:grid;gap:14px">
-  <div class="eyebrow">Master design · v10 · ID card rebuilt, final fixes (15 Nov 2026) · v9 · touch targets, sheets, phone and landscape polish (15 Nov 2026) · v8 phone title bar · v7 professional patterns · v6 chakra · owner decisions of 14 Nov · built on v4</div>
+  <div class="eyebrow">Master design · v11 · Control centre + WhatsApp queue (15 Nov 2026) · v10 · ID card rebuilt, final fixes (15 Nov 2026) · v9 · touch targets, sheets, phone and landscape polish (15 Nov 2026) · v8 phone title bar · v7 professional patterns · v6 chakra · owner decisions of 14 Nov · built on v4</div>
   <h1>Meldi Dham Admin — Master Design</h1>
   <p class="lead">A clickable redesign of the Shree Vihat Meldi Dham admin panel and seva form, built around the trust's plan: take as many registrations as WhatsApp can confirm, then define sevas, plan each festival day, and form teams with a leader and vice‑leader. Colours, fonts and Gujarati wording follow the current site.</p>
-  <nav class="toc" aria-label="Sections"><a href="#master">Master v5 decisions</a><a href="#need">Your requirements</a><a href="#proto">Live prototype</a><a href="#pages">Every admin page</a><a href="#gallery">Phones &amp; tablets</a><a href="#fit">Device layout spec</a><a href="#website">Website form</a><a href="#phases">Phase plan</a><a href="#problems">Problems found</a><a href="#ia">New structure</a><a href="#flows">Flows</a><a href="#states">Rules</a><a href="#design">Design rules</a><a href="#build">Build plan</a><a href="#data">Data model</a><a href="#tests">Tests</a><a href="#decide">Decisions</a><a href="#words">Glossary</a><a href="#gaps">Known gaps</a><a href="#handoff">Hand‑off</a></nav>
+  <nav class="toc" aria-label="Sections"><a href="#v11">v11 changes</a><a href="#master">Master v5 decisions</a><a href="#need">Your requirements</a><a href="#proto">Live prototype</a><a href="#pages">Every admin page</a><a href="#gallery">Phones &amp; tablets</a><a href="#fit">Device layout spec</a><a href="#website">Website form</a><a href="#phases">Phase plan</a><a href="#problems">Problems found</a><a href="#ia">New structure</a><a href="#flows">Flows</a><a href="#states">Rules</a><a href="#design">Design rules</a><a href="#build">Build plan</a><a href="#data">Data model</a><a href="#tests">Tests</a><a href="#decide">Decisions</a><a href="#words">Glossary</a><a href="#gaps">Known gaps</a><a href="#handoff">Hand‑off</a></nav>
 </header>
+
+<section id="v11" style="margin-top:40px">
+  <div class="sh">
+<div class="eyebrow">00B · v11 · 15 Nov 2026 · design only</div>
+<h2>Control Centre and WhatsApp queue recovery</h2>
+  <p>Owner decisions of 15 Nov 2026. Nothing in code, database, flags, GitHub, staging, production or WhatsApp settings was changed. The embedded build brief has the full specification as section 0B.</p>
+</div>
+  <div class="tbl"><table><thead><tr><th>#</th><th>Topic</th><th>In the prototype</th></tr></thead><tbody>
+<tr><td>1</td><td><b>WhatsApp never closes registration</b></td><td>Registration control: "દૈનિક મર્યાદા = WhatsApp મર્યાદા" replaced by "નોંધણીની મર્યાદા · WhatsApp થી સ્વતંત્ર". The open-state no longer checks WhatsApp. Messages wait in a queue.</td></tr>
+<tr><td>2</td><td><b>નિયંત્રણ કેન્દ્ર</b> (new) — every ON/OFF by toggle</td><td>Owner decision 15 Nov: all switches in one place as toggles (website public, emergency private, ceremony page, 7 sections, website registration, intake, 7 festival days, WhatsApp sending, Emergency Stop, live mode, 6 modules). A toggle opens a confirmation: reason; Super Admin authenticator code for "માલિક સ્તર" and "મોડ્યુલ"; typed word for critical ones. Locked toggles show the reason. Every change is audited and listed under the row.</td></tr>
+<tr><td>3</td><td><b>WhatsApp કતાર અને ફરી પ્રયાસ</b> (new tab)</td><td>Policy banner, Meta limit vs panel budget vs customer-service window, pause / Emergency Stop, counters and filters, message detail timeline, flow (8 steps), retry rules table, duplicate prevention. Demo button to simulate capacity full / back.</td></tr>
+<tr><td>4</td><td>Dashboard</td><td>Hero chip "WhatsApp કતાર · N રાહમાં".</td></tr>
+<tr><td>5</td><td>Planner auto-fill</td><td>"આપમેળે ભરો" shown off, approval pending (manual Seva and Team assignment).</td></tr>
+<tr><td>6</td><td>Implementation note</td><td>Needs approval: switches move from Render env and <code>/website-control</code> into database settings; Render stays the upper limit, <code>WEBSITE_EMERGENCY_PRIVATE</code> the last-resort override.</td></tr>
+<tr><td>7</td><td>Open decisions</td><td>See brief 0B.5 (8 items; #1 decided).</td></tr>
+</tbody></table></div>
+</section>
 
 <section id="master" style="margin-top:40px">
   <div class="sh">
@@ -2235,7 +2401,7 @@ const todayPeople=()=>S.people.filter(p=>p.rd===TODAY);
 const waToday=()=>todayPeople().filter(p=>p.msg==='sent').length;
 const waAllow=()=>Math.max(0,S.waQuota-S.waReserve);
 const regCap=()=>Math.floor(waAllow()/S.msgPer);
-const effLimit=()=>Math.min(S.dailyLimit,regCap());
+const effLimit=()=>S.dailyLimit;
 const regFor=d=>live().filter(p=>p.avail[d]);
 const dayFull=d=>S.dayCap[d]!=null&&regFor(d).length>=S.dayCap[d];
 const bookable=d=>S.dayOpen[d]&&!dayFull(d);
@@ -2245,7 +2411,7 @@ function isOpen(){const G=S.gates;
   if(!G.intake)return[false,'નોંધણી સ્વીકાર બંધ છે','manual'];
   if(!G.consent)return[false,'સંમતિ લખાણ મંજૂર નથી','manual'];
   if(todayPeople().length>=effLimit())return[false,'આજની દૈનિક મર્યાદા પૂરી · રાત્રે ૧૨ વાગ્યા પછી આપમેળે ખૂલશે','daily'];
-  if(waToday()>=S.waQuota)return[false,'WhatsApp ની ૨૪ કલાકની મર્યાદા પૂરી · જગ્યા થતાં આપમેળે ખૂલશે','daily'];
+  /* v11: WhatsApp capacity never closes registration (owner decision) */
   if(S.totalLimit&&live().length>=S.totalLimit)return[false,'કુલ અભિયાન મર્યાદા પૂરી','total'];
   if(!DAYS.some(d=>bookable(d[0])))return[false,'મહોત્સવના બધા દિવસ બંધ અથવા ભરાયેલા છે','days'];
   return[true,'નવી નોંધણી સ્વીકારાય છે','open']}
@@ -2328,17 +2494,13 @@ function scrCtrl(){const [o,why,kind]=isOpen();const G=S.gates;
   const today=`<div class="card"><div class="ch"><h5>આજ (૧૩/૧૧)</h5>${kind==='daily'?'<span class="pill warn"><i></i>આપમેળે બંધ</span>':''}</div><div style="display:grid;gap:10px">
     ${meter('આજની નોંધણી',todayPeople().length,effLimit())}
     ${meter('WhatsApp · છેલ્લા ૨૪ કલાક (બધા સંદેશા)',waToday(),S.waQuota)}
-    <p class="note">મર્યાદા પૂરી થતાં ફોર્મ આપમેળે બંધ થાય છે અને વેબસાઇટ પર "આજની નોંધણી પૂર્ણ" દેખાય છે. નોંધણીની મર્યાદા રાત્રે ૧૨ વાગ્યે ફરી શરૂ થાય; WhatsApp ની ગણતરી છેલ્લા ૨૪ કલાકની છે.</p></div></div>`;
+    <p class="note">દૈનિક નોંધણી મર્યાદા પૂરી થતાં ફોર્મ આપમેળે બંધ થાય છે અને વેબસાઇટ પર "આજની નોંધણી પૂર્ણ" દેખાય છે; રાત્રે ૧૨ વાગ્યે ફરી શરૂ. WhatsApp ની ગણતરી અલગ છે અને નોંધણી બંધ કરતી નથી.</p></div></div>`;
   const step=(k,st,lab,sub,val)=>`<div class="gate"><span class="ic ${val?'y':'w'}">${ic(val?'check':'alert')}</span><div><b>${lab}</b><small>${sub}</small></div><div class="stepper2"><button data-a="lim" data-k="${k}" data-d="-${st}" aria-label="ઘટાડો">−</button><span class="num">${val?g(val):'નક્કી નથી'}</span><button data-a="lim" data-k="${k}" data-d="${st}" aria-label="વધારો">+</button></div></div>`;
-  const limits=`<div class="card"><div class="ch"><h5>દૈનિક મર્યાદા = WhatsApp મર્યાદા</h5></div>
-    <div class="gate" style="border-top:0"><span class="ic y">${ic('msg')}</span><div><b>WhatsApp મર્યાદા (૨૪ કલાક)</b><small>Meta TIER_250 · પેનલમાં ૨૦૦ રાખી છે</small></div><b class="num">${g(S.waQuota)}</b></div>
-    ${step('waReserve',10,'નિમંત્રણ અને બીજા સંદેશા માટે','હાલના પેનલમાં: નિમંત્રણ મહત્તમ ૧૫૦',S.waReserve)}
-    <div class="gate"><span class="ic y">=</span><div><b>નોંધણી માટે WhatsApp</b><small>${g(S.waQuota)} − ${g(S.waReserve)}</small></div><b class="num">${g(waAllow())}</b></div>
-    ${msgPolicyBlock()}
-    <div class="gate"><span class="ic y">÷</span><div><b>WhatsApp મુજબ મહત્તમ નોંધણી</b><small>${g(waAllow())} ÷ ${g(S.msgPer)}</small></div><b class="num">${g(regCap())}</b></div>
-    ${step('dailyLimit',10,'દૈનિક નોંધણી મર્યાદા','WhatsApp મુજબ મહત્તમ કરતાં વધુ રાખી શકાય નહીં',S.dailyLimit)}
-    ${S.dailyLimit!==regCap()?`<button class="btn out sm" data-a="matchwa" style="margin-top:8px">WhatsApp મુજબ ${g(regCap())} કરો</button>`:''}
-    ${step('totalLimit',100,'કુલ અભિયાન મર્યાદા','વૈકલ્પિક',S.totalLimit)}</div>`;
+  const limits=`<div class="card"><div class="ch"><h5>નોંધણીની મર્યાદા</h5><span class="pill ok"><i></i>WhatsApp થી સ્વતંત્ર</span></div>
+    ${step('dailyLimit',10,'દૈનિક નોંધણી મર્યાદા','એડમિન નક્કી કરે · WhatsApp ક્ષમતા પર આધાર નથી',S.dailyLimit)}
+    ${step('totalLimit',100,'કુલ અભિયાન મર્યાદા','વૈકલ્પિક',S.totalLimit)}
+    <div class="ccok" style="margin-top:10px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><b>WhatsApp ની ક્ષમતા પૂરી થાય તો પણ નોંધણી બંધ થતી નથી.</b><span>પુષ્ટિ સંદેશા કતારમાં રહે છે અને ક્ષમતા મળે ત્યારે જાય છે. <button class="lk" data-a="queue">કતાર જુઓ</button></span></div></div>
+    ${msgPolicyBlock()}</div>`;
   const days=`<div class="card"><div class="ch"><h5>મહોત્સવના દિવસ · વેબસાઇટ પર બુકિંગ</h5><span class="note">બંધ દિવસ ફોર્મ પર ગ્રે દેખાશે</span></div>
     ${DAYS.map(([d,w,ev])=>{const all=regFor(d);const acc=all.filter(p=>p.st==='accepted').length;const st=!S.dayOpen[d]?['mut','બંધ']:dayFull(d)?['bad','ભરાઈ ગયો']:['ok','ખુલ્લો'];
       return `<div class="dayrow"><button class="sw" role="switch" aria-checked="${S.dayOpen[d]}" data-a="day" data-d="${d}" aria-label="${g(d)} ફેબ્રુઆરી બુકિંગ"></button><div class="dn"><b>${g(d)} ફેબ્રુ. · ${w}</b><small>${ev} · ${g(all.length)} નોંધાયેલા · ${g(acc)} સ્વીકારેલા</small></div><div class="rt"><span class="pill ${st[0]}"><i></i>${st[1]}</span><div class="mini2"><button data-a="cap" data-d="${d}" data-v="-10" aria-label="મર્યાદા ઘટાડો">−</button><span>${S.dayCap[d]!=null?g(S.dayCap[d]):'મર્યાદા —'}</span><button data-a="cap" data-d="${d}" data-v="10" aria-label="મર્યાદા વધારો">+</button></div></div></div>`}).join('')}</div>`;
@@ -2405,7 +2567,7 @@ function scrPlan(){
   const d=S.pday,sl=S.pslot;const act=S.sevas.filter(s=>s.active);
   const free=freeFor(d,sl).length;const need=act.reduce((a,s)=>a+needOf(s.id,d,sl),0);const got=act.reduce((a,s)=>a+asgIn(s.id,d,sl).length,0);const short=Math.max(0,need-got);
   const dchips=`<div class="dsel">${DAYS.map(([n,w])=>{const nd=act.reduce((a,s)=>a+needOf(s.id,n,'am')+needOf(s.id,n,'pm'),0);const gt=act.reduce((a,s)=>a+asgIn(s.id,n,'am').length+asgIn(s.id,n,'pm').length,0);return `<button class="dchip ${d===n?'on':''}" data-a="pday" data-v="${n}"><b>${g(n)}</b><small>${w} · ${g(gt)}/${g(nd)}</small></button>`}).join('')}</div>`;
-  const slotSeg=`<div class="tabs"><button class="tab ${sl==='am'?'on':''}" data-a="pslot" data-v="am">સવારથી બપોર</button><button class="tab ${sl==='pm'?'on':''}" data-a="pslot" data-v="pm">બપોરથી રાત</button><button class="btn pri sm" data-a="autofill" style="margin-left:auto">${ic('wand')}આપમેળે ભરો</button></div>`;
+  const slotSeg=`<div class="tabs"><button class="tab ${sl==='am'?'on':''}" data-a="pslot" data-v="am">સવારથી બપોર</button><button class="tab ${sl==='pm'?'on':''}" data-a="pslot" data-v="pm">બપોરથી રાત</button><button class="btn out sm" data-a="toast" data-m="આપમેળે ફાળવણી માલિકની નવી મંજૂરી વગર ચાલુ નથી · એડમિન હાથથી ફાળવે" style="margin-left:auto" title="મંજૂરી બાકી">${ic('wand')}આપમેળે ભરો · બંધ (મંજૂરી બાકી)</button></div>`;
   const kp=`<div class="kp"><div class="kpi"><div class="l">ઉપલબ્ધ (ફાળવણી બાકી)</div><div class="v num">${g(free)}</div><div class="h">સ્વીકારેલા, આ સમયે</div></div><div class="kpi"><div class="l">જોઈએ</div><div class="v num">${g(need)}</div><div class="h">બધી સેવા</div></div><div class="kpi"><div class="l">ફાળવેલા</div><div class="v num" style="color:var(--ok)">${g(got)}</div></div><div class="kpi"><div class="l">ખૂટે છે</div><div class="v num" style="color:${short?'var(--bad)':'var(--ok)'}">${g(short)}</div></div></div>`;
   const warn=short>free?`<div class="warnline">${ic('alert')}<span>આ સમયે ${g(short-free)} સ્વયંસેવક ઓછા છે. આ દિવસ માટે નોંધણી ચાલુ રાખો અથવા જરૂર ઘટાડો.</span></div>`:'';
   const rows=act.map(s=>{const n=needOf(s.id,d,sl);const a=asgIn(s.id,d,sl);const pct=n?Math.min(100,a.length/n*100):0;
@@ -2562,7 +2724,7 @@ function loginFrame(toast){
 /* ---------- frame ---------- */
 function app7(){
   if(S.auth!=='in')return loginFrame(S.toast?`<div class="toast">${ic('check')}${S.toast}</div>`:'');
-  const M=isMob();const scr={pad:scrPad,inv:scrInv,dash:scrDash,regs:scrRegs,ctrl:scrCtrl,msgs:scrMsgs,sevas:scrSevas,plan:scrPlan,teams:scrTeams,cards:scrCards,fest:scrFest,reps:scrReps,sets:scrSets,more:scrMore,dev:scrDev,search:scrSearch,states:scrStates}[S.screen]();
+  const M=isMob();const scr={pad:scrPad,inv:scrInv,dash:scrDash,regs:scrRegs,ctrl:scrCtrl,msgs:scrMsgs,sevas:scrSevas,plan:scrPlan,teams:scrTeams,cards:scrCards,fest:scrFest,reps:scrReps,sets:scrSets,more:scrMore,dev:scrDev,search:scrSearch,states:scrStates,cc:scrCC}[S.screen]();
   const toast=S.toast?`<div class="toast">${ic('check')}${S.toast}</div>`:'';const failed=qCount('wa')>0;
   if(!M){
     const side=`<aside class="side"><div class="brand"><div class="lg">${embImg()}</div><div><b>શ્રી વિહત મેલડી ધામ</b><small>વ્યવસ્થાપન · સાણંદ</small></div></div>${NAV.map(([gn,items])=>`<div class="grp">${gn}</div>${items.map(([k,l,i])=>`<button class="nv ${S.screen===k?'on':''}" data-a="nav" data-s="${k}">${ic(i)}${l}${badge(k)}</button>`).join('')}`).join('')}<div class="me"><div class="av">T</div><div style="flex:1;min-width:0">Temple Administrator<small>સુપર એડમિન</small></div><button class="ib" data-a="logout" aria-label="બહાર નીકળો" style="background:transparent;border-color:rgba(255,255,255,.25);color:var(--side-ink)">${ic('logout')}</button></div></aside>`;
@@ -3006,7 +3168,7 @@ function scrDash(){return scrDash0()}
 
 /* ---------- registration control: message policy and history ---------- */
 function msgPolicyBlock(){const O=[['both','બંને સંદેશા','નોંધણી મળી + નોંધણી સ્વીકારી',2],['received','ફક્ત "નોંધણી મળી"','ફોર્મ ભરાતાં તરત પુષ્ટિ. સ્વીકાર અને સેવાની જાણ પછી સેવા સોંપણીના એક સંદેશમાં',1],['confirmed','ફક્ત "નોંધણી સ્વીકારી"','ફોર્મ ભરતી વખતે સંદેશ નહીં; સ્વીકારો ત્યારે એક સંદેશ',1]];
-  return `<div class="mpol"><div><b>એક નોંધણી પર કયા WhatsApp સંદેશા જાય</b><small>આ પસંદગીથી દૈનિક મર્યાદા નક્કી થાય છે</small></div>${O.map(o=>`<button class="opt ${S.msgPolicy===o[0]?'on':''}" data-a="mpol" data-v="${o[0]}" aria-pressed="${S.msgPolicy===o[0]}"><span class="grow">${o[1]}${o[0]==='received'?' <span class="pill ok">ભલામણ</span>':''}<br><small>${o[2]} · ${g(o[3])} સંદેશ → દિવસે મહત્તમ ${g(Math.floor(waAllow()/o[3]))} નોંધણી</small></span>${S.msgPolicy===o[0]?ic('check','style="width:16px;height:16px;color:var(--accent)"'):''}</button>`).join('')}</div>`}
+  return `<div class="mpol"><div><b>એક નોંધણી પર કયા WhatsApp સંદેશા જાય</b><small>આ પસંદગી ફક્ત WhatsApp ક્ષમતા વાપરે છે; નોંધણીની મર્યાદા પર અસર નથી</small></div>${O.map(o=>`<button class="opt ${S.msgPolicy===o[0]?'on':''}" data-a="mpol" data-v="${o[0]}" aria-pressed="${S.msgPolicy===o[0]}"><span class="grow">${o[1]}${o[0]==='received'?' <span class="pill ok">ભલામણ</span>':''}<br><small>${o[2]} · ${g(o[3])} સંદેશ → દિવસે આશરે ${g(Math.floor(waAllow()/o[3]))} નોંધણીને તે જ દિવસે પુષ્ટિ; બાકીની કતારમાં</small></span>${S.msgPolicy===o[0]?ic('check','style="width:16px;height:16px;color:var(--accent)"'):''}</button>`).join('')}</div>`}
 function ctrlHist(){const H=S.audit.filter(a=>a[2]==='નિયંત્રણ'||a[2]==='વેબસાઇટ કંટ્રોલ').slice(0,5);
   return `<div class="card"><div class="ch"><h5>ફેરફાર ઇતિહાસ</h5><button class="lk" data-a="toast" data-m="ગણતરી ફરી તપાસી: નોંધણી અને WhatsApp ગણતરી બરાબર છે">ગણતરી ફરી તપાસો</button></div>${H.length?`<div class="tl">${H.map(a=>`<div><span>${a[1]} <small>· ${a[0]}</small></span></div>`).join('')}</div>`:'<p class="note">હજી કોઈ ફેરફાર નથી.</p>'}</div>`}
 
@@ -3124,7 +3286,7 @@ function attSheetHtml(sidv,d,sl,mm){const sv=S.sevas.find(s=>s.id===sidv)||S.sev
 /* ---------- WhatsApp tabs ---------- */
 const WAT=[['main','મોકલનાર અને મર્યાદા'],['tpl','ટેમ્પલેટ અને પોસ્ટર'],['cons','સંમતિ નોંધ'],['log','સંદેશ સ્થિતિ']];
 const waTabs=()=>`<div class="tabs">${WAT.map(t=>`<button class="tab ${S.waTab===t[0]?'on':''}" data-a="wtab" data-v="${t[0]}">${t[1]}</button>`).join('')}</div>`;
-function scrMsgs(){if(S.waTab==='main'){const h=scrMsgs0();const i=h.indexOf('<div class="g2')>=0&&!isP()?h.indexOf('<div class="g2'):h.indexOf('<div class="card"');return i>0?h.slice(0,i)+waTabs()+h.slice(i):waTabs()+h}
+function scrMsgs10(){if(S.waTab==='main'){const h=scrMsgs0();const i=h.indexOf('<div class="g2')>=0&&!isP()?h.indexOf('<div class="g2'):h.indexOf('<div class="card"');return i>0?h.slice(0,i)+waTabs()+h.slice(i):waTabs()+h}
   const hd=head('WhatsApp સંદેશા','મોકલનાર, ટેમ્પલેટ, સંમતિ અને દરેક સંદેશની સ્થિતિ');let b='';
   if(S.waTab==='tpl'){const T=[['registration_received','નોંધણી મળી','ok','મંજૂર'],['registration_confirmed','નોંધણી સ્વીકારી','ok','મંજૂર'],['registration_corrected','વિગત સુધારી','ok','મંજૂર'],['registration_cancelled','નોંધણી રદ','ok','મંજૂર'],['assignment_update','સેવા સોંપણી','ok','મંજૂર'],['card_ready','કાર્ડ તૈયાર','ok','મંજૂર'],['festival_invitation','મહોત્સવ નિમંત્રણ (પોસ્ટર/PDF)','warn','ડ્રાફ્ટ · મંજૂરી બાકી']];
     b=`<div class="card"><div class="ch"><h5>Meta ટેમ્પલેટ</h5><span class="note">લખાણ બદલવાથી ટ્રસ્ટ અને Meta બંનેની મંજૂરી ફરી જોઈએ</span></div><div class="tblw"><table><thead><tr><th>ટેમ્પલેટ</th><th>શેના માટે</th><th>સ્થિતિ</th></tr></thead><tbody>${T.map(t=>`<tr><td class="mono">${t[0]}</td><td>${t[1]}</td><td><span class="pill ${t[2]}"><i></i>${t[3]}</span></td></tr>`).join('')}</tbody></table></div></div><div class="card"><div class="ch"><h5>પોસ્ટર / PDF</h5></div><p class="note">નિમંત્રણ સાથે જનાર ફાઇલ "નિમંત્રણ" પગલું ૧માં ચડાવાય છે. બીજી વ્યક્તિની મંજૂરી પછી જ વપરાય.</p><button class="btn out sm" data-a="itabGo" style="margin-top:8px">નિમંત્રણ ખોલો</button></div>`}
@@ -3375,7 +3537,7 @@ X_READY=true;extSeed(S);
 document.getElementById('c-states').addEventListener('click',()=>{S.auth='in';S.screen='states';S.sel=null;S.padSel=null;S.sheet=null;stin.innerHTML='';render(false);document.getElementById('proto').scrollIntoView({behavior:'smooth',block:'start'})});
 
 /* ===== v6 (15 Nov 2026): website chakra + professional polish ===== */
-function heroCard(){const [o]=isOpen();return `<div class="hero" role="region" aria-label="મહોત્સવ"><div class="hx"><div class="hk">મૂર્તિ પ્રાણ પ્રતિષ્ઠા મહોત્સવ</div><div class="hd">તા. ૨ થી ૮ ફેબ્રુઆરી, ૨૦૨૭ · પ્રાણ પ્રતિષ્ઠા ૮ ફેબ્રુઆરી, બપોરે ૧૨:૩૯</div><div class="hc"><div class="hcd"><b class="num">${g(81)}</b><small>દિવસ બાકી<br>મહોત્સવ શરૂ થવામાં</small></div><div class="hcd"><b class="num">${g(87)}</b><small>દિવસ બાકી<br>પ્રાણ પ્રતિષ્ઠા સુધી</small></div></div><button class="hs ${o?'on':'off'}" data-a="nav" data-s="ctrl"><i></i>સેવા નોંધણી ${o?'ચાલુ':'બંધ'}${ic('chev','style="width:14px;height:14px"')}</button></div></div>`}
+function heroCard6(){const [o]=isOpen();return `<div class="hero" role="region" aria-label="મહોત્સવ"><div class="hx"><div class="hk">મૂર્તિ પ્રાણ પ્રતિષ્ઠા મહોત્સવ</div><div class="hd">તા. ૨ થી ૮ ફેબ્રુઆરી, ૨૦૨૭ · પ્રાણ પ્રતિષ્ઠા ૮ ફેબ્રુઆરી, બપોરે ૧૨:૩૯</div><div class="hc"><div class="hcd"><b class="num">${g(81)}</b><small>દિવસ બાકી<br>મહોત્સવ શરૂ થવામાં</small></div><div class="hcd"><b class="num">${g(87)}</b><small>દિવસ બાકી<br>પ્રાણ પ્રતિષ્ઠા સુધી</small></div></div><button class="hs ${o?'on':'off'}" data-a="nav" data-s="ctrl"><i></i>સેવા નોંધણી ${o?'ચાલુ':'બંધ'}${ic('chev','style="width:14px;height:14px"')}</button></div></div>`}
 function scrDash(){let h=scrDash0();h=h.replace(`શુક્રવાર, ૧૩ નવેમ્બર · મહોત્સવને ${g(81)} દિવસ · પ્રાણ પ્રતિષ્ઠાને ${g(87)} દિવસ`,'શુક્રવાર, ૧૩ નવેમ્બર · આજનું કામ');const pc=phaseCard();const i=h.indexOf(pc);return i<0?heroCard()+h:h.slice(0,i)+heroCard()+h.slice(i)}
 
 function scrMore(){const h=scrMore0();return h.replace('<div class="menu">','<div class="prof"><div class="av">T</div><div class="grow"><b>Temple Administrator</b><small>સુપર એડમિન · શ્રી વિહત મેલડી ધામ</small></div></div><div class="menu">')}
@@ -3418,6 +3580,145 @@ window.__card=(kind,mm)=>{const saved=S;S=withSevas(saved);try{const acc=S.peopl
   if(kind==='long'){const p=acc.find(x=>x.photo);return idFront(Object.assign({},p,{n:'ભાગ્યશ્રીબેન મહેન્દ્રભાઈ પ્રજાપતિ'}),mm)}
   if(kind==='nine')return acc.filter(p=>p.photo).slice(0,9).map(p=>idFront(p,mm));
   return idFront(acc.find(x=>x.photo),mm)}finally{S=saved}};
+
+
+/* ===== v11 (15 Nov 2026): Control Centre (all ON/OFF in one place) + WhatsApp queue & recovery ===== */
+const CCT={op:['ok','તરત','એડમિન બદલી શકે · કારણ અને ખાતરી · ઓડિટ'],own:['gold','માલિક સ્તર','ફક્ત સુપર એડમિન · કારણ, ચકાસણી કોડ અને ખાતરી · ઓડિટ'],flag:['info','મોડ્યુલ','ફક્ત સુપર એડમિન · ચકાસણી કોડ · સર્વરની ઉપલી મર્યાદામાં જ · ઓડિટ'],ro:['mut','ફક્ત સ્થિતિ','ફક્ત જોવા માટે']};
+function CC(){return S.cc11||(S.cc11={paused:false,estop:false,exhausted:false,filter:'all',qf:'all',live:false,cer:false,emerg:false,secs:{hist:true,darshan:true,gallery:true,newtemple:true,seva:true,community:true,contact:true},mod:{SEVA_V2:true,TEAMS:true,DEVOTEES:true,PADHRAMNI:true,INVITATIONS:true,WHATSAPP_MGMT:true,CEREMONY_REHEARSAL:false}})}
+const SECS=[['hist','ઇતિહાસ','ઇતિહાસ પાનું'],['darshan','દર્શન','દર્શન પાનું'],['gallery','ગેલેરી','ફોટો ગેલેરી'],['newtemple','નવું મંદિર','નવું મંદિર પાનું'],['seva','સેવા નોંધણી','ફોર્મનું બટન અને પાનું'],['community','WhatsApp સમુદાય','"WhatsApp સમુદાયમાં જોડાઓ" બટન'],['contact','સંપર્ક','સંપર્ક પાનું']];
+const MODS=[['SEVA_V2','સેવા નોંધણી v2','નોંધણીનું નવું ફોર્મ અને ક્ષમતા'],['TEAMS','ટીમ અને ફાળવણી',''],['DEVOTEES','ભક્ત યાદી',''],['PADHRAMNI','પધરામણી અને કૅલેન્ડર','ભક્ત યાદી ચાલુ હોવી જોઈએ'],['INVITATIONS','નિમંત્રણ','ભક્ત યાદી ચાલુ હોવી જોઈએ'],['WHATSAPP_MGMT','WhatsApp વ્યવસ્થાપન',''],['CEREMONY_REHEARSAL','સમારોહ રિહર્સલ','સર્વર મર્યાદા: બંધ']];
+function ccRows(){const c=CC(),G=S.gates;const [o,why]=isOpen();const dOpen=DAYS.filter(d=>S.dayOpen[d[0]]).length;const q=qStats();
+  const R=(k,t,sub,on,type,who,eff,x={})=>Object.assign({k,t,sub,on,type,who,eff},x);
+  const ST=(on,a,b)=>on?['ok',a]:['mut',b];
+  return [
+   ['web','વેબસાઇટ','globe','જાહેર કે ખાનગી અને વિભાગો',[
+    R('site','વેબસાઇટ જાહેર','બંધ = ખાનગી ("ટૂંક સમયમાં" પાનું)',G.site,'own','સુપર એડમિન',G.site?'સામાન્ય મુલાકાતીઓને તરત "ટૂંક સમયમાં" પાનું દેખાશે. સેવા નોંધણી પણ બંધ થશે.':'બધા મુલાકાતીઓ અને search engines વેબસાઇટ તરત જોઈ શકશે.',{crit:true,dis:c.emerg?'ઇમરજન્સી ખાનગી ચાલુ છે':null}),
+    R('emerg','ઇમરજન્સી ખાનગી','ચાલુ = બધું ગમે તે હોય, વેબસાઇટ ખાનગી',c.emerg,'own','સુપર એડમિન',c.emerg?'વેબસાઇટ ફરી "વેબસાઇટ જાહેર" સ્વિચ મુજબ દેખાશે.':'વેબસાઇટ તરત ખાનગી થશે અને જાહેર કરી શકાશે નહીં.',{crit:true,stOn:['bad','ચાલુ']}),
+    R('cer','ઉદ્ઘાટન સમારોહ પેજ','ચાલુ કરવાથી વેબસાઇટ જાહેર થતી નથી',c.cer,'own','સુપર એડમિન',c.cer?'સમારોહ પેજ તરત બંધ થશે.':'સમારોહ પેજ (અલગ કોડ સાથે) ઉપલબ્ધ થશે.'),
+    R('inaug','ઉદ્ઘાટન નોંધ','એક જ વાર, સમારોહ પેજ પરથી',null,'ro','—','',{st:['mut','બાકી']}),
+    ...SECS.map(([k,n,d])=>R('sec_'+k,'વિભાગ: '+n,d,c.secs[k],'own','સુપર એડમિન',c.secs[k]?'વિભાગ મેનુ, લિંક અને sitemap માંથી નીકળશે; સરનામું "વિગત ટૂંક સમયમાં" બતાવશે.':'વિભાગ ફરી દેખાશે.',{dis:k==='seva'?null:null,prop:true}))]],
+   ['reg','સેવા નોંધણી','reg','ફોર્મ ક્યારે ખુલ્લું',[
+    R('regEff','જાહેર નોંધણી (અસરકારક)',o?'નીચેના બધા સ્વિચ ખુલ્લા છે':'કારણ: '+why,null,'ro','—','',{st:o?['ok','ખુલ્લી']:['warn','બંધ']}),
+    R('siteReg','વેબસાઇટ પર સેવા નોંધણી','મુખ્ય સ્વિચ',G.siteReg,'own','સુપર એડમિન',G.siteReg?'વેબસાઇટ પર નવી નોંધણી તરત બંધ.':'વેબસાઇટ પર નોંધણી તરત ખૂલશે (મર્યાદા અને દિવસ મુજબ).',{crit:true,dis:!G.site?'પહેલાં વેબસાઇટ જાહેર કરો':!G.consent?'સંમતિ લખાણ મંજૂર નથી':null}),
+    R('intake','નોંધણી સ્વીકાર (પેનલ)','હાથથી ઝડપી બંધ / ચાલુ',G.intake,'op','સુપર એડમિન, એડમિન',G.intake?'નવી નોંધણી તરત બંધ. જૂની નોંધણી પર અસર નહીં.':'બાકીના સ્વિચ ખુલ્લા હોય તો નોંધણી તરત શરૂ.',{crit:true}),
+    ...DAYS.map(([d,w])=>R('day_'+d,g(d)+' ફેબ્રુ. · '+w,'આ દિવસ માટે બુકિંગ',S.dayOpen[d],'op','સુપર એડમિન, એડમિન',S.dayOpen[d]?'આ દિવસ ફોર્મ પર ગ્રે થશે.':'આ દિવસ ફોર્મ પર પસંદ થઈ શકશે.')),
+    R('daily','દૈનિક નોંધણી મર્યાદા','WhatsApp થી સ્વતંત્ર · બદલવા "નોંધણી નિયંત્રણ"',null,'ro','સુપર એડમિન','',{st:['ok',g(S.dailyLimit)+' / દિવસ'],go:'ctrl'}),
+    R('waRule','WhatsApp ક્ષમતા પૂરી થાય ત્યારે','નોંધણી ક્યારેય આપમેળે બંધ ન થાય · માલિકનો નિર્ણય',null,'ro','—','',{st:['ok','નોંધણી ચાલુ રહે']}),
+    R('consent','સંમતિ લખાણ','નવી આવૃત્તિ ટ્રસ્ટની મંજૂરી પછી',null,'ro','—','',{st:['ok','આવૃત્તિ ૨ · મંજૂર']})]],
+   ['wa','WhatsApp','msg','મોકલવું, રોકવું, કતાર',[
+    R('waSend','સંદેશા મોકલવાનું','બંધ = કતાર રોકી (નોંધણી ચાલુ)',!c.paused,'op','સુપર એડમિન, એડમિન',c.paused?'કતારના સંદેશા ક્રમ મુજબ, ક્ષમતા મુજબ જવા લાગશે.':'નવા સંદેશા કતારમાં રહેશે. નોંધણી ચાલુ.',{dis:c.estop?'ઇમરજન્સી સ્ટોપ ચાલુ છે':null}),
+    R('estop','ઇમરજન્સી સ્ટોપ','ચાલુ = બધા સંદેશા તરત બંધ',c.estop,'op','સુપર એડમિન, એડમિન',c.estop?'સંદેશા ફરી ક્ષમતા મુજબ જવા લાગશે. પહેલાં કારણ તપાસો.':'બધા WhatsApp સંદેશા તરત બંધ: નોંધણી, ટીમ, નિમંત્રણ અને ફરી પ્રયાસ. નોંધણી ચાલુ રહે; કંઈ ખોવાતું નથી.',{crit:true,word:'રોકો',stOn:['bad','ચાલુ']}),
+    R('live','સાચું મોકલવું (Live)','બંધ = ટેસ્ટ મોડ (ફક્ત મંજૂર નંબરો)',c.live,'own','સુપર એડમિન',c.live?'ફક્ત ટેસ્ટ નંબરો પર જ સંદેશ જશે.':'સાચા ભક્તોને સંદેશા જવા લાગશે (મંજૂર ટેમ્પલેટ અને સંમતિ સાથે જ).',{crit:true,dis:'Cloud API સેટ નથી (સર્વર મર્યાદા)',stOff:['warn','ટેસ્ટ મોડ']}),
+    R('waQ','સંદેશ કતાર','રાહમાં અને ફરી પ્રયાસ',null,'ro','—','',{st:['info',g(q.cap+q.q+q.retry)+' રાહમાં'],go:'queue'}),
+    R('waTier','Meta મેસેજિંગ મર્યાદા','ચાલતા ૨૪ કલાકમાં અલગ ભક્તો · Meta નક્કી કરે',null,'ro','—','',{st:['info','TIER_250']}),
+    R('waTpl','મંજૂર ટેમ્પલેટ','Meta અને ટ્રસ્ટની મંજૂરી',null,'ro','—','',{st:['ok','૬ મંજૂર · ૧ બાકી'],go:'tpl'})]],
+   ['mod','મોડ્યુલ','set','કયા વિભાગ ચાલુ છે',[
+    R('ADMIN_PANEL','એડમિન પેનલ','પેનલ પોતાને બંધ ન કરી શકે',true,'flag','—','',{dis:'અહીંથી બંધ ન થાય (Render માં જ)'}),
+    ...MODS.map(([f,n,d])=>R('m_'+f,n,d||f,c.mod[f],'flag','સુપર એડમિન',c.mod[f]?'આ વિભાગ મેનુમાંથી નીકળશે; ડેટા સચવાય છે.':'આ વિભાગ મેનુમાં દેખાશે.',{dis:f==='CEREMONY_REHEARSAL'?'સર્વર મર્યાદા: બંધ (Render)':(['PADHRAMNI','INVITATIONS'].includes(f)&&!c.mod.DEVOTEES)?'પહેલાં ભક્ત યાદી ચાલુ કરો':null,crit:f==='SEVA_V2'}))]],
+   ['sys','સિસ્ટમ સ્થિતિ','alert','ફક્ત જોવા માટે',[
+    R('db','ડેટાબેઝ જોડાણ','Turso',null,'ro','—','',{st:['ok','બરાબર']}),
+    R('hz','વેબસાઇટ /healthz','છેલ્લી તપાસ ૧ મિનિટ પહેલાં',null,'ro','—','',{st:['ok','બરાબર']}),
+    R('mfa','બે-પગલાંની ચકાસણી','બદલી શકે તેવી દરેક ભૂમિકા',null,'ro','—','',{st:['ok','ફરજિયાત']}),
+    R('bk','છેલ્લો બેકઅપ','',null,'ro','—','',{st:['mut','નોંધ નથી']})]]]}
+function rowSt(r){if(r.on==null)return r.st;return r.on?(r.stOn||['ok','ચાલુ']):(r.stOff||['mut','બંધ'])}
+function ccRow(r){const T=CCT[r.type];const st=rowSt(r);const sw=r.on==null?(r.go?`<button class="ib ccgo" data-a="${r.go==='queue'?'queue':r.go==='tpl'?'ccTpl':'ccNav'}" data-v="${r.go}" aria-label="ખોલો">${ic('chev')}</button>`:''):`<button class="sw ${r.k==='estop'||r.k==='emerg'?'swd':''}" role="switch" aria-checked="${!!r.on}" data-a="ccTog" data-v="${r.k}" aria-label="${r.t}" ${r.dis?'aria-disabled="true"':''}></button>`;
+  return `<div class="ccr ${r.dis?'dis':''}"><button class="ccm" data-a="ccInfo" data-v="${r.k}"><b>${r.t}${r.prop?' <span class="pill mut" style="font-size:10.5px">નવું</span>':''}</b><small>${r.dis?'<span class="ccdis">'+ic('lock','style="width:11px;height:11px;vertical-align:-1px"')+' '+r.dis+'</span>':r.sub}</small><span class="ccs"><span class="pill ${st[0]}"><i></i>${st[1]}</span><span class="cct t-${r.type}">${T[1]}</span></span></button>${sw}</div>`}
+function scrCC(){const c=CC();const secs=ccRows();const f=c.filter;const q=qStats();const [o]=isOpen();
+  const tile=(l,v,cls,a)=>`<button class="cct2 ${cls}" data-a="${a}"><small>${l}</small><b>${v}</b></button>`;
+  const top=`<div class="ccsum">${tile('વેબસાઇટ',c.emerg?'ઇમરજન્સી ખાનગી':S.gates.site?'જાહેર':'ખાનગી',c.emerg?'bad':S.gates.site?'ok':'mut','ccGo" data-v="web')}${tile('સેવા નોંધણી',o?'ખુલ્લી':'બંધ',o?'ok':'warn','ccGo" data-v="reg')}${tile('WhatsApp',c.estop?'ઇમરજન્સી સ્ટોપ':c.paused?'રોક્યું':'ચાલુ',c.estop?'bad':c.paused?'warn':'ok','ccGo" data-v="wa')}${tile('સંદેશ કતાર',g(q.cap+q.q+q.retry)+' રાહમાં','info','queue')}</div>`;
+  const legend=`<div class="cclg">${Object.entries(CCT).map(([k,t])=>`<button class="tab ${f===k?'on':''}" data-a="ccF" data-v="${k}"><span class="cct t-${k}">${t[1]}</span></button>`).join('')}<button class="tab ${f==='all'?'on':''}" data-a="ccF" data-v="all">બધા</button></div><p class="note">${f==='all'?'દરેક ON/OFF અહીં જ ટૉગલથી બદલાય. ટૉગલ દબાવતાં કારણ અને ખાતરી માગે; માલિક સ્તરે સુપર એડમિનનો ચકાસણી કોડ પણ. દરેક ફેરફાર ઓડિટમાં.':CCT[f][2]}</p>`;
+  const estop=c.estop?`<div class="ccalert">${ic('alert')}<div><b>WhatsApp ઇમરજન્સી સ્ટોપ ચાલુ છે.</b><span>કોઈ સંદેશ જતો નથી. સેવા નોંધણી ચાલુ છે; સંદેશા કતારમાં સચવાય છે.</span></div></div>`:'';
+  const emerg=c.emerg?`<div class="ccalert">${ic('alert')}<div><b>ઇમરજન્સી ખાનગી ચાલુ છે.</b><span>વેબસાઇટ ખાનગી છે અને "વેબસાઇટ જાહેર" ચાલુ કરી શકાતું નથી.</span></div></div>`:'';
+  const body=secs.map(([id,t,i,sub,rows])=>{const rr=rows.filter(r=>f==='all'||r.type===f);if(!rr.length)return'';return `<section class="ccsec" id="cc-${id}"><div class="ch"><h5>${ic(i,'style="width:16px;height:16px;vertical-align:-3px"')} ${t}</h5><span class="note">${sub}</span></div>${rr.map(ccRow).join('')}</section>`}).join('');
+  return head('નિયંત્રણ કેન્દ્ર','બધા ON/OFF એક જ જગ્યાએ, ટૉગલથી · સાચી હાલની સ્થિતિ સાથે')+emerg+estop+top+legend+`<div class="ccgrid">${body}</div>`}
+function ccFind(k){for(const s of ccRows())for(const r of s[4])if(r.k===k)return r;return null}
+function ccApply(k){const c=CC(),G=S.gates;
+  if(k==='site')G.site=!G.site;else if(k==='emerg'){c.emerg=!c.emerg;if(c.emerg)G.site=false}else if(k==='cer')c.cer=!c.cer;
+  else if(k.startsWith('sec_'))c.secs[k.slice(4)]=!c.secs[k.slice(4)];else if(k==='siteReg')G.siteReg=!G.siteReg;else if(k==='intake')G.intake=!G.intake;
+  else if(k.startsWith('day_')){const d=+k.slice(4);S.dayOpen[d]=!S.dayOpen[d]}else if(k==='waSend')c.paused=!c.paused;else if(k==='estop')c.estop=!c.estop;else if(k==='live')c.live=!c.live;
+  else if(k.startsWith('m_'))c.mod[k.slice(2)]=!c.mod[k.slice(2)]}
+/* ---------- WhatsApp queue ---------- */
+const QST={cap:['warn','ક્ષમતાની રાહ'],q:['info','કતારમાં'],retry:['info','ફરી પ્રયાસ નક્કી'],sent:['ok','મોકલાયો'],dlv:['ok','પહોંચ્યો'],fail:['bad','નિષ્ફળ'],blk:['mut','રોકાયેલો'],exp:['mut','સમય પૂરો'],unk:['warn','પરિણામ અજાણ્યું']};
+function qItems(){const c=CC();return S.people.slice().sort((a,b)=>b.id-a.id).filter(p=>p.msg!=='nocons').map(p=>{let st;
+  if(p.msg==='queued')st=c.exhausted||p.id%3===0?'cap':p.id%3===1?'retry':'q';else if(p.msg==='failed')st=p.id%4===0?'unk':p.id%4===1?'exp':p.id%4===2?'blk':'fail';else st=p.id%11===0?'retry':p.id%13===0?'q':p.id%5===0?'sent':'dlv';
+  if(c.exhausted&&st==='q')st='cap';return {p,st,kind:'registration_received',tpl:'નોંધણી મળી',att:st==='retry'?2:st==='fail'||st==='unk'?1:st==='cap'||st==='q'?0:1}})}
+function qStats(){const r={cap:0,q:0,retry:0,sent:0,dlv:0,fail:0,blk:0,exp:0,unk:0};for(const x of qItems())r[x.st]++;r.nocons=S.people.filter(p=>p.msg==='nocons').length;return r}
+function qState(c){return c.estop?['bad','ઇમરજન્સી સ્ટોપ · કંઈ જતું નથી']:c.paused?['warn','કતાર રોકી છે']:c.exhausted?['warn','ક્ષમતા પૂરી · સંદેશા રાહમાં']:['ok','સંદેશા જાય છે']}
+function scrQueue(){const c=CC();const s=qStats();const all=qItems();const f=c.qf;const L=all.filter(x=>f==='all'||x.st===f||(f==='wait'&&['cap','q','retry'].includes(x.st)));const st=qState(c);
+  const policy=`<div class="ccok">${ic('check')}<div><b>WhatsApp ની ક્ષમતા પૂરી થાય તો પણ સેવા નોંધણી ચાલુ રહે છે.</b><span>નોંધણી અને WhatsApp અલગ છે: નોંધણી તરત સચવાય છે, પુષ્ટિ સંદેશ કતારમાં રહે છે અને ક્ષમતા મળે ત્યારે એક જ વાર જાય છે.</span></div></div>`;
+  const used=c.exhausted?250:168,inner=c.exhausted?200:142;
+  const cap=`<div class="card"><div class="ch"><h5>ક્ષમતા · ત્રણ અલગ બાબતો</h5><span class="pill ${st[0]}"><i></i>${st[1]}</span></div>
+    <div class="capx"><div>${meter('Meta મેસેજિંગ મર્યાદા · TIER_250',used,250)}<p class="note">ચાલતા ૨૪ કલાકમાં કેટલા <b>અલગ ભક્તોને</b> સંદેશ પહોંચાડી શકાય. આખા Meta business portfolio માટે એક. જગ્યા ક્યારે ખૂલે તે Meta નક્કી કરે; કોઈ નિશ્ચિત મધ્યરાત્રિ રીસેટ નથી. ${c.exhausted?'અંદાજ: સૌથી જૂના સંદેશને ૨૪ કલાક થાય ત્યારે (૧૪/૧૧ આશરે ૦૯:૧૦ પછી) — ખાતરી નહીં.':''}</p></div>
+    <div>${meter('પેનલની આંતરિક મર્યાદા',inner,200)}<p class="note">૨૦૦ પ્રયાસ અને ૨૦૦ અલગ ભક્ત, છેલ્લા ૨૪ કલાક (ચાલતી ગણતરી). તેમાંથી ૫૦ નોંધણી અને ટીમ સંદેશા માટે અનામત; નિમંત્રણ તે વાપરી ન શકે.</p></div>
+    <div class="cwin"><b>ગ્રાહક-સેવા વિન્ડો (૨૪ કલાક)</b><p class="note">ભક્ત આપણને સંદેશ મોકલે પછી ૨૪ કલાક સુધી સામાન્ય જવાબ આપી શકાય. આ ઉપરની મર્યાદાથી અલગ છે. નોંધણીના સંદેશા મંજૂર ટેમ્પલેટ છે, એટલે તેમને આ વિન્ડોની જરૂર નથી અને વિન્ડો પૂરી થવાથી "રીસેટ" થતું નથી.</p></div></div></div>`;
+  const ctl=`<div class="qctl"><button class="btn ${c.paused?'pri':'out'} sm" data-a="ccAct" data-v="waSend">${c.paused?'કતાર ચાલુ કરો':'કતાર રોકો'}</button><button class="btn danger sm" data-a="ccAct" data-v="estop">${c.estop?'ઇમરજન્સી સ્ટોપ હટાવો':'ઇમરજન્સી સ્ટોપ'}</button><span class="demo2"><span>ડેમો:</span><button class="btn out sm" data-a="qDemo" data-v="${c.exhausted?'free':'full'}">${c.exhausted?'ક્ષમતા ફરી મળી':'ક્ષમતા પૂરી થાય'}</button></span></div>`;
+  const chips=[['wait','રાહમાં',s.cap+s.q+s.retry],['cap','ક્ષમતાની રાહ',s.cap],['retry','ફરી પ્રયાસ નક્કી',s.retry],['dlv','પહોંચ્યા',s.dlv],['sent','મોકલાયા',s.sent],['fail','નિષ્ફળ',s.fail],['blk','રોકાયેલા',s.blk],['exp','સમય પૂરો',s.exp],['unk','પરિણામ અજાણ્યું',s.unk],['all','બધા',all.length]];
+  const ch=`<div class="tabs dchips">${chips.map(([k,l,n])=>`<button class="tab ${f===k?'on':''}" data-a="qF" data-v="${k}">${l}<small>${g(n)}</small></button>`).join('')}</div>`;
+  const list=`<div class="card"><div class="ch"><h5>સંદેશા</h5><span class="note">સંમતિ ન આપનાર ${g(s.nocons)} માટે સંદેશ બનતો જ નથી</span></div>${L.length?`<div class="qlist">${L.slice(0,14).map(x=>`<button class="qrow" data-a="qOpen" data-id="${x.p.id}"><span class="grow"><b>${x.p.n}</b><small>${sid(x.p)} · ${x.tpl}${x.att?' · પ્રયાસ '+g(x.att):''}${x.st==='retry'?' · આગળનો પ્રયાસ ૧૧:૩૦':''}</small></span><span class="pill ${QST[x.st][0]}"><i></i>${QST[x.st][1]}</span></button>`).join('')}</div>`:'<div class="empty">આ યાદી ખાલી છે.</div>'}</div>`;
+  const flow=`<div class="card"><div class="ch"><h5>સંદેશનો પ્રવાહ</h5><span class="note">નોંધણીથી પહોંચ્યા સુધી</span></div><ol class="qflow">
+    <li><b>નોંધણી સફળ</b><span>ફોર્મ સચવાય, નંબર મળે. WhatsApp ગમે તે સ્થિતિમાં હોય, નોંધણી પર અસર નહીં.</span></li>
+    <li><b>પાત્રતા અને સંમતિ</b><span>WhatsApp સંમતિ નથી → સંદેશ બનતો જ નથી. ના પાડી / STOP → રોકાયેલો. ટેસ્ટ મોડમાં મંજૂર યાદી બહારનો નંબર → રોકાયેલો.</span></li>
+    <li><b>કતારમાં</b><span>એક ઘટના = એક સંદેશ (અનન્ય ચાવી). મંજૂર ટેમ્પલેટ ન હોય તો કારણ સાથે રાહ જુએ.</span></li>
+    <li><b>ક્ષમતા તપાસ</b><span>જગ્યા નથી → "ક્ષમતાની રાહ". કતાર રોકી હોય કે ઇમરજન્સી સ્ટોપ હોય → કશું જતું નથી.</span></li>
+    <li><b>ક્ષમતા ફરી મળે</b><span>ચાલતી ગણતરીમાં જગ્યા થાય ત્યારે પ્રાથમિકતા મુજબ: નોંધણી → ટીમ → બાકીના.</span></li>
+    <li><b>મોકલવું</b><span>કતારમાંથી એક જ કાર્યકર સંદેશ ઉપાડે (બેવડું મોકલવું અટકે).</span></li>
+    <li><b>પરિણામ</b><span>Meta ની સ્થિતિ: મોકલાયો → પહોંચ્યો → વાંચ્યો. કામચલાઉ ભૂલ → નિયમ મુજબ ફરી પ્રયાસ. કાયમી ભૂલ → નિષ્ફળ. જવાબ ન આવે → "પરિણામ અજાણ્યું", આપમેળે ફરી નહીં.</span></li>
+    <li><b>સમય પૂરો</b><span>બહુ જૂનો સંદેશ (દા.ત. વિગત બદલાઈ ગઈ, કે નક્કી કરેલા દિવસ પછી) મોકલાતો નથી.</span></li></ol></div>`;
+  const rules=`<div class="card"><div class="ch"><h5>ફરી પ્રયાસના નિયમ</h5><span class="note">Meta ના નિયમ ક્યારેય ઓળંગાતા નથી</span></div><div class="tblw"><table><thead><tr><th>Meta નો જવાબ</th><th>અર્થ</th><th>પેનલ શું કરે</th></tr></thead><tbody>
+    <tr><td class="mono">130429</td><td>ઝડપ મર્યાદા</td><td>આપમેળે ફરી: ૧, ૫, ૧૫, ૬૦ મિનિટ પછી (વધુમાં વધુ ૬)</td></tr>
+    <tr><td class="mono">131000 · 131016</td><td>કામચલાઉ સેવા ભૂલ</td><td>આપમેળે ફરી, એ જ ક્રમમાં</td></tr>
+    <tr><td class="mono">131049</td><td>Meta એ પહોંચાડવાનું રોક્યું</td><td>૨૪ કલાક પછી એક વાર; પછી નિષ્ફળ</td></tr>
+    <tr><td class="mono">131048</td><td>ગુણવત્તા / સ્પામ મર્યાદા</td><td>આખી કતાર રોકો, એડમિનને જાણ; આપમેળે નહીં</td></tr>
+    <tr><td class="mono">131026</td><td>નંબર પર પહોંચતું નથી</td><td>નિષ્ફળ; ફરી નહીં. નંબર સુધાર્યા પછી જ હાથથી</td></tr>
+    <tr><td class="mono">131050 · STOP</td><td>ભક્તે ના પાડી</td><td>રોકાયેલો; ના-યાદીમાં નોંધ</td></tr>
+    <tr><td class="mono">132000 · 132001</td><td>ટેમ્પલેટની ભૂલ / મંજૂર નથી</td><td>કતારમાં રાહ; ટેમ્પલેટ સુધારાય પછી</td></tr>
+    <tr><td>જવાબ નહીં / timeout</td><td>પરિણામ અજાણ્યું</td><td>આપમેળે ક્યારેય નહીં (બે વાર જવાનું જોખમ)</td></tr></tbody></table></div><p class="note" style="margin-top:8px">ફરી પ્રયાસ એ જ ચાવીથી થાય છે, એટલે એક જ ઘટનાનો બીજો સંદેશ બની શકતો નથી. "હમણાં ફરી પ્રયાસ" ફક્ત કામચલાઉ ભૂલ માટે અને ક્ષમતા હોય ત્યારે જ દેખાય.</p></div>`;
+  const hd=head('WhatsApp સંદેશા','મોકલનાર, ટેમ્પલેટ, સંમતિ અને દરેક સંદેશની સ્થિતિ');
+  return hd+waTabs()+policy+(c.estop?`<div class="ccalert">${ic('alert')}<div><b>ઇમરજન્સી સ્ટોપ ચાલુ છે.</b><span>નવી નોંધણી સ્વીકારાય છે; સંદેશા કતારમાં સચવાય છે.</span></div></div>`:'')+ctl+cols(cap+ch+list,flow+rules)}
+WAT.splice(1,0,['queue','કતાર અને ફરી પ્રયાસ']);
+function scrMsgs(){if(S.waTab==='queue')return scrQueue();return scrMsgs10()}
+/* ---------- sheets ---------- */
+XS.ccInfo=()=>{const r=ccFind(S.ccK);if(!r)return['<h5>—</h5>'];const T=CCT[r.type];const st=rowSt(r);const H=S.audit.filter(a=>a[2]==='નિયંત્રણ કેન્દ્ર'&&a[1].startsWith(r.t)).slice(0,4);
+  const act=r.on!=null&&!r.dis?`<button class="btn pri" data-a="ccTog" data-v="${r.k}">${r.on?'બંધ કરો':'ચાલુ કરો'}</button>`:r.go?`<button class="btn pri" data-a="${r.go==='queue'?'queue':r.go==='tpl'?'ccTpl':'ccNav'}" data-v="${r.go}">ખોલો</button>`:'';
+  return [`<h5>${r.t}</h5><p class="note">${r.sub}</p><div class="kv"><span>હાલની સ્થિતિ</span><b><span class="pill ${st[0]}"><i></i>${st[1]}</span></b><span>સ્તર</span><b><span class="cct t-${r.type}">${T[1]}</span></b><span>કોણ બદલી શકે</span><b>${r.who}</b>${r.eff?`<span>બદલવાથી</span><b>${r.eff}</b>`:''}</div>${r.dis?`<div class="ccnote">${ic('lock','style="width:13px;height:13px;vertical-align:-2px"')} હમણાં બદલી શકાતું નથી: ${r.dis}.</div>`:''}<p class="note" style="margin-top:6px">${T[2]}.</p><div class="ch" style="margin-top:10px"><h5 style="font-size:15px">તાજેતરના ફેરફાર</h5></div>${H.length?`<div class="tl">${H.map(a=>`<div><span>${a[1]} <small>· ${a[0]}</small></span></div>`).join('')}</div>`:'<p class="note">હજી કોઈ ફેરફાર નથી.</p>'}<div class="sbtns"><button class="btn out" data-a="sclose">બંધ કરો</button>${act}</div>`]};
+XS.ccConfirm=()=>{const r=ccFind(S.ccK);if(!r)return['<h5>—</h5>'];const st=rowSt(r);const to=r.on?(r.stOff||['mut','બંધ'])[1]:(r.stOn||['ok','ચાલુ'])[1];const e=S.ccErr||{};const R=S.ccR||{};const own=r.type==='own'||r.type==='flag';const word=r.word||'હા';
+  return [`<h5>${r.t}: ${st[1]} → ${to}?</h5><div class="ccnote">${r.eff}</div><label class="fl">કારણ (ઓડિટમાં રહેશે) *<textarea class="inp" rows="2" data-f="ccR.r">${R.r||''}</textarea></label>${e.r?`<span class="ferr">${e.r}</span>`:''}${own?`<label class="fl">સુપર એડમિનનો ચકાસણી કોડ (ઓથેન્ટિકેટર) *<input class="inp otp" inputmode="numeric" maxlength="6" placeholder="••••••" data-f="ccR.c" value="${R.c||''}"></label>${e.c?`<span class="ferr">${e.c}</span>`:''}`:''}${r.crit?`<label class="fl">ખાતરી માટે "${word}" લખો *<input class="inp" data-f="ccR.w" value="${R.w||''}"></label>${e.w?`<span class="ferr">${e.w}</span>`:''}`:''}<p class="note">સર્વર ફરી પરવાનગી અને હાલની સ્થિતિ તપાસે. બીજી વ્યક્તિએ વચ્ચે બદલ્યું હોય તો ફેરફાર રોકાય અને નવી સ્થિતિ બતાવે.</p><div class="sbtns"><button class="btn out" data-a="sclose">રદ કરો</button><button class="btn ${r.k==='estop'&&!r.on||r.k==='emerg'&&!r.on?'danger':'pri'}" data-a="ccDo">હા, ${to} કરો</button></div>`]};
+XS.qMsg=()=>{const x=qItems().find(y=>y.p.id===S.qId);if(!x)return['<h5>—</h5>'];const p=x.p;const c=CC();const st=QST[x.st];
+  const T=[['૧૦:૦૨','નોંધણી સફળ · '+sid(p)],['૧૦:૦૨','WhatsApp સંમતિ: હા (આવૃત્તિ ૨)'],['૧૦:૦૨','કતારમાં · ટેમ્પલેટ "નોંધણી મળી" મંજૂર']];
+  if(x.st==='cap')T.push(['૧૦:૦૨','ક્ષમતા પૂરી · રાહમાં']);
+  if(x.st==='retry')T.push(['૧૦:૧૫','પ્રયાસ ૧ · 130429 ઝડપ મર્યાદા'],['૧૦:૨૦','પ્રયાસ ૨ · 130429'],['—','આગળનો પ્રયાસ ૧૧:૩૦ (આપમેળે)']);
+  if(x.st==='sent'||x.st==='dlv')T.push(['૧૦:૦૩','મોકલાયો · Meta id wamid…'+String(p.id*97).slice(-4)]);if(x.st==='dlv')T.push(['૧૦:૦૩','પહોંચ્યો']);
+  if(x.st==='fail')T.push(['૧૦:૦૩','131026 · નંબર પર પહોંચતું નથી · ફરી આપમેળે નહીં']);
+  if(x.st==='unk')T.push(['૧૦:૦૩','જવાબ ન મળ્યો (timeout) · પરિણામ અજાણ્યું · આપમેળે ફરી નહીં']);
+  if(x.st==='blk')T.push(['૧૦:૦૩','ભક્તે STOP મોકલ્યું · ના-યાદીમાં']);
+  if(x.st==='exp')T.push(['૧૩/૧૧','સમય પૂરો · વિગત બદલાઈ, નવો સંદેશ બન્યો']);
+  const blocked=c.estop||c.paused;
+  const acts=x.st==='retry'?`<button class="btn pri" data-a="toast" data-m="${blocked?'કતાર રોકી છે: પહેલાં ચાલુ કરો':c.exhausted?'ક્ષમતા નથી: રાહમાં રહેશે':'ફરી પ્રયાસ શરૂ · એ જ ચાવી'}" ${blocked||c.exhausted?'disabled':''}>હમણાં ફરી પ્રયાસ</button>`:x.st==='fail'?`<button class="btn pri" data-a="toast" data-m="નોંધણી વિગતમાં નંબર સુધારો · પછી હાથથી મોકલી શકાય">નંબર સુધારો</button>`:x.st==='unk'?`<button class="btn pri" data-a="toast" data-m="Meta સ્થિતિ ફરી માગી · બીજો સંદેશ મોકલાયો નથી">Meta સ્થિતિ તપાસો</button>`:(x.st==='cap'||x.st==='q')?`<button class="btn out" data-a="toast" data-m="સંદેશ રદ · કારણ ઓડિટમાં">આ સંદેશ રદ કરો</button>`:'';
+  return [`<h5>${p.n}</h5><p class="note">${sid(p)} · ${x.tpl} <span class="pill ${st[0]}"><i></i>${st[1]}</span></p><div class="kv"><span>અનન્ય ચાવી</span><b class="mono">out:reg:${p.id}:received</b><span>પ્રયાસ</span><b>${g(x.att)}</b><span>મોબાઇલ</span><b class="num">${phone(p)}</b></div><div class="tl" style="margin-top:8px">${T.map(t=>`<div><span>${t[1]} <small>· ${t[0]}</small></span></div>`).join('')}</div><p class="note">એક જ ઘટનાનો બીજો સંદેશ બની શકતો નથી. મોકલાયેલો સંદેશ ક્યારેય ફરી "કતારમાં" જતો નથી.</p><div class="sbtns"><button class="btn out" data-a="sclose">બંધ કરો</button>${acts}</div>`]};
+/* ---------- events ---------- */
+stin.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!el)return;const a=el.dataset.a,v=el.dataset.v;const stop=()=>{e.stopPropagation();e.preventDefault()};const c=CC();
+  if(a==='ccF'){stop();c.filter=v;render();return}
+  if(a==='ccGo'){stop();c.filter='all';render(false);const t=document.getElementById('cc-'+v);if(t)t.scrollIntoView({block:'start'});return}
+  if(a==='ccInfo'){stop();S.ccK=v;S.sheet='ccInfo';render();return}
+  if(a==='ccTog'||a==='ccAct'){stop();const r=ccFind(v);if(r&&r.dis){S.ccK=v;S.sheet='ccInfo';render();return}S.ccK=v;S.ccR={r:'',w:'',c:''};S.ccErr=null;S.sheet='ccConfirm';render();return}
+  if(a==='ccDo'){stop();const r=ccFind(S.ccK);const R=S.ccR||{};const er={};if(!R.r||R.r.trim().length<3)er.r='કારણ લખો (ઓછામાં ઓછા ૩ અક્ષર).';if((r.type==='own'||r.type==='flag')&&!/^\d{6}$/.test(R.c||''))er.c='૬ અંકનો કોડ લખો.';const word=r.word||'હા';if(r.crit&&(R.w||'').trim()!==word)er.w=`"${word}" લખો.`;if(er.r||er.c||er.w){S.ccErr=er;render();return}
+    ccApply(S.ccK);const r2=ccFind(S.ccK);const m=r.t+': '+rowSt(r2)[1];audit(m+' · કારણ: '+R.r.trim(),'નિયંત્રણ કેન્દ્ર');S.sheet=null;S.ccErr=null;toast(m+' · ઓડિટમાં નોંધ્યું');return}
+  if(a==='ccNav'){stop();S.sheet=null;S.screen=v;render(false);return}
+  if(a==='ccTpl'){stop();S.sheet=null;S.screen='msgs';S.waTab='tpl';render(false);return}
+    if(a==='queue'&&!el.dataset.q){stop();S.sheet=null;S.screen='msgs';S.waTab='queue';render(false);return}
+  if(a==='qF'){stop();c.qf=v;render();return}
+  if(a==='qOpen'){stop();S.qId=+el.dataset.id;S.sheet='qMsg';render();return}
+  if(a==='qDemo'){stop();c.exhausted=v==='full';toast(c.exhausted?'ડેમો: ક્ષમતા પૂરી · નોંધણી ચાલુ, સંદેશા રાહમાં':'ડેમો: ક્ષમતા મળી · રાહમાંના સંદેશા ક્રમ મુજબ જશે');return}
+},true);
+stin.addEventListener('input',e=>{const f=e.target.dataset&&e.target.dataset.f;if(f&&f.startsWith('ccR.')){S.ccR=S.ccR||{};S.ccR[f.slice(4)]=e.target.value}},true);
+/* ---------- menu, more, dashboard ---------- */
+NAV[0][1].splice(1,0,['cc','નિયંત્રણ કેન્દ્ર','lock']);TITLE.cc='નિયંત્રણ કેન્દ્ર';
+MORE_ALL.unshift(['cc','નિયંત્રણ કેન્દ્ર','lock','વેબસાઇટ, નોંધણી, WhatsApp અને મોડ્યુલના બધા ON/OFF']);
+function moreKeys(){return S.dev==='tport'?['cc','dev','inv','msgs','sevas','plan','cards','fest','reps','sets']:['cc','dev','inv','msgs','sevas','plan','teams','cards','fest','reps','sets']}
+function heroCard(){const h=heroCard6();const q=qStats();const c=CC();const n=q.cap+q.q+q.retry;return h.replace('</button></div></div>',`</button><button class="hs ${c.estop?'off':''}" data-a="queue">WhatsApp કતાર · ${g(n)} રાહમાં${ic('chev','style="width:14px;height:14px"')}</button></div></div>`)}
+if(typeof NOTES==='object'){NOTES.cc=['<b>નિયંત્રણ કેન્દ્ર (v11)</b>: દરેક ON/OFF સાચી હાલની સ્થિતિ સાથે અહીં જ ટૉગલથી (માલિકનો નિર્ણય ૧૫ નવે.). સ્તર: તરત (એડમિન), માલિક સ્તર (સુપર એડમિન + ચકાસણી કોડ), મોડ્યુલ (સુપર એડમિન + કોડ, સર્વર મર્યાદામાં), ફક્ત સ્થિતિ.'];NOTES.msgs=[...(NOTES.msgs||[]),'<b>કતાર અને ફરી પ્રયાસ (v11)</b>: WhatsApp ની ક્ષમતા પૂરી થાય તો નોંધણી ચાલુ; સંદેશા કતારમાં, ક્ષમતા મળે ત્યારે એક જ વાર. Meta મર્યાદા, પેનલની આંતરિક મર્યાદા અને ગ્રાહક-સેવા વિન્ડો અલગ બતાવ્યાં.']}
+if(typeof NAMES==='object')NAMES.cc='Control centre';
+window.__q=()=>qItems().map(x=>({id:x.p.id,st:x.st}));
 
 /* export hook used only to generate the canvas boards (no effect on the prototype) */
 window.__exp={EMB,EMBR,
