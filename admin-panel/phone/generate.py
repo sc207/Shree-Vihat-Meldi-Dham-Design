@@ -292,6 +292,11 @@ def tl(xs):
     return '<div class="tl">'+''.join(f'<div class="{st}"><i></i><b>{t}</b><small>{w}</small></div>' for t,w,st in xs)+'</div>'
 def at(n,s,p,pc,y=False,x=False):
     return f'<div class="at"><div class="top"><b>{n}</b><small>{s}</small></div><div class="bt"><span class="y {"on" if y else ""}">હાજર</span><span class="x {"on" if x else ""}">ગેરહાજર</span></div></div>'
+import base64 as _bm, os as _om
+def _webmandala():
+    p=_om.path.join(_om.path.dirname(_om.path.abspath(__file__)),'mandala.svg')
+    return 'url("data:image/svg+xml;base64,'+_bm.b64encode(open(p,'rb').read()).decode()+'")'
+MANDALA=_webmandala()
 def _mandala(stroke='%23ffffff'):
     p=[f"<ellipse cx='100' cy='46' rx='13' ry='36' transform='rotate({i*22.5} 100 100)'/>" for i in range(16)]
     p+= [f"<circle cx='100' cy='14' r='2.2' transform='rotate({i*15} 100 100)'/>" for i in range(24)]
@@ -308,7 +313,8 @@ css+='''
 .lhead{padding:32px 20px 38px;position:relative;overflow:hidden}
 .lhead>*{position:relative;z-index:1}
 .lhead img{width:52px;height:52px}
-.lhead::before{content:"";position:absolute;left:50%;top:-54px;width:310px;height:310px;transform:translateX(-50%);background:'''+MANDALA_W+''' center/contain no-repeat;opacity:.14}
+.lhead::before,.hero::before,.empty::before{-webkit-mask:'''+MANDALA+''' center/contain no-repeat;mask:'''+MANDALA+''' center/contain no-repeat}
+.lhead::before{content:"";position:absolute;left:50%;top:-86px;width:420px;height:420px;transform:translateX(-50%);background:#fff;opacity:.17}
 .lfest{display:block;font-style:normal;margin-top:7px;color:#e6c978;font-size:12.5px;font-weight:600}
 .lform{padding:0 16px;display:block}
 .lcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;margin-top:-22px;box-shadow:0 10px 24px rgba(60,20,30,.12);display:grid;gap:12px}
@@ -316,10 +322,10 @@ css+='''
 .lfoot{margin-top:20px;text-align:center;font-size:12.5px;font-weight:600;color:#9a7b2e}
 .hero{position:relative;overflow:hidden}
 .hero>*{position:relative;z-index:1}
-.hero::before{content:"";position:absolute;right:-56px;top:-70px;width:230px;height:230px;background:'''+MANDALA_W+''' center/contain no-repeat;opacity:.13}
+.hero::before{content:"";position:absolute;right:-70px;top:-86px;width:260px;height:260px;background:#fff;opacity:.16}
 .empty{position:relative}
 .empty>*{position:relative;z-index:1}
-.empty::before{content:"";position:absolute;left:50%;top:14px;width:190px;height:190px;transform:translateX(-50%);background:'''+MANDALA_M+''' center/contain no-repeat;opacity:.07}
+.empty::before{content:"";position:absolute;left:50%;top:6px;width:230px;height:230px;transform:translateX(-50%);background:var(--mar);opacity:.10}
 '''
 def lhead(t='એડમિન પેનલ'):
     return (f'<div class="lhead"><img src="{LIGHT}" alt=""><b>શ્રી વિહત મેલડી ધામ</b>'

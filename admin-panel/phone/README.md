@@ -106,3 +106,10 @@ navigation before the content starts, and the dark theme.
 - **Final measured check of all 101 screens**: no overflow, no sideways scroll, every tappable row,
   button, chip and tab at least 40 px, on-screen text at least 12 px (count badges and the printed
   ID card excepted), no script errors.
+
+### Revision 3.6 — the website's own mandala (18 Nov 2026)
+The hand-drawn mandala was replaced with the real one the website and the ID card use:
+`public/media/mandala.*.svg` from the website repo, copied here as `mandala.svg` (24 KB) and
+embedded by `generate.py`. It is used as a CSS mask, so one copy serves all three places and each
+can take its own colour: white at 17% behind the login head, white at 16% on the dashboard festival
+card, maroon at 10% behind every empty state. Still never behind running text.
