@@ -113,3 +113,16 @@ The hand-drawn mandala was replaced with the real one the website and the ID car
 embedded by `generate.py`. It is used as a CSS mask, so one copy serves all three places and each
 can take its own colour: white at 17% behind the login head, white at 16% on the dashboard festival
 card, maroon at 10% behind every empty state. Still never behind running text.
+
+### Revision 3.7 — the login screen rebuilt again (18 Nov 2026)
+The owner did not like the first attempt (a maroon strip over a mostly empty cream screen), so the
+login is now one piece:
+- the whole screen is a maroon gradient; the website's mandala sits behind the logo at 16% white and
+  the new temple render (`14_temple_new-temple-render.webp`, reduced to a 640 px alpha mask,
+  `temple-mask.png`) rises from the bottom edge at 15.5% white
+- ॥ જય શ્રી વિહત મેલડી માઁ ॥ in gold above the logo, the temple name, «એડમિન પેનલ · સાણંદ», and
+  «મંગલારોહણ · ૨ થી ૮ ફેબ્રુઆરી, ૨૦૨૭» under a thin gold rule
+- the form sits in a near-white card with a deep shadow, and «જય શ્રી વિહત મેલડી ધામ» closes the
+  screen in gold
+All five login screens use it. No overflow; the file is 770 KB with the two card pictures, the
+mandala and the temple mask embedded.

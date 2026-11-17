@@ -297,6 +297,10 @@ def _webmandala():
     p=_om.path.join(_om.path.dirname(_om.path.abspath(__file__)),'mandala.svg')
     return 'url("data:image/svg+xml;base64,'+_bm.b64encode(open(p,'rb').read()).decode()+'")'
 MANDALA=_webmandala()
+def _temple():
+    p=_om.path.join(_om.path.dirname(_om.path.abspath(__file__)),'temple-mask.png')
+    return 'url("data:image/png;base64,'+_bm.b64encode(open(p,'rb').read()).decode()+'")'
+TEMPLE=_temple()
 def _mandala(stroke='%23ffffff'):
     p=[f"<ellipse cx='100' cy='46' rx='13' ry='36' transform='rotate({i*22.5} 100 100)'/>" for i in range(16)]
     p+= [f"<circle cx='100' cy='14' r='2.2' transform='rotate({i*15} 100 100)'/>" for i in range(24)]
@@ -310,16 +314,25 @@ MANDALA_W=_mandala('%23ffffff')
 MANDALA_M=_mandala('%236b1f2a')
 css+='''
 /* a little mandala, the way the ID card has it — faint, never behind text */
-.lhead{padding:32px 20px 38px;position:relative;overflow:hidden}
-.lhead>*{position:relative;z-index:1}
-.lhead img{width:52px;height:52px}
-.lhead::before,.hero::before,.empty::before{-webkit-mask:'''+MANDALA+''' center/contain no-repeat;mask:'''+MANDALA+''' center/contain no-repeat}
-.lhead::before{content:"";position:absolute;left:50%;top:-86px;width:420px;height:420px;transform:translateX(-50%);background:#fff;opacity:.17}
-.lfest{display:block;font-style:normal;margin-top:7px;color:#e6c978;font-size:12.5px;font-weight:600}
-.lform{padding:0 16px;display:block}
-.lcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;margin-top:-22px;box-shadow:0 10px 24px rgba(60,20,30,.12);display:grid;gap:12px}
+/* login: the whole screen is the temple — mandala above, temple below, form in a white card */
+.login{background:linear-gradient(176deg,#5a1a23 0%,#7b2433 46%,#5a1a23 100%);position:relative;overflow:hidden}
+.login>*{position:relative;z-index:1}
+.login::before{content:"";position:absolute;left:50%;top:-120px;width:460px;height:460px;transform:translateX(-50%);background:#fff;opacity:.16;z-index:0}
+.login::after{content:"";position:absolute;left:50%;bottom:0;width:440px;height:346px;transform:translateX(-50%);background:#fff;opacity:.155;z-index:0;
+  -webkit-mask:'''+TEMPLE+''' bottom/contain no-repeat;mask:'''+TEMPLE+''' bottom/contain no-repeat}
+.login::before,.hero::before,.empty::before{-webkit-mask:'''+MANDALA+''' center/contain no-repeat;mask:'''+MANDALA+''' center/contain no-repeat}
+.lhead{background:none;padding:26px 20px 14px}
+.lhead img{width:56px;height:56px}
+.lhead b{font-size:21px}
+.lhead small{color:#e8d6cf}
+.ljai{display:block;font-style:normal;color:#e6c978;font-size:12.5px;letter-spacing:.4px;margin-bottom:2px}
+.lfest{display:block;font-style:normal;margin-top:9px;color:#f0dca6;font-size:12.5px;font-weight:600;border-top:1px solid rgba(255,255,255,.22);padding-top:9px}
+.lform{padding:0 18px;display:block}
+.lcard{background:#fffdf9;border-radius:20px;padding:18px;box-shadow:0 14px 34px rgba(30,8,12,.28);display:grid;gap:12px}
 .lcard h3{margin:0}
-.lfoot{margin-top:20px;text-align:center;font-size:12.5px;font-weight:600;color:#9a7b2e}
+.lcard .fl input,.lcard .in{background:#fff}
+.lfoot{margin-top:16px;text-align:center;font-size:12.5px;font-weight:600;color:#f0dca6}
+.lcard .note{color:#6f6052}
 .hero{position:relative;overflow:hidden}
 .hero>*{position:relative;z-index:1}
 .hero::before{content:"";position:absolute;right:-70px;top:-86px;width:260px;height:260px;background:#fff;opacity:.16}
@@ -328,7 +341,8 @@ css+='''
 .empty::before{content:"";position:absolute;left:50%;top:6px;width:230px;height:230px;transform:translateX(-50%);background:var(--mar);opacity:.10}
 '''
 def lhead(t='એડમિન પેનલ'):
-    return (f'<div class="lhead"><img src="{LIGHT}" alt=""><b>શ્રી વિહત મેલડી ધામ</b>'
+    return (f'<div class="lhead"><u class="ljai">॥ જય શ્રી વિહત મેલડી માઁ ॥</u>'
+            f'<img src="{LIGHT}" alt=""><b>શ્રી વિહત મેલડી ધામ</b>'
             f'<small>{t} · સાણંદ</small><u class="lfest">મંગલારોહણ · ૨ થી ૮ ફેબ્રુઆરી, ૨૦૨૭</u></div>')
 def LP(inner):
     return ('<div class="ph"><div class="login">'+lhead()+
