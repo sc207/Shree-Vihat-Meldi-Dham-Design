@@ -57,3 +57,15 @@ Every one of the 101 screens was measured in the browser, not just looked at:
   is 30 px but sits inside a 70 px row that is tappable as a whole; status pills are not tappable.
 - no script errors. The file loads its Gujarati fonts from Google Fonts, so it needs internet to look
   right; nothing else is fetched.
+
+### Revision 3.2 — card preview shows both sides (18 Nov 2026)
+The owner asked for the older behaviour back: the v11 design showed the ID card's front and back
+together, and that read better than a front/back switch.
+- «કાર્ડ પ્રિવ્યૂ» now shows both cards side by side, 170x271 each, labelled આગળ and પાછળ, with the
+  back carrying the festival dates and the website QR. The આગળ/પાછળ segmented control is gone.
+- The same pair shows behind the «કાર્ડ સોંપ્યું?» and «કાર્ડ ફરી છાપવું?» sheets, which used to sit
+  on an empty screen.
+- Bug found while doing it: the design system already uses `.back` for the round back-arrow button
+  (display:grid, 44x44), so a card marked `.idcard.back` lost its flex column and its header and
+  footer band shrank. The card class is now `.idcard.bk`. Worth knowing for the build: do not reuse
+  `back` as a modifier.
