@@ -43,3 +43,17 @@ Checked: all 101 screens render with no overflow and no console errors (Playwrig
 
 Still open for the owner: new wording in the new strips and folds, and whether an admin may edit a
 registration's date — both need approval before they go into the panel.
+
+### Revision 3.1 — full audit pass (18 Nov 2026)
+Every one of the 101 screens was measured in the browser, not just looked at:
+- vertical overflow: none; sideways page scroll: none
+- tab and filter strips now really scroll sideways (`overflow-x:auto`); before they were cut off by
+  `overflow:hidden`, which contradicted rule 2
+- all text on a screen is at least 12 px. Raised: the group label in the top bar, the bottom-bar labels,
+  the weekday in the day strip, list second lines, quick-tile labels, summary lines, the calendar
+  weekday header and the "નવું" tag. Exceptions on purpose: the red count badge (11 px), level badges
+  (11.5 px) and the printed ID card, which is a 54x86 mm card and not a screen.
+- touch targets: every tappable row, button, chip, tab and nav item is 40 px or more. The switch graphic
+  is 30 px but sits inside a 70 px row that is tappable as a whole; status pills are not tappable.
+- no script errors. The file loads its Gujarati fonts from Google Fonts, so it needs internet to look
+  right; nothing else is fetched.

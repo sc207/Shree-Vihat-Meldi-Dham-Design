@@ -215,6 +215,22 @@ css+='''
 .at .bt span{height:42px;min-width:62px;display:grid;place-items:center;font-size:14px;font-weight:700;color:var(--mut);border-radius:0;border:0}
 .at .bt .y.on{background:var(--grbg);color:var(--gr)}.at .bt .x.on{background:var(--rzbg);color:var(--rz)}
 .at .bt .y{border-right:1.5px solid var(--line)}
+/* v5.1 — nothing on a screen below 12px (the printed ID card and the sheet's own labels excepted) */
+.bar .t small{font-size:12px}
+.nav div{font-size:12px}
+.nav em{font:600 11px/17px "Hind Vadodara";min-width:17px;height:17px;border-radius:9px}
+.days span small{font-size:12px}
+.rr .s small{font-size:12px}
+.tile small{font-size:12px}
+.sum small{font-size:12px}
+.cal .h{font-size:12px}
+.newtag{font-size:12px}
+.lv{font-size:11.5px}
+.rail div{font-size:11.5px}
+.cnt small{font-size:12.5px}
+/* tab and filter strips really scroll sideways; they are not just cut off */
+.tabs{overflow-x:auto;overflow-y:hidden;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
 .lockb{display:inline-flex;align-items:center;gap:5px;opacity:.55}
 .lockb svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2}
 '''
