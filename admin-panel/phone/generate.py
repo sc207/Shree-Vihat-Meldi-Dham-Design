@@ -218,6 +218,7 @@ css+='''
 /* card preview: front and back side by side, the way the v11 design showed them */
 .idpair{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;justify-items:center;flex:none}
 .idpair small{font-size:12px;color:var(--mut);font-weight:600}
+.idshot{width:170px;height:271px;border-radius:12px;display:block;box-shadow:0 6px 18px rgba(60,20,30,.22)}
 .idcard.sm{width:170px;height:271px}
 .idcard.sm .h{padding:8px 6px 20px;font-size:9.5px}
 .idcard.sm .h b{font-size:11px}
@@ -410,13 +411,20 @@ S['K · ટીમ']=[
 IDT=['બધી <small>૧૩</small>','તૈયાર નથી <small>૬</small>','સમીક્ષા <small>૧</small>','છાપવા મંજૂર <small>૧</small>','છપાયું','લઈ લીધું']
 IDL=card(idr(0,'રમેશભાઈ પટેલ','SEVA-000001 · સ્વાગત','તૈયાર નથી','p-mut')+idr(0,'કાંતાબેન ઠાકોર','SEVA-000002 · ભોજન-પ્રસાદ','તૈયાર નથી','p-mut')+idr(0,'પ્રજ્ઞેશકુમાર શાહ','SEVA-000003 · સેવા બાકી','તૈયાર નથી','p-mut')+idr(0,'જયંતીભાઈ રાવળ','SEVA-000007 · સ્વાગત','સમીક્ષા માટે','p-info')+idr(0,'હીનાબેન દેસાઈ','SEVA-000008 · ભોજન-પ્રસાદ','છાપવા મંજૂર','p-ok')+idr(0,'દિનેશભાઈ ચૌહાણ','SEVA-000009 · જળ સેવા','લેવા તૈયાર','p-ok')+idr(0,'મહેશભાઈ સોલંકી','SEVA-000011 · સુરક્ષા','છપાયું','p-ok'))
 IDCARD=f'<div class="idcard"><div class="h"><img src="{LIGHT}" alt=""><b>શ્રી વિહત મેલડી ધામ</b>મંગલારોહણ · ૨–૮ ફેબ્રુ. ૨૦૨૭</div><div class="p">ર</div><div class="n">રમેશભાઈ પટેલ</div><div class="r">સ્વયંસેવક · ૩, ૪ ફેબ્રુ.</div><div class="b"><i></i><span><b>સ્વાગત અને માર્ગદર્શન</b><br>SEVA-000001</span></div></div>'
-IDPAIR=('<div class="idpair">'+IDCARD.replace('class="idcard"','class="idcard sm"')+f'<div class="idcard sm bk"><div class="h"><img src="{LIGHT}" alt=""><b>શ્રી વિહત મેલડી ધામ</b>મંગલારોહણ</div>'+'<div class="bd">મૂર્તિ પ્રાણ પ્રતિષ્ઠા મહોત્સવ<b>૨ થી ૮ ફેબ્રુઆરી, ૨૦૨૭</b>પ્રાણ પ્રતિષ્ઠા · ૮ ફેબ્રુ., બપોરે ૧૨:૩૯</div>'+'<div class="b"><i></i><span><b>મંદિરની વેબસાઇટ</b><br>જોવા માટે સ્કેન કરો</span></div></div>'+'<small>આગળ</small><small>પાછળ</small></div>')
+import base64 as _b64, os as _os
+def _card(f):
+    p=_os.path.join(_os.path.dirname(_os.path.abspath(__file__)),f)
+    return 'data:image/jpeg;base64,'+_b64.b64encode(open(p,'rb').read()).decode()
+IDPAIR=('<div class="idpair">'
+        '<img class="idshot" src="'+_card('card-front.jpg')+'" alt="">'
+        '<img class="idshot" src="'+_card('card-back.jpg')+'" alt="">'
+        '<small>આગળ</small><small>પાછળ</small></div>')
 S['L · ઓળખકાર્ડ']=[
 ('ઓળખકાર્ડ યાદી','એક ફિલ્ટર પટ્ટી; ટિક હરોળની અંદર.',P('કામ · ૧૩ કાર્ડ','ઓળખકાર્ડ',tabs(IDT)+'<div class="warnb">સ્વીકાર બાકી: ૩ · ફોટો નથી: ૪</div>'+IDL,1,('print','bell'))),
 ('પસંદ કર્યા પછી','પટ્ટી નીચે આવે; આગળનું એક જ પગલું ઘેરું.',None),
-('કાર્ડ પ્રિવ્યૂ','આગળ અને પાછળ બંને એકસાથે; કામ નીચે.',P('SEVA-000001 · તૈયાર નથી','કાર્ડ પ્રિવ્યૂ',IDPAIR+note('આગળના QR માં ફક્ત SEVA નંબર છે, પાછળનો વેબસાઇટનો. કાર્ડ પર દબાવો તો પૂરા કદમાં ખૂલે.')+acts(['ફોટો બદલો','કાર્ડનો ઇતિહાસ']),None,(),True,foot('છાપો','સમીક્ષા માટે તૈયાર'))),
-('કાર્ડ સોંપવું','કોણે અને ક્યારે આપ્યું તે નોંધાય.',P('SEVA-000009 · લેવા તૈયાર','કાર્ડ પ્રિવ્યૂ',IDPAIR,None,(),True,over=sheet('કાર્ડ સોંપ્યું?',kv([('સ્વયંસેવક','દિનેશભાઈ ચૌહાણ'),('આપનાર','તમે (સુપર એડમિન)'),('સમય','હમણાં')])+fl('નોંધ','')+bt('રદ કરો','હા, સોંપ્યું')))),
-('ફરી છાપવું','કારણ ફરજિયાત; જૂનું કાર્ડ રદ ગણાય.',P('SEVA-000007','કાર્ડ પ્રિવ્યૂ',IDPAIR,None,(),True,over=sheet('કાર્ડ ફરી છાપવું?',lab('કારણ *')+tabs(['ખોવાયું','સેવા બદલાઈ','નામમાં ભૂલ','ફોટો બદલાયો'],1)+'<div class="warnb">જૂનું કાર્ડ રદ ગણાશે.</div>'+bt('રદ કરો','ફરી છાપવા મૂકો')))),
+('કાર્ડ પ્રિવ્યૂ','v11 નું ખરું કાર્ડ, આગળ અને પાછળ બંને એકસાથે; કામ નીચે.',P('SEVA-000060 · તૈયાર નથી','કાર્ડ પ્રિવ્યૂ',IDPAIR+note('આગળના QR માં ફક્ત SEVA નંબર છે, પાછળનો વેબસાઇટનો. કાર્ડ પર દબાવો તો પૂરા કદમાં ખૂલે.')+acts(['ફોટો બદલો','કાર્ડનો ઇતિહાસ']),None,(),True,foot('છાપો','સમીક્ષા માટે તૈયાર'))),
+('કાર્ડ સોંપવું','કોણે અને ક્યારે આપ્યું તે નોંધાય.',P('SEVA-000060 · લેવા તૈયાર','કાર્ડ પ્રિવ્યૂ',IDPAIR,None,(),True,over=sheet('કાર્ડ સોંપ્યું?',kv([('સ્વયંસેવક','અંકિત શાહ'),('આપનાર','તમે (સુપર એડમિન)'),('સમય','હમણાં')])+fl('નોંધ','')+bt('રદ કરો','હા, સોંપ્યું')))),
+('ફરી છાપવું','કારણ ફરજિયાત; જૂનું કાર્ડ રદ ગણાય.',P('SEVA-000060','કાર્ડ પ્રિવ્યૂ',IDPAIR,None,(),True,over=sheet('કાર્ડ ફરી છાપવું?',lab('કારણ *')+tabs(['ખોવાયું','સેવા બદલાઈ','નામમાં ભૂલ','ફોટો બદલાયો'],1)+'<div class="warnb">જૂનું કાર્ડ રદ ગણાશે.</div>'+bt('રદ કરો','ફરી છાપવા મૂકો')))),
 ('A4 શીટ છાપો','કેટલાં કાર્ડ અને પાનાં તે ઉપર; પ્રિન્ટ નીચે.',P('૨ કાર્ડ · ૧ પાનું','A4 શીટ','<div style="background:#fff;border:1px solid var(--line);border-radius:8px;aspect-ratio:210/297;width:250px;justify-self:center;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:6px;padding:14px">'+''.join(f'<i style="border-radius:5px;background:{"linear-gradient(180deg,#6b1830 30%,#fff 30%)" if i<2 else "#f3ecdf"};border:1px solid #e3d6bf"></i>' for i in range(9))+'</div>'+note('A4, ૯ કાર્ડ પ્રતિ પાનું, ૫૪×૮૬ મિમી. છાપતી વખતે «Actual size» રાખો.'),None,(),True,foot('પાછા','છાપો / PDF'))),
 ]
 ATB=days(0,WD)+seg(['સવાર','બપોર'])+'<div class="search"><div class="in" style="color:var(--ink);font-weight:600;justify-content:space-between">પ્રસાદ સેવા ટીમ'+sv('down')+'</div></div>'

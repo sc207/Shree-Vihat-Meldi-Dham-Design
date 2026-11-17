@@ -69,3 +69,12 @@ together, and that read better than a front/back switch.
   (display:grid, 44x44), so a card marked `.idcard.back` lost its flex column and its header and
   footer band shrank. The card class is now `.idcard.bk`. Worth knowing for the build: do not reuse
   `back` as a modifier.
+
+### Revision 3.3 — the preview uses the real v11 card (18 Nov 2026)
+The owner asked for the actual card from the repo, not a redrawn one. `admin-panel/master/id-card/
+front-3x.png` and `back-3x.png` are scaled to 360 px wide (`card-front.jpg`, `card-back.jpg`, beside
+`generate.py`) and embedded in the preview, so the screen shows the approved artwork: mandala, the
+મંગલારોહણ wordmark, the arched photo frame, the gold volunteer pill, the maroon footer band with the
+SEVA number and the QR, and on the back the festival dates and the website QR.
+The card art names અંકિત શાહ / SEVA-000060, so the three card screens now name the same volunteer.
+The file is 666 KB because of the two embedded pictures.
