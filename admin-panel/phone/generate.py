@@ -219,6 +219,8 @@ css+='''
 .idpair{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;justify-items:center;flex:none}
 .idpair small{font-size:12px;color:var(--mut);font-weight:600}
 .idshot{width:170px;height:271px;border-radius:12px;display:block;box-shadow:0 6px 18px rgba(60,20,30,.22)}
+/* the one action a row needs, inside the row (Zoho People does this on approval rows) */
+.rr .s .qbtn{display:block;margin-top:7px;background:var(--mar);color:#fff;font-size:12.5px;font-weight:700;padding:10px 12px;border-radius:10px;line-height:20px;white-space:nowrap}
 .idcard.sm{width:170px;height:271px}
 .idcard.sm .h{padding:8px 6px 20px;font-size:9.5px}
 .idcard.sm .h b{font-size:11px}
@@ -290,6 +292,13 @@ def tl(xs):
     return '<div class="tl">'+''.join(f'<div class="{st}"><i></i><b>{t}</b><small>{w}</small></div>' for t,w,st in xs)+'</div>'
 def at(n,s,p,pc,y=False,x=False):
     return f'<div class="at"><div class="top"><b>{n}</b><small>{s}</small></div><div class="bt"><span class="y {"on" if y else ""}">હાજર</span><span class="x {"on" if x else ""}">ગેરહાજર</span></div></div>'
+_rr0=rr
+def rr(av,name,l1,l2,pill,pc,right=''):
+    h=_rr0(av,name,l1,l2,pill,pc,right)
+    if pill=='નવી':
+        i=h.rfind('</span></div>')
+        h=h[:i]+'<span class="qbtn">સ્વીકારો</span>'+h[i:]
+    return h
 SUBS={'ડેશબોર્ડ':'મહોત્સવની આજની સ્થિતિ અને આજે કરવાનાં કામ',
  'સેવા નોંધણીઓ':'વેબસાઇટ પરથી આવેલી સેવા નોંધણી',
  'પધરામણી':'ભક્તોના ઘર અને દુકાને બાપા/ભુવાજીની પધરામણી',
@@ -330,7 +339,7 @@ S['C · સેવા નોંધણી']=[
 ('નોંધણી યાદી','ત્રણ પાતળી પટ્ટી, પછી તરત નામ; ૬ નામ એક સ્ક્રીન પર.',P('કામ · ૧૮ નોંધણી','સેવા નોંધણીઓ',REGBODY+reglist(5),1,('dl','bell'))),
 ('ફિલ્ટર','બધાં ફિલ્ટર એક શીટમાં; યાદી ઉપર ભીડ નહીં.',P('કામ · ૧૮ નોંધણી','સેવા નોંધણીઓ',REGBODY,1,('dl','bell'),over=sheet('ફિલ્ટર',lab('સેવા')+tabs(['બધી','સેવા બાકી','સ્વાગત','ભોજન-પ્રસાદ','જળ સેવા'])+lab('WhatsApp સંદેશ')+tabs(['બધા','પહોંચ્યો','નિષ્ફળ','કોઈ સંદેશ નથી'])+lab('ફોટો')+seg(['બધા','ફોટો બાકી'])+lab('સમય')+seg(['બધા','સવાર','બપોર','આખો દિવસ'])+lab('ક્રમ')+seg(['નવી પહેલાં','નામ','SEVA નંબર'])+bt('સાફ કરો','૪ નોંધણી બતાવો')))),
 ('ઘણી પસંદ કરવી','«પસંદ કરો» દબાવ્યા પછી જ ટિક દેખાય; કામ નીચેની પટ્ટીમાં.',f'<div class="ph">{bar3("૨ પસંદ કર્યા","પસંદ કરો",(),True)}<div class="body">'+card(''.join(f'<div class="rr"><span class="cb {"on" if i<2 else ""}">{"✓" if i<2 else ""}</span><span class="m"><b>{r[1]}</b><small>{r[2]}</small><small>{r[3]}</small></span><span class="s">{pill(r[4],r[5])}</span></div>' for i,r in enumerate(REGS)))+'</div><div class="selbar"><span>૨ પસંદ કર્યા</span><b>સ્વીકારો</b><b style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)">સેવા સોંપો</b></div></div>'),
-('નોંધણીની વિગત','આખી સ્ક્રીન; «સ્વીકારો» હંમેશાં નીચે.',P('SEVA-000001 · સમીક્ષા થઈ','નોંધણીની વિગત',PERSON+nextup('સમીક્ષા થઈ ગઈ છે — હવે સ્વીકારવાનું બાકી','સ્વીકાર્યા પછી ભક્તને WhatsApp પર જાણ થશે','check')+kv([('ઉપલબ્ધતા',chips(['૩ ફેબ્રુ. સવાર','૪ ફેબ્રુ. બપોર'])),('ફાળવેલી સેવા','સ્વાગત અને માર્ગદર્શન · સ્વાગત ટીમ'),('WhatsApp','પહોંચ્યો · સંમતિ ✓'),('નોંધણી સમય','૦૧/૧૨/૨૦૨૬, ૧૧:૩૨')])+acts(['સેવા અને ટીમ સોંપો','વિગત સુધારો','ખાનગી વિગત બતાવો','ફેરફાર ઇતિહાસ']),None,(),True,foot('રદ કરો','સ્વીકારો'))),
+('નોંધણીની વિગત','આખી સ્ક્રીન; «સ્વીકારો» હંમેશાં નીચે.',P('SEVA-000001 · સમીક્ષા થઈ','નોંધણીની વિગત',PERSON+cnt([('૨ દિવસ','ઉપલબ્ધતા',0,'clock'),('બાકી','સેવા ફાળવણી',1,'dash'),('ગયો','WhatsApp સંદેશ',0,'msg'),('બાકી','ઓળખકાર્ડ',0,'reg')])+nextup('સમીક્ષા થઈ ગઈ છે — હવે સ્વીકારવાનું બાકી','સ્વીકાર્યા પછી ભક્તને WhatsApp પર જાણ થશે','check')+qa([('phone','ફોન'),('msg','WhatsApp'),('eye','ખાનગી'),('print','ઓળખકાર્ડ')])+kv([('ઉપલબ્ધતા',chips(['૩ ફેબ્રુ. સવાર','૪ ફેબ્રુ. બપોર']))])+acts(['સેવા અને ટીમ સોંપો','વિગત સુધારો','ફેરફાર ઇતિહાસ']),None,(),True,foot('રદ કરો','સ્વીકારો'))),
 ('સેવા અને ટીમ સોંપો','સેવા અને ટીમ અલગ; બંને હાથથી પસંદ થાય.',P('SEVA-000001','નોંધણીની વિગત',PERSON,None,(),True,over=sheet('સેવા અને ટીમ સોંપો',lab('સેવા')+tabs(['સ્વાગત','ભોજન-પ્રસાદ','જળ સેવા','પાર્કિંગ'],0)+lab('ટીમ')+card(''.join(f'<div class="row" style="min-height:48px"><span class="cb {"on" if i==0 else ""}" style="border-radius:50%">{"✓" if i==0 else ""}</span><span class="l" style="font-weight:500">{t}</span><span class="val">{v}</span></div>' for i,(t,v) in enumerate([('સ્વાગત ટીમ','૧ / ૫'),('પ્રસાદ સેવા ટીમ','૧ / ૫'),('ટીમ વગર','')])))+fl('કારણ (ઓડિટમાં રહેશે) *','કારણ લખો')+bt('રદ કરો','સોંપો')))),
 ('વિગત સુધારો','એક સાદી યાદી: શું બદલવું છે તે પસંદ કરો. ફોટો અને દિવસ પણ અહીંથી.',P('','વિગત સુધારો',PERSON+card('<div class="hd" style="display:flex;align-items:center;gap:12px;min-height:60px;padding:0 14px;font-weight:700">ફોટો</div>'+'<div style="display:flex;gap:12px;align-items:center;padding:0 14px 14px"><span style="width:62px;height:76px;border-radius:12px;font-size:24px;background:#f1e4c6;color:#7a5a10;font-weight:700;display:grid;place-items:center;border:2px solid #fff;box-shadow:0 2px 8px rgba(40,20,10,.15);flex:none">ર</span><span style="display:grid;gap:8px;flex:1"><span class="btn sm">નવો ફોટો લો</span><span class="btn sm">ફોટો કાઢો</span></span></div>')+card(''.join(f'<div class="fold" style="{"border-top:1px solid var(--line)" if i else ""}"><span>{t} <small>· {v}</small></span>{sv("down")}</div>' for i,(t,v) in enumerate([('નામ અને સંપર્ક','રમેશભાઈ પટેલ · અમદાવાદ'),('સેવાના દિવસ અને સમય','૩ ફેબ્રુ. સવાર · ૪ ફેબ્રુ. બપોર'),('નોંધણીની તારીખ અને સમય','૦૧/૧૨/૨૦૨૬, ૧૧:૩૨')])))+fl('કારણ (ઓડિટમાં રહેશે) *','કારણ લખો')+note('બધા ફેરફાર એક જ વાર «સાચવો»થી થાય છે અને ઓડિટમાં રહે છે.'),None,(),True,foot('રદ કરો','સાચવો'))),
 ('ફોટો બદલો','નવો ફોટો લો અથવા પસંદ કરો; મોટો પ્રિવ્યૂ. (નવું)',P('','ફોટો બદલો','<div class="photo">ર</div>'+'<span class="btn pri" style="flex:none">કૅમેરાથી ફોટો લો</span><span class="btn">ગેલેરીમાંથી પસંદ કરો</span><span class="btn" style="border-color:var(--bad);color:var(--bad)">ફોટો કાઢો</span>'+fl('કારણ (ઓડિટમાં રહેશે) *','કારણ લખો')+note('ફોટો ખાનગી રહે છે. તે નાનો કરીને સચવાય છે.'),None,(),True,foot('રદ કરો','સાચવો'))),

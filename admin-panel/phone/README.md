@@ -78,3 +78,18 @@ front-3x.png` and `back-3x.png` are scaled to 360 px wide (`card-front.jpg`, `ca
 SEVA number and the QR, and on the back the festival dates and the website QR.
 The card art names અંકિત શાહ / SEVA-000060, so the three card screens now name the same volunteer.
 The file is 666 KB because of the two embedded pictures.
+
+### Revision 3.4 — how a registration record is shown (18 Nov 2026)
+After going through all ~73 screenshots in the Zoho People mobile guide (help.zoho.com, mobile app
+guide), three of their patterns were taken for the registration screens. Their look was not copied:
+the panel stays maroon and cream.
+- **Key facts first.** Zoho opens a record with a small block of its decisive values (First In, Last
+  Out, Overtime, Total). «નોંધણીની વિગત» now opens with the person card and a 2x2 block:
+  ઉપલબ્ધતા ૨ દિવસ · સેવા ફાળવણી બાકી · WhatsApp સંદેશ ગયો · ઓળખકાર્ડ બાકી.
+- **The four things you do with a person, as buttons**, not as list rows: ફોન · WhatsApp · ખાનગી ·
+  ઓળખકાર્ડ. The long «label : value» table is gone; only ઉપલબ્ધતા stays as a fact row, because the
+  chips show which days.
+- **The row's own action inside the row.** Zoho puts ✓/✕ on an approval row. A registration whose
+  status is «નવી» now carries a «સ્વીકારો» button in the row itself, in the list and on the dashboard.
+Not copied: their empty cards that still take space ("No Birthdays today!"), three stacked rows of
+navigation before the content starts, and the dark theme.
