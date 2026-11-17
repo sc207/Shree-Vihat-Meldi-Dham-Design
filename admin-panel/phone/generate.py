@@ -221,6 +221,18 @@ css+='''
 .idshot{width:170px;height:271px;border-radius:12px;display:block;box-shadow:0 6px 18px rgba(60,20,30,.22)}
 /* the one action a row needs, inside the row (Zoho People does this on approval rows) */
 .rr .s .qbtn{display:block;margin-top:7px;background:var(--mar);color:#fff;font-size:12.5px;font-weight:700;padding:10px 12px;border-radius:10px;line-height:20px;white-space:nowrap}
+/* one button on the row that shows the whole record without leaving the list */
+.rr .m .mline{display:flex;gap:8px;align-items:center;margin-top:3px;min-width:0}
+.rr .m .mline small{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rr .m .mline .pill{flex:none}
+.rr .m .mline .rt{flex:none;white-space:nowrap;color:var(--mut)}
+.rr .peek{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:#fff;display:grid;place-items:center;flex:none;align-self:center;margin-left:2px}
+.rr .peek svg{width:20px;height:20px;fill:none;stroke:var(--mar);stroke-width:1.9}
+.qv{display:flex;gap:14px;align-items:flex-start}
+.qv .shot{width:92px;height:114px;border-radius:14px;background:#f1e4c6;border:2px solid #fff;box-shadow:0 3px 10px rgba(40,20,10,.18);display:grid;place-items:center;font-size:30px;font-weight:700;color:#7a5a10;flex:none}
+.qv .who b{display:block;font-size:19px;line-height:1.25}
+.qv .who small{display:block;font-size:13.5px;color:var(--mut);margin-top:3px}
+.qvnote{font-size:12px;color:var(--mut);margin-top:6px}
 .idcard.sm{width:170px;height:271px}
 .idcard.sm .h{padding:8px 6px 20px;font-size:9.5px}
 .idcard.sm .h b{font-size:11px}
@@ -351,9 +363,13 @@ def LP(inner):
 _rr0=rr
 def rr(av,name,l1,l2,pill,pc,right=''):
     h=_rr0(av,name,l1,l2,pill,pc,right)
-    if pill=='નવી':
-        i=h.rfind('</span></div>')
-        h=h[:i]+'<span class="qbtn">સ્વીકારો</span>'+h[i:]
+    if 'SEVA-' in str(l1):
+        extra=f'<small>{l2}</small>' if l2 else ''
+        return ('<div class="rr"><span class="av">'+str(av)+'</span>'
+                f'<span class="m"><b>{name}</b>'
+                f'<span class="mline"><small>{l1}</small><span class="pill {pc}">{pill}</span>'
+                + (f'<small class="rt">{right}</small>' if right else '') + '</span>' + extra + '</span>'
+                '<span class="peek">'+ic('eye')+'</span></div>')
     return h
 SUBS={'ડેશબોર્ડ':'મહોત્સવની આજની સ્થિતિ અને આજે કરવાનાં કામ',
  'સેવા નોંધણીઓ':'વેબસાઇટ પરથી આવેલી સેવા નોંધણી',
@@ -403,6 +419,7 @@ S['C · સેવા નોંધણી']=[
 ('નામ અને સંપર્ક','એક કૉલમ, મોટાં ખાનાં; કારણ ફરજિયાત.',P('','નામ અને સંપર્ક',fl('પૂરું નામ','રમેશભાઈ પટેલ',False)+fl('મોબાઇલ','90••••••10',False,'બદલવા પૂરો નંબર લખો')+fl('ગામ / શહેર','અમદાવાદ',False)+fl('ઉંમર','•••',False)+fl('કારણ (ઓડિટમાં રહેશે) *','કારણ લખો',cls='ta'),None,(),True,foot('રદ કરો','સાચવો'))),
 ('સ્વીકારો · ખાતરી','નાની શીટ; શું થશે તે એક લીટીમાં.',P('SEVA-000018 · નવી','નોંધણીની વિગત',PERSON,None,(),True,over=sheet('નોંધણી સ્વીકારવી?','<div class="okb">સ્વીકાર્યા પછી ભક્તને WhatsApp પર જાણ થશે (સંમતિ હોય તો).</div>'+bt('રદ કરો','હા, સ્વીકારો')))),
 ('રદ કરો · કારણ','કારણ ગોળીથી પસંદ થાય અથવા લખાય.',P('SEVA-000018 · નવી','નોંધણીની વિગત',PERSON,None,(),True,over=sheet('નોંધણી રદ કરવી?','<div class="err">નોંધણી નંબર ફરી વપરાશે નહીં. ઇતિહાસ સચવાય છે.</div>'+lab('કારણ *')+'<div class="chipset">'+''.join(f'<span class="tabs" style="margin:0;padding:0;-webkit-mask-image:none"><span>{x}</span></span>' for x in ['ભક્તે ના પાડી','બે વાર નોંધણી','ખોટી વિગત','અન્ય'])+'</div>'+fl('નોંધ','વધુ વિગત (વૈકલ્પિક)')+bt('પાછા','હા, રદ કરો',True)))),
+('ઝડપી નજર','યાદીમાંથી જ ફોટો અને મુખ્ય વિગત; ખોલ્યા વગર ખાતરી થાય.',P('સેવા નોંધણીઓ','સેવા નોંધણીઓ',REGBODY+card(''.join(rr(*r) for r in REGS[:3])),1,('dl','bell'),over=sheet('ઝડપી નજર','<div class="qv"><span class="shot">ર</span><span class="who"><b>રમેશભાઈ પટેલ</b><small>SEVA-000001 · અમદાવાદ</small><small>90••••••10</small><span class="pill p-ok" style="margin-top:6px">સમીક્ષા થઈ</span></span></div>'+'<div class="qvnote">ફોટો અને પૂરો મોબાઇલ ખાનગી છે — જોયાની નોંધ ઓડિટમાં રહે છે.</div>'+kv([('ઉપલબ્ધતા',chips(['૩ ફેબ્રુ. સવાર','૪ ફેબ્રુ. બપોર'])),('સેવા અને ટીમ','હજી ફાળવી નથી')])+bt('પૂરી વિગત ખોલો','સ્વીકારો')))),
 ('ફોટો અને સંપર્ક બતાવો','ખાનગી વિગત માગો ત્યારે જ; જોયાની નોંધ.',P('SEVA-000001','નોંધણીની વિગત',PERSON,None,(),True,over=sheet('ખાનગી વિગત બતાવવી?','<div class="infob">પૂરો મોબાઇલ, સરનામું, ઉંમર અને ફોટો દેખાશે. કોણે ક્યારે જોયું તેની નોંધ ઓડિટમાં રહેશે.</div>'+bt('રદ કરો','બતાવો')))),
 ]
 S['D · નોંધણી નિયંત્રણ']=[
@@ -421,7 +438,7 @@ WT=['સ્થિતિ','કતાર <small>૧</small>','ઝુંબેશ',
 def q(n,s,t,p,pc):return rr(n[0],n,s,t,p,pc)
 S['F · WhatsApp સંદેશા']=[
 ('WhatsApp · સ્થિતિ','મોડ, ૨૪ કલાકની મર્યાદા અને કતારનો સાર એક સ્ક્રીન પર.',P('કામ','WhatsApp સંદેશા',tabs(WT)+card('<div style="display:flex;justify-content:space-between;align-items:center"><b>કયો સંદેશ આપમેળે જાય</b>'+pill('ટેસ્ટ મોડ','p-warn')+'</div>'+seg(['નોંધણી','નિમંત્રણ','થોભાવેલ'],2)+note('થોભાવેલ: કોઈ સંદેશ જતો નથી; કતાર સચવાય છે. નોંધણી ચાલુ રહે.'),'padding:12px;display:grid;gap:8px')+card('<div style="display:flex;justify-content:space-between"><b>છેલ્લા ૨૪ કલાક</b><span>૦ / ૨૦૦</span></div><div class="meter"><i style="width:2%"></i></div>'+note('નોંધણી માટે અનામત ૫૦'),'padding:12px;display:grid;gap:6px')+sec('કતાર','બધું જુઓ')+rows(QROWS[:3])+acts(['મર્યાદા અને સમજૂતી']),4)),
-('કતાર અને ફરી પ્રયાસ','ઉપર બે કામ, પછી સ્થિતિ ફિલ્ટર, પછી સંદેશા.',P('કામ','WhatsApp સંદેશા',tabs(WT,1)+'<div class="okb">WhatsApp ની ક્ષમતા પૂરી થાય તો પણ સેવા નોંધણી ચાલુ રહે છે.</div><div class="two"><span class="btn sm">કતાર રોકો</span><span class="btn sm" style="border-color:var(--bad);color:var(--bad)">ઇમરજન્સી સ્ટોપ</span></div>'+tabs(['બધા <small>૧૧</small>','રાહમાં <small>૧</small>','નિષ્ફળ <small>૨</small>','અજાણ્યું <small>૧</small>','પહોંચ્યા'])+card(q('જયંતીભાઈ રાવળ','SEVA-000007 · નોંધણી મળી','આજે ૧૧:૩૨','રાહમાં','p-info')+q('ભરતભાઈ પ્રજાપતિ','SEVA-000013 · નોંધણી સ્વીકાર','ગઈકાલે ૧૮:૦૫ · ૧૩૧૦૨૬','નિષ્ફળ','p-bad')+q('નીતાબેન ત્રિવેદી','SEVA-000014 · નોંધણી મળી','ગઈકાલે ૧૭:૪૦','અજાણ્યું','p-warn')+q('અશોકભાઈ મકવાણા','SEVA-000015 · નોંધણી સ્વીકાર','ગઈકાલે ૧૬:૧૦','પહોંચ્યો','p-ok')+q('રમેશભાઈ પટેલ','SEVA-000001 · સેવા ફાળવણી','૨૯ નવે.','પહોંચ્યો','p-ok')),4)),
+('કતાર અને ફરી પ્રયાસ','ઉપર બે કામ, પછી સ્થિતિ ફિલ્ટર, પછી સંદેશા.',P('કામ','WhatsApp સંદેશા',tabs(WT,1)+'<div class="okb">WhatsApp ની ક્ષમતા પૂરી થાય તો પણ સેવા નોંધણી ચાલુ રહે છે.</div><div class="two"><span class="btn sm">કતાર રોકો</span><span class="btn sm" style="border-color:var(--bad);color:var(--bad)">ઇમરજન્સી સ્ટોપ</span></div>'+tabs(['બધા <small>૧૧</small>','રાહમાં <small>૧</small>','નિષ્ફળ <small>૨</small>','અજાણ્યું <small>૧</small>','પહોંચ્યા'])+card(q('જયંતીભાઈ રાવળ','SEVA-000007 · નોંધણી મળી','આજે ૧૧:૩૨','રાહમાં','p-info')+q('ભરતભાઈ પ્રજાપતિ','SEVA-000013 · નોંધણી સ્વીકાર','ગઈકાલે ૧૮:૦૫ · ૧૩૧૦૨૬','નિષ્ફળ','p-bad')+q('નીતાબેન ત્રિવેદી','SEVA-000014 · નોંધણી મળી','ગઈકાલે ૧૭:૪૦','અજાણ્યું','p-warn')+q('અશોકભાઈ મકવાણા','SEVA-000015 · નોંધણી સ્વીકાર','ગઈકાલે ૧૬:૧૦','પહોંચ્યો','p-ok')),4)),
 ('સંદેશની વિગત','સમયરેખા અને ફક્ત સલામત કામ.',P('SEVA-000013 · નોંધણી સ્વીકાર','સંદેશની વિગત',kv([('ભક્ત','ભરતભાઈ પ્રજાપતિ'),('સ્થિતિ',pill('નિષ્ફળ','p-bad')),('ટેમ્પલેટ','registration_confirmed'),('Meta જવાબ','૧૩૧૦૨૬ · પહોંચાડી ન શકાયો'),('પ્રયાસ','૧ / ૬')])+lab('સમયરેખા')+card(''.join(f'<div class="row" style="min-height:46px"><span class="l" style="font-weight:500">{t}</span><span class="val">{v}</span></div>' for t,v in [('કતારમાં મુકાયો','૧૮:૦૪'),('મોકલવાનો પ્રયાસ','૧૮:૦૫'),('Meta એ નકાર્યો','૧૮:૦૫')]))+'<div class="warnb">આ ભૂલમાં આપમેળે ફરી પ્રયાસ થતો નથી. નંબર તપાસો.</div>',None,(),True,foot('નોંધણી ખોલો','ફરી મોકલો'))),
 ('ઝુંબેશ','દરેક ઝુંબેશ એક હરોળ, પ્રગતિ સાથે.',P('કામ','WhatsApp સંદેશા',tabs(WT,2)+card(''.join(f'<div class="tg" style="display:grid;gap:6px"><div style="display:flex;justify-content:space-between;gap:8px"><b style="font-size:14.5px">{t}</b>{pill(p,pc)}</div><small style="color:var(--mut);font-size:12.5px">{s}</small><div class="meter"><i style="width:{w}%"></i></div></div>' for t,s,p,pc,w in [('મહોત્સવ નિમંત્રણ · સાણંદ','૧૨૦ માંથી ૪૫ મોકલાયા · રોજ ૧૫૦ સુધી','ચાલુ','p-ok',38),('ગામ યાદી · બાવળા','તપાસ બાકી · ૮૦ સંપર્ક','ડ્રાફ્ટ','p-mut',0)]))+'<span class="btn">+ નવી ઝુંબેશ</span>',4)),
 ('ટેમ્પલેટ','મંજૂર અને નકારેલા અલગ રંગમાં; દબાવો તો લખાણ.',P('કામ','WhatsApp સંદેશા',tabs(WT,3)+card(''.join(f'<div class="row" style="min-height:52px"><span class="l" style="font-weight:600;font-size:13.5px">{t}<small>{s}</small></span>{pill(p,pc)}</div>' for t,s,p,pc in [('registration_received_v2','નોંધણી મળી · ૩ વિગત','મંજૂર','p-ok'),('registration_confirmed','સ્વીકાર · ૩ વિગત','મંજૂર','p-ok'),('registration_corrected','સુધારો · ૩ વિગત','મંજૂર','p-ok'),('registration_cancelled','રદ · ૨ વિગત','મંજૂર','p-ok'),('assignment_update','સેવા ફાળવણી · ૫ વિગત','મંજૂર','p-ok'),('card_ready_v2','ઓળખકાર્ડ તૈયાર · ૫ વિગત','મંજૂર','p-ok'),('seva_reminder','સેવા યાદ · ૫ વિગત','મંજૂર','p-ok'),('card_ready','જૂનો','નકારેલો','p-bad')])),4)),

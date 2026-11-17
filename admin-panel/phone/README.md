@@ -126,3 +126,17 @@ login is now one piece:
   screen in gold
 All five login screens use it. No overflow; the file is 770 KB with the two card pictures, the
 mandala and the temple mask embedded.
+
+### Revision 3.8 — «ઝડપી નજર», and the list row that finally fits (18 Nov 2026) — FINAL
+- **One button per row shows the whole record.** Every row that carries a SEVA number has a round
+  eye button on the right; it opens the «ઝડપી નજર» sheet: photo, name, SEVA number, village,
+  mobile, status, availability chips, seva and team, and two buttons — «પૂરી વિગત ખોલો» and
+  «સ્વીકારો». The sheet says in one line that the photo and the full mobile are private and that
+  looking at them is written to the audit.
+- **The row was rebuilt to make room for it**: the name now has the full width on its own line, and
+  the SEVA number, the status pill and any time sit on the second line, the number truncating first.
+  Before this the name was cut after about twelve letters.
+- The inline «સ્વીકારો» button from revision 3.4 was removed: the quick view carries it now, and
+  the row stayed readable.
+- 102 screens (one new), all measured: no overflow, no sideways scroll, 40 px targets, 12 px text,
+  no script errors.
