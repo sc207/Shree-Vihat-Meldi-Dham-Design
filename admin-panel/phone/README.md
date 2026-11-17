@@ -93,3 +93,16 @@ the panel stays maroon and cream.
   status is «નવી» now carries a «સ્વીકારો» button in the row itself, in the list and on the dashboard.
 Not copied: their empty cards that still take space ("No Birthdays today!"), three stacked rows of
 navigation before the content starts, and the dark theme.
+
+### Revision 3.5 — login, mandala, final check (18 Nov 2026)
+- **Login rebuilt for the phone.** The maroon head runs edge to edge with a soft mandala behind the
+  logo, the temple name, «એડમિન પેનલ · સાણંદ» and a gold line «મંગલારોહણ · ૨ થી ૮ ફેબ્રુઆરી, ૨૦૨૭».
+  The form sits in a white card that overlaps the head by 22 px, and the screen closes with
+  «જય શ્રી વિહત મેલડી ધામ» in gold. All five login screens (sign in, code, wrong password,
+  recovery code, lost password) use it.
+- **Mandala, lightly.** One SVG (about 1 KB, drawn in `generate.py`, not a picture) is used three
+  times: behind the login head (14% white), top right of the festival card on the dashboard (13%
+  white) and behind every empty state (7% maroon). Never behind running text.
+- **Final measured check of all 101 screens**: no overflow, no sideways scroll, every tappable row,
+  button, chip and tab at least 40 px, on-screen text at least 12 px (count badges and the printed
+  ID card excepted), no script errors.
