@@ -222,10 +222,14 @@ css+='''
 /* the one action a row needs, inside the row (Zoho People does this on approval rows) */
 .rr .s .qbtn{display:block;margin-top:7px;background:var(--mar);color:#fff;font-size:12.5px;font-weight:700;padding:10px 12px;border-radius:10px;line-height:20px;white-space:nowrap}
 /* one button on the row that shows the whole record without leaving the list */
+/* the person's photo in the row, only when the admin switches it on */
+.av.pho{background:#eadfca;border:1.5px solid #fff;box-shadow:0 1px 4px rgba(40,20,10,.18);overflow:hidden;position:relative}
+.av.pho svg{width:30px;height:30px;fill:none;stroke:#a08a62;stroke-width:1.6;margin-top:8px}
+.av.pho::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:#a08a62;opacity:.5;border-radius:50% 50% 0 0/70% 70% 0 0}
 .rr .m .mline{display:flex;gap:8px;align-items:center;margin-top:3px;min-width:0}
-.rr .m .mline small{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rr .m .mline small{flex:0 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .rr .m .mline .pill{flex:none}
-.rr .m .mline .rt{flex:none;white-space:nowrap;color:var(--mut)}
+.rr .m .mline .rt{flex:1 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:right;color:var(--mut)}
 .rr .peek{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:#fff;display:grid;place-items:center;flex:none;align-self:center;margin-left:2px}
 .rr .peek svg{width:20px;height:20px;fill:none;stroke:var(--mar);stroke-width:1.9}
 .qv{display:flex;gap:14px;align-items:flex-start}
@@ -368,7 +372,7 @@ def rr(av,name,l1,l2,pill,pc,right=''):
         return ('<div class="rr"><span class="av">'+str(av)+'</span>'
                 f'<span class="m"><b>{name}</b>'
                 f'<span class="mline"><small>{l1}</small><span class="pill {pc}">{pill}</span>'
-                + (f'<small class="rt">{right}</small>' if right else '') + '</span>' + extra + '</span>'
+                + '</span>' + extra + '</span>'
                 '<span class="peek">'+ic('eye')+'</span></div>')
     return h
 SUBS={'ડેશબોર્ડ':'મહોત્સવની આજની સ્થિતિ અને આજે કરવાનાં કામ',
@@ -420,6 +424,7 @@ S['C · સેવા નોંધણી']=[
 ('સ્વીકારો · ખાતરી','નાની શીટ; શું થશે તે એક લીટીમાં.',P('SEVA-000018 · નવી','નોંધણીની વિગત',PERSON,None,(),True,over=sheet('નોંધણી સ્વીકારવી?','<div class="okb">સ્વીકાર્યા પછી ભક્તને WhatsApp પર જાણ થશે (સંમતિ હોય તો).</div>'+bt('રદ કરો','હા, સ્વીકારો')))),
 ('રદ કરો · કારણ','કારણ ગોળીથી પસંદ થાય અથવા લખાય.',P('SEVA-000018 · નવી','નોંધણીની વિગત',PERSON,None,(),True,over=sheet('નોંધણી રદ કરવી?','<div class="err">નોંધણી નંબર ફરી વપરાશે નહીં. ઇતિહાસ સચવાય છે.</div>'+lab('કારણ *')+'<div class="chipset">'+''.join(f'<span class="tabs" style="margin:0;padding:0;-webkit-mask-image:none"><span>{x}</span></span>' for x in ['ભક્તે ના પાડી','બે વાર નોંધણી','ખોટી વિગત','અન્ય'])+'</div>'+fl('નોંધ','વધુ વિગત (વૈકલ્પિક)')+bt('પાછા','હા, રદ કરો',True)))),
 ('ઝડપી નજર','યાદીમાંથી જ ફોટો અને મુખ્ય વિગત; ખોલ્યા વગર ખાતરી થાય.',P('સેવા નોંધણીઓ','સેવા નોંધણીઓ',REGBODY+card(''.join(rr(*r) for r in REGS[:3])),1,('dl','bell'),over=sheet('ઝડપી નજર','<div class="qv"><span class="shot">ર</span><span class="who"><b>રમેશભાઈ પટેલ</b><small>SEVA-000001 · અમદાવાદ</small><small>90••••••10</small><span class="pill p-ok" style="margin-top:6px">સમીક્ષા થઈ</span></span></div>'+'<div class="qvnote">ફોટો અને પૂરો મોબાઇલ ખાનગી છે — જોયાની નોંધ ઓડિટમાં રહે છે.</div>'+kv([('ઉપલબ્ધતા',chips(['૩ ફેબ્રુ. સવાર','૪ ફેબ્રુ. બપોર'])),('સેવા અને ટીમ','હજી ફાળવી નથી')])+bt('પૂરી વિગત ખોલો','સ્વીકારો')))),
+('ફોટો સાથે યાદી','ફોટો ફક્ત સ્વિચથી; એક જ ઓડિટ નોંધ, દરેક નામ માટે નહીં.',P('સેવા નોંધણીઓ','સેવા નોંધણીઓ',SRCH+seg(SEGR)+'<div class="okb" style="display:flex;align-items:center;gap:10px"><span style="flex:1">ફોટો સાથે યાદી ચાલુ છે — જોયાની એક નોંધ ઓડિટમાં લખાઈ.</span><span class="sw on"></span></div>'+card(''.join(rr(*r).replace('class="av"','class="av pho"').replace('>'+r[0]+'<','>'+ic('user')+'<') for r in REGS[:4])),1,('dl','bell'))),
 ('ફોટો અને સંપર્ક બતાવો','ખાનગી વિગત માગો ત્યારે જ; જોયાની નોંધ.',P('SEVA-000001','નોંધણીની વિગત',PERSON,None,(),True,over=sheet('ખાનગી વિગત બતાવવી?','<div class="infob">પૂરો મોબાઇલ, સરનામું, ઉંમર અને ફોટો દેખાશે. કોણે ક્યારે જોયું તેની નોંધ ઓડિટમાં રહેશે.</div>'+bt('રદ કરો','બતાવો')))),
 ]
 S['D · નોંધણી નિયંત્રણ']=[

@@ -140,3 +140,14 @@ mandala and the temple mask embedded.
   the row stayed readable.
 - 102 screens (one new), all measured: no overflow, no sideways scroll, 40 px targets, 12 px text,
   no script errors.
+
+### Revision 3.9 — the person's photo in the list (18 Nov 2026) — FINAL
+The owner asked to see the face in the row, not only the first letter.
+- A «ફોટો સાથે યાદી» switch turns every row avatar into the volunteer's photo. Off by default.
+- Conditions for the build: only for a role that may already see private details; a small thumbnail,
+  never the stored 800 px photo; ONE audit row when the switch is turned on, not one per devotee;
+  off again on the next visit. A green bar on the list says the switch is on and that the look was
+  recorded.
+- The row line was tightened again while doing this: the trailing team text was dropped, so the
+  name has its own full-width line and the SEVA number keeps its space beside the status pill.
+  103 screens, all measured, no overflow and no errors.
