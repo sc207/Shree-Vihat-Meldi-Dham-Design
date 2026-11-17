@@ -139,8 +139,8 @@ def chips(xs):return '<b class="chipset">'+''.join(f'<i class="chip" style="font
 def tg(t,lv,lvc,stt,on,lock=False):return f'<div class="tg"><span class="m"><b>{t}</b><small><span class="lv {lvc}">{lv}</span>{stt}</small></span><span class="sw {"on" if on else ""} {"lock" if lock else ""}"></span></div>'
 def foldo(t,s,inner):return f'<div class="card acc"><div class="hd"><span>{t} <small>{s}</small></span>{sv("up")}</div>{inner}</div>'
 def at(n,s,p,pc,y=False,x=False):return f'<div class="at"><div class="top"><b>{n}<small>{s}</small></b>{pill(p,pc)}</div><div class="bt"><span class="y {"on" if y else ""}">હાજર</span><span class="x {"on" if x else ""}">ગેરહાજર</span></div></div>'
-REGS=[('પ્ર','પ્રજ્ઞેશકુમાર ભૂપેન્દ્રભાઈ ચૌધરી','SEVA-000018 · ૨, ૩, ૪ ફેબ્રુ.','','નવી','p-info','ટીમ —'),('ભ','ભરતભાઈ પ્રજાપતિ','SEVA-000013 · ૨, ૩ ફેબ્રુ.','','સમીક્ષા થઈ','p-ok','WhatsApp નિષ્ફળ'),('ર','રમેશભાઈ પટેલ','SEVA-000001 · ૨, ૩ ફેબ્રુ.','','સમીક્ષા થઈ','p-ok','સ્વાગત ટીમ'),('કિ','કિરણબેન શાહ','SEVA-000004 · ૨ ફેબ્રુ.','','સમીક્ષા થઈ','p-ok','પ્રસાદ ટીમ'),('સં','સંગીતાબેન રાઠોડ','SEVA-000016 · ૭ ફેબ્રુ.','','રદ','p-mut',''),('વિ','વિપુલભાઈ જોષી','SEVA-000017 · ૮ ફેબ્રુ.','','નવી','p-info','ટીમ —')]
-def reglist(k=6):return card(''.join(rr(*r) for r in REGS[:k]))
+REGS=[('પ્ર','પ્રજ્ઞેશકુમાર ભૂપેન્દ્રભાઈ ચૌધરી','SEVA-000018 · સાણંદ','','નવી','p-info','ટીમ —'),('ભ','ભરતભાઈ પ્રજાપતિ','SEVA-000013 · ગેપ્પરા','','સમીક્ષા થઈ','p-ok','WhatsApp નિષ્ફળ'),('ર','રમેશભાઈ પટેલ','SEVA-000001 · અમદાવાદ','','સમીક્ષા થઈ','p-ok','સ્વાગત ટીમ'),('કિ','કિરણબેન શાહ','SEVA-000004 · બોલ','','સમીક્ષા થઈ','p-ok','પ્રસાદ ટીમ'),('સં','સંગીતાબેન રાઠોડ','SEVA-000016 · વિરોચનનગર','','રદ','p-mut',''),('વિ','વિપુલભાઈ જોષી','SEVA-000017 · સાણંદ','','નવી','p-info','ટીમ —')]
+def reglist(k=5):return card(''.join(rr(*r) for r in REGS[:k]))
 HERO='<div class="hero"><b>મૂર્તિ પ્રાણ પ્રતિષ્ઠા મહોત્સવ</b><div class="cd"><span><strong>૭૭</strong>દિવસ બાકી</span><span>૨–૮ ફેબ્રુ. ૨૦૨૭</span></div><div class="chips"><span>સેવા નોંધણી બંધ</span><span>WhatsApp કતાર · ૧ રાહમાં</span></div></div>'
 TODO=[('૩','','સ્વીકાર બાકી','નવી નોંધણી તપાસો'),('૫','','સેવા બાકી',''),('૧','','તારીખ-સમય નક્કી કરવાની પધરામણી',''),('૧','','પધરામણીમાં ફરી સંપર્ક બાકી',''),('૧','','લીડર બાકી','')]
 KP='<div class="kpis"><div><small>કુલ નોંધણી</small><b>૧૬</b></div><div><small>સ્વીકારેલી</small><b>૧૩</b></div><div><small>રદ</small><b>૨</b></div></div>'
@@ -222,11 +222,22 @@ css+='''
 /* the one action a row needs, inside the row (Zoho People does this on approval rows) */
 .rr .s .qbtn{display:block;margin-top:7px;background:var(--mar);color:#fff;font-size:12.5px;font-weight:700;padding:10px 12px;border-radius:10px;line-height:20px;white-space:nowrap}
 /* one button on the row that shows the whole record without leaving the list */
+/* what happened on the chosen festival day, in one line */
+.daystat{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px 2px;flex:none}
+.daystat::-webkit-scrollbar{display:none}
+.daystat span{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:1px;background:#fff;border:1px solid var(--line);border-top:2px solid #b9ab93;border-radius:10px;padding:6px 2px;font-size:12px;color:var(--mut);white-space:nowrap}
+.daystat b{font-size:15px;color:var(--ink);line-height:1.1}
+.daystat .ok{border-top-color:var(--ok)}.daystat .new{border-top-color:#2b5c8a}.daystat .rev{border-top-color:var(--gold)}.daystat .bad{border-top-color:var(--bad)}
 /* the person's photo in the row, only when the admin switches it on */
 .av.pho{background:#eadfca;border:1.5px solid #fff;box-shadow:0 1px 4px rgba(40,20,10,.18);overflow:hidden;position:relative}
 .av.pho svg{width:30px;height:30px;fill:none;stroke:#a08a62;stroke-width:1.6;margin-top:8px}
 .av.pho::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:#a08a62;opacity:.5;border-radius:50% 50% 0 0/70% 70% 0 0}
-.rr .m .mline{display:flex;gap:8px;align-items:center;margin-top:3px;min-width:0}
+/* the row is tightened so the SEVA number and village fit beside the status */
+.rr{padding:12px 11px!important;gap:10px!important}
+.rr .av{width:42px;height:42px}
+.rr .peek{margin-left:0}
+.rr .m .mline{display:flex;gap:6px;align-items:center;margin-top:3px;min-width:0}
+.rr .m .mline small{font-size:12.5px}
 .rr .m .mline small{flex:0 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .rr .m .mline .pill{flex:none}
 .rr .m .mline .rt{flex:1 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:right;color:var(--mut)}
@@ -375,6 +386,16 @@ def rr(av,name,l1,l2,pill,pc,right=''):
                 + '</span>' + extra + '</span>'
                 '<span class="peek">'+ic('eye')+'</span></div>')
     return h
+DAYSTAT=('<div class="daystat">'
+ '<span><b>૪</b>મળી</span>'
+ '<span class="ok"><b>૨</b>સ્વીકારી</span>'
+ '<span class="new"><b>૧</b>નવી</span>'
+ '<span class="rev"><b>૧</b>સમીક્ષા</span>'
+ '<span class="bad"><b>૦</b>રદ</span></div>')
+REGBODY=(SRCH+seg(SEGR)+days(0)
+ +'<div class="count"><span>મંગળવાર, ૨ ફેબ્રુઆરી</span>'
+  '<span style="color:var(--mar);font-weight:600">પસંદ કરો</span></div>'
+ +DAYSTAT)
 SUBS={'ડેશબોર્ડ':'મહોત્સવની આજની સ્થિતિ અને આજે કરવાનાં કામ',
  'સેવા નોંધણીઓ':'વેબસાઇટ પરથી આવેલી સેવા નોંધણી',
  'પધરામણી':'ભક્તોના ઘર અને દુકાને બાપા/ભુવાજીની પધરામણી',
@@ -412,7 +433,7 @@ S['B · ડેશબોર્ડ, સૂચનાઓ, શોધ, મેનુ']=
 ('«વધુ» મેનુ','લોગો સાથે; ચિહ્નવાળાં ખાનાં, જૂથ પ્રમાણે.',None),
 ]
 S['C · સેવા નોંધણી']=[
-('નોંધણી યાદી','ત્રણ પાતળી પટ્ટી, પછી તરત નામ; ૬ નામ એક સ્ક્રીન પર.',P('કામ · ૧૮ નોંધણી','સેવા નોંધણીઓ',REGBODY+reglist(5),1,('dl','bell'))),
+('નોંધણી યાદી','ત્રણ પાતળી પટ્ટી, પછી તરત નામ; ૬ નામ એક સ્ક્રીન પર.',P('કામ · ૧૮ નોંધણી','સેવા નોંધણીઓ',REGBODY+reglist(4),1,('dl','bell'))),
 ('ફિલ્ટર','બધાં ફિલ્ટર એક શીટમાં; યાદી ઉપર ભીડ નહીં.',P('કામ · ૧૮ નોંધણી','સેવા નોંધણીઓ',REGBODY,1,('dl','bell'),over=sheet('ફિલ્ટર',lab('સેવા')+tabs(['બધી','સેવા બાકી','સ્વાગત','ભોજન-પ્રસાદ','જળ સેવા'])+lab('WhatsApp સંદેશ')+tabs(['બધા','પહોંચ્યો','નિષ્ફળ','કોઈ સંદેશ નથી'])+lab('ફોટો')+seg(['બધા','ફોટો બાકી'])+lab('સમય')+seg(['બધા','સવાર','બપોર','આખો દિવસ'])+lab('ક્રમ')+seg(['નવી પહેલાં','નામ','SEVA નંબર'])+bt('સાફ કરો','૪ નોંધણી બતાવો')))),
 ('ઘણી પસંદ કરવી','«પસંદ કરો» દબાવ્યા પછી જ ટિક દેખાય; કામ નીચેની પટ્ટીમાં.',f'<div class="ph">{bar3("૨ પસંદ કર્યા","પસંદ કરો",(),True)}<div class="body">'+card(''.join(f'<div class="rr"><span class="cb {"on" if i<2 else ""}">{"✓" if i<2 else ""}</span><span class="m"><b>{r[1]}</b><small>{r[2]}</small><small>{r[3]}</small></span><span class="s">{pill(r[4],r[5])}</span></div>' for i,r in enumerate(REGS)))+'</div><div class="selbar"><span>૨ પસંદ કર્યા</span><b>સ્વીકારો</b><b style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)">સેવા સોંપો</b></div></div>'),
 ('નોંધણીની વિગત','આખી સ્ક્રીન; «સ્વીકારો» હંમેશાં નીચે.',P('SEVA-000001 · સમીક્ષા થઈ','નોંધણીની વિગત',PERSON+cnt([('૨ દિવસ','ઉપલબ્ધતા',0,'clock'),('બાકી','સેવા ફાળવણી',1,'dash'),('ગયો','WhatsApp સંદેશ',0,'msg'),('બાકી','ઓળખકાર્ડ',0,'reg')])+nextup('સમીક્ષા થઈ ગઈ છે — હવે સ્વીકારવાનું બાકી','સ્વીકાર્યા પછી ભક્તને WhatsApp પર જાણ થશે','check')+qa([('phone','ફોન'),('msg','WhatsApp'),('eye','ખાનગી'),('print','ઓળખકાર્ડ')])+kv([('ઉપલબ્ધતા',chips(['૩ ફેબ્રુ. સવાર','૪ ફેબ્રુ. બપોર']))])+acts(['સેવા અને ટીમ સોંપો','વિગત સુધારો','ફેરફાર ઇતિહાસ']),None,(),True,foot('રદ કરો','સ્વીકારો'))),
@@ -424,7 +445,7 @@ S['C · સેવા નોંધણી']=[
 ('સ્વીકારો · ખાતરી','નાની શીટ; શું થશે તે એક લીટીમાં.',P('SEVA-000018 · નવી','નોંધણીની વિગત',PERSON,None,(),True,over=sheet('નોંધણી સ્વીકારવી?','<div class="okb">સ્વીકાર્યા પછી ભક્તને WhatsApp પર જાણ થશે (સંમતિ હોય તો).</div>'+bt('રદ કરો','હા, સ્વીકારો')))),
 ('રદ કરો · કારણ','કારણ ગોળીથી પસંદ થાય અથવા લખાય.',P('SEVA-000018 · નવી','નોંધણીની વિગત',PERSON,None,(),True,over=sheet('નોંધણી રદ કરવી?','<div class="err">નોંધણી નંબર ફરી વપરાશે નહીં. ઇતિહાસ સચવાય છે.</div>'+lab('કારણ *')+'<div class="chipset">'+''.join(f'<span class="tabs" style="margin:0;padding:0;-webkit-mask-image:none"><span>{x}</span></span>' for x in ['ભક્તે ના પાડી','બે વાર નોંધણી','ખોટી વિગત','અન્ય'])+'</div>'+fl('નોંધ','વધુ વિગત (વૈકલ્પિક)')+bt('પાછા','હા, રદ કરો',True)))),
 ('ઝડપી નજર','યાદીમાંથી જ ફોટો અને મુખ્ય વિગત; ખોલ્યા વગર ખાતરી થાય.',P('સેવા નોંધણીઓ','સેવા નોંધણીઓ',REGBODY+card(''.join(rr(*r) for r in REGS[:3])),1,('dl','bell'),over=sheet('ઝડપી નજર','<div class="qv"><span class="shot">ર</span><span class="who"><b>રમેશભાઈ પટેલ</b><small>SEVA-000001 · અમદાવાદ</small><small>90••••••10</small><span class="pill p-ok" style="margin-top:6px">સમીક્ષા થઈ</span></span></div>'+'<div class="qvnote">ફોટો અને પૂરો મોબાઇલ ખાનગી છે — જોયાની નોંધ ઓડિટમાં રહે છે.</div>'+kv([('ઉપલબ્ધતા',chips(['૩ ફેબ્રુ. સવાર','૪ ફેબ્રુ. બપોર'])),('સેવા અને ટીમ','હજી ફાળવી નથી')])+bt('પૂરી વિગત ખોલો','સ્વીકારો')))),
-('ફોટો સાથે યાદી','ફોટો ફક્ત સ્વિચથી; એક જ ઓડિટ નોંધ, દરેક નામ માટે નહીં.',P('સેવા નોંધણીઓ','સેવા નોંધણીઓ',SRCH+seg(SEGR)+'<div class="okb" style="display:flex;align-items:center;gap:10px"><span style="flex:1">ફોટો સાથે યાદી ચાલુ છે — જોયાની એક નોંધ ઓડિટમાં લખાઈ.</span><span class="sw on"></span></div>'+card(''.join(rr(*r).replace('class="av"','class="av pho"').replace('>'+r[0]+'<','>'+ic('user')+'<') for r in REGS[:4])),1,('dl','bell'))),
+('ફોટો સાથે યાદી','ફોટો ફક્ત સ્વિચથી; એક જ ઓડિટ નોંધ, દરેક નામ માટે નહીં.',P('સેવા નોંધણીઓ','સેવા નોંધણીઓ',REGBODY+'<div class="okb" style="display:flex;align-items:center;gap:10px"><span style="flex:1">ફોટો સાથે યાદી ચાલુ છે — જોયાની એક નોંધ ઓડિટમાં લખાઈ.</span><span class="sw on"></span></div>'+card(''.join(rr(*r).replace('class="av"','class="av pho"').replace('>'+r[0]+'<','>'+ic('user')+'<') for r in REGS[:3])),1,('dl','bell'))),
 ('ફોટો અને સંપર્ક બતાવો','ખાનગી વિગત માગો ત્યારે જ; જોયાની નોંધ.',P('SEVA-000001','નોંધણીની વિગત',PERSON,None,(),True,over=sheet('ખાનગી વિગત બતાવવી?','<div class="infob">પૂરો મોબાઇલ, સરનામું, ઉંમર અને ફોટો દેખાશે. કોણે ક્યારે જોયું તેની નોંધ ઓડિટમાં રહેશે.</div>'+bt('રદ કરો','બતાવો')))),
 ]
 S['D · નોંધણી નિયંત્રણ']=[
@@ -572,7 +593,7 @@ def LS(on,title,top,body,over=''):return f'<div class="phl">{rail(on)}<div class
 LSR='<div class="search" style="flex:1"><div class="in" style="height:40px">'+sv('search')+'નામ, મોબાઇલ કે SEVA-નંબર</div></div><div style="width:250px">'+seg(SEGR)+'</div>'
 L=[
 ('ફોન આડો · ડેશબોર્ડ','hero ડાબે, «આજે કરવાનું» જમણે; scroll વગર.',LS(0,'ડેશબોર્ડ','<span style="flex:1"></span><div class="ib" style="width:40px;height:40px">'+ic('search')+'</div><div class="ib" style="width:40px;height:40px">'+ic('bell')+'<i></i></div>','<div class="two" style="grid-template-columns:1fr 1.15fr">'+'<div style="display:grid;gap:8px;align-content:start">'+HERO+KP+'</div>'+card(''.join(f'<div class="row" style="min-height:46px"><span class="n {c}">{n}</span><span class="l">{t}</span>{sv("chev")}</div>' for n,c,t,s in TODO))+'</div>')),
-('ફોન આડો · નોંધણી યાદી','ચિહ્ન નીચે નામ; ફિલ્ટર ઉપરની પટ્ટીમાં; યાદી ૨ કૉલમ.',LS(1,'સેવા નોંધણીઓ',LSR,'<div style="display:grid;grid-template-columns:1fr 150px;gap:10px;align-items:center">'+days(0,DSUB)+'<span class="count" style="justify-content:flex-end;gap:12px"><span>૪ નોંધણી</span><span style="color:var(--mar);font-weight:600">પસંદ કરો</span></span></div><div class="two">'+card(lr('પ્ર','પ્રજ્ઞેશકુમાર ચૌધરી','SEVA-000018 · ૨, ૩, ૪ ફેબ્રુ.','નવી','p-info')+lr('ર','રમેશભાઈ પટેલ','SEVA-000001 · ૨, ૩ ફેબ્રુ.','સમીક્ષા થઈ','p-ok')+lr('સં','સંગીતાબેન રાઠોડ','SEVA-000016 · ૭ ફેબ્રુ.','રદ','p-mut'))+card(lr('ભ','ભરતભાઈ પ્રજાપતિ','SEVA-000013 · ૨, ૩ ફેબ્રુ.','સમીક્ષા થઈ','p-ok')+lr('કિ','કિરણબેન શાહ','SEVA-000004 · ૨ ફેબ્રુ.','સમીક્ષા થઈ','p-ok')+lr('વિ','વિપુલભાઈ જોષી','SEVA-000017 · ૮ ફેબ્રુ.','નવી','p-info'))+'</div>')),
+('ફોન આડો · નોંધણી યાદી','ચિહ્ન નીચે નામ; ફિલ્ટર ઉપરની પટ્ટીમાં; યાદી ૨ કૉલમ.',LS(1,'સેવા નોંધણીઓ',LSR,'<div style="display:grid;grid-template-columns:1fr 150px;gap:10px;align-items:center">'+days(0,DSUB)+'<span class="count" style="justify-content:flex-end;gap:12px"><span>૪ નોંધણી</span><span style="color:var(--mar);font-weight:600">પસંદ કરો</span></span></div><div class="two">'+card(lr('પ્ર','પ્રજ્ઞેશકુમાર ચૌધરી','SEVA-000018 · સાણંદ','નવી','p-info')+lr('ર','રમેશભાઈ પટેલ','SEVA-000001 · અમદાવાદ','સમીક્ષા થઈ','p-ok')+lr('સં','સંગીતાબેન રાઠોડ','SEVA-000016 · વિરોચનનગર','રદ','p-mut'))+card(lr('ભ','ભરતભાઈ પ્રજાપતિ','SEVA-000013 · ગેપ્પરા','સમીક્ષા થઈ','p-ok')+lr('કિ','કિરણબેન શાહ','SEVA-000004 · બોલ','સમીક્ષા થઈ','p-ok')+lr('વિ','વિપુલભાઈ જોષી','SEVA-000017 · સાણંદ','નવી','p-info'))+'</div>')),
 ('ફોન આડો · નોંધણીની વિગત','યાદી ડાબે રહે; વિગત જમણે; બટન હંમેશાં દેખાય.',LS(1,'સેવા નોંધણીઓ',LSR,'',over='<div class="dim"></div><div class="lsheet"><div class="l">'+PERSON.replace('class="card idh"','class="idh" style="padding:0"')+acts(['સેવા અને ટીમ સોંપો','ઉપલબ્ધતા સુધારો','વિગત સુધારો'])+'</div><div class="r">'+'<div class="kv" style="padding:0">'+''.join(f'<span>{k}</span><b>{v}</b>' for k,v in [('ઉપલબ્ધતા',chips(['૩ ફેબ્રુ. સવાર','૪ ફેબ્રુ. બપોર'])),('સેવા','સ્વાગત અને માર્ગદર્શન'),('ટીમ','સ્વાગત ટીમ'),('WhatsApp','પહોંચ્યો')])+'</div>'+bt('રદ કરો','સ્વીકારો')+'</div></div>')),
 ('ફોન આડો · ખાતરી','ડાબે શું થશે, જમણે ખાનાં અને બટન.',LS(2,'નિયંત્રણ કેન્દ્ર','','',over='<div class="dim"></div><div class="lsheet"><div class="l"><h3 style="margin:0;font:700 18px/1.3 \'Noto Serif Gujarati\',serif;color:var(--mar)">વેબસાઇટ જાહેર: ચાલુ → બંધ?</h3><div class="warnb" style="background:#fff">મુલાકાતીઓને તરત «ટૂંક સમયમાં» પાનું દેખાશે.</div>'+note('ફક્ત સુપર એડમિન. ફેરફાર ઓડિટમાં નોંધાશે.')+'</div><div class="r">'+fl('કારણ *','કારણ લખો')+'<div class="two">'+fl('ચકાસણી કોડ *','• • • • • •')+fl('"હા" લખો *','')+'</div>'+bt('રદ કરો','હા, બંધ કરો')+'</div></div>')),
 ('ફોન આડો · હાજરી','ફિલ્ટર ઉપર; નામ ૨ કૉલમમાં, બટન નામની બાજુમાં.',LS(4,'મહોત્સવ દિવસ · હાજરી','<div style="flex:1">'+days(0)+'</div><div style="width:150px">'+seg(['સવાર','બપોર'])+'</div>','<div style="display:grid;grid-template-columns:1fr 200px;gap:10px;align-items:center">'+ATS+QRB+'</div><div class="two">'+''.join(card(f'<div class="rr" style="min-height:58px;padding:7px 10px"><span class="m"><b>{n}</b><small>{s}</small></span><span class="bt" style="width:170px"><span class="y {"on" if y else ""}" style="height:42px">હાજર</span><span class="x {"on" if x else ""}" style="height:42px">ગેરહાજર</span></span></div>') for n,s,y,x in [('રમેશભાઈ પટેલ','SEVA-000001',0,0),('કિરણબેન શાહ','SEVA-000004',1,0),('જયંતીભાઈ રાવળ','SEVA-000007',0,1),('ભરતભાઈ પ્રજાપતિ','SEVA-000013',0,0)])+'</div>')),

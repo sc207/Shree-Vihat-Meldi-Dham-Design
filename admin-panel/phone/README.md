@@ -151,3 +151,21 @@ The owner asked to see the face in the row, not only the first letter.
 - The row line was tightened again while doing this: the trailing team text was dropped, so the
   name has its own full-width line and the SEVA number keeps its space beside the status pill.
   103 screens, all measured, no overflow and no errors.
+
+### Revision 4.0 — the festival day on every list, with that day's counts (18 Nov 2026) — FINAL
+The owner asked for the seven-day strip on the photo list as well, and, under it, how that day went.
+- **The day strip is now part of one shared list header** (`REGBODY`): search, the four status tabs,
+  the seven festival days (૨–૮ ફેબ્રુ.), the chosen date with «પસંદ કરો», and then the new counts.
+  The registration list, the photo list and every list that reuses the header get the same block,
+  so the admin never has to remember which page carries the day filter.
+- **The counts for the chosen day**, five equal columns that fit the phone with no sideways scroll:
+  મળી, સ્વીકારી, નવી, સમીક્ષા, રદ — the figure large, the word under it, and a coloured top edge
+  (green accepted, blue new, gold under review, red cancelled, sand received). The word is always
+  there, so the colour is decoration only and never the sole signal (rule 13).
+- **The row's second line now reads «SEVA-000018 · ગામ»** instead of the dates. The day strip above
+  already says which day the list is showing, so repeating the dates in every row only cut the
+  line short. The row chrome was tightened by 14 px (padding, gap, avatar 46→42) so the SEVA number
+  and the village fit beside the status pill; the village truncates first, the number never.
+- 103 screens, all measured again: no overflow, no sideways scroll, 40 px targets, 12 px text, no
+  script errors. `registration-day-stats.jpg` shows the registration list and the photo list side by
+  side.
