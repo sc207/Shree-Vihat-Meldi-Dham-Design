@@ -15,3 +15,31 @@ Status: design proposal, shown to the owner. Not yet in the Claude Design canvas
 - Day strip: weekday above the date with the caption "મહોત્સવનો દિવસ · ફેબ્રુઆરી ૨૦૨૭"; counts removed from the boxes (they were unclear).
 - Dashboard: only the festival card, "આજે કરવાનું" and four quick actions; charts live in Reports.
 - "વિગત સુધારો" is a short menu: photo, name and contact, seva days and time. Photo change by an admin is NEW (needs owner approval and a server change).
+
+## Revision 3 (17 Nov 2026) — after reviewing svmds.onrender.com on a phone
+The owner asked to look at the other temple panel (SVMDS) on a phone and fix what our design lacked.
+Six patterns were taken from it, the rest of our design was kept:
+
+1. **One stat card, 2×2** replaces every cramped four-across number row (dashboard, registrations,
+   padhramni, attendance, capacity planner, invitations, reports). Each cell: soft tinted icon square,
+   big number, label.
+2. **Detail pages no longer show a raw "label : value" table.** Fact rows (icon + small label + large
+   value), a "what is left to do" strip at the top, four quick-action buttons (phone, WhatsApp, Maps,
+   calendar) and a dotted **timeline** at the bottom. Applied to registration detail, padhramni detail,
+   devotee profile, message detail and the smaller sheets.
+3. **Colour**: five soft tints (saffron, green, gold, blue, rose) for icon chips only; maroon stays the
+   single strong colour.
+4. **One line under the page name** saying what the page is for (main pages only, ~20 px).
+5. **"વિગત સુધારો" is now one page** — photo inline with its two buttons, three folded sections
+   (name and contact, seva days and time, **registration date and time**), one reason, one save.
+   This answers the owner's request that the admin can edit the date and the photo.
+6. **Padhramni request form** shows four fields (devotee, date, time, purpose); place/Maps and
+   note/contact are folded, with a one-line summary next to each fold. Sort was added to the
+   registration filter sheet; list pages get a round "+" button bottom right.
+
+Checked: all 101 screens render with no overflow and no console errors (Playwright, 390×844 and
+844×390). `phone-design-before-after.jpg` shows six screens before (v4) and now (v5).
+`generate.py` is the script that produces the HTML.
+
+Still open for the owner: new wording in the new strips and folds, and whether an admin may edit a
+registration's date — both need approval before they go into the panel.
