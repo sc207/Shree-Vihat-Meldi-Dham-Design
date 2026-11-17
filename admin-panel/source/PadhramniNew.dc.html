@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>પધરામણીની નવી વિનંતી</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root p-fsroot">
+<dc-import name="Shell" active="padh" hint-size="100%,64px"></dc-import>
+<div class="p-fsbody">
+<main class="p-page" style="gap: 16px; max-width: 980px; padding-bottom: 0;">
+<a class="p-link" href="Padhramni.dc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>પધરામણીની યાદી</a>
+<div class="p-ph"><div><span class="p-eyebrow">પધરામણી</span><h1>પધરામણીની નવી વિનંતી</h1><p>ફક્ત વિનંતી કરનારનું નામ અને હેતુ જરૂરી છે. બાકીની વિગત પછી ઉમેરી શકાય. · <span class="p-sample">ઉદાહરણ</span></p></div></div>
+
+<section class="p-card" aria-labelledby="pn-who">
+<div class="p-card__h"><h2 id="pn-who" class="p-h2">વિનંતી કરનાર</h2></div>
+<div class="p-form">
+<div class="p-field"><label for="pn1">વિનંતી કરનારનું નામ <span class="p-req" aria-hidden="true">*</span></label><input id="pn1" class="p-input is-err" type="text" autocomplete="name" value="" aria-invalid="true" aria-describedby="pn1-err" aria-required="true"><span class="p-err" id="pn1-err"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9.5 17h-19zM12 10v4.5M12 17.5v.3"></path></svg>નામ લખો <span class="p-check-tag">લખાણ ચકાસણી બાકી</span></span></div>
+<div class="p-field"><label for="pn2">મોબાઇલ (વૈકલ્પિક)</label><input id="pn2" class="p-input" type="tel" inputmode="tel" autocomplete="tel" value="98XXXXXX45"></div>
+<div class="p-field p-span2"><span class="p-flab">ભક્ત યાદી</span><div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;"><span class="p-small p-muted">ભક્ત યાદી સાથે જોડાયેલ નથી (જરૂરી નથી)</span><button type="button" class="p-btn p-btn--sec p-btn--sm">ભક્ત યાદીમાંથી જોડો</button></div></div>
+<div class="p-field"><label for="pn3">વિનંતી ક્યારે આવી (જાણતા હો તો)</label><input id="pn3" class="p-input" type="date"></div>
+<div class="p-field"><span class="p-flab">પ્રસંગના સંપર્ક માટેની વ્યક્તિ</span><label class="p-check"><input class="p-cb" type="checkbox" checked readOnly="{{true}}">વિનંતી કરનાર જ સંપર્ક માટેની વ્યક્તિ છે</label></div>
+</div>
+</section>
+
+<section class="p-card" aria-labelledby="pn-what">
+<div class="p-card__h"><h2 id="pn-what" class="p-h2">હેતુ અને સ્થળ</h2></div>
+<div class="p-form">
+<div class="p-field"><label for="pn4">પધરામણીનો હેતુ <span class="p-req" aria-hidden="true">*</span></label><select id="pn4" class="p-input"><option>હેતુ પસંદ કરો</option></select><button type="button" class="p-link" style="border: 0; background: none; padding: 0; font: inherit; font-weight: 600; color: #741A32;">+ નવો હેતુ ઉમેરો</button></div>
+<div class="p-field"><label for="pn5">સ્થળનું નામ (વૈકલ્પિક)</label><input id="pn5" class="p-input" type="text" value="સાણંદ"></div>
+<div class="p-field p-span2"><label for="pn6">સરનામું</label><textarea id="pn6" class="p-input" autocomplete="street-address"></textarea></div>
+<div class="p-field"><label for="pn7">સ્થળ શોધવા માટેની સૂચના</label><input id="pn7" class="p-input" type="text"></div>
+<div class="p-field"><label for="pn8">ગૂગલ મેપ્સ લિંક (વૈકલ્પિક)</label><input id="pn8" class="p-input" type="url" inputmode="url"></div>
+</div>
+</section>
+
+<section class="p-card" aria-labelledby="pn-when">
+<div class="p-card__h"><h2 id="pn-when" class="p-h2">સમય</h2></div>
+<div class="p-form">
+<div class="p-field"><label for="pn9">માંગેલી તારીખ</label><input id="pn9" class="p-input" type="date"></div>
+<div class="p-field"><label for="pn10">માંગેલો સમય</label><input id="pn10" class="p-input" type="time"></div>
+<div class="p-field p-span2"><label class="p-check"><input class="p-cb" type="checkbox">ફરી સંપર્ક કરવો છે</label></div>
+<div class="p-field p-span2"><label for="pn11">નોંધ (વૈકલ્પિક)</label><textarea id="pn11" class="p-input"></textarea></div>
+</div>
+</section>
+
+<div class="p-actbar"><a class="p-btn p-btn--ghost" href="Padhramni.dc.html">રહેવા દો</a><button type="button" class="p-btn p-btn--pri">તપાસો</button></div>
+<p class="p-small p-muted" style="margin: 0;">“તપાસો” પછી વિગત જોવાનું પગલું આવે — તે પગલું હાલની સિસ્ટમ પ્રમાણે. ફોન પર બટન નીચે ચોંટેલું રહે.</p>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

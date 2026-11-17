@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>કોણ ક્યારે આવી શકે</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root p-fsroot">
+<dc-import name="Shell" active="team" hint-size="100%,64px"></dc-import>
+<div class="p-fsbody">
+<main class="p-page" style="gap: 16px;">
+<nav class="p-subnav" aria-label="ટીમો અને હાજરી"><a href="Teams.dc.html">ટીમો</a><a href="#" aria-current="page">કોણ ક્યારે આવી શકે</a><a href="CapacityDates.dc.html">દિવસ મુજબ સેવક જગ્યા</a></nav>
+<div class="p-ph"><div><span class="p-eyebrow">મહોત્સવ તૈયારી · ટીમો અને હાજરી</span><h1>કોણ ક્યારે આવી શકે</h1><p>દરેક તારીખે કેટલા સ્વયંસેવકોએ સવાર, બપોર કે આખો દિવસ ઉપલબ્ધ હોવાનું જણાવ્યું છે. ફરજ પછી નક્કી થશે. · <span class="p-sample">ઉદાહરણ</span></p></div></div>
+<div class="p-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a8 8 0 1 0 0 16a8 8 0 1 0 0-16M12 11v5M12 8v.3"></path></svg><span>આ સ્વયંસેવકોએ જાતે જણાવેલો સમય છે — સેવા સોંપણી કે હાજરી નથી.</span></div>
+<section class="p-stats" aria-label="પાંચ દિવસનો સરવાળો (ઉદાહરણ)"><div class="p-stat"><span>સવાર — કુલ</span><b>૧૬૮</b></div><div class="p-stat"><span>બપોર — કુલ</span><b>૧૪૫</b></div><div class="p-stat"><span>આખો દિવસ — કુલ</span><b>૨૧૩</b></div><div class="p-stat"><span>પાંચ દિવસ — કુલ</span><b>૫૨૬</b></div></section>
+<div class="p-tablebox p-rtbox">
+<table class="p-table p-rt">
+<caption class="p-vh">તારીખ મુજબ ઉપલબ્ધતા</caption>
+<thead><tr><th scope="col">તારીખ</th><th scope="col">સવાર</th><th scope="col">બપોર</th><th scope="col">આખો દિવસ</th><th scope="col">કુલ</th></tr></thead>
+<tbody>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="5">
+<tr><td class="p-rt-main">{{r.d}}</td><td class="p-tnum" data-label="સવાર">{{r.a}}</td><td class="p-tnum" data-label="બપોર">{{r.b}}</td><td class="p-tnum" data-label="આખો દિવસ">{{r.c}}</td><td class="p-tnum" data-label="કુલ"><b>{{r.t}}</b></td></tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+<section class="p-card" aria-label="ખાલી સ્થિતિનું ઉદાહરણ">
+<div class="p-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"></path></svg><b>હજી કોઈ ઉપલબ્ધતા નોંધાઈ નથી.</b><span class="p-small">(ખાલી સ્થિતિ — જ્યારે કોઈએ સમય ન જણાવ્યો હોય)</span></div>
+</section>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      rows: [
+        { d: '૧૫ નવે. ૨૦૨૬', a: '૪૨', b: '૩૦', c: '૫૫', t: '૧૨૭' },
+        { d: '૧૬ નવે. ૨૦૨૬', a: '૪૫', b: '૪૧', c: '૬૦', t: '૧૪૬' },
+        { d: '૧૭ નવે. ૨૦૨૬', a: '૨૮', b: '૨૨', c: '૪૦', t: '૯૦' },
+        { d: '૧૮ નવે. ૨૦૨૬', a: '૩૫', b: '૪૦', c: '૩૮', t: '૧૧૩' },
+        { d: '૧૯ નવે. ૨૦૨૬', a: '૧૮', b: '૧૨', c: '૨૦', t: '૫૦' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

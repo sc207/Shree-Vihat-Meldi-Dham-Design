@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>મેનુ C — પાનાંનો નકશો</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root" style="width: 1440px; min-height: 1560px; padding: 56px 64px 64px; display: flex; flex-direction: column; gap: 28px;">
+
+<header style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px;">
+<div>
+<p class="p-muted" style="margin: 0; font-weight: 600;">Phase C · બેચ ૧ · મેનુ C</p>
+<h1 style="margin: 4px 0 0; font-family: var(--display); font-size: 40px; line-height: 1.3; font-weight: 600; color: #741A32;">બધાં ૨૦ પાનાં ક્યાં મળશે</h1>
+<p style="margin: 6px 0 0; max-width: 820px; color: #675A51;">મેનુ C માં હાલનાં બધાં ૨૦ પાનાં (route) એમ જ રહે છે. ફક્ત મેનુમાં તેમની જગ્યા બદલાય છે. દરેક ભૂમિકાને હાલ જે પાનાં દેખાય છે, તે જ દેખાશે — પરવાનગી બદલાતી નથી.</p>
+</div>
+<span class="p-check-tag">નકશો સમીક્ષા માટે — અંતિમ નથી</span>
+</header>
+
+<div style="display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 32px; align-items: start;">
+
+<div style="border-radius: 16px; background: #481022; color: #FBF7EF; padding: 14px 12px; display: flex; flex-direction: column; gap: 10px;">
+<div class="p-brand"><span class="p-emb"><img src="/_blob/3f1091500bdbb5ec48a47fce1ab31208" alt="" width="40" height="40"></span><span class="p-brand__t"><b>શ્રી વિહત મેલડી ધામ</b><small>એડમિન પેનલ</small></span></div>
+<sc-for list="{{tree}}" as="g" hint-placeholder-count="8">
+<div>
+<div style="font-weight: 600; font-size: 15px; padding: 6px 8px; border-radius: 8px; background: rgba(251,247,239,.08);">{{g.t}} <span style="font-weight: 400; font-size: 13px; color: #E2C27A;">{{g.note}}</span></div>
+<sc-for list="{{g.sub}}" as="s" hint-placeholder-count="2">
+<div style="font-size: 13.5px; padding: 3px 8px 3px 24px; color: #EADFCB;">› {{s}}</div>
+</sc-for>
+</div>
+</sc-for>
+<div style="margin-top: 6px; padding: 8px; border: 1.5px dashed rgba(226,194,122,.7); border-radius: 8px; font-size: 13px; color: #E2C27A;">નિયંત્રણ કેન્દ્ર — ભવિષ્યનો પ્રસ્તાવ. બન્યું નથી, એટલે મેનુમાં નથી.</div>
+</div>
+
+<div class="p-tablebox">
+<table class="p-table">
+<caption class="p-vh">દરેક હાલનું પાનું, તેનું હાલનું નામ અને મેનુ C માં જગ્યા</caption>
+<thead><tr><th scope="col">#</th><th scope="col">પાનું (route — બદલાતું નથી)</th><th scope="col">હાલ મેનુમાં</th><th scope="col">મેનુ C માં જગ્યા</th><th scope="col">ક્લિક</th><th scope="col">ફોન પર</th></tr></thead>
+<tbody>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="21">
+<tr><td class="p-tnum p-muted">{{r.n}}</td><td class="p-id">{{r.route}}</td><td>{{r.now}}</td><td class="p-nm">{{r.c}}</td><td class="p-tnum">{{r.k}}</td><td class="p-muted">{{r.ph}}</td></tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;">
+<div class="p-card"><b>૯ પાનાં — ૧ ક્લિક</b><p class="p-small p-muted" style="margin: 6px 0 0;">૫ મુખ્ય વિભાગ, “મહોત્સવ તૈયારી” જૂથના ૩ (દરેક પહેલા ટૅબ પર ખૂલે), અને મારું ખાતું.</p></div>
+<div class="p-card"><b>૧૧ પાનાં — ૨ ક્લિક</b><p class="p-small p-muted" style="margin: 6px 0 0;">મુખ્ય પાનું ખોલી ઉપરના ટૅબમાંથી. ફોન પર “વધુ” માં સીધાં.</p></div>
+<div class="p-card"><b>બદલાતું નથી</b><p class="p-small p-muted" style="margin: 6px 0 0;">Route, પરવાનગી, ભૂમિકા પ્રમાણે શું દેખાય, અને પાનાંનું કામ. WhatsApp અને મેસેજની સ્થિતિ મહોત્સવ-નિમંત્રણ સાથે, નોંધણી સાથે નહીં.</p></div>
+</div>
+<p class="p-small p-muted" style="margin: 0;">વિભાગોનાં ગુજરાતી નામ પ્રસ્તાવિત છે — અંતિમ શબ્દો ગુજરાતી સમીક્ષા પછી.</p>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1560}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const raw = [
+      ['#/dashboard', 'ડેશબોર્ડ', 'આજનું કામ', '૧', 'નીચેનું મેનુ'],
+      ['#/registrations', 'સેવા નોંધણીઓ', 'નોંધણી', '૧', 'નીચેનું મેનુ'],
+      ['#/idcards', 'ઓળખકાર્ડ', 'નોંધણી › ઓળખકાર્ડ', '૨', 'વધુ'],
+      ['#/capacity/intake', 'નોંધણી સ્વીકાર', 'નોંધણી › નવી નોંધણી ચાલુ/બંધ', '૨', 'વધુ'],
+      ['#/padhramni', 'પધરામણી', 'પધરામણી', '૧', 'નીચેનું મેનુ'],
+      ['#/reports', 'અહેવાલ', 'રિપોર્ટ', '૧', 'વધુ'],
+      ['#/analytics', 'એડમિન એનાલિટિક્સ', 'રિપોર્ટ › પેનલના આંકડા', '૨', 'વધુ'],
+      ['#/settings', 'સેટિંગ', 'સેટિંગ્સ', '૧', 'વધુ'],
+      ['#/site', 'વેબસાઇટ સ્થિતિ', 'સેટિંગ્સ › વેબસાઇટ સ્થિતિ', '૨', 'વધુ'],
+      ['#/users', 'એડમિન વપરાશકર્તા', 'સેટિંગ્સ › યુઝર્સ', '૨', 'વધુ'],
+      ['#/audit', 'ઓડિટ ઇતિહાસ', 'સેટિંગ્સ › કોણે શું કર્યું', '૨', 'વધુ'],
+      ['#/account', 'મારું ખાતું', 'નીચે નામ › મારું ખાતું', '૧', 'વધુ'],
+      ['#/teams', 'ટીમો', 'ટીમો અને હાજરી', '૧', 'વધુ'],
+      ['#/availability', 'સ્વયંસેવક ઉપલબ્ધતા', 'ટીમો અને હાજરી › કોણ ક્યારે આવી શકે', '૨', 'વધુ'],
+      ['#/capacity/dates', 'તારીખ મુજબ ક્ષમતા', 'ટીમો અને હાજરી › દિવસ મુજબ સેવક જગ્યા', '૨', 'વધુ'],
+      ['#/devotees', 'ભક્તો', 'ભક્તો', '૧', 'વધુ'],
+      ['#/programme', 'મહોત્સવ કાર્યક્રમ', 'મહોત્સવ અને નિમંત્રણ › કાર્યક્રમ (પહેલું ટૅબ)', '૧', 'વધુ'],
+      ['#/invitations', 'નિમંત્રણ ઝુંબેશ', 'મહોત્સવ અને નિમંત્રણ › નિમંત્રણ યાદી', '૨', 'વધુ'],
+      ['#/whatsapp', 'WhatsApp સંદેશા', 'મહોત્સવ અને નિમંત્રણ › WhatsApp મેસેજ', '૨', 'વધુ'],
+      ['#/notifications', 'સંદેશ સ્થિતિ', 'મહોત્સવ અને નિમંત્રણ › મેસેજની સ્થિતિ', '૨', 'વધુ'],
+      ['#/search', 'ઉપરની શોધ', 'દરેક પાને ઉપર શોધ', '૧', 'ઉપર શોધ-ચિહ્ન']
+    ];
+    const gu = (n) => String(n).replace(/[0-9]/g, (d) => '૦૧૨૩૪૫૬૭૮૯'[d]);
+    return {
+      rows: raw.map((x, i) => ({ n: i < 20 ? gu(i + 1) : '—', route: x[0], now: x[1], c: x[2], k: x[3], ph: x[4] })),
+      tree: [
+        { t: 'આજનું કામ', note: '', sub: [] },
+        { t: 'નોંધણી', note: 'ટૅબ', sub: ['નોંધણી યાદી', 'ઓળખકાર્ડ', 'નવી નોંધણી ચાલુ/બંધ'] },
+        { t: 'પધરામણી', note: '', sub: [] },
+        { t: 'રિપોર્ટ', note: 'ટૅબ', sub: ['રિપોર્ટ', 'પેનલના આંકડા'] },
+        { t: 'સેટિંગ્સ', note: 'ટૅબ', sub: ['સેટિંગ્સ', 'વેબસાઇટ સ્થિતિ', 'યુઝર્સ', 'કોણે શું કર્યું'] },
+        { t: 'મહોત્સવ તૈયારી · ટીમો અને હાજરી', note: 'ટૅબ', sub: ['ટીમો', 'કોણ ક્યારે આવી શકે', 'દિવસ મુજબ સેવક જગ્યા'] },
+        { t: 'મહોત્સવ તૈયારી · ભક્તો', note: '', sub: [] },
+        { t: 'મહોત્સવ તૈયારી · મહોત્સવ અને નિમંત્રણ', note: 'ટૅબ', sub: ['કાર્યક્રમ', 'નિમંત્રણ યાદી', 'WhatsApp મેસેજ', 'મેસેજની સ્થિતિ'] },
+        { t: 'નીચે: નામ', note: '', sub: ['મારું ખાતું', 'લૉગઆઉટ'] }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

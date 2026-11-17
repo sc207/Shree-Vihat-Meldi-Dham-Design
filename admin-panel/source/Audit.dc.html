@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>કોણે શું કર્યું</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root p-fsroot">
+<dc-import name="Shell" active="set" hint-size="100%,64px"></dc-import>
+<div class="p-fsbody">
+<main class="p-page" style="gap: 16px;">
+<nav class="p-subnav" aria-label="સેટિંગ્સ વિભાગ"><a href="Settings.dc.html">સેટિંગ્સ</a><a href="Site.dc.html">વેબસાઇટ સ્થિતિ</a><a href="Users.dc.html">યુઝર્સ</a><a href="#" aria-current="page">કોણે શું કર્યું</a></nav>
+<div class="p-ph"><div><span class="p-eyebrow">સેટિંગ્સ</span><h1>કોણે શું કર્યું</h1><p>એડમિનના દરેક કાર્યની નોંધ. સંવેદનશીલ વિગત ઢંકાયેલી છે. · <span class="p-sample">ઉદાહરણ</span></p></div></div>
+<div class="p-tools">
+<label class="p-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14M20 20l-4-4"></path></svg><span class="p-vh">શોધ</span><input type="search" placeholder="લક્ષ્ય કે ક્રિયા"></label>
+<button type="button" class="p-select p-only-desk"><small>એડમિન:</small>બધા<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+<button type="button" class="p-select p-only-desk"><small>વિભાગ:</small>બધા<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+<button type="button" class="p-select p-only-desk"><small>પરિણામ:</small>બધાં<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+<button type="button" class="p-select p-only-desk"><small>તારીખથી – તારીખ સુધી:</small>૨૯ ઑક્ટો. – ૪ નવે.</button>
+<button type="button" class="p-btn p-btn--sec p-only-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16l-6 7.5V19l-4-2v-4.5z"></path></svg>ફિલ્ટર</button>
+</div>
+<div class="p-tablebox p-rtbox">
+<table class="p-table p-rt">
+<caption class="p-vh">ઓડિટ નોંધ</caption>
+<thead><tr><th scope="col">ક્રિયા</th><th scope="col">સમય</th><th scope="col">એડમિન</th><th scope="col">લક્ષ્ય</th><th scope="col">વિભાગ</th><th scope="col">પરિણામ</th><th scope="col">સંવેદનશીલતા</th></tr></thead>
+<tbody>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="7">
+<tr><td class="p-rt-main"><span class="p-nm">{{r.a}}</span></td><td class="p-tnum" data-label="સમય">{{r.t}}</td><td data-label="એડમિન">{{r.who}}</td><td class="p-tnum" data-label="લક્ષ્ય">{{r.tg}}</td><td data-label="વિભાગ">{{r.sec}}</td><td data-label="પરિણામ"><span class="{{r.rc}}"><i></i>{{r.r}}</span></td><td data-label="સંવેદનશીલતા"><span class="{{r.sc}}"><i></i>{{r.s}}</span></td></tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+<div class="p-pager"><span class="p-pager__info p-muted p-small">૧–૭ · કુલ ૨૧૦ માંથી</span><nav class="p-pager__b" aria-label="પાનાં"><button type="button" class="p-pg" aria-current="page">૧</button><button type="button" class="p-pg">૨</button><button type="button" class="p-pg">૩</button></nav></div>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const ok = 'p-badge p-badge--ok', bad = 'p-badge p-badge--bad', nrm = 'p-badge p-badge--off', sen = 'p-badge p-badge--warn', sec = 'p-badge p-badge--new';
+    const raw = [
+      ['લૉગિન સફળ', '૦૯:૦૨', 'ઉદાહરણ વપરાશકર્તા', '—', 'લૉગિન', 'સફળ', ok, 'સુરક્ષા', sec],
+      ['કાર્ડની વિગત જોઈ', '૦૯:૧૫', 'ઉદાહરણ સ્ટાફ ૨', 'SEVA-000139', 'ઓળખકાર્ડ', 'સફળ', ok, 'સંવેદનશીલ', sen],
+      ['ઘણા કાર્ડની સ્થિતિ બદલી', '૦૯:૨૦', 'ઉદાહરણ સ્ટાફ ૨', '૧૨ કાર્ડ', 'ઓળખકાર્ડ', 'સફળ', ok, 'સામાન્ય', nrm],
+      ['સેવા ફાળવણી બદલી', '૧૦:૦૧', 'ઉદાહરણ સ્ટાફ ૧', 'SEVA-000138', 'નોંધણી', 'સફળ', ok, 'સામાન્ય', nrm],
+      ['સ્વયંસેવક સોંપ્યા', '૧૦:૧૫', 'ઉદાહરણ સ્ટાફ ૩', 'ટીમ ૭', 'ટીમો', 'સફળ', ok, 'સામાન્ય', nrm],
+      ['બધા વિભાગમાં શોધ કરી', '૧૦:૩૦', 'ઉદાહરણ સ્ટાફ ૧', '—', 'શોધ', 'સફળ', ok, 'અન્ય', nrm],
+      ['પરવાનગી નથી', '૧૦:૪૦', 'ઉદાહરણ સ્ટાફ ૪', 'યુઝર્સ', 'યુઝર્સ', 'નિષ્ફળ', bad, 'સુરક્ષા', sec]
+    ];
+    return { rows: raw.map((x) => ({ a: x[0], t: x[1], who: x[2], tg: x[3], sec: x[4], r: x[5], rc: x[6], s: x[7], sc: x[8] })) };
+  }
+}
+</script>
+</body>
+</html>

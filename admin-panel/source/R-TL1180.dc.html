@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>બધાં ૨૫ પાનાં · ટૅબ્લેટ આડું · 1180×820</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@500;600&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+.rz-bar select:focus-visible,.rz-bar button:focus-visible{outline:3px solid #B8862E;outline-offset:2px}
+</style>
+</helmet>
+<div style="display: flex; flex-direction: column; min-height: 100vh; background: #FBF7EF;">
+<div class="rz-bar" style="height: 60px; box-sizing: border-box; display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: #481022; color: #FBF7EF; font-family: 'Hind Vadodara', sans-serif; border-bottom: 2px solid #B8862E;">
+<label for="rz-sel" style="font-size: 13px; font-weight: 600; white-space: nowrap; color: #EBD3A0;">1180 · પાનું</label>
+<select id="rz-sel" value="{{cur}}" onChange="{{onSel}}" style="flex: 1 1 0; min-width: 0; max-width: 560px; height: 44px; padding: 0 10px; border-radius: 10px; border: 1px solid #B8862E; background: #FBF7EF; color: #29272A; font: 600 15px/1.2 'Hind Vadodara', sans-serif;">
+<sc-for list="{{pages}}" as="it" hint-placeholder-count="25">
+<option value="{{it.k}}">{{it.n}} · {{it.t}}</option>
+</sc-for>
+</select>
+<button type="button" onClick="{{prev}}" aria-label="પાછલું પાનું" style="width: 44px; height: 44px; flex: none; display: flex; align-items: center; justify-content: center; border-radius: 10px; border: 1px solid #B8862E; background: transparent; color: #FBF7EF; cursor: pointer;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<button type="button" onClick="{{next}}" aria-label="આગળનું પાનું" style="width: 44px; height: 44px; flex: none; display: flex; align-items: center; justify-content: center; border-radius: 10px; border: 1px solid #B8862E; background: transparent; color: #FBF7EF; cursor: pointer;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+</div>
+<div class="p-force-compact" style="position: relative; transform: translateZ(0); height: calc(100vh - 60px); overflow: hidden;">
+<sc-if value="{{show.Login}}" hint-placeholder-val="{{false}}"><dc-import name="Login" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.DashC}}" hint-placeholder-val="{{true}}"><dc-import name="DashC" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Regs}}" hint-placeholder-val="{{false}}"><dc-import name="Regs" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.RegDetail}}" hint-placeholder-val="{{false}}"><dc-import name="RegDetail" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.IdCards}}" hint-placeholder-val="{{false}}"><dc-import name="IdCards" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Intake}}" hint-placeholder-val="{{false}}"><dc-import name="Intake" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Padhramni}}" hint-placeholder-val="{{false}}"><dc-import name="Padhramni" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.PadhramniNew}}" hint-placeholder-val="{{false}}"><dc-import name="PadhramniNew" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Reports}}" hint-placeholder-val="{{false}}"><dc-import name="Reports" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Analytics}}" hint-placeholder-val="{{false}}"><dc-import name="Analytics" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Settings}}" hint-placeholder-val="{{false}}"><dc-import name="Settings" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Site}}" hint-placeholder-val="{{false}}"><dc-import name="Site" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Users}}" hint-placeholder-val="{{false}}"><dc-import name="Users" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Audit}}" hint-placeholder-val="{{false}}"><dc-import name="Audit" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Account}}" hint-placeholder-val="{{false}}"><dc-import name="Account" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Teams}}" hint-placeholder-val="{{false}}"><dc-import name="Teams" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Availability}}" hint-placeholder-val="{{false}}"><dc-import name="Availability" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.CapacityDates}}" hint-placeholder-val="{{false}}"><dc-import name="CapacityDates" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Devotees}}" hint-placeholder-val="{{false}}"><dc-import name="Devotees" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.DevoteesForm}}" hint-placeholder-val="{{false}}"><dc-import name="DevoteesForm" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Programme}}" hint-placeholder-val="{{false}}"><dc-import name="Programme" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Invitations}}" hint-placeholder-val="{{false}}"><dc-import name="Invitations" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Whatsapp}}" hint-placeholder-val="{{false}}"><dc-import name="Whatsapp" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Notifications}}" hint-placeholder-val="{{false}}"><dc-import name="Notifications" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{show.Search}}" hint-placeholder-val="{{false}}"><dc-import name="Search" hint-size="100%,100vh"></dc-import></sc-if>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"screen":{"editor":"enum","options":["Login","DashC","Regs","RegDetail","IdCards","Intake","Padhramni","PadhramniNew","Reports","Analytics","Settings","Site","Users","Audit","Account","Teams","Availability","CapacityDates","Devotees","DevoteesForm","Programme","Invitations","Whatsapp","Notifications","Search"],"default":"DashC"},"$preview":{"width":1180,"height":2200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var P = [
+      ['Login', 'લૉગિન'], ['DashC', 'આજનું કામ (ડેશબોર્ડ)'], ['Regs', 'નોંધણી યાદી'], ['RegDetail', 'નોંધણી વિગત'],
+      ['IdCards', 'ઓળખકાર્ડ'], ['Intake', 'નવી નોંધણી ચાલુ/બંધ'], ['Padhramni', 'પધરામણી'], ['PadhramniNew', 'પધરામણીની નવી વિનંતી'],
+      ['Reports', 'રિપોર્ટ'], ['Analytics', 'પેનલના આંકડા'], ['Settings', 'સેટિંગ્સ'], ['Site', 'વેબસાઇટ સ્થિતિ'],
+      ['Users', 'યુઝર્સ અને ભૂમિકા'], ['Audit', 'કોણે શું કર્યું'], ['Account', 'મારું ખાતું'], ['Teams', 'ટીમો'],
+      ['Availability', 'કોણ ક્યારે આવી શકે'], ['CapacityDates', 'દિવસ મુજબ સેવક જગ્યા'], ['Devotees', 'ભક્તો'], ['DevoteesForm', 'ભક્ત ઉમેરો'],
+      ['Programme', 'મહોત્સવ કાર્યક્રમ'], ['Invitations', 'નિમંત્રણ યાદી'], ['Whatsapp', 'WhatsApp મેસેજ'], ['Notifications', 'મેસેજની સ્થિતિ'],
+      ['Search', 'શોધ']
+    ];
+    var G = '૦૧૨૩૪૫૬૭૮૯';
+    var gu = function (n) { return String(n).split('').map(function (c) { return G[+c]; }).join(''); };
+    var keys = P.map(function (p) { return p[0]; });
+    var cur = this.state.cur || this.props.screen || 'DashC';
+    if (keys.indexOf(cur) < 0) cur = 'DashC';
+    var i = keys.indexOf(cur);
+    var self = this;
+    var show = {};
+    keys.forEach(function (k) { show[k] = k === cur; });
+    return {
+      cur: cur,
+      show: show,
+      pages: P.map(function (p, j) { return { k: p[0], t: p[1], n: gu(j + 1) }; }),
+      onSel: function (e) { self.setState({ cur: e.target.value }); },
+      prev: function () { self.setState({ cur: keys[(i - 1 + keys.length) % keys.length] }); },
+      next: function () { self.setState({ cur: keys[(i + 1) % keys.length] }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

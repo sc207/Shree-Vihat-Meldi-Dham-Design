@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>ઘટકો — ડેસ્કટોપ</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root" style="width: 1440px; min-height: 3180px; padding: 56px 64px 64px; display: flex; flex-direction: column; gap: 32px;">
+
+<header>
+<p class="p-muted" style="margin: 0; font-weight: 600;">Phase C · બેચ ૧ · ફક્ત ડિઝાઇન</p>
+<h1 style="margin: 4px 0 0; font-family: var(--display); font-size: 40px; line-height: 1.3; font-weight: 600; color: #741A32;">ઘટકો — ડેસ્કટોપ</h1>
+<p style="margin: 6px 0 0; color: #675A51;">બધાં પાનાંમાં વપરાતા સામાન્ય ભાગ. કોઈ બટન કામ કરતું નથી — ફક્ત દેખાવ.</p>
+</header>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start;">
+
+<section class="p-card" aria-labelledby="c-btn">
+<div class="p-card__h"><h2 id="c-btn" class="p-h2">૧ · બટન</h2></div>
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+<button type="button" class="p-btn p-btn--pri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>નવી પધરામણી</button>
+<button type="button" class="p-btn p-btn--sec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>CSV ડાઉનલોડ</button>
+<button type="button" class="p-btn p-btn--ghost">રદ કરો</button>
+<button type="button" class="p-btn p-btn--danger">હા, રદ કરો</button>
+<button type="button" class="p-btn p-btn--pri" disabled>સાચવો</button>
+</div>
+<div class="p-small p-muted">મુખ્ય (એક પાનામાં એક જ) · બીજું · સાદું · જોખમી (ફક્ત પુષ્ટિ સંદેશમાં) · બંધ</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+<button type="button" class="p-ibtn" aria-label="વિગત બંધ કરો"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+<button type="button" class="p-ibtn" aria-label="સૂચનાઓ, ૩ નવી"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20.5a2 2 0 0 0 4 0"></path></svg><span class="p-count" aria-hidden="true">૩</span></button>
+<button type="button" class="p-btn p-btn--sec p-btn--sm">નાનું બટન (40)</button>
+<span style="display: inline-flex; gap: 8px; padding: 8px; border-radius: 12px; background: #481022;"><button type="button" class="p-btn p-btn--light p-btn--sm">“સમીક્ષા થઈ” કરો</button><button type="button" class="p-btn p-btn--onDark p-btn--sm">પસંદગી હટાવો</button></span>
+</div>
+<div class="p-small p-muted">ચિહ્ન-બટન હંમેશાં ગુજરાતીમાં નામ સાથે (સ્ક્રીન રીડર માટે). દરેક બટન ઓછામાં ઓછું 44px ઊંચું; નાનું 40px ફક્ત ડેસ્કટોપ પર.</div>
+</div>
+</section>
+
+<section class="p-card" aria-labelledby="c-in">
+<div class="p-card__h"><h2 id="c-in" class="p-h2">૨ · ફોર્મનાં ખાનાં</h2></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
+<div class="p-field"><label for="cf1">ભક્તનું નામ</label><input id="cf1" class="p-input" type="text" value="રમેશભાઈ પટેલ"><span class="p-help">જેમ ઓળખકાર્ડ પર છપાય તેમ</span></div>
+<div class="p-field"><label for="cf2">મોબાઇલ નંબર</label><input id="cf2" class="p-input is-err" type="tel" value="98765"><span class="p-err"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9.5 17h-19zM12 10v4.5M12 17.5v.3"></path></svg>૧૦ અંકનો નંબર લખો</span></div>
+<label class="p-search" style="grid-column: 1 / -1; border-radius: 12px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14M20 20l-4-4"></path></svg><span class="p-vh">શોધો</span><input type="search" placeholder="નામ, મોબાઇલ કે નોંધણી નંબર"></label>
+<div class="p-field"><span class="p-flab">પસંદગી (select)</span><button type="button" class="p-select" style="justify-content: space-between;"><span><small>સેવા:</small> બધી</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button></div>
+<div class="p-field"><span class="p-flab">ચેકબોક્સ</span><label class="p-check"><input class="p-cb" type="checkbox" checked readOnly="{{true}}">આ પાનાની બધી પસંદ કરો</label></div>
+<div class="p-field" style="grid-column: 1 / -1;"><span class="p-flab">ચાલુ / બંધ (ફક્ત સ્થિતિ દેખાડવા)</span>
+<div style="display: flex; flex-wrap: wrap; gap: 24px;"><span class="p-switch"><span class="p-switch__t is-on" aria-hidden="true"></span>નોંધણી ફોર્મ: ચાલુ</span><span class="p-switch"><span class="p-switch__t" aria-hidden="true"></span>પધરામણી ફોર્મ: બંધ</span></div>
+<span class="p-help">નિયંત્રણ કેન્દ્રની સ્વિચ આ બેચમાં ફક્ત દેખાવ છે — કોઈ સાચી સ્વિચ જોડાયેલી નથી.</span></div>
+</div>
+</section>
+
+<section class="p-card" aria-labelledby="c-badge">
+<div class="p-card__h"><h2 id="c-badge" class="p-h2">૩ · સ્થિતિ (badge)</h2></div>
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<div><b>નોંધણીની સ્થિતિ — ત્રણેય અલગ રહે</b></div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px;"><span class="p-badge p-badge--new"><i></i>નવી</span><span class="p-badge p-badge--ok"><i></i>સમીક્ષા થઈ</span><span class="p-badge p-badge--off"><i></i>રદ</span></div>
+<div class="p-small p-muted">“રદ સિવાયની” = નવી + સમીક્ષા થઈ. આ ફક્ત યાદીનું ફિલ્ટર છે, અલગ સ્થિતિ નથી — એટલે તેનો badge નથી.</div>
+<div style="border-top: 1px solid #E4D6BE; padding-top: 14px;"><b>બીજા વિભાગોમાં</b></div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px;"><span class="p-badge p-badge--ok"><i></i>ચાલુ</span><span class="p-badge p-badge--off"><i></i>બંધ</span><span class="p-badge p-badge--warn"><i></i>બાકી</span><span class="p-badge p-badge--bad"><i></i>મોકલાયો નથી</span><span class="p-badge p-badge--ok"><i></i>પહોંચ્યો</span></div>
+<div class="p-small p-muted">નિમંત્રણમાં “બંધ” એ જ રહે — “પૂરી” નહીં, કારણ કે બંધ કરવું અને પૂરું થવું જુદી વાત છે. સંદેશાના બાકીના પ્રકાર બેચ ૨ માં સાચી યાદી જોઈને.</div>
+</div>
+</section>
+
+<section class="p-card" aria-labelledby="c-tabs">
+<div class="p-card__h"><h2 id="c-tabs" class="p-h2">૪ · ટૅબ, ફિલ્ટર અને ક્રમ</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<div class="p-tabs" role="tablist" aria-label="નમૂનો"><button type="button" class="p-tab" role="tab" aria-selected="true">બધી <span class="p-cnt">૧,૩૦૪</span></button><button type="button" class="p-tab" role="tab" aria-selected="false">નવી <span class="p-cnt">૧૨</span></button><button type="button" class="p-tab" role="tab" aria-selected="false">સમીક્ષા થઈ <span class="p-cnt">૧,૨૩૬</span></button><button type="button" class="p-tab" role="tab" aria-selected="false">રદ <span class="p-cnt">૫૬</span></button></div>
+<div class="p-chips"><span class="p-chip">સેવા: ભોજનાલય<button type="button" aria-label="સેવા ફિલ્ટર હટાવો"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></span><span class="p-chip">સેવાનો દિવસ: ૧૫ નવે.<button type="button" aria-label="દિવસ ફિલ્ટર હટાવો"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></span><button type="button" class="p-btn p-btn--ghost p-btn--sm">બધા ફિલ્ટર હટાવો</button></div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;"><button type="button" class="p-select"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5v14M5 8l3-3 3 3M16 19V5M13 16l3 3 3-3"></path></svg><small>ક્રમ:</small>નવી પહેલાં<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button><span class="p-small">વિકલ્પ (હાલની સિસ્ટમના જ): નવી પહેલાં · જૂની પહેલાં · નામ મુજબ</span></div>
+<p class="p-small p-muted" style="margin: 0;">ક્રમ હાલની સિસ્ટમમાં છે — ફક્ત દેખાવ નવો. કોઈ નવો વિકલ્પ ઉમેર્યો નથી.</p>
+</div>
+</section>
+
+<section class="p-card" aria-labelledby="c-nav">
+<div class="p-card__h"><h2 id="c-nav" class="p-h2">૫ · બાજુ-મેનુ (મેનુ C)</h2></div>
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+<div style="width: 256px; flex: none; border-radius: 16px; background: #481022; padding: 12px;">
+<div class="p-brand" style="color: #FBF7EF;"><span class="p-emb"><img src="/_blob/3f1091500bdbb5ec48a47fce1ab31208" alt="" width="40" height="40"></span><span class="p-brand__t"><b>શ્રી વિહત મેલડી ધામ</b><small>એડમિન પેનલ</small></span></div>
+<ul class="p-nav" style="margin-top: 10px;">
+<li><a href="#" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4zM10 20v-5h4v5"></path></svg><span class="p-lbl">આજનું કામ</span></a></li>
+<li><a href="#" style="background: rgba(251,247,239,.09);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5h8v3H8zM6.5 5H5v15.5h14V5h-1.5M8.5 11h7M8.5 15h5"></path></svg><span class="p-lbl">નોંધણી</span></a></li>
+</ul>
+<div class="p-ngroup"><div class="p-ngroup__h">મહોત્સવ તૈયારી</div></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14.5px;">
+<div><b>હાલનું પાનું</b> — આઇવરી પટ્ટી, મરૂન લખાણ</div>
+<div><b>માઉસ ઉપર</b> — આછો પ્રકાશ</div>
+<div><b>લોગો</b> — વેબસાઇટનું જ આઇવરી મંદિર-ચિહ્ન (ઘેરા મેનુ પર). આછી પાછળ લાલ ચિહ્ન</div>
+<div><b>જૂથ</b> — “મહોત્સવ તૈયારી” ના ૩ વિભાગ. દરેક વિભાગ હાલની પરવાનગી મુજબ જ દેખાય.</div>
+<div><b>નિયંત્રણ કેન્દ્ર</b> — બન્યું નથી, એટલે મેનુમાં નથી (ભવિષ્યનો પ્રસ્તાવ).</div>
+<div class="p-muted">1024–1279 પર ચિહ્ન + ટૂંકું નામ; ફોન આડો હોય ત્યારે ફક્ત ચિહ્ન.</div>
+</div>
+</div>
+</section>
+
+<section class="p-card" aria-labelledby="c-hd">
+<div class="p-card__h"><h2 id="c-hd" class="p-h2">૬ · ઉપરની પટ્ટી અને પાનાનું શીર્ષક</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<div class="p-top" style="border: 1px solid #E4D6BE; border-radius: 12px; padding: 10px 16px;"><label class="p-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14M20 20l-4-4"></path></svg><span class="p-vh">આખી પેનલમાં શોધો</span><input type="search" placeholder="આખી પેનલમાં શોધો"></label><span class="p-top__sp"></span><button type="button" class="p-ibtn p-aplus" aria-label="મોટા અક્ષર">અ+</button><button type="button" class="p-ibtn" aria-label="સૂચનાઓ, ૩ નવી"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20.5a2 2 0 0 0 4 0"></path></svg><span class="p-count" aria-hidden="true">૩</span></button></div>
+<div class="p-ph"><div><h1>નોંધણી</h1><p>સેવા માટે આવેલી બધી નોંધણી</p></div><div class="p-ph__act"><button type="button" class="p-btn p-btn--sec">CSV ડાઉનલોડ</button></div></div>
+<div class="p-small p-muted">શીર્ષક એક જ વાર — ઉપરની પટ્ટીમાં ફરી નહીં. જમણી બાજુ પાનાનું એક મુખ્ય કામ. “અ+” હાલની સિસ્ટમનું મોટા અક્ષરનું બટન — એ જ જગ્યાએ પાછું મૂક્યું.</div>
+</div>
+</section>
+
+<section class="p-card" aria-labelledby="c-kpi" style="grid-column: 1 / -1;">
+<div class="p-card__h"><h2 id="c-kpi" class="p-h2">૭ · ડેશબોર્ડના ભાગ</h2></div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px;">
+<article class="p-wc p-wc--urgent"><div class="p-wc__n">૧૨</div><div class="p-wc__b"><div class="p-wc__t">નવી નોંધણી — સમીક્ષા બાકી</div><div class="p-wc__m">ખોલીને સમીક્ષા કરો</div></div><a class="p-link" href="#">નોંધણી જુઓ</a></article>
+<article class="p-wc"><div class="p-wc__n">૯</div><div class="p-wc__b"><div class="p-wc__t">ફોટો બાકી</div><div class="p-wc__m">ફોટો વગરની નોંધણી</div></div><a class="p-link" href="#">નોંધણી જુઓ</a></article>
+<div class="p-kpi"><div class="p-kpi__l">ચાલુ નોંધણી (રદ સિવાય)</div><div class="p-kpi__v">૧,૨૪૮</div><div class="p-kpi__d">કુલ મર્યાદા ૨,૦૦૦</div></div>
+<a class="p-rd" href="#"><span class="p-rd__h"><span class="p-rd__t">નિમંત્રણ યાદી</span></span><span class="p-rd__m">કોને હાથોહાથ નિમંત્રણ આપ્યું તેની નોંધ</span></a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; margin-top: 16px; font-size: 14.5px;">
+<span><b>કામ-કાર્ડ</b> — હાલના ડેશબોર્ડનો જ આંકડો + શું કરવું + એક લિંક. પીળું = પહેલાં કરવાનું.</span>
+<span><b>આંકડો</b> — લેબલ, મોટો આંકડો, નાની સરખામણી.</span>
+<span><b>લિંક-કાર્ડ</b> — ફક્ત પાના પર જવા માટે; કોઈ નવો આંકડો નહીં.</span><span class="p-sample">બધા આંકડા ઉદાહરણ</span>
+</div>
+<div class="p-strip" style="margin-top: 16px;"><span class="p-strip__i"><span class="p-sd p-sd--ok" aria-hidden="true"></span>ચાલુ</span><span class="p-strip__i"><span class="p-sd p-sd--warn" aria-hidden="true"></span>ધ્યાન આપો</span><span class="p-strip__i"><span class="p-sd p-sd--bad" aria-hidden="true"></span>તકલીફ</span><span class="p-strip__i"><span class="p-sd p-sd--off" aria-hidden="true"></span>બંધ</span><span class="p-strip__end p-small p-muted">સ્થિતિ-પટ્ટી: દરેક નિશાનનો આકાર જુદો — ફક્ત રંગ પર આધાર નહીં</span></div>
+</section>
+
+<section class="p-card" aria-labelledby="c-tbl" style="grid-column: 1 / -1;">
+<div class="p-card__h"><h2 id="c-tbl" class="p-h2">૮ · યાદી, એકસાથે પસંદગી અને પાનાં</h2></div>
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<div class="p-pzbox" style="padding: 0; margin-top: 6px; border-color: #1F4E79;"><span class="p-check-tag">એકસાથે ફેરફાર: હાલની સિસ્ટમમાં છે કે નહીં — ચકાસણી બાકી</span><div class="p-bulk"><b>૨ પસંદ કરી</b><button type="button" class="p-btn p-btn--light p-btn--sm">“સમીક્ષા થઈ” કરો</button><button type="button" class="p-btn p-btn--onDark p-btn--sm">પસંદગી હટાવો</button></div></div>
+<div class="p-tablebox"><table class="p-table"><thead><tr><th scope="col" class="p-cbcell"><span class="p-vh">પસંદગી</span></th><th scope="col">નોંધણી નંબર</th><th scope="col">નામ</th><th scope="col">મોબાઇલ</th><th scope="col">સેવા</th><th scope="col">સ્થિતિ</th><th scope="col"><span class="p-vh">વિગત</span></th></tr></thead>
+<tbody>
+<tr><td class="p-cbcell"><label class="p-cblab"><input class="p-cb" type="checkbox" aria-label="પસંદ કરો"></label></td><td class="p-id">SEVA-000142</td><td class="p-nm">રમેશભાઈ પટેલ</td><td class="p-tnum">98XXXXXX21</td><td>ભોજનાલય સેવા</td><td><span class="p-badge p-badge--new"><i></i>નવી</span></td><td><a class="p-link" href="#">વિગત</a></td></tr>
+<tr class="is-sel"><td class="p-cbcell"><label class="p-cblab"><input class="p-cb" type="checkbox" checked readOnly="{{true}}" aria-label="પસંદ કરો"></label></td><td class="p-id">SEVA-000141</td><td class="p-nm">ગીતાબેન શાહ</td><td class="p-tnum">97XXXXXX08</td><td>સ્વચ્છતા સેવા</td><td><span class="p-badge p-badge--ok"><i></i>સમીક્ષા થઈ</span></td><td><a class="p-link" href="#">વિગત</a></td></tr>
+<tr class="is-open"><td class="p-cbcell"><label class="p-cblab"><input class="p-cb" type="checkbox" aria-label="પસંદ કરો"></label></td><td class="p-id">SEVA-000137</td><td class="p-nm">જયશ્રીબેન સોલંકી</td><td class="p-tnum">90XXXXXX33</td><td>અન્ય</td><td><span class="p-badge p-badge--off"><i></i>રદ</span></td><td><a class="p-link" href="#">વિગત</a></td></tr>
+</tbody></table></div>
+<div class="p-pager"><span class="p-small p-muted">૧–૧૦ · કુલ ૧,૩૦૪ માંથી</span><nav class="p-pager__b" aria-label="પાનાં"><button type="button" class="p-pg" aria-current="page">૧</button><button type="button" class="p-pg">૨</button><button type="button" class="p-pg">૩</button></nav></div>
+<div class="p-small p-muted">હરોળ: સામાન્ય · પસંદ કરેલી (આછી ક્રીમ) · વિગત ખુલ્લી (ઘેરી ક્રીમ). ફોન અને SEVA નંબર અંગ્રેજી અંકમાં; મોબાઇલ યાદીમાં ઢાંકેલો. 700–999px પર નામ નીચે નંબર અને મોબાઇલ એક જ ખાનામાં. બધાં નામ ઉદાહરણ.</div>
+</div>
+</section>
+
+<section class="p-card" aria-labelledby="c-dr">
+<div class="p-card__h"><h2 id="c-dr" class="p-h2">૯ · “વધુ કાર્ય” મેનુ</h2><span class="p-pz">પ્રસ્તાવિત — મંજૂર નથી</span></div>
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+<div class="p-menu" role="menu" aria-label="વધુ કાર્ય">
+<button type="button" role="menuitem" class="is-danger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a8 8 0 1 0 0 16a8 8 0 1 0 0-16M6.5 6.5l11 11"></path></svg>નોંધણી રદ કરો…</button>
+</div>
+<p class="p-small" style="margin: 0;">“નોંધણી રદ કરો” હાલની સિસ્ટમમાં છે. તેને મુખ્ય બટનની બાજુમાંથી આ મેનુમાં ખસેડવું પ્રસ્તાવ છે — ભૂલથી દબાઈ ન જાય. મેનુમાં બીજું કોઈ નવું કામ ઉમેર્યું નથી.</p>
+</div>
+</section>
+
+<section class="p-card" aria-labelledby="c-cf">
+<div class="p-card__h"><h2 id="c-cf" class="p-h2">૧૦ · પુષ્ટિ સંદેશ</h2><span class="p-pz">પ્રસ્તાવિત — મંજૂર નથી</span></div>
+<div class="p-dialog" role="alertdialog" aria-labelledby="cf-t" aria-describedby="cf-d">
+<h2 id="cf-t">આ નોંધણી રદ કરવી છે?</h2>
+<p id="cf-d">રમેશભાઈ પટેલ (<span class="p-tnum">SEVA-000142</span>) ની નોંધણી “રદ” સ્થિતિમાં જશે.</p>
+<div class="p-dialog__a"><button type="button" class="p-btn p-btn--sec">ના, પાછા જાઓ</button><button type="button" class="p-btn p-btn--danger">હા, રદ કરો</button></div>
+</div>
+<p class="p-small p-muted" style="margin: 12px 0 0;">રદ પછી ભક્તને સંદેશ જાય છે કે નહીં, અને રદ પાછું થઈ શકે કે નહીં — હાલની સિસ્ટમ જોઈને જ લખાણમાં ઉમેરવું.</p>
+</section>
+
+<section class="p-card" aria-labelledby="c-role" style="grid-column: 1 / -1;">
+<div class="p-card__h"><h2 id="c-role" class="p-h2">૧૧ · ભૂમિકાનાં દેખાતાં નામ અને મુખ્ય શબ્દો</h2></div>
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 24px;">
+<div>
+<div class="p-tablebox"><table class="p-table"><thead><tr><th scope="col">ભૂમિકાનું ગુજરાતી નામ</th><th scope="col">ક્યાં દેખાય</th></tr></thead><tbody>
+<tr><td class="p-nm">એડમિન</td><td>બાજુ-મેનુ નીચે, વપરાશકર્તા યાદી</td></tr>
+<tr><td class="p-nm">નોંધણી સંભાળનાર</td><td>બાજુ-મેનુ નીચે, વપરાશકર્તા યાદી</td></tr>
+<tr><td class="p-nm">ટીમ લીડર</td><td>બાજુ-મેનુ નીચે, પ્રવૃત્તિ યાદી</td></tr>
+</tbody></table></div>
+<p class="p-small p-muted" style="margin: 10px 0 0;">ફક્ત દેખાતું નામ. પરવાનગી અને સિસ્ટમની અંદરની ભૂમિકા-ઓળખ બદલાતી નથી. બાકીની ભૂમિકાનાં નામ હાલની યાદી જોઈને બેચ ૨ માં.</p>
+</div>
+<div class="p-tablebox"><table class="p-table"><thead><tr><th scope="col">પહેલાં</th><th scope="col">હવે</th><th scope="col">કારણ</th></tr></thead><tbody>
+<tr><td>રજિસ્ટ્રેશન / નોંધણીઓ / સેવા નોંધણીઓ</td><td class="p-nm">નોંધણી</td><td>એક જ શબ્દ બધે</td></tr>
+<tr><td>Logout / લોગ આઉટ</td><td class="p-nm">લૉગઆઉટ</td><td>મંજૂર જોડણી</td></tr>
+<tr><td>Excel ડાઉનલોડ</td><td class="p-nm">CSV ડાઉનલોડ</td><td>ફાઈલ ખરેખર CSV છે</td></tr>
+<tr><td>ID કાર્ડ</td><td class="p-nm">ઓળખકાર્ડ</td><td>હાલનો શબ્દ, બધે એક જ</td></tr>
+<tr><td>ઓડિટ ઇતિહાસ</td><td class="p-nm">કોણે શું કર્યું</td><td>મેનુનું પ્રસ્તાવિત નામ</td></tr>
+<tr><td>સ્વીકૃત · પાકી · સમીક્ષા થઈ</td><td class="p-nm">જેમ છે તેમ</td><td>અર્થ ચકાસ્યા વગર ભેગા નહીં</td></tr>
+<tr><td>અહેવાલ</td><td class="p-nm">રિપોર્ટ</td><td>રોજનો બોલાતો શબ્દ</td></tr>
+<tr><td>સેટિંગ</td><td class="p-nm">સેટિંગ્સ</td><td>મેનુમાં એકસરખું</td></tr>
+</tbody></table></div>
+</div>
+</section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3180}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

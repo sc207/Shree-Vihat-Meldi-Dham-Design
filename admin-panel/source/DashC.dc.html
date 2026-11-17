@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>આજનું કામ — ડેશબોર્ડ</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root p-app">
+
+<aside class="p-side" aria-label="મુખ્ય મેનુ">
+<div class="p-brand"><span class="p-emb"><img src="/_blob/3f1091500bdbb5ec48a47fce1ab31208" alt="" width="40" height="40"></span><span class="p-brand__t"><b>શ્રી વિહત મેલડી ધામ</b><small>એડમિન પેનલ</small></span></div>
+<nav aria-label="વિભાગો">
+<ul class="p-nav">
+<sc-for list="{{nav}}" as="it" hint-placeholder-count="5">
+<li><a href="{{it.href}}" class="{{it.cls}}" aria-current="{{it.cur}}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{it.d}}"></path></svg><span class="p-lbl">{{it.t}}</span><span class="p-sl">{{it.s}}</span><sc-if value="{{it.tag}}" hint-placeholder-val="{{false}}"><span class="p-ntag">{{it.tag}}</span></sc-if></a></li>
+</sc-for>
+<li class="p-only-land"><a href="ComponentsPhone.dc.html" aria-label="વધુ — બધા વિભાગ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span class="p-lbl">વધુ</span></a></li>
+</ul>
+<sc-if value="{{navC}}" hint-placeholder-val="{{true}}">
+<div class="p-ngroup">
+<div class="p-ngroup__h">મહોત્સવ તૈયારી</div>
+<ul class="p-nav">
+<sc-for list="{{group}}" as="it" hint-placeholder-count="3">
+<li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{it.d}}"></path></svg><span class="p-lbl">{{it.t}}</span><span class="p-sl">{{it.s}}</span></a></li>
+</sc-for>
+</ul>
+</div>
+</sc-if>
+</nav>
+<div class="p-side__foot">
+<div class="p-who"><span class="p-avatar" aria-hidden="true">ઉ</span><span class="p-who__t"><b>ઉદાહરણ વપરાશકર્તા</b><small>એડમિન</small></span></div>
+<button type="button" class="p-logout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M18 12H9"></path></svg>લૉગઆઉટ</button>
+</div>
+</aside>
+
+<div class="p-main">
+<header class="p-top">
+<div class="p-top__brand"><span class="p-emb"><img src="/_blob/3152a68bd766f07ab3774c82f8c243f1" alt="" width="34" height="34"></span><b>શ્રી વિહત મેલડી ધામ</b></div>
+<label class="p-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14M20 20l-4-4"></path></svg><span class="p-vh">શોધો</span><input type="search" placeholder="નામ, SEVA નંબર કે મોબાઇલના છેલ્લા 4 અંક"></label>
+<span class="p-top__sp"></span>
+<button type="button" class="p-ibtn p-ibtn--search" aria-label="શોધો"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14M20 20l-4-4"></path></svg></button>
+<button type="button" class="p-ibtn p-aplus" aria-label="મોટા અક્ષર">અ+</button>
+<button type="button" class="p-ibtn" aria-label="સૂચનાઓ, ૩ નવી"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20.5a2 2 0 0 0 4 0"></path></svg><span class="p-count" aria-hidden="true">૩</span></button>
+</header>
+
+<div class="p-scroll">
+<main class="p-page">
+
+<div class="p-ph p-ph--hero">
+<div><span class="p-eyebrow">શ્રી વિહત મેલડી ધામ · એડમિન પેનલ</span><h1>આજનું કામ</h1><p>બુધવાર, ૪ નવેમ્બર ૨૦૨૬ · <span class="p-sample">ઉદાહરણ — બધા આંકડા ઉદાહરણ છે</span></p></div>
+<div class="p-ph__act"><a class="p-btn p-btn--pri" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>નવી પધરામણી વિનંતી</a></div>
+</div>
+
+<section class="p-strip" aria-label="હાલની સ્થિતિ">
+<span class="p-strip__i"><span class="p-sd p-sd--ok" aria-hidden="true"></span>નવી નોંધણી: <b>ચાલુ</b></span>
+<span class="p-strip__i"><span class="p-sd p-sd--ok" aria-hidden="true"></span>વેબસાઇટ: <b>બધાને દેખાય</b></span>
+<span class="p-strip__i"><span class="p-sd p-sd--off" aria-hidden="true"></span>ચેતવણી: <b>કોઈ નથી</b></span>
+<span class="p-strip__end"><a class="p-link" href="#">નવી નોંધણી ચાલુ/બંધ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></span>
+</section>
+
+<section class="p-sec" aria-labelledby="h-work">
+<h2 id="h-work" class="p-h2">આજે શું કરવાનું છે</h2>
+<div class="p-work">
+<sc-for list="{{work}}" as="w" hint-placeholder-count="3">
+<article class="{{w.cls}}">
+<div class="p-wc__n">{{w.n}}</div>
+<div class="p-wc__b"><div class="p-wc__t">{{w.t}}</div><div class="p-wc__m">{{w.m}}</div></div>
+<a class="p-link" href="{{w.href}}">{{w.go}}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+</article>
+</sc-for>
+</div>
+</section>
+
+<section class="p-kpis" aria-label="મુખ્ય આંકડા">
+<sc-for list="{{kpis}}" as="k" hint-placeholder-count="3">
+<div class="p-kpi"><div class="p-kpi__l">{{k.l}}</div><div class="p-kpi__v">{{k.v}}</div><div class="p-kpi__d">{{k.d}}</div></div>
+</sc-for>
+</section>
+
+<div class="p-split">
+<section class="p-card" aria-labelledby="h-chart">
+<div class="p-card__h"><h2 id="h-chart" class="p-h2">નોંધણી — છેલ્લા ૧૪ દિવસ</h2><span class="p-small p-muted">૨૨ ઑક્ટો. – ૪ નવે.</span></div>
+<div class="p-chart" role="img" aria-label="છેલ્લા ૧૪ દિવસમાં રોજની નોંધણી, ઉદાહરણ આંકડા">
+<sc-for list="{{bars}}" as="b" hint-placeholder-count="14">
+<div class="{{b.cls}}"><small>{{b.v}}</small><span class="p-bar__f" style="{{b.h}}"></span></div>
+</sc-for>
+</div>
+<div class="p-chartx" aria-hidden="true">
+<sc-for list="{{bars}}" as="b" hint-placeholder-count="14"><span>{{b.x}}</span></sc-for>
+</div>
+<div class="p-legend"><span><i style="background: #741A32;"></i>તે દિવસની રદ સિવાયની નોંધણી</span><span><i style="background: #B4461A;"></i>આજે</span></div>
+</section>
+<section class="p-card" aria-labelledby="h-vg">
+<div class="p-card__h"><h2 id="h-vg" class="p-h2">મહોત્સવ સેવકો — દિવસ મુજબ</h2></div>
+<table class="p-vg">
+<caption class="p-vh">દરેક દિવસે સોંપેલા સેવક અને કુલ જગ્યા, ઉદાહરણ</caption>
+<thead><tr><th scope="col">દિવસ</th><th scope="col">સવાર</th><th scope="col">બપોર પછી</th></tr></thead>
+<tbody>
+<sc-for list="{{vg}}" as="r" hint-placeholder-count="5">
+<tr><th scope="row">{{r.d}}</th><td class="{{r.ac}}">{{r.a}}</td><td class="{{r.bc}}">{{r.b}}</td></tr>
+</sc-for>
+</tbody>
+</table>
+<p class="p-small p-muted" style="margin: 10px 0 0;">આ સેવકોની જગ્યા છે, નોંધણીની સંખ્યા નથી. પીળું = ૮૦% થી વધુ ભરાયું.</p>
+</section>
+</div>
+
+<section class="p-sec" aria-labelledby="h-ready">
+<h2 id="h-ready" class="p-h2">મહોત્સવ તૈયારી</h2>
+<div class="p-ready">
+<a class="p-rd" href="#"><span class="p-rd__h"><span class="p-rd__t">ભક્તો</span></span><span class="p-rd__m">ભક્ત યાદી જુઓ</span></a>
+<a class="p-rd" href="#"><span class="p-rd__h"><span class="p-rd__t">નિમંત્રણ યાદી</span></span><span class="p-rd__m">કોને હાથોહાથ નિમંત્રણ આપ્યું તેની નોંધ</span></a>
+<a class="p-rd" href="#"><span class="p-rd__h"><span class="p-rd__t">હાજરી</span></span><span class="p-rd__m">ટીમ મુજબ આજની હાજરી જુઓ</span></a>
+</div>
+</section>
+
+<section class="p-card" aria-labelledby="h-recent">
+<div class="p-card__h"><h2 id="h-recent" class="p-h2">તાજેતરની નોંધણી</h2><a class="p-link" href="Regs.dc.html">બધી નોંધણી જુઓ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a></div>
+<ul class="p-act">
+<sc-for list="{{recent}}" as="a" hint-placeholder-count="5">
+<li><span class="p-avatar" aria-hidden="true">{{a.i}}</span><span><b>{{a.who}}</b> · <span class="p-tnum">{{a.id}}</span> · <span class="{{a.bcls}}"><i></i>{{a.st}}</span></span><time>{{a.at}}</time></li>
+</sc-for>
+</ul>
+</section>
+
+</main>
+</div>
+
+<nav class="p-bbar" aria-label="મુખ્ય મેનુ">
+<ul>
+<li><a href="DashC.dc.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4zM10 20v-5h4v5"></path></svg>આજનું કામ</a></li>
+<li><a href="Regs.dc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5h8v3H8zM6.5 5H5v15.5h14V5h-1.5M8.5 11h7M8.5 15h5"></path></svg>નોંધણી</a></li>
+<li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11zM12 7.6a2.4 2.4 0 1 0 0 4.8a2.4 2.4 0 1 0 0-4.8"></path></svg>પધરામણી</a></li>
+<li><a href="ComponentsPhone.dc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>વધુ</a></li>
+</ul>
+</nav>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"nav":{"editor":"enum","options":["c","a"],"default":"c","section":"મેનુ"},"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const navC = (this.props.nav ?? 'c') !== 'a';
+    const I = {
+      home: 'M4 11l8-7 8 7v9H4zM10 20v-5h4v5',
+      ctrl: 'M4 7h10M18 7h2M4 17h4M12 17h8M14 4v6M8 14v6',
+      reg: 'M8 3.5h8v3H8zM6.5 5H5v15.5h14V5h-1.5M8.5 11h7M8.5 15h5',
+      padh: 'M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11zM12 7.6a2.4 2.4 0 1 0 0 4.8a2.4 2.4 0 1 0 0-4.8',
+      rep: 'M5 20V11M12 20V4M19 20v-6M3 20.5h18',
+      set: 'M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1',
+      team: 'M9 5a3 3 0 1 0 0 6a3 3 0 1 0 0-6M3 20c0-3.4 2.6-5.5 6-5.5s6 2.1 6 5.5M16 6.5a3 3 0 0 1 0 5.5M18 14.8c2 .6 3.2 2.4 3.2 5.2',
+      dev: 'M12 4a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7M5 20c0-3.9 3.1-6.5 7-6.5s7 2.6 7 6.5',
+      fest: 'M4 6h16v12H4zM4 7l8 6 8-6'
+    };
+    const main = [
+      { t: 'આજનું કામ', s: 'આજનું કામ', d: I.home, href: 'DashC.dc.html', cur: 'page' },
+      { t: 'નોંધણી', s: 'નોંધણી', d: I.reg, href: 'Regs.dc.html' },
+      { t: 'પધરામણી', s: 'પધરામણી', d: I.padh, href: '#' },
+      { t: 'રિપોર્ટ', s: 'રિપોર્ટ', d: I.rep, href: '#' },
+      { t: 'સેટિંગ્સ', s: 'સેટિંગ્સ', d: I.set, href: '#' }
+    ];
+    const future = { t: 'નિયંત્રણ કેન્દ્ર', s: 'ભવિષ્ય: નિયંત્રણ', d: I.ctrl, href: '#', cls: 'is-future', tag: 'ભવિષ્યનો પ્રસ્તાવ' };
+    const nav = navC ? main : [main[0], future].concat(main.slice(1));
+    const vals = [6, 9, 7, 12, 8, 5, 10, 14, 11, 9, 13, 16, 11, 14];
+    const days = ['૨૨', '૨૩', '૨૪', '૨૫', '૨૬', '૨૭', '૨૮', '૨૯', '૩૦', '૩૧', '૧', '૨', '૩', '૪'];
+    const gu = (n) => String(n).replace(/[0-9]/g, (d) => '૦૧૨૩૪૫૬૭૮૯'[d]);
+    const bars = vals.map((v, i) => ({
+      v: gu(v), x: days[i], h: 'height: ' + Math.round((v / 16) * 100) + '%',
+      cls: i === vals.length - 1 ? 'p-bar p-bar--today' : 'p-bar'
+    }));
+    const vgRaw = [['૧૫ નવે.', 42, 50, 30, 50], ['૧૬ નવે.', 45, 50, 41, 50], ['૧૭ નવે.', 28, 50, 22, 50], ['૧૮ નવે.', 35, 50, 40, 50], ['૧૯ નવે.', 18, 50, 12, 50]];
+    const vg = vgRaw.map((r) => ({
+      d: r[0], a: gu(r[1]) + ' / ' + gu(r[2]), b: gu(r[3]) + ' / ' + gu(r[4]),
+      ac: r[1] / r[2] >= 0.8 ? 'is-high' : '', bc: r[3] / r[4] >= 0.8 ? 'is-high' : ''
+    }));
+    const ST = { n: ['નવી', 'p-badge p-badge--new'], r: ['સમીક્ષા થઈ', 'p-badge p-badge--ok'], c: ['રદ', 'p-badge p-badge--off'] };
+    const rec = [['ર', 'રમેશભાઈ પટેલ', 'SEVA-000142', 'n', '૧૦:૧૨'], ['ગ', 'ગીતાબેન શાહ', 'SEVA-000141', 'n', '૦૯:૫૦'], ['ક', 'કિશનભાઈ દેસાઈ', 'SEVA-000140', 'n', '૦૯:૩૧'], ['હ', 'હેતલબેન પરમાર', 'SEVA-000139', 'r', 'ગઈકાલે'], ['જ', 'જયશ્રીબેન સોલંકી', 'SEVA-000137', 'c', 'ગઈકાલે']];
+    return {
+      navC,
+      nav,
+      group: [
+        { t: 'ટીમો અને હાજરી', s: 'ટીમો', d: I.team },
+        { t: 'ભક્તો', s: 'ભક્તો', d: I.dev },
+        { t: 'મહોત્સવ અને નિમંત્રણ', s: 'મહોત્સવ', d: I.fest }
+      ],
+      work: [
+        { cls: 'p-wc p-wc--urgent', n: '૧૨', t: 'નવી નોંધણી — સમીક્ષા બાકી', m: 'ખોલીને સમીક્ષા કરો', go: 'નોંધણી જુઓ', href: 'Regs.dc.html' },
+        { cls: 'p-wc', n: '૯', t: 'ફોટો બાકી', m: 'ફોટો વગરની નોંધણી', go: 'નોંધણી જુઓ', href: 'Regs.dc.html' },
+        { cls: 'p-wc', n: '૮', t: 'ફેરફાર નોંધાયા', m: 'મેસેજ હજી બન્યો નથી, કંઈ મોકલાયું નથી', go: 'મેસેજની સ્થિતિ જુઓ', href: '#' }
+      ],
+      kpis: [
+        { l: 'આજની નોંધણી (રદ પણ ગણાય)', v: '૧૪', d: 'રોજની મર્યાદા ૫૦ (ભારતીય સમય)' },
+        { l: 'ચાલુ નોંધણી (રદ સિવાય)', v: '૧,૨૪૮', d: 'કુલ મર્યાદા ૨,૦૦૦' },
+        { l: 'સમીક્ષા થઈ', v: '૧,૨૩૬', d: 'રદ સિવાયની કુલ નોંધણીમાંથી' }
+      ],
+      bars,
+      vg,
+      recent: rec.map((x) => ({ i: x[0], who: x[1], id: x[2], st: ST[x[3]][0], bcls: ST[x[3]][1], at: x[4] }))
+    };
+  }
+}
+</script>
+</body>
+</html>

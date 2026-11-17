@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>પધરામણી</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root p-fsroot">
+<dc-import name="Shell" active="padh" hint-size="100%,64px"></dc-import>
+<div class="p-fsbody">
+<main class="p-page" style="gap: 16px;">
+<div class="p-ph">
+<div><span class="p-eyebrow">પધરામણી</span><h1>પધરામણી</h1><p>પધરામણીની વિનંતી ફોન પર નોંધો, પછી તારીખ નક્કી કરો, ફરી સંપર્ક કરો અને પૂર્ણ કરો. · <span class="p-sample">ઉદાહરણ</span></p></div>
+<div class="p-ph__act"><button type="button" class="p-btn p-btn--sec">હેતુઓ સંભાળો</button><a class="p-btn p-btn--pri" href="PadhramniNew.dc.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>પધરામણીની વિનંતી નોંધો</a></div>
+</div>
+
+<div class="p-tabs" role="tablist" aria-label="કામ પ્રમાણે">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="5">
+<button type="button" class="p-tab" role="tab" aria-selected="{{t.sel}}">{{t.t}} <span class="p-cnt">{{t.n}}</span></button>
+</sc-for>
+</div>
+
+<div class="p-tools">
+<label class="p-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14M20 20l-4-4"></path></svg><span class="p-vh">શોધો</span><input type="search" placeholder="નામ, સ્થળ, હેતુ કે PAD નંબર"></label>
+<button type="button" class="p-select p-only-desk"><small>સ્થિતિ:</small>ચાલુ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+<button type="button" class="p-btn p-btn--sec p-only-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16l-6 7.5V19l-4-2v-4.5z"></path></svg>ફિલ્ટર</button>
+<div class="p-seg" role="group" aria-label="દેખાવ"><button type="button" aria-pressed="true">યાદી</button><button type="button" aria-pressed="false">કાર્યસૂચિ</button><button type="button" aria-pressed="false">અઠવાડિયું</button><button type="button" aria-pressed="false">મહિનો</button></div>
+</div>
+<p class="p-help" style="margin: -6px 0 0;">નામના ઓછામાં ઓછા ૨ અક્ષર, PAD નંબર કે મોબાઇલના છેલ્લા 4 અંક લખો.</p>
+
+<div class="p-tablebox p-rtbox">
+<table class="p-table p-rt">
+<caption class="p-vh">પધરામણી વિનંતીઓ</caption>
+<thead><tr><th scope="col">વિનંતી કરનાર</th><th scope="col">PAD નંબર</th><th scope="col">હેતુ</th><th scope="col">સ્થળ</th><th scope="col">માંગેલી તારીખ</th><th scope="col">સ્થિતિ</th><th scope="col"><span class="p-vh">કાર્ય</span></th></tr></thead>
+<tbody>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="6">
+<tr>
+<td class="p-rt-main"><span class="p-nm">{{r.name}}</span></td>
+<td class="p-tnum" data-label="PAD નંબર">{{r.id}}</td>
+<td data-label="હેતુ">{{r.h}}</td>
+<td data-label="સ્થળ">{{r.p}}</td>
+<td data-label="માંગેલી તારીખ">{{r.d}}</td>
+<td data-label="સ્થિતિ"><span class="{{r.bcls}}"><i></i>{{r.st}}</span></td>
+<td class="p-rt-act"><a class="p-link" href="#">વિગત</a></td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+
+<section class="p-card" aria-label="ખાલી વિભાગનું ઉદાહરણ">
+<div class="p-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"></path></svg><b>આ વિભાગમાં કોઈ પધરામણી નથી.</b><span class="p-small">(ખાલી ટૅબ — ઉદાહરણ: “ફરી સંપર્ક બાકી”)</span></div>
+</section>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const T = [['બાકી વિનંતી', '૬'], ['સમય નક્કી કરવાનો', '૪'], ['ફરી સંપર્ક બાકી', '૦'], ['આજની પધરામણી', '૩'], ['આગામી', '૧૨']];
+    const B = { c: ['ચાલુ', 'p-badge p-badge--new'], t: ['સમય નક્કી કરવાનો', 'p-badge p-badge--warn'], a: ['આગામી', 'p-badge p-badge--ok'], d: ['પૂર્ણ', 'p-badge p-badge--off'] };
+    const raw = [
+      ['ભરતભાઈ ઠક્કર', 'PAD-000031', 'ગૃહ પ્રવેશ', 'સાણંદ', '૨૦ નવે.', 'c'],
+      ['સુનીતાબેન વ્યાસ', 'PAD-000030', 'દુકાન ઉદ્ઘાટન', 'બાવળા', '૨૨ નવે.', 't'],
+      ['પ્રકાશભાઈ રાવલ', 'PAD-000029', 'ગૃહ પ્રવેશ', 'વિરમગામ', 'નક્કી નથી', 'c'],
+      ['મીનાબેન પંચાલ', 'PAD-000028', 'વાસ્તુ', 'અમદાવાદ', '૧૮ નવે.', 'a'],
+      ['જગદીશભાઈ ગોહિલ', 'PAD-000027', 'દુકાન ઉદ્ઘાટન', 'સાણંદ', '૧૭ નવે.', 'a'],
+      ['રેખાબેન નાયક', 'PAD-000026', 'ગૃહ પ્રવેશ', 'ધોળકા', '૨ નવે.', 'd']
+    ];
+    return {
+      tabs: T.map((t, i) => ({ t: t[0], n: t[1], sel: i === 0 ? 'true' : 'false' })),
+      rows: raw.map((x) => ({ name: x[0], id: x[1], h: x[2], p: x[3], d: x[4], st: B[x[5]][0], bcls: B[x[5]][1] }))
+    };
+  }
+}
+</script>
+</body>
+</html>

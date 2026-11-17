@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<title>નિમંત્રણ યાદી</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./phc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FBF7EF}
+a{color:#741A32}a:hover{color:#5C1227}
+</style>
+</helmet>
+<div class="p-root p-fsroot">
+<dc-import name="Shell" active="fest" hint-size="100%,64px"></dc-import>
+<div class="p-fsbody">
+<main class="p-page" style="gap: 16px;">
+<nav class="p-subnav" aria-label="મહોત્સવ અને નિમંત્રણ"><a href="Programme.dc.html">કાર્યક્રમ</a><a href="#" aria-current="page">નિમંત્રણ યાદી</a><a href="Whatsapp.dc.html">WhatsApp મેસેજ</a><a href="Notifications.dc.html">મેસેજની સ્થિતિ</a></nav>
+<div class="p-ph">
+<div><span class="p-eyebrow">મહોત્સવ તૈયારી · મહોત્સવ અને નિમંત્રણ</span><h1>નિમંત્રણ યાદી</h1><p>કોને નિમંત્રણ આપવાનું છે, કોણે તૈયાર કર્યું, કોણે હાથોહાથ આપ્યું અને કોણે મળ્યાની પુષ્ટિ કરી તેની નોંધ અહીં રાખો. અહીંથી કોઈ સંદેશ મોકલાતો નથી.</p></div>
+<div class="p-ph__act"><button type="button" class="p-btn p-btn--pri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>નવી ઝુંબેશ</button></div>
+</div>
+<div class="p-note p-note--off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4zM4 7l8 6 8-6"></path></svg><span>આ ફક્ત હાથે નોંધ રાખવાની યાદી છે — નિમંત્રણ હાથોહાથ અપાય છે, WhatsApp થી નહીં.</span></div>
+<div class="p-grid3">
+<sc-for list="{{lists}}" as="l" hint-placeholder-count="3">
+<article class="p-card" style="display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; justify-content: space-between; gap: 8px; align-items: flex-start;"><b style="font-size: 16px;">{{l.n}}</b><span class="{{l.bc}}"><i></i>{{l.b}}</span></div>
+<div class="p-stats" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+<div class="p-stat"><span>કોને આપવાનું</span><b>{{l.a}}</b></div>
+<div class="p-stat"><span>તૈયાર કર્યાં</span><b>{{l.p}}</b></div>
+<div class="p-stat"><span>હાથોહાથ આપ્યાં</span><b>{{l.h}}</b></div>
+<div class="p-stat"><span>મળ્યાની પુષ્ટિ</span><b>{{l.c}}</b></div>
+</div>
+<a class="p-link" href="#">યાદી ખોલો</a>
+</article>
+</sc-for>
+</div>
+<section class="p-card" aria-labelledby="iv-t">
+<div class="p-card__h"><h2 id="iv-t" class="p-h2">ધ્યાન આપવાનું</h2><span class="p-check-tag">ટાઇલનો અર્થ ચકાસણી બાકી</span></div>
+<div class="p-stats"><div class="p-stat"><span>આવ્યા, પુષ્ટિ બાકી</span><b>૧૪</b></div><div class="p-stat"><span>ફરી સંપર્ક કરવાના</span><b>૬</b></div></div>
+</section>
+<p class="p-small p-muted" style="margin: 0;">બધાં નામ અને આંકડા ઉદાહરણ. સ્થિતિ: ડ્રાફ્ટ · મંજૂર · બંધ — ત્રણેય અલગ.</p>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      lists: [
+        { n: 'ગામના આગેવાનો', b: 'મંજૂર', bc: 'p-badge p-badge--ok', a: '૨૪૦', p: '૨૦૦', h: '૧૬૦', c: '૧૧૦' },
+        { n: 'દાતાશ્રીઓ', b: 'ડ્રાફ્ટ', bc: 'p-badge p-badge--new', a: '૮૦', p: '૦', h: '૦', c: '૦' },
+        { n: 'ગયા વર્ષના સેવકો', b: 'બંધ', bc: 'p-badge p-badge--off', a: '૩૨૦', p: '૩૨૦', h: '૩૧૨', c: '૨૮૦' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
